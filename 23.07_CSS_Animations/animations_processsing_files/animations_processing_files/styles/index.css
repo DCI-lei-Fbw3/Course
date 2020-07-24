@@ -1,0 +1,60 @@
+div.processing-item:first-child {
+    position: relative;
+    margin-top: 30vh;
+    animation: example 1s 1 forwards;
+   
+   transform: scale(0.2);
+   
+}
+
+div.processing-item:nth-child(2){
+position: relative;
+animation: name 1s 1s 3 forwards ;
+transform: scale(0.2);
+margin-top: -40vh;
+visibility: hidden;
+}
+
+
+div.processing-item:nth-child(3){
+    position: relative;
+    animation: name_2 0.5s 4s 1 alternate;
+    transform: scale(0.2);
+    margin-top: -40vh;
+   visibility: hidden;
+    
+    }
+
+@keyframes example{
+
+
+0%{right: 0px;}
+
+
+100%{right: 100px; visibility: hidden;}
+
+}
+
+@keyframes name{
+    0%{right: 0px; visibility: visible}
+
+    100%{right: 100px; visibility:hidden;}
+    
+    }  
+    
+
+
+    /* @keyframes name_2{
+        0%{right: 0px; visibility: visible}
+    
+        100%{top: 100px; visibility:visible;}
+        
+       
+        }  
+    
+         */
+       
+@keyframes name_2{
+    0%{transform: translateY(0); visibility: visible;}
+    100%{transform: translateY(-50px); visibility: visible;}
+}
