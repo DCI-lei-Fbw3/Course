@@ -144,7 +144,11 @@ body{
 
 
 .sprint{
+<<<<<<< HEAD
     /* border:4px dotted red; */
+=======
+    /* border: 2px dotted red; */
+>>>>>>> 8b8d550579057ea2792a7a27c06659a8eaa08875
     width: 50vh ;
     height: 8vw ;
     display: inline-block;
@@ -587,7 +591,11 @@ top: -60px;
 left: -10px ;
 height: 230px ;
 width: 110% ;
+<<<<<<< HEAD
 border:4px solidblue;
+=======
+border: 2px solid black;
+>>>>>>> 8b8d550579057ea2792a7a27c06659a8eaa08875
 background-color: rgb(204, 204, 204); 
 
 }
@@ -621,7 +629,11 @@ position: relative;
 top: -102px ;
 left: 54px ;
 display: inline-block;
+<<<<<<< HEAD
 /* border:4px dotted red; */
+=======
+/* border: 2px dotted red; */
+>>>>>>> 8b8d550579057ea2792a7a27c06659a8eaa08875
 width: 34vw;
 font-weight: 500;
 
