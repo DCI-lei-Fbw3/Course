@@ -1,0 +1,63 @@
+
+
+
+.container{
+    position: absolute;
+    top: 43vh;
+    left: 100vh;
+}
+
+
+
+
+.box{
+    position: absolute;
+    height: 100px ;
+    width: 100px ;
+    background-color: orange; 
+    margin-top: 40px ;
+    color: orange;
+    
+    
+    
+}
+
+
+.with-circle::before{
+    content: "dummy text";
+    clip-path: circle(30%);
+    background-color: orange;
+    position: absolute;
+    bottom: 80px;
+    color: orange ;
+    left: 14px;
+    height: 40px;
+    
+
+}
+
+
+
+
+.with-triangle::after{
+    content: "ssss";
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border: 5px solid orange;
+    position: absolute;
+    top: -20px ;
+    background-color: orange;
+    color: orange;
+    left: 34px;
+
+}
+
+.main-container{
+    margin: 43vh 0px 0px 80vh;
+}
+
+
+h2{
+    
+    position: absolute;
+    margin: -5vh 0px 0px 74vh;
+}

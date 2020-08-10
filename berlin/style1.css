@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0px 10px;
+  }
+  
+  header img {
+    height: 50px;
+  }
+  
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    background-color: lightgrey;
+  }
+  
+  #topsection {
+    position: relative;
+    text-align: center;
+  }
+  
+  #reichstag {
+    width: 100%;
+    height: auto;
+    filter: brightness(70%);
+  }
+  
+  #overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+  }
+  
+  h1 {
+    font-style: italic;
+    color: white;
+    padding-bottom: 20px;
+  }
+  
+  a#getstartedbutton {
+    background-color: yellow;
+    color: orangered;
+    border:4px solid orangered;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .smallinfocontainer {
+    display: flex;
+    width: 90%;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    align-self: center;
+  }
+  
+  .smallinfo {
+    display: flex;
+    flex-basis: 45%;
+    margin: 15px;
+  }
+  
+  .smallinfo img {
+    width: 50px;
+    padding: 10px;
+  }
+  
+  footer {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: grey;
+    padding: 10px;
+    color: white;
+    font-size: 0.7rem;
+    height: 30px;
+  }
+  
+  @media screen and (min-width: 800px) {
+    .smallinfocontainer {
+      flex-flow: row wrap;
+      padding: 40px 0;
+      font-size: 1.8em;
+    }
+  
+    header > img {
+      padding: 0px 30px;
+      height: 100px;
+    }
+  
+    h1,
+    a#getstartedbutton {
+      font-size: 4rem;
+    }
+  
+    footer {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media screen and (max-width: 300px) {
+    .overlayitem {
+      font-size: 0.5rem;
+    }
+  }
