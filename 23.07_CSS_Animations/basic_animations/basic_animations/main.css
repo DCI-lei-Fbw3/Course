@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+<<<<<<< HEAD
+  border:4px solid hotpink;
+=======
+  border: 2px solid hotpink;
+>>>>>>> 8b8d550579057ea2792a7a27c06659a8eaa08875
+  height: 100vh;
+}
+
+div {
+<<<<<<< HEAD
+  border:4px dotted chartreuse;
+=======
+  border: 2px dotted chartreuse;
+>>>>>>> 8b8d550579057ea2792a7a27c06659a8eaa08875
+  width: 20%;
+}
+
+
+.wrapper>div:hover {
+  background-color: yellow;
+  
+  animation: first 2s infinite alternate-reverse ease-in-out;
+  
+}
+
+
+
+@keyframes first {
+  from,to {
+    background-color: yellow;
+    
+  }
+
+  50% {
+    background-color: transparent;
+  }
+}

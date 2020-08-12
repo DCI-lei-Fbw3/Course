@@ -1,0 +1,68 @@
+.outer{
+    width: 99vw;
+    height: 80vh;
+    
+}
+
+.table-1{
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.table-1 fieldset input{
+    width: 1%;
+   
+   
+}
+
+h2{
+    width: 99.5vw;
+    background-color: grey;
+    color: white;
+}
+
+
+
+.table-1 textarea{
+    width: 100%;
+}
+
+
+.table-2{
+position: absolute;
+width: 99% ;
+height: 80%;
+top: 0;
+left: 102%;
+
+
+}
+
+#cars{
+    width: 100%;
+    font-size: large;
+   
+    
+    
+}
+
+
+.but_ton{
+   padding: 5% 0% 0% 0%; 
+   
+    
+}
+
+.but_ton > input{
+    background-color: green; 
+    color: white;
+    min-width: 15vw;
+    height: 5vh;
+    padding: 0.7vw 2vw 1vw 2vw ;
+    border-radius: 0.8vw;
+    font-size: 2vh;
+    
+    
+     
+ }
