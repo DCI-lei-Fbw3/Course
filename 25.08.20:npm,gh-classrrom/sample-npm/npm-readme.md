@@ -10,4 +10,6 @@ _npm audit fix_ : this goes through vulnerabilities in your packages and _tries_
 
 _npm start_: run the "start" script from package.json.
 
+_npm init_: initialise node app in the folder (creates package.json).
+
 ## READ : https://docs.npmjs.com/cli-documentation/.
