@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
-set -e
+set 
+
+BOOTSTRAP_URL="https://github.com/twbs/bootstrap/releases/download/v4.5.2/bootstrap-4.5.2-dist.zip"
 
 echo "retrieving bootstrap"
-wget https://github.com/twbs/bootstrap/releases/download/v4.5.2/bootstrap-4.5.2-dist.zip -O bootstrap.zip
+wget $BOOTSTRAP_URL -O bootstrap.zip
 
 echo "unzipping the downloaded file"
 unzip bootstrap.zip
