@@ -13,6 +13,7 @@
 
 ### "Dynamic" Bootstrap
 
+- setup Bootstrap via npm
+
 - how can SASS be used to customize Bootstrap
 
-- setup Bootstrap via npm
