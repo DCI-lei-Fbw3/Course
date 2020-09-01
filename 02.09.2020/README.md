@@ -4,6 +4,8 @@
 
 https://javascript.info/
 
+https://www.w3schools.com/
+
 ## Exercises
 
 ### Operators on Numbers (Arithmetic Operators)
