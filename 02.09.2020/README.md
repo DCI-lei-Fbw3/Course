@@ -1,5 +1,9 @@
 # Types and Operators
 
+## Link
+
+https://javascript.info/
+
 ## Exercises
 
 ### Operators on Numbers (Arithmetic Operators)
