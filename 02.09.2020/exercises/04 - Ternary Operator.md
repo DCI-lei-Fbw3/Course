@@ -4,7 +4,7 @@ These exercises are designed to make you more comfortable with the ternary opera
 
 1. Declare a variable named isDog. If true, print 'pat, pat' and if not, print 'find me a dog to pat!'
 
-2. Declare a variable named speedCheck. If speedlimit is 50km/h, and your speed is above that, print 'you're going too fast!'. If speed is lower than 50km/h, print 'You're driving below the speed limit, Oma'.
+2. Declare a variable named currentSpeed, and give it your desired speed. If speedlimit is 50km/h, and your speed is above that, print 'you're going too fast!'. If speed is lower or equal than 50km/h, print 'Your speed is fine.'.
 
 3. Declare a variable named age. If age is below 16, print "serve butter beer". Otherwise print "serve beer".
 

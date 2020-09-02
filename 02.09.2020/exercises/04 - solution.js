@@ -1,9 +1,14 @@
 
 // 1
-isDog = true
+
+dog = "Dackel"
+animalAtHand = "Dackel"
+
+isDog = dog == animalAtHand
 console.log( isDog ? 'pat, pat' : 'find me a dog to pat!')
 
-isDog = false
+animalAtHand = "Cat"
+isDog = dog == animalAtHand
 console.log( isDog ? 'pat, pat' : 'find me a dog to pat!')
 
 // 2
@@ -46,5 +51,20 @@ console.log(okMarie == "cake"? "Let them eat cake" : "Oh, bother")
 okMarie = "cake"
 console.log(okMarie? "Let them eat cake" : "Oh, bother")
 
+username = "Jon"
 
+username? "fireworks" : "no fireworks" // fireworks for everyone
+username == "Jon" ? "fireworks" : "no fireworks"
 
+// 6
+
+number = 30
+//          TEST             if true             : else/alternative
+// % => modulo operator or remainder
+console.log(number % 2 == 0? number + " is even" : number + " is odd")
+
+number = 939
+console.log(number % 2 == 0? number + " is even" : number + " is odd")
+
+number = 40.9
+console.log(number % 2 == 0? number + " is even" : number + " is odd")
