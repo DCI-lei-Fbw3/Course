@@ -6,21 +6,63 @@ https://javascript.info/
 
 https://www.w3schools.com/
 
-## Exercises
 
-### Operators on Numbers (Arithmetic Operators)
-https://github.com/DigitalCareerInstitute/PB-operators-arithmetic-pt1/tree/master
+## Covered Subjects
 
-https://github.com/DigitalCareerInstitute/PB-operators-arithmetic-pt2/tree/master
+## Numbers
+    - Integer
+    - Float
+    - signed
 
-### Statements
-https://github.com/DigitalCareerInstitute/PB-language-statements/tree/master
+### Operators on Numbers
+  - `+` addition
+  - `-` subtraction
+  - `*` multiplication
+  - `/` division
+  - `%` remainder/modulo
+
+## Special Numbers
+  - `Infinity`
+  - `-Infinity`
+  - `NaN` - not a number (e.g. `0/0`, `Infinity - Infinity`)
+
+## Strings
+  - "hello"
+  - 'world'
+  - \`hello world\`
+
+  - `\` backslap is the escape character
+  - `\n` newline
+  - `\t` tabulator
+
+### Operators on Strings
+  - `+` concatenation
+
+## Boolean
+  - `true`
+  - `false`
+
+### Operators on Booleans
+  - `&&` and
+  - `||` or
+  - `!`  not/negation
+  - ternary:
+    - `true?  1 : 2`
+    - `false? 1 : 2`
+
+## Comparison
+  - `>`  greater than
+  - `<`  less than
+  - `>=` greater or equal
+  - `<=` less or equal
+  - `==` equal
+  - `!=` not equal
 
 
-### Comparison Operators
+# Open as of 2020-09-02
 
-https://github.com/DigitalCareerInstitute/PB-operators-comparison/tree/master
+## Unary Operators
 
-### Console Logging Exercise
-
-https://github.com/DigitalCareerInstitute/PB-console/tree/master
+- typeof 4.5
+- ! true
+- -42
