@@ -1,6 +1,6 @@
 # Types and Operators
 
-## Link
+## Links
 
 https://javascript.info/
 
