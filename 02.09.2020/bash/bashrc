@@ -1,0 +1,6 @@
+# check if something like this is in your "~/.bashrc" file:
+# line no 5 "sources" (kind of includes) the file ~/.bash_aliases
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi

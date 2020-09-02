@@ -1,0 +1,16 @@
+# a sample "~/.bash_aliases" file:
+# NOTE:
+# after editing this file restarting the 
+
+# shortcuts for listing files:
+alias l='ls -lh'
+alias ll='l -a'
+
+# if you use docker-compose and docker, maybe:
+alias dc='docker-compose'
+alias dps='docker ps'
+alias dpsa='dps --all'
+
+# I like these for git interaction:
+alias gits='git status'
+alias gitc='git commit -m'
