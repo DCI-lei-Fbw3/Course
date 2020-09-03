@@ -2,6 +2,8 @@
 
 ## Links
 
+https://eloquentjavascript.net/
+
 https://javascript.info/
 
 https://www.w3schools.com/
@@ -70,4 +72,10 @@ https://www.w3schools.com/
 
 - typeof 4.5
 - ! true
+- -42
+- -42
+- -42
+- -42
+- -42
+- -42
 - -42
