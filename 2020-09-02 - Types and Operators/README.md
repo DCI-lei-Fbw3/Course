@@ -10,16 +10,16 @@ https://www.w3schools.com/
 ## Covered Subjects
 
 ## Numbers
-    - Integer
-    - Float
-    - signed
+    - Integer ('whole' numbers, e.g. 2, 6, 15)
+    - Float (numbers with a decimal point, e.g. 4.25, 9.01, 29.99)
+    - signed (+/-)
 
 ### Operators on Numbers
   - `+` addition
   - `-` subtraction
   - `*` multiplication
   - `/` division
-  - `%` remainder/modulo
+  - `%` remainder/modulo (e.g. 9 % 7 = 2)
 
 ## Special Numbers
   - `Infinity`
@@ -31,11 +31,12 @@ https://www.w3schools.com/
   - 'world'
   - \`hello world\`
 
-  - `\` backslap is the escape character
+  - `\` backslash is the escape character
   - `\n` newline
   - `\t` tabulator
+  - `\\` to produce one '\\'
 
-### Operators on Strings
+### Operator on Strings
   - `+` concatenation
 
 ## Boolean
@@ -45,12 +46,12 @@ https://www.w3schools.com/
 ### Operators on Booleans
   - `&&` and
   - `||` or
-  - `!`  not/negation
+  - `!`  not/negation/inversion
   - ternary:
-    - `true?  1 : 2`
-    - `false? 1 : 2`
+    - `true?  1 : 2` => `1`
+    - `false? 1 : 2` => `2`
 
-## Comparison
+## Comparison +1
   - `>`  greater than
   - `<`  less than
   - `>=` greater or equal
@@ -58,11 +59,18 @@ https://www.w3schools.com/
   - `==` equal
   - `!=` not equal
 
+## A note on equal signs
+
+- `=` assigns a variable
+- `==` compares two objects
 
 # Open as of 2020-09-02
 
 ## Unary Operators
 
+- typeof 4.5
+- typeof 4.5
+- typeof 4.5
 - typeof 4.5
 - ! true
 - -42
