@@ -58,35 +58,40 @@ true
 
 ## Unary Operators
 
-- `!`
-- `-`
-- `typeof`
-
+- `!` Not/Negation
 ```
-> ! true
-false
-> ! false
-true
-> a = 10
-10
-> -a
--10
-> a
-10
-> -a
--10
-> typeof a
-'number'
-> typeof "a"
-'string'
-> typeof "hi"
-'string'
-> typeof Infinity
-'number'
-> typeof NaN
-'number'
-> typeof null
-'object'
-> typeof undefined
-'undefined'
+   > ! true
+   false
+   > ! false
+   true
+```
+
+- `-` Minus
+```
+   > a = 10
+   10
+   > -a
+   -10
+   > a
+   10
+   > -a
+   -10
+```
+
+- `typeof`
+```
+   > typeof a
+   'number'
+   > typeof "a"
+   'string'
+   > typeof "hi"
+   'string'
+   > typeof Infinity
+   'number'
+   > typeof NaN
+   'number'
+   > typeof null
+   'object'
+   > typeof undefined
+   'undefined'
 ```
