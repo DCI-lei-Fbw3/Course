@@ -69,8 +69,5 @@ https://www.w3schools.com/
 ## Unary Operators
 
 - typeof 4.5
-- typeof 4.5
-- typeof 4.5
-- typeof 4.5
 - ! true
 - -42
