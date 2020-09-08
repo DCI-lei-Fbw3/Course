@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Variables Excercise
 
 You will work in teams to solve as many of the following excercises as you can in 90 mins. 
@@ -21,7 +20,7 @@ _Want to find out how old you'll be? Calculate it!_
 * Calculate your 2 possible ages for that year based on the stored values.
 * For example, if you were born in 1988, then in 2026 you'll be either 37 or 38, depending on what month it is in 2026.
 * Output them to the screen like so: "I will be either NN or NN in YYYY", substituting the values.
-See Solution
+
 
 ## The Lifetime Supply Calculator
 
@@ -35,7 +34,7 @@ _Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no m
 
 ## The Geometrizer 
 
-_Calculate properties of a circle, using the definitions here : http://math2.org/math/geometry/circles.htm_
+_Calculate properties of a circle, using the definitions here : http://math2.org/math/geometry/circles.html_
 
 * Store a radius into a variable.
 * Calculate the circumference based on the radius, and output "The circumference is NN".
@@ -86,7 +85,7 @@ _Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no m
 
 ## The Geometrizer 
 
-_Calculate properties of a circle, using the definitions here: http://math2.org/math/geometry/circles.html_
+_Calculate properties of a circle, using the definitions here._
 
 * Store a radius into a variable.
 * Calculate the circumference based on the radius, and output "The circumference is NN".
@@ -94,10 +93,10 @@ _Calculate properties of a circle, using the definitions here: http://math2.org/
 
 ## The Temperature Converter
 
-_It's hot out! Let's make a converter based on the steps here:  https://www.mathsisfun.com/temperature-conversion.html_
+_It's hot out! Let's make a converter based on the steps here._
 
 * Store a celsius temperature into a variable.
 * Convert it to fahrenheit and output "NN°C is NN°F".
 * Now store a fahrenheit temperature into a variable.
 * Convert it to celsius and output "NN°F is NN°C."
->>>>>>> 118102634d44eaabdfb812851e7d0199515b6712
+
