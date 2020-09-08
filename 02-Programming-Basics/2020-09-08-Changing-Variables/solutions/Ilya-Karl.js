@@ -82,7 +82,7 @@ function geometizer() {
 
     let radius = 7;
     let circumference = (2 * Math.PI * radius).toFixed(2);
-    let area = Math.pow(Math.PI * radius,2).toFixed(2);
+    let area =  (Math.PI * radius**2).toFixed(2);
 
     return console.log(`The circumference is ${circumference}\nThe area is ${area}`);
 

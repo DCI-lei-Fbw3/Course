@@ -36,7 +36,7 @@ console.log("The area is " + area);
 // The Temperature Converter
 
 var celsius = 30;
-var celsiusInF = (celsius*9)/5 + 32;
+var celsiusInF = (celsius*9)/5 + 32; //--> 86 F
 console.log(celsius + '°C is ' + celsiusInF + '°F');
 var fahrenheit = 20;
 var fahrenheitInC = ((fahrenheit - 32)*5)/9;
