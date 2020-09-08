@@ -34,7 +34,7 @@ _Ever wonder how much a "lifetime supply" of your favorite snack is? Wonder no m
 
 ## The Geometrizer 
 
-_Calculate properties of a circle, using the definitions here._
+_Calculate properties of a circle, using the definitions here: http://math2.org/math/geometry/circles.html_
 
 * Store a radius into a variable.
 * Calculate the circumference based on the radius, and output "The circumference is NN".
@@ -42,7 +42,7 @@ _Calculate properties of a circle, using the definitions here._
 
 ## The Temperature Converter
 
-_It's hot out! Let's make a converter based on the steps here._
+_It's hot out! Let's make a converter based on the steps here:  https://www.mathsisfun.com/temperature-conversion.html_
 
 * Store a celsius temperature into a variable.
 * Convert it to fahrenheit and output "NN°C is NN°F".
