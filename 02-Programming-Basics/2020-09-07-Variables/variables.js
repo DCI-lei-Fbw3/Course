@@ -109,4 +109,4 @@ B) missing
 C) undefined 
 */
 a = 0;
-typeof
+typeof(a)
