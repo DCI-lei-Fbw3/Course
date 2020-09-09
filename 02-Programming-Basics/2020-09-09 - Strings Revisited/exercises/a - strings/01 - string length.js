@@ -3,5 +3,5 @@
 // Use the length property to determine the length of txt.
 
 var txt = "Hello World!";
-var x = txt.;
+var x = txt.length;
 console.log(x);

@@ -8,3 +8,6 @@ var x = {
     firstName: "John",
     lastName: "Doe"
 };
+
+console.log (typeof(length), typeof(lastname), typeof(x));
+
