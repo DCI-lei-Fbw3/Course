@@ -8,3 +8,10 @@ var x = {
     firstName: "John",
     lastName: "Doe"
 };
+
+console.log("displaying types:")
+
+console.log(length, typeof length);
+console.log(lastName, typeof lastName);
+console.log(x, typeof x)
+console.log(x.firstName, typeof x.firstName, x.lastName, typeof x.lastName);
