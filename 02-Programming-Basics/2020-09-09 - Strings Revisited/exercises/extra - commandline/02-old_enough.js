@@ -5,6 +5,7 @@ log a greeting message to the console, like "Hi, NAME"
 */
 
 let args = process.argv.slice(2);
-let name = args[0];
+let age = args[0];
 
-console.log("Hello", name);
+console.log(age);
+console.log(age < 18? "too young" : "old enough");
