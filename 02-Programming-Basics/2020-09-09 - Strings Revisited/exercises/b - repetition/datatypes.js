@@ -9,5 +9,5 @@ var x = {
     lastName: "Doe"
 };
 
-console.log (typeof(length), typeof(lastname), typeof(x));
-
+console.log (typeof(length), typeof(lastName), typeof(x), typeof x.firstName);
+//alternatively, one can use typeof length, without the ()
