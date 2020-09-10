@@ -1,0 +1,187 @@
+/* .outer{
+width: 100vw;
+height: 100vh;
+border: 1vw solid red;
+
+
+
+} */
+
+
+
+
+.container{
+    /* width: 100vw ; /*  */
+    /* height: 100vh; */ 
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 0.5vw solid red;
+    
+    
+    
+
+   
+   
+}
+
+.container :nth-child(1){
+    width: 40%;
+    height: 40%;
+    position: relative;
+    left: 27%;
+    top: 2%;
+}
+
+.box-container{
+    width: 99vw;
+    position: relative;
+    left: -0vw;
+    top: 0.5vw;
+    
+}
+
+.box-1{
+   
+   border: 0.6vw solid black;
+   background-color: grey;
+  
+
+
+}
+
+.box-1 > h1 {
+color: white;
+font-size: 2vw;
+display: inline;
+
+margin-left: -3vw;
+
+}
+
+.box-1 > p {
+    font-size: 2vw;
+
+
+
+}
+
+.box-2-container{
+    width: 99.3vw;
+    margin-top: 1vw;
+    margin-left: 0vw;
+   
+}
+
+
+.box-2{
+    border: 0.5vw solid grey;
+    background-color: grey;
+}
+
+.box-2 > h1{
+    font-size: 2vw;
+    display: inline;
+    
+}
+
+.box-2 > p{
+text-align: center;
+font-size: 1.5vw;
+}
+
+#name{
+font-size: 1vw;
+background-color: darkgray;
+width: 20vw;
+margin-left: 10vw;
+
+}
+
+#name1{
+font-size: 1.5vw;
+background-color: white;
+height: 2vw;
+margin-top: -0.8vw;
+width: 20vw;
+margin-left: 10vw;
+text-align: left;
+}
+
+#email{
+    background-color: darkgrey;
+    font-size: 1vw;
+    width: 20vw;
+margin-left: 10vw;
+margin-top: -1vw;
+}
+
+#email1{
+    font-size: 1.5vw;
+    background-color: white;
+    height: 2vw;
+    margin-top: -0.8vw;
+    width: 20vw;
+    margin-left: 10vw;
+    text-align: left;
+
+}
+
+#time{
+    background-color: darkgrey;
+    font-size: 1vw;
+    width: 20vw;
+margin-left: 10vw;
+margin-top: -1vw;
+
+}
+
+
+#time1{
+    font-size: 1.5vw;
+    background-color: white;
+    height: 2vw;
+    margin-top: -0.8vw;
+    width: 20vw;
+    margin-left: 10vw;
+    text-align: left;
+
+}
+
+#reservation{
+    display: flex;
+    background-color: darkgrey;
+    font-size: 1vw;
+    width: 20vw;
+margin-left: 10vw;
+margin-top: -1vw;
+height: 2vw;
+justify-content: center;
+align-items: center;
+
+}
+
+footer{
+    
+    color: white;
+    margin-left: 43vw;
+    font-size: 1vw;
+    margin-top: 1vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
