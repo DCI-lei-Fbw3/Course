@@ -14,7 +14,7 @@
 - Get an overview/feeling of what functionality is covered.
 - What sections do they have in common?
 - Review the description of the following functions and write down their signature with a short description (in your own words) of what they do. In addition please provide a usage example.
-  - Match.round()
+  - Math.round()
   - Math.abs()
   - Math.ceil()
   - Math.random()
