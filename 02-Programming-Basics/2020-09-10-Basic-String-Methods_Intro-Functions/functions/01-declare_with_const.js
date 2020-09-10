@@ -14,15 +14,16 @@ const greet = function(firstname, surname) {
 };
 
 greet("Thomas", "Hofmann");
-greet("Merle", "Hofmann");
+greet("M.", "H.");
+
+console.log("show what greet() does, when calling without providing arguments:");
+greet();
 
 const createGreeting = function(firstname, surname) {
     return "Hi " + firstname + " " + surname;
 }
 
-console.log(createGreeting());
-
-greeting = createGreeting("Taimur", "Khan");
+greeting = createGreeting("T.", "K.");
 console.log(greeting);
 
 const counting = function() {
