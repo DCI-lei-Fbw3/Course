@@ -13,3 +13,12 @@
       - output some random numbers with min=1 and max=6
 
 */
+
+function rnd(min, max) {
+  if (max > 0 && min > 0 && max > min) {
+    a = Math.random() * (max - min + 1) + min;
+    return Math.floor(a);
+  }
+  return 0;
+}
+console.log(rnd(2, 4));
