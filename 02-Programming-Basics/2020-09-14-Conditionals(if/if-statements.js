@@ -193,6 +193,6 @@
     If the hours worked is greater than 40, use one and the half (x1.5) for overtime rate 
     (for hours beyond 40) and compute accordingly.
 
-HINT: var name = prompt("Employee's Name", "Name");
+HINT: var name = prompt("Employee's Name", "Name"); //prompt() function allows you to open a prompt box in the browser
 
  */
