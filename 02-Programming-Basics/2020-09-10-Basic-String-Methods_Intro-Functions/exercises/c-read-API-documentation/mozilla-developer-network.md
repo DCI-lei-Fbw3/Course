@@ -15,10 +15,8 @@
 - What sections do they have in common?
 - Review the description of the following functions and write down their signature with a short description (in your own words) of what they do. In addition please provide a usage example.
   - Math.round()
-<<<<<<< HEAD
     - round is used to round up number in a floating number. 
-=======
->>>>>>> 7d708aaef3c3c23865d2e7989d9fb03e739ef42e
+
   - Math.abs()
     - abs stands for absolute, which is to convert negative into positive.
 
@@ -34,7 +32,8 @@
   - Math.sign() => 2's complement, positive is unsigned, sign bit is 0
                    negative is signed, sign bit is negative. 
     - how to calculate unsigned (0-2**n-1).
-    - how to calculate signed two's compliment, which is inverting all of the bits and adding 1 to it.
+    - how to calculate signed two's compliment, which is inverting all  
+      of the bits and adding 1 to it.
     - sign refers to signed and unsigned.
 
   - String.match()
