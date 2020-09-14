@@ -196,3 +196,28 @@
 HINT: var name = prompt("Employee's Name", "Name"); //prompt() function allows you to open a prompt box in the browser
 
  */
+
+//Taimur's solution:
+
+//program that prompts for:
+// employee name
+var name = prompt("Employee's Name", "Name"); //anything after a comma in a prompt function, is the placeholder in the input field
+// employee's SSN
+var ssn = prompt("Social Security Number for " + name, "000-00-0000");
+// employee's wage
+var wage= prompt("Hourly wage for" + name, "5.25");
+// number of hours worked
+var hours = prompt("How many hours did" + name + " work?", "40");
+//to calculate the wage
+var total;
+//IF emplyee worked less than or equal 40 hours
+if (hours <= 40)
+    total = hours * wage;
+//  IF the hours worked is greater than 40, use one and the half (x1.5) for overtime rate 
+// (for hours beyond 40) and compute accordingly.
+else
+	total = (40 * wage) + (hours - 40) * wage * 1.5;
+
+console.log(total);
+
+//https://repl.it/languages/nodejs --> live node environment without need to set up
