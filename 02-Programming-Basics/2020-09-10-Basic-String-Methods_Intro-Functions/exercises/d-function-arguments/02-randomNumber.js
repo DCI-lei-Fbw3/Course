@@ -19,13 +19,13 @@ function rnd(min, max) {
     a = Math.random() * (max - min + 1) + min;
     return Math.floor(a);
   }
-  return 0;
+  return 100;
 }
 console.log(rnd(2, 4));
-    - Try to call "randomInteger" the following ways, see what is output:
+/* - Try to call "randomInteger" the following ways, see what is output:
       - randomInteger(-1, 0)
       - randomInteger(-10, 10)
-*/
+
 
 console.log("[0, 1]:\t\t",   randomInteger(0, 1));
 console.log("[0, 100]:\t", randomInteger(0, 100));
@@ -51,4 +51,4 @@ function randomInteger(min, max) {
   //                         scaling the random number  and moving it by "min"
   let result2 = Math.floor(scalingFactor * Math.random() + min)
   return result2;
-}
+} */
