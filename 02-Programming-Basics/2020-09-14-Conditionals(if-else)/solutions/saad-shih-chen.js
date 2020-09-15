@@ -40,10 +40,10 @@ var b = 50;
 var c = 55;
 
 if (a > b && a > c) {
-  console.log("false, a is not the largest");
+  console.log("a is the largest");
 }
 if (b > a && b > c) {
-  console.log("True, because 20 is bigger than 5 or 10");
+  console.log("b is the largest");
 }
 if (c > a && c > b) {
   console.log("correct!");
