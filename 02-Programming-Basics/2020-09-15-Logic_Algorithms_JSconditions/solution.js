@@ -20,8 +20,8 @@ determiner = 5;
 
 if (determiner >= 0) {
   let updater = "greater or equal to 0";
-  /* var message = "this is with var"; */
-/* let message = "positive integer";
+  /* var message = "this is with var";  */
+/* let message = "positive integer"; 
   console.log(message);
 } else {
   if (determiner < 0) {
@@ -29,7 +29,7 @@ if (determiner >= 0) {
     console.log(updater);
   }
 }
-console.log(message); */
+console.log(message);  */
 
 // Question 3
 
@@ -71,7 +71,7 @@ console.log("Did someone say mangoes?")
 }
  */
 
-var fruit = "apples";
+/* var fruit = "apples";
 switch (fruit) {
   case "bananas":
     console.log("Bananas are good before and after a football match");
@@ -91,4 +91,6 @@ switch (fruit) {
 
   default:
     console.log("try another one");
-}
+} */
+
+
