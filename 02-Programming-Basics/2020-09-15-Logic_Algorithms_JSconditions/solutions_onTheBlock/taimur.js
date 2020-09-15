@@ -8,7 +8,7 @@ console.log(x);
 let updater;
 if (determiner >= 0) {
     updater = "Greater or equal to 0"
-    const message = "Positive integer";
+    let message = "Positive integer";
     console.log(message);
 } else {
     updater = "Less than 0";

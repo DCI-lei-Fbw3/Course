@@ -19,7 +19,6 @@ if (determiner < 0) {
 // Trying to print message here would return undefined/ "no such variable"
 ​
 //We would use a ternary here if we only had a simple outcome, not multi-line code
-Collapse
 
 
 
