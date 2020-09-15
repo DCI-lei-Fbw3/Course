@@ -1,13 +1,13 @@
 # Switch Cases: Taimur's opinion on some fruits
 
-The idea is to do the same taks using both if/else statements and switch/cases.
+The idea is to do the same task using both if/else statements and switch/cases.
 
 In this exercise, create a program that:
     * Creates a variable that takes its value from a prompt() function
     * The user is able to enter four values only:
         ** apples
         ** bananas
-        ** pineapples
+        ** oranges
         ** mangoes
 
 For each corresponding fruit type, log the following  in the console:
