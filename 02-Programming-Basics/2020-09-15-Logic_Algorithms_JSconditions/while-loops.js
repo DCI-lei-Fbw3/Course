@@ -45,5 +45,5 @@ While-Loop Advantages
 Sometimes we abslutely have to repeat things an unknown number of times. 
 This is when whil-loops shine! We only give them a conidition and 
 when the condition is no longer met, the loop stops. In this way, they
-are more flexible than for-loops
+are more flexible than for-loops.
 */
