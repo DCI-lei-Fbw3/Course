@@ -85,3 +85,10 @@ while (true) {
 
     if (x == 10) break;
 }
+
+console.log("use 'do {} while ()' to log x from 1 to 10 if divisible by 2");
+x = 0;
+do {
+    x++;
+    if (x % 2 == 0) console.log(x)
+} while (x < 10)
