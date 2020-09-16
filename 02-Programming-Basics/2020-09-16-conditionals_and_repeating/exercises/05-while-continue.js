@@ -6,10 +6,9 @@ console.log("- increment i by 1");
 
 let i=0;
 while(i<10){
-    console.log("in the loop.");
+    console.log(`in the loop. ${i}`);
     i++;
     if (i==5) {
-    continue;
-    }
-    console.log(i);
+        continue;
+    }    
 }
