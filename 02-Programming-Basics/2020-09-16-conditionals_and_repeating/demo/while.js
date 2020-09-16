@@ -91,4 +91,11 @@ x = 0;
 do {
     x++;
     if (x % 2 == 0) console.log(x)
-} while (x < 10)
+} while (x < 2)
+
+console.log("head directed loop:");
+x = 1;
+while (x < 2) {
+    if (x % 2 == 0) console.log(x)
+    x++;
+}
