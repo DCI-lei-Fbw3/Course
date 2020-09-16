@@ -1,5 +1,7 @@
 console.log("The following program should output the number 'i', increment it by 'increment', and terminate if 20 is reached.");
 console.log();
+console.log("Hint: CTRL-C can be used to terminate running programs.");
+console.log();
 console.log("Does the program work as expected?");
 console.log("What problems may arise when working with such code?");
 console.log("What happens if 'i' is set to 1?");
