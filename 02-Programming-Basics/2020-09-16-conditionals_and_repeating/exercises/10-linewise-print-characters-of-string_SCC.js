@@ -20,7 +20,11 @@ d
 */
 
 // scroll down for hints
+let message = "hello world";
 
+for (let i of message) {
+    console.log(i);
+}
 
 
 

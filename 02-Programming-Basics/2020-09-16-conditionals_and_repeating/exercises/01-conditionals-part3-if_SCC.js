@@ -12,7 +12,7 @@ Attempt this exercise using only simple "if" conditionals (and only what you hav
 - 1d) Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console.
 - 1e) Like before, change the scores to generate different winners, keeping in mind that there might be draws.*/
 
-let ATeam = [89, 102, 103]
+let ATeam = [89, 102, 103];
 let LTeam = [97, 134, 105];// [116, 94, 123];
 let MTeam = [97, 134, 105];
 
