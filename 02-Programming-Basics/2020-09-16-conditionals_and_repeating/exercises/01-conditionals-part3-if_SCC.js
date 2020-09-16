@@ -12,8 +12,8 @@ Attempt this exercise using only simple "if" conditionals (and only what you hav
 - 1d) Mary also plays basketball, and her team scored 97, 134 and 105 points. Like before, log the average winner to the console.
 - 1e) Like before, change the scores to generate different winners, keeping in mind that there might be draws.*/
 
-let ATeam = [97, 134, 105];//[89, 102, 103];intentionally make this idential for testing purpose.
-let LTeam = [116, 94, 123];
+let ATeam = [89, 102, 103]
+let LTeam = [97, 134, 105];// [116, 94, 123];
 let MTeam = [97, 134, 105];
 
 let ATeamTotal =(ATeam.reduce((a, b)=> a+b, 0));
@@ -43,7 +43,15 @@ if (MTeamAve>ATeamAve && MTeamAve>LTeamAve) {
     console.log(`The highest average score is Mary's team at the average score of ${MTeamAve}`);
 }
 if (ATeamAve==LTeamAve || ATeamAve == MTeamAve || LTeamAve==MTeamAve) {
-    console.log("Any two of the teams have the same average scores so more games are needed");
+    if (ATeamAve==LTeamAve) {
+        console.log(`Aleeza's team has a tight score with Liz's team of ${ATeamAve}`);
+    }
+    if (ATeamAve==MTeamAve) {
+        console.log(`Aleeza's team has a tight score with Mary's team of ${ATeamAve}`);
+    }
+    else {
+        console.log(`Liz's team has a tight score with Mary's team of ${LTeamAve}`);
+    }
 }
 
 

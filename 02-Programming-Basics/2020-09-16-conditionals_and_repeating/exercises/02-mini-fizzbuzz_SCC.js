@@ -9,7 +9,7 @@ That is, if any of the above conditions apply, print the above words *instead of
 
 - Otherwise, just print the number.*/
 
-for(let i=1; i<=100;i++) {
+for(let i=1; i<=15;i++) {
     if (i%15==0) {
         console.log(`FizzBuzz ${i}`);
     }
