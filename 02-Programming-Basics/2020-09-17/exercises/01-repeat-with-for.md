@@ -9,7 +9,7 @@ let i=0;
 let sum=0;
 
 2. **There are i bottles of beer on the wall.**
-Write a program that will output, "There is one bottle of beer on the wall." "There are two bottles of beer on the wall" up until there are five bottles.
+Write a program that will output, "There is 1 bottle of beer on the wall." "There are 2 bottles of beer on the wall" up until there are 5 bottles.
 
 3. **The odd/even reporter.**
 Write a program that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
@@ -18,15 +18,9 @@ Write a program that will iterate from 0 to 20. For each iteration, it will chec
 Write a program that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
 **Bonus:** Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
 
-5. **Fizz Buzz**
-Write a program which iterates the integers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
-
-6. **Sum of Multiples**
-Write a program to add the multiples of 3 and 5 under 1000.
-
 **Bonus**
 
-7. Write programs that produce the following outputs:
+5. Write programs that produce the following outputs:
 >100 200 300 400 500 600 700 800 900 1000
 >
 >0 2 4 6 8 10
