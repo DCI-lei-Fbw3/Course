@@ -1,13 +1,13 @@
 const stringMultiplier = (string, multiplier) => {
   let result = "";
-  for (i = 0; i < multiplier; i++) {
+  for (let i = 0; i < multiplier; i++) {
     result += string;
   }
   return result;
 };
 
 const randNumGen = (quant, threshold) => {
-  for (i = 0; i < quant; i++) {
+  for (let i = 0; i < quant; i++) {
     let randomNumber = Math.random();
 
     if (randomNumber >= threshold) {
