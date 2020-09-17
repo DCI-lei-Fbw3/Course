@@ -7,3 +7,11 @@ print the number, but in the following cases instead of printing the number, do:
 - print "FizzBuzz" if divisible by both
 
 */
+
+for (let number = 1; number <= 100; number++) {
+  let output = "";
+  if (number % 3 == 0) output += "Fizz";
+  if (number % 5 == 0) output += "Buzz";
+
+  console.log(output || number);
+}
