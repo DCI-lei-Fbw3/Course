@@ -1,7 +1,7 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false" show_note_icons="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -206,8 +206,9 @@
 <node TEXT="if" FOLDED="true" ID="ID_286131568" CREATED="1600327405030" MODIFIED="1600327421860">
 <node TEXT="if (CONDITION) {&#xa;   CODEBLOCK&#xa;} else if (CONDITION) {&#xa;   CODEBLOCK&#xa;} else {&#xa;   CODEBLOCK&#xa;}" ID="ID_1987772926" CREATED="1600327426678" MODIFIED="1600327484482"/>
 </node>
-<node TEXT="switch-case" FOLDED="true" ID="ID_893812530" CREATED="1600328109509" MODIFIED="1600328154879">
+<node TEXT="switch-case" ID="ID_893812530" CREATED="1600328109509" MODIFIED="1600328154879">
 <node TEXT="switch (DECISION_VARIABLE) {&#xa;    case &quot;CASE_A&quot;:&#xa;        CODE&#xa;        break; // optional, without it =&gt; fall through to the&#xa;                   // next case until a break is hit&#xa;    case &quot;CASE_B&quot;:&#xa;        ...&#xa;    default:&#xa;        CODE&#xa;        break;&#xa;}" ID="ID_1645435560" CREATED="1600327486212" MODIFIED="1600328183087"/>
+<node TEXT="ATTENTION: when falling through to the next case,&#xa;the condition of that next case is not checked, but&#xa;the code of that case is executed." ID="ID_1950516813" CREATED="1600335879284" MODIFIED="1600335921456"/>
 </node>
 <node TEXT="Loops" ID="ID_890895675" CREATED="1600327690984" MODIFIED="1600327698089">
 <node TEXT="while" FOLDED="true" ID="ID_1246199304" CREATED="1600328116956" MODIFIED="1600328120528">
@@ -255,7 +256,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="type coercion" FOLDED="true" ID="ID_1295304904" CREATED="1599638938581" MODIFIED="1599638945031">
@@ -291,7 +291,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -313,7 +312,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
