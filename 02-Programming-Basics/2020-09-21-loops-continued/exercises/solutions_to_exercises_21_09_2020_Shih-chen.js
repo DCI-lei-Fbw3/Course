@@ -10,6 +10,7 @@ let index=0;
 let string2="Winnie the Pooh";
 for (index in string2) {
     console.log(string2[index]);
+
 }
 
 
