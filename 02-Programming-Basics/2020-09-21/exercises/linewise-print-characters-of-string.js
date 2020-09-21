@@ -28,10 +28,17 @@ for (let i=0; i<string1.length; i++){
 console.log("\n");
 
 let index=0;
+//line="";
 let string2="Winnie the Pooh";
 for (index in string2) {
+    //string2[index];   
+    //line=line+string2[index];
+     //index;
+    //line=line+index;
     console.log(string2[index]);
+
 }
+    
 
 
 

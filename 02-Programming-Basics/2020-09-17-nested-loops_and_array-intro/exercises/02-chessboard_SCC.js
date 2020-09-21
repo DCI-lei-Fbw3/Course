@@ -10,7 +10,7 @@
 "# # # # "
 " # # # #"*/
 
-/* Shih-chen
+//Shih-chen
 var result = " ";
 var size= 10;
 
@@ -28,9 +28,9 @@ for (let row=0; row<size; row++){
 }
 
 console.log(result); 
-*/
 
-// Ilya
+
+/* Ilya
 const chessBoard = (width, height) => {
   let row;
   for(i = 0; i < height; i++) {

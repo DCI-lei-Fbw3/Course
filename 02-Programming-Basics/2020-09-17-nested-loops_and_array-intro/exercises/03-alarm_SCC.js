@@ -21,7 +21,7 @@ for (let i=0; i<10; i++) {
     if (randomNumber>threshold){
         var difference=randomNumber-threshold;
         var gap=Math.round(difference/0.1);
-        var line=""
+        var line="";
         for(let counter=1; counter<=gap; counter++) {
             line=line+"*";
         }
