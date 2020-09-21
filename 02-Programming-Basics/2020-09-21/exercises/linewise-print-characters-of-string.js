@@ -21,6 +21,18 @@ d
 
 // scroll down for hints
 
+let string1="Hello World";
+for (let i=0; i<string1.length; i++){
+    console.log(string1[i]);
+}
+console.log("\n");
+
+let index=0;
+let string2="Winnie the Pooh";
+for (index in string2) {
+    console.log(string2[index]);
+}
+
 
 
 
