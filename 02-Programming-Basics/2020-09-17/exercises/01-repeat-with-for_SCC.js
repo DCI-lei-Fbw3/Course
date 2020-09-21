@@ -101,4 +101,22 @@ for (let i=1; i<=10; i++) {
 
 /*6. **isPalindrome.**
    Write a program to check whether a word is a palindrome or not.
-   Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. madam or tarrattarrat*/
+   Note: a palindrome is a word, phrase, or sequence that reads the same backwards as forwards, e.g. mmada or tarrattarrat*/
+
+   let oldString="Peacock";
+   let newString="";
+   
+   for(let index=oldString.length-1; index>=0; index--) {
+      newString=newString+oldString[index];     
+   }
+   
+   console.log(oldString);
+   console.log(newString);
+   
+   var palindromeTest = (oldString===newString)? "a Palindrome!" : "Not a Palindrome for sure!";
+   console.log(palindromeTest);
+
+//let palindroneTest = (oldString!==newString)? "Not a Palindrone!": "A Palindrone for sure!";
+
+//console.log(palindroneTest);
+
