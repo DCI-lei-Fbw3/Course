@@ -102,3 +102,24 @@ for ( let i = 0 ; i < 5;  i++){
  };
 
  // How many golf balls can you fit in a school bus?
+
+ /* 
+ Bus estimates:
+
+H = 2.3 m
+
+Width = 2.5 m
+
+Length = 11 m
+
+Volume of bus = 2.3 x 2.5 x 11 = 63.25 cubic meters
+
+
+1 golf ball = 0.4267 m
+
+# in 1 meter = 1/ 0.4267 = 23.43
+
+In 1 cubic meter lattice = 23.43 x 23.43 x 23.43 = 12865
+
+Total golf balls bus = 813,734
+  */
