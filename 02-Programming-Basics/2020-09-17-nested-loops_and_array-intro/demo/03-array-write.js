@@ -1,5 +1,8 @@
 // 5 random numbers
 
+// link to documentation:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
 let numbers = [];
 
 for (let i = 0; i < 5; i++) {
