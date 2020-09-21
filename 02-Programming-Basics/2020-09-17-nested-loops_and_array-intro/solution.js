@@ -33,14 +33,14 @@ console.log(sum); */
  } */
 
 //Question 5
-let a = [];
+/* let a = [];
 for (let i = 100; i <= 1000; i++) {
   if (i % 100 == 0) {
     a.push(i);
   }
 }
 
-console.log(a.join(""));
+console.log(a.join(" "));
 
 let b = [];
 for (let i = 0; i <= 10; i++) {
@@ -58,7 +58,7 @@ for (let i = 3; i <= 15; i++) {
   }
 }
 /* console.log(c); */
-console.log(c.join(" "));
+/* console.log(c.join(" "));
 
 let d = [];
 for (let i = 0; i <= 9; i++) {
@@ -119,35 +119,85 @@ for (let l = 1; l <= 1; l++) {
     var num_4a = Array.of(l_a);
     console.log(num_4a);
   }
-}
+} */
 
 // Question -6
 
-let efg = [];
+/* let efg = [];
 for (let i = 0; i <=4; i++){
-    efg.push(i);
-    
-    
-}
+    efg.push(i); */
+
+/* } */
 /* console.log(efg.join(" ")); */
 
-for (let j = 0; j <=4; j++){
-    efg.push(j);
-    
-    
-}
+/* for (let j = 0; j <=4; j++){
+    efg.push(j); */
+
+/* } */
 /* console.log(efg.join(" "))
  */
-for (let k = 0; k<=4; k++){
+/* for (let k = 0; k<=4; k++){
     efg.push(k);
     
     
-}
+} */
 /* console.log(efg.join(" ")) */
 
-for (let m = 0; m<=4; m++){
+/* for (let m = 0; m<=4; m++){
    efg.push(m);
     
     
 }
-console.log(efg.join(" "))
+console.log(efg.join(" ")) 
+ */
+
+// Chessboard
+/* console.log("chessboard");
+let width = 12;
+let height = 12;
+for (let i = 1; i <= height; i++) {
+  let var_1 = "";
+  for (let j = 1; j <= width; j++) {
+     if(i%2 !=0){
+       var_1 = var_1 + ((j%2!=0) ? "#" : " ");
+     }
+     else{
+       var_1 = var_1 + ((j%2==0) ? "#" : " ");
+     }
+    
+  
+}
+  console.log(var_1);
+} */
+  
+let width = 8;
+let height = 8;
+for (let i = 1 ; i <= height ; i++){
+  let line = "";
+  for (let j = 1 ; j <= width ; j++){
+    
+    if(i%2!=0){
+      line = line + ((j%2!=0) ? "#" : " ");
+    }
+    else{
+      line = line + ((j%2==0) ? "#" : " ");
+    }
+}
+console.log(line);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
