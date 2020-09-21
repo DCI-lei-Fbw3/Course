@@ -58,7 +58,8 @@ for (let n=0; n<=15; n++) {
 let lineTable='';
  for (let x=1; x<=10; x++) {   
   for (let y=1; y<=10; y++) {      
-    lineTable=lineTable+(x*y)+'\t';        }  
+    lineTable=lineTable+(x*y)+'\t'; 
+  }  
   lineTable=lineTable+'\n';
  } 
  console.log(lineTable);
