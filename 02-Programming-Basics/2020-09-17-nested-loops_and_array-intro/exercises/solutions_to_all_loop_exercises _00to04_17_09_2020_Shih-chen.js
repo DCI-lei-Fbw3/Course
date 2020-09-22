@@ -53,15 +53,19 @@ for (let n=0; n<=15; n++) {
   for (let i=0; i<=10; i++) {
    j=i*9;
    console.log(`${i} * 9 = ${j}`);
- }
- 
- for (let x=0; x<=10; x++) {
-   for(let y=0; y<=10; y++) {
-     z=x*y;     
-     console.log(z);
-   }   
- }
+ } 
 
+ //Bonus, Mulfitication Table
+ let lineTable='';
+ for (let x=1; x<=10; x++) {   
+  for (let y=1; y<=10; y++) {      
+    lineTable=lineTable+(x*y)+'\t';        
+  }  
+  lineTable=lineTable+'\n';
+ } 
+ console.log(lineTable);
+  
+        
 
 //**Bonus***
 

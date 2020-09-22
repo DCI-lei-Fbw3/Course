@@ -12,23 +12,22 @@ for (index in string2) {
     console.log(string2[index]);
 }
 
-
 // you could directly solve the last exercise, 
 // but the stepwise approach shows how the problem can be approached.
 
 console.log("print a random number");
-let result1=Math.floor(Math.random()*101); //generate number from 0 to 100
+let result1=Math.floor(Math.random()*101); //generate a number from 0 to 100
 console.log(result1);
 
 console.log("\n");
 
 console.log("print 3 random numbers");
 function result2 () {
-    var randomNumber=Math.floor(Math.random()*101); //generate number from 0 to 100
+    var randomNumber=Math.floor(Math.random()*101); //generate a number from 0 to 100
     return randomNumber;
     }
 
-for (let i=0; i<3; i++) {
+for (let i=0; i<3; i++) {     //call the function 3 times to generate 3 numbers
     result2();
     console.log(result2());    
 }
