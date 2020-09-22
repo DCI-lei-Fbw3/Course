@@ -221,3 +221,19 @@
 // 		`Attention: current value ${randomNumber} exceeds the threshold ${THRESHOLD} by ${result}.`
 // 	);
 // }
+
+const threshold = 0.2;                            //Define the threshold
+for (let i = 0; i < 10; i++) {                    //Create a loop to run 10 times
+  let value = Math.random();                      //Assign a random number to value
+  if (value > threshold) {                        //Check if value exceeds the threshold
+    let difference = (value - threshold);         //Assign the difference to a variable
+    let stars = Math.floor(difference / 0.1);     //Work out how many stars we need
+    let starString = "";                          //Create a string to assign stars to
+    for (let x = 0; x < stars; x++) {             //Loop through the number of stars we need
+      starString += "*"                           //Adding that number of stars to the string
+    }
+    console.log(`${starString} Attention: current value ${value} exceeds the threshold ${threshold} by ${difference}.`)  //console log all of it
+  }
+}
+
+
