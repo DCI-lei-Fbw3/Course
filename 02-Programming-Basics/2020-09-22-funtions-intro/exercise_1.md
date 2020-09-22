@@ -1,4 +1,4 @@
-# Variables Excercise
+# Functions Excercise
 
 You will work individually to solve as many of the following excercises as you can in 90 mins. 
 
