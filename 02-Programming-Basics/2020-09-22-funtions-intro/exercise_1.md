@@ -1,4 +1,4 @@
-# Variables Excercise
+# Functions Excercise
 
 You will work individually to solve as many of the following excercises as you can in 90 mins. 
 
@@ -21,7 +21,7 @@ _You know how old your dog is in human years, but what about dog years? Calculat
         * outputs the result to the screen like so: "Your doggie is NN years old in dog years!"
 * Call the function three times with different sets of values.
 * Bonus: Add an additional argument to the function that takes the conversion rate of human to dog years.
-See Solution
+
 
 
 ## The Lifetime Supply Calculator
