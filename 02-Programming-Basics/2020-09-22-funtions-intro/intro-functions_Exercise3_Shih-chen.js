@@ -47,7 +47,7 @@ for (let i=0; i<y; i++) {
    } 
 console.log(result);
 }
-exponent(3, 5);
+exponent (3, 5);
 exponent (2, 8);
 exponent (3, 6);
 //If result is initiated using let instead of var, console.log threw out an error for having an unidentified variable. However, with result taking a var, console.log does not throw out an error.
