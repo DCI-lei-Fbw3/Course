@@ -170,8 +170,8 @@ for (let i = 1; i <= height; i++) {
   console.log(var_1);
 } */
   
-let width = 8;
-let height = 8;
+let width = 20;
+let height = 20;
 for (let i = 1 ; i <= height ; i++){
   let line = "";
   for (let j = 1 ; j <= width ; j++){
