@@ -8,7 +8,9 @@ let maxNumber = Math.max(...numbers);
 let sumMinMax = sum(minNumber, maxNumber);
 
 console.log(minNumber, "+", maxNumber, "=", sumMinMax);
+console.log("Alternative with calling the function 'sum':");
+console.log(minNumber, "+", maxNumber, "=", sum(minNumber, maxNumber));
 
 function sum(a, b) {
-  return a + b;
+	return a + b;
 }
