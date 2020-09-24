@@ -14,3 +14,9 @@ console.log(minNumber, "+", maxNumber, "=", sum(minNumber, maxNumber));
 function sum(a, b) {
 	return a + b;
 }
+
+function noReturn() {
+	console.log("no return, only logging");
+}
+
+console.log("value of the noReturn()-function:", noReturn());
