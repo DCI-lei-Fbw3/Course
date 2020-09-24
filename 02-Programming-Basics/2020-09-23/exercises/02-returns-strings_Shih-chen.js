@@ -78,11 +78,9 @@ hasSpaces(",./!@#")       ➞ false
 */
 
 const hasSpaces = function (aString) {
-  if (aString === "" || aString.indexOf(" ") >= 0) {
-    console.log("Hurray! There is space in the string!");
-  } else {
-    console.log("False. There is no space in this string.");
-  }
+  aString === "" || aString.indexOf(" ") >= 0
+    ? console.log("true")
+    : console.log("false");
 };
 
 hasSpaces("hello");
@@ -107,16 +105,17 @@ Hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_O
 */
 
 const cToNumber = function (aCharacter) {
-  let result = aCharacter.charCodeAt(aCharacter[0]);
+  let result = aCharacter.charCodeAt();
   console.log(result);
 };
 
 cToNumber("A"); //➞ 65
 cToNumber("m"); //➞ 109
+cToNumber("["); // 91
 cToNumber("<");
 cToNumber("(");
 cToNumber("@");
-//cToNumber('\');
+//cToNumber("\");
 
 console.log("\n");
 
@@ -148,7 +147,7 @@ const stringMatch = (stringA, stringB) => {
       result1 == result2
         ? true
         : false;
-    console.log(compareResult);
+    console.log(compareResult); 
   }
 };
 
@@ -173,14 +172,25 @@ sameCase("Hello") ➞ false
 sameCase("ketcHUp") ➞ false
 ```
 */
-const sameCase = aString => {
-    for (i in aString) {
-        let letterNumber=aString.charCodeAt(i);
-        //or let letterNumber=aString[i].charCodeAt();
-        var caseResult = ((letterNumber>=65 && letterNumber<=90) || (letterNumber>=97 && letterNumber<=122))? true: false;
-    }
-    console.log(caseResult);    
-}
+//const sameCase = aString => {
+//    for (i in aString) {
+//        var letterNumber=aString[i];
+//      }
+//        //or let letterNumber=aString[i].charCodeAt();
+//      (letterNumber>='A' && letterNumber<='Z') || (letterNumber>='a' && letterNumber<='z')? console.log("true"): console.log("false");
+//  }
+
+const regex1 = /[A-Z]/g;
+const regex2 = /[a-z]/g;
+var result;
+const sameCase = (aString) => {
+  for (let i = 0; i < aString.length; i++) {
+    !(aString.match(regex1) && aString.match(regex2))
+      ? (result = true)
+      : (result = false);
+  }
+  console.log(result);
+};
 
 sameCase("Winnie");
 sameCase("hello");
@@ -212,6 +222,8 @@ const removeFirstLast = (aString) => {
 removeFirstLast("Hello");
 removeFirstLast("Winnie the Pooh says hello");
 
+console.log("\n");
+
 /* 10. Strange Pair
 A pair of strings form a strange pair if both of the following are true:
 - The 1st string's first letter = 2nd string's last letter.
@@ -231,3 +243,13 @@ isStrangePair("", "")                ➞ true
 ### Note
 It should work on a pair of empty strings (they trivially share nothing).
 */
+
+const isStrangePair = (pairA, pairB) => {
+  let pairOutcome = ((pairA[0]==pairB[pairB.length-1]) && (pairA[pairA.length-1]==pairB[0]))? true:false; 
+  console.log(pairOutcome);    
+}
+
+isStrangePair("wolverine", "peacock");  
+isStrangePair("sparkling", "groups");
+isStrangePair("bush", "hubris");
+isStrangePair("", "")   
