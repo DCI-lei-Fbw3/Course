@@ -102,14 +102,20 @@ convertToSeconds(4, 6);
 
 const convertToDays = function (seconds) {
     let d=Math.floor(seconds/(3600*24));
+        let s=seconds;
+        s -= d*60*60*24;
     let h=Math.floor(seconds % (60*60*24)/(60*60));
+        s -= h*60*60;
     let m=Math.floor(seconds % (60*60)/60);
-    let s=Math.floor (seconds % 60);
-
+        s -= m*60;
+    
     console.log (`${seconds} seconds is converted into ${d} days ${h} hours ${m} minutes ${s} seconds`);
 }
 
-convertToDays (113610);
+convertToDays (3546544);
+convertToDays (436654);
+convertToDays (3601);
+convertToDays (121);
 console.log(".......");
 
 /* 8. Check if an Integer is Divisible By Five

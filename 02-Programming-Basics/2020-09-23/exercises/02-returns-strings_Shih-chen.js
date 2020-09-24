@@ -115,7 +115,7 @@ cToNumber("["); // 91
 cToNumber("<");
 cToNumber("(");
 cToNumber("@");
-//cToNumber("\");
+cToNumber("n");
 
 console.log("\n");
 
