@@ -127,9 +127,9 @@ console.log(remain_2(3,2)); */
   } else {
     console.log(x ** y);
   }
-}
+} 
 
-valid(4, 2); */
+valid(4, 2);  */
 
 //Q2
 
@@ -170,12 +170,31 @@ Q1(600); */
 // Q2
 
 /* function numbers(x,y,z){
-return (x**3) + (y**3) + (z**3);
+   
+    if ( x === undefined && y === undefined && z === undefined){
+        return 0;
+    }
+   
+    if(y === undefined && z ===undefined){
 
+return x ** 3;
+    }
+
+    if(z === undefined ){
+        return (x **3) + (y ** 3)
+    }
+   
+   
+    else{
+        
+        return (x **3) + (y ** 3) + (z **3);
+    }
+
+    
 }
 
-console.log(numbers(2,5,9)); */
-
+console.log(numbers(2,4));
+ */
 // Q3
 
 /* function isStr(x,y){
@@ -204,7 +223,7 @@ console.log(isLess(10)); */
 
 //Q5
 
-function occurences(x,y){
+/* function occurences(x,y){
 var b = [];
    for (let i = 0 ; i <=x.length; i++){
     
@@ -220,8 +239,145 @@ var b = [];
    console.log(b.length);
  }
 
- occurences("this is a string", "i");
+ occurences("this is a string", "i"); */
  
 
 
+ // Q6
+
+ /* function calcBaseToExponent(x,y){
+
+if (x >= 0 && y >= 0){
+    return x ** y
+} 
+
+
+else{
+    console.log("please enter only positive integers");
+}   
+ }
+
+ console.log(calcBaseToExponent(10,2)); */
+
+ // Q7
+
+ /* function dogAge(human_age){
+let puppy_age =  human_age * 7;
+console.log("Your dog is " + puppy_age + " years old in human years")
  
+}
+
+dogAge(4); */
+
+// Q8
+
+/* function snack(age, amount_per_day){
+    let max_age = 80;
+    let rest_life = max_age - age;
+    return Math.round(rest_life * 365 * amount_per_day)
+}
+
+console.log(snack(35,2.558855)); */
+
+
+//Q9
+
+/* function isWaldoHere(x){
+let y = x;
+return y.match(/Waldo/gi) ? true : false
+}
+
+console.log(isWaldoHere("waldo is here?")); */
+
+
+//Q10
+
+/* function isEqualSlices(x,y,z){
+    if(z*y == x){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+console.log(isEqualSlices(11,5,3)); */
+
+
+//Q11
+
+/* function check(t){
+    let y = t;
+    let status_1 = y.match(/o/gi);
+    
+    let status_1a = status_1.length;
+    let status_2 = y.match(/x/gi);
+    let status_2a = status_2.length;
+    if (status_1a == status_2a){
+        return true;
+    }
+    
+    
+    else{
+        console.log("false");
+    }
+    
+   
+    
+}
+
+console.log(check("xXoo")); */
+
+//Q12                            // using Wilson's theorem
+
+function isPrime(x){
+  var z = 1; 
+  var t = x-1
+                       
+ for (let i = 0 ; i <=t-1; i++ ){
+ 
+ var z =  z * (t-i) ; 
+  
+}
+
+console.log(z); 
+
+var Check = z;
+console.log(Check); 
+if (x===1){
+    return "its not a prime number";
+}
+if (x===2 || x===3){
+    return "its a prime number";
+}
+if(Check%x === 0 || x ===4 || x%2 ==0 || x%3 ==0 || x%5==0 || x%7==0){
+    return "its not a prime number";
+}
+    else{
+        if((Check+1)%x ==0){
+            return "its a a prime number";
+        }
+        /* if(Check%x===28){
+            return "its not a a prime number";
+        } */
+        else{
+            return "its a a a a prime number";
+        }
+    }
+ 
+ }
+ 
+
+ 
+ 
+console.log(isPrime(23));
+
+
+     
+
+ 
+
+      
+
+      
+
