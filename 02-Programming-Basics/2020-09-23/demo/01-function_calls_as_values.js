@@ -9,6 +9,9 @@ function minimalDemo() {
 
 log(minimalDemo());
 
-function headline(headline) {
-	console.log("***", headline, "***");
+log("*** more calculations ***");
+function sum(a, b) {
+	return a + b;
 }
+
+log(sum(20, 22));
