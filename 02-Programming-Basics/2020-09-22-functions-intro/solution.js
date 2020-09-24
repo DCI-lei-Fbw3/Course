@@ -330,7 +330,7 @@ console.log(check("xXoo")); */
 
 //Q12                            // using Wilson's theorem
 
-function isPrime(x){
+/* function isPrime(x){
   var z = 1; 
   var t = x-1
                        
@@ -350,34 +350,162 @@ if (x===1){
 if (x===2 || x===3){
     return "its a prime number";
 }
-if(Check%x === 0 || x ===4 || x%2 ==0 || x%3 ==0 || x%5==0 || x%7==0){
+if(Check%x === 0 || x ===4 || x%2 ==0 || x%3 ==0 || x%5==0 || x%7==0 || x%11===0){
     return "its not a prime number";
 }
     else{
         if((Check+1)%x ==0){
-            return "its a a prime number";
-        }
-        /* if(Check%x===28){
+            return "its a a prime number"; */
+        /* } */
+       /*  if(Check%x===28){
             return "its not a a prime number";
         } */
-        else{
+       /*  else{
             return "its a a a a prime number";
         }
     }
  
  }
  
-
- 
- 
-console.log(isPrime(23));
+console.log(isPrime(103));  */
 
 
+  // Rafa solution   
+
+ // !Prime numbers in range
+/* const isPrime = (num) => {
+    for (let i = 2; i < num; i++) 
+    if (num % i === 0) return false;
+    return num > 1;
+};
+const primeInRange = (num) => {
+let arr = [];
+    for (let i = 2; i < num; i++) {
+        if (isPrime(i)) {
+            arr.push(i);
+        }
+    }
+    return arr;
+};
+console.log(...primeInRange(103)); */
+
+
+// Q13
+
+function StringCheck(r){
+    let s = r;
+    Array_1 = [];
+    Array_2 =[];
+    Array_3 = [];
+    if(s.match(/@/gi)){
+        console.log("@ symbol there");
+    }
      
+    
+    else{
+        console.log("@ symbol not there");
+    }
 
- 
+    if(s.match(/./gi)){
+        console.log(". symbol there");
+    }
+    else{
+        console.log(". symbol not there");
+    }
+    if(s.endsWith(".com")){
+        console.log(".com at the end");
+    }
+    else{
+        console.log(".com not at the end, try again");
+    }
+    if(s.includes("@.") || s.includes(".@")){
+        console.log("false");
+    }
+    else{
+        console.log("all good");
+    }
 
+
+    if(s[s.length-1] === "@"){
+        console.log("@ in the wrong place");
+    }
+    else{
+        
+    }
+    
+    
+    if(s[s.length-1] === "." || s[0] === "." || s[0] === "@"){
+        console.log(". in the wrong place");
+    }
+    else{
+        console.log(". in the right place");
+    }
+
+    
+
+    for (let i = 0 ; i <1 ; i++){
+      for (let j = 0 ; j<=s.length ; j++ ){
+        if(s[j] == "@"){
+            Array_1.push("@");                
+            
+        }
+        else{
+           
+        }
+}
+        if(Array_1.length > 1){
+            console.log("too many @ values");
+        }
+        else{
+            
+        }
+        
+
+
+    }
+
+    for (let k = 0 ; k <1 ; k++){
+        for (let m = 0 ; m<=s.length ; m++ ){
+          if(s[m] == "." && s[m+1] == "."){
+              
+              console.log(". values consecutively repeating");                
+              
+          }
+          else{       
+                  
+        }
+  }  
+      }
       
+      for (let q = 0 ; q <1 ; q++){
+        for (let p = 0 ; p<=s.length ; p++ ){
+          if(s[p] == "."){
+              Array_3.push(".");                
+              
+          }
+          else{
+             
+          }
+  }
+          if(Array_3.length > 2){
+              console.log("too many . values");
+          }
+          else{
+              
+          }
+          
+   
+      }
+      
+    
+}
+
+
+console.log(StringCheck("john.smith@gmail.com"));
+
+
+
+
 
       
 
