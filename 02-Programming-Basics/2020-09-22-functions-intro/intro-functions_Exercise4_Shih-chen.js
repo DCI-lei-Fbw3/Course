@@ -321,6 +321,7 @@ function isStrInWord(aFragment, aString) {
 // DRY principle: Do Not Repeat Yourself
 // There are only two numbers in JavaScript: 1 and infinity. The moment you need to do something more than once, assume it will be done infinitely.
 
+//Anna's solution:
 function isItPrime(number) {
   if (number <= 1) {
     console.log("Invalid number")
@@ -334,7 +335,7 @@ function isItPrime(number) {
   }
 }
 
-// This needs to be re-written because this piece of code is too long.
+// Shih-chen's solution: this needs to be re-written because this piece of code is too long
  const isPrime = (prime) => {
   if (typeof prime!="number" || prime<0) {
      console.log("Please enter a positive integer");
@@ -344,11 +345,14 @@ function isItPrime(number) {
        console.log(`${prime} is an odd number. Any odd number but 2 which will never a prime number.`);
      }
      if (prime==2) {
-       console.log(`${prime} is a prime number`);
+       console.log(`${prime} is the smallest prime number`);
+     }
+     if (prime==1) {
+       
      }
     else {
    let counter=0;
-   for (let i=1; i<=prime; i++) {
+   for (let i=2; i<=prime; i++) {
     let result=prime%i;     
         if (result==0){
       counter=counter+1;
@@ -389,7 +393,7 @@ function isItPrime(number) {
 // * e.g. "john.smith@com" is invalid while "john.smith@email.com" is valid.
 // * e.g. "john..smith@email.com" and "john.@email.com" and "john@.email.com" are all invalid.*/
 
-
+//by Anna and Shih-chen but Anna did most of the job.
 function validateEmail(email) {
   if (email.includes("@") && email.includes(".")) {
     let atPositions = [];
