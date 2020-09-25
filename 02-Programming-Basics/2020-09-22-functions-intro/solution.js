@@ -392,7 +392,7 @@ console.log(...primeInRange(103)); */
 
 // Q13
 
-function StringCheck(r){
+/* function StringCheck(r){
     let s = r;
     Array_1 = [];
     Array_2 =[];
@@ -502,10 +502,74 @@ function StringCheck(r){
 
 
 console.log(StringCheck("john.smith@gmail.com"));
+ */
+
+
+// prime number test
+
+function isPrime(x){
+        for(var j = 2; j<50; j++){
+            if(x==j){
+                continue;
+            }
+                if(Number.isInteger(x/j)){
+                   
+                    var str_1= "not a prime number";
+                    var str_1a = (str_1.match(/not/gi).length >=1) ? "not a prime number" : "a prime number";
+                    /* return str_1a; */
+                    /* console.log(j + str_1a); */
+                    return str_1a;
+                    
+                }
+                
+                
+                
+                }
+               console.log("a prime number");
+            }
+        
+        console.log(isPrime(19)); 
+                
+                /*  if(str_1a.length >=1){
+                    return "not a a prime number";
+                } */
+                /* else{
+                    console.log(j);
+                    return "a prime number";
+                } */
+                
+                
+            
+            
+            
+        
+        /*  }  */
+        
+        
+            
+       /*  if(x%1 ==0 && x%x ==0 && Number.isInteger(25/5)){
+            /* console.log(j + " NOT A PRIME NUMBER"); */
+            /* console.log(j); */
+            /* return "NOT A PRIME NUMBER"; */
+            
+        /* } */
+       /*  else{ */
+            /*   console.log(j + " A PRIME NUMBER"); */
+            /* console.log(Number.isInteger((26/5))); */
+            /* return "A PRIME NUMBER"; */
+            
+/*         }
+    }
+}  */
+
+
+/* } */
+
+        
 
 
 
 
 
-      
+
 
