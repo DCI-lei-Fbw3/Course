@@ -19,6 +19,6 @@ typeof lambdaDepth(2)() ➞ "function"
 **_Notes_**
 
 1. num will always be a non-negative integer.
-2. If num == 0, return "edabit".
+2. If num == 0, return "dci".
 3. If num > 0, return a function.
 4. All non-example test cases come in two forms: checking whether 5.5.5.5. lambda_depth(k), after being called k times, returns a string, and 6. checking whether lambda_depth(k) returns a function.
