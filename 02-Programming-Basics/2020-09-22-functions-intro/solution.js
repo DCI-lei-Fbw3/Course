@@ -515,7 +515,7 @@ function isPrime(x){
                 if(Number.isInteger(x/j)){
                    
                     var str_1= "not a prime number";
-                    var str_1a = (str_1.match(/not/gi).length >=1) ? "not a prime number" : "a prime number";
+                    var str_1a = (str_1.match(/not/gi).length >=1) ? "not a prime number" : "";
                     /* return str_1a; */
                     /* console.log(j + str_1a); */
                     return str_1a;
@@ -528,7 +528,7 @@ function isPrime(x){
                console.log("a prime number");
             }
         
-        console.log(isPrime(19)); 
+        console.log(isPrime(12)); 
                 
                 /*  if(str_1a.length >=1){
                     return "not a a prime number";
