@@ -10,7 +10,7 @@ let persons = ["Albert Einstein", "Lise Meitner", "Gene Simmons", "Patrick Swayz
 
 ## 3. String sorting
 
-### a) What happens to the sorting order if you add "apple" or "raspberry"
+### a) What happens to the sorting order of the fruits-array if you add "apple" or "raspberry"
 
 ### b) Why is that?
 
