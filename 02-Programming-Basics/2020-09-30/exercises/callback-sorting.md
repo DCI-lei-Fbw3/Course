@@ -14,7 +14,7 @@ let persons = ["Albert Einstein", "Lise Meitner", "Gene Simmons", "Patrick Swayz
 
 ### b) Why is that?
 
-### c) Create and use a sorting functions that treat characters as beeing the same if their only difference is their capitalization (lowercase/uppercase; "a" == "A").
+### c) Create and use a sorting function that treats characters as beeing the same if their only difference is their capitalization (lowercase/uppercase; "a" == "A").
 
 Hint 1: Use a search engine to get a first idea, on how to sort strings with a custom function.
 
