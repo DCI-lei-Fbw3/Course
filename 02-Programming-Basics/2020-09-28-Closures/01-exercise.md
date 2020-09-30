@@ -27,3 +27,13 @@ If not, then the program should calculate how many years remain until the person
 
 - Example: A lady is 40 years old, she retires at 65, she earns $2000 per month and she saves the 5% of it. How much money will she have saved until she retires?
 - Output: $30000
+
+
+function add(x){
+    function add_1(y){
+        return x+y;
+    }
+    return add_1;
+}
+
+console.log(add(4)(7));

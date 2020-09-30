@@ -1,30 +1,28 @@
 //Q1
 
-/* function add(x){
-    let y = 4;
-    
-    function add_1(z){  
+function add(x){
+    return function add_1(y,z){
+       
+        
         return x+y+z;
         }
-        
-        return add_1;
-    }
+    
+}
 
 var add_ = add(3);
-console.log(add_(3)); */
+console.log(add_(2,3));
 
 
 //Q2
 
-/* function multiplier(x){
-    let z = 4;
-    return function mul(y){
+function multiplier(x,y){
+    return function mul(z){
         return x*y*z;
     }
 }
 
-let Q2 = multiplier(2);
-console.log(Q2(2)); */
+let Q2 = multiplier(2,3);
+console.log(Q2(2));
 
 
 //Q3
@@ -42,9 +40,8 @@ console.log(Q2(2)); */
     }
 console.log(calculation (40, 65, 2000, 5));
  */
-/* function calculation(Age, RA){
-    let wage = 2000; 
-    return function age_check(savings){
+function calculation(Age, RA){
+    return function age_check(savings, wage){
     if(Age>=RA){
         console.log("you are already retired");
     }
@@ -56,49 +53,4 @@ console.log(calculation (40, 65, 2000, 5));
 } 
 
 var abc = calculation(40,65);
-console.log(abc(5)); */
-
-
-/* function say_hi(){
-    return "hello";
-
-} 
-
-function greetings(x,y){
-    return x() + y;
-}
-
-console.log(greetings(say_hi, " Saad")); */
-
-
-
-
-/* function add(z){
-     return z;
-}
-
-function sum (x,y){
-    return x+y;
-} */
-
-/* console.log(add(sum(5,7))); */
-
-function say_hi(){
-    return "hi";
-}
-
-function greetings(x,y){
-    return x() + y;
-}
-
-console.log(greetings(say_hi, " Saad"));
-
-function say_hi(){
-    return "hiiii";
-}
-
-function greetings(y){
-    return y();
-}
-
-greetings(say_hi);
+console.log(abc(5,2000));
