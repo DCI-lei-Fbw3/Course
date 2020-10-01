@@ -12,9 +12,9 @@ There are two to three main modes of how to read a document:
 
 -   reading it thoroughly from top to bottom
 
-    -   learning, taking notes
+    -   learning, taking notes, try out (experiment)
 
-## Get an Overview on the following Tipics
+## Get an Overview on the following Topics
 
 ### Arrays
 
@@ -23,3 +23,7 @@ see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Ob
 ### Strings
 
 see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+### Built-Ins
+
+see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
