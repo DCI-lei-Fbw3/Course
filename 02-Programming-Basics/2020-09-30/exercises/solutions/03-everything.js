@@ -16,13 +16,13 @@ console.log(every([2, 4, 16], (n) => n < 10));
 console.log(every([], (n) => n < 10));
 // → true
 
-console.log("everyWithArraySome:");
+// console.log("not working yet - everyWithArraySome:");
 
-function everyWithArraySome(array, testFunction) {
-	if (!array.some((a) => !testFunction)) return true;
+// function everyWithArraySome(array, testFunction) {
+// 	if (!array.some((a) => !testFunction)) return true;
 
-	return false;
-}
+// 	return false;
+// }
 
 every = everyWithArraySome;
 
