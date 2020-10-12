@@ -55,7 +55,7 @@ function it was passed into.
 function functionOne(x) { console.log(x);};
 
 function functionTwo(var1, callback) {
-    callback(var1);
+    callback(var1); // how the program executes --> funtionOne("Hey this callback stuff is strange!")
 }
 functionTwo("Hey this callback stuff is strange!",functionOne); // inside functionTwo, var1's value will be functionOne
 
@@ -126,8 +126,9 @@ function functionFive(var1, var2, callback) {
 	let x = var1;
     let y = var2; //this can just be var1+var2, but we want to see an example of closure so we use variable scopes
     // x and y are equal to 2
+    
 	const innerFunc = () =>{
-		let add = x + y;
+         let add = x + y;
 		return callback(add); // return print(4) --> console.log(4)
 	}; // this is where the conncetion between closure and callback is happening
 	return innerFunc();
