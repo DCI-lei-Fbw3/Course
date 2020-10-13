@@ -2,6 +2,9 @@
 
  These exercises are designed for practicing arrays and array methods. __You may need to look up some methods to complete these tasks__. Print each result to the console.
 
+
+__Please send me a js file (<firstname>.js) on Slack__
+
 1. Declare a variable named "euroCities" and assign an array to the variable e.g. ["Paris", "London", "Valletta", "Prague", "Rome"]. Declare another variable and assign the second item of the array as a value.
 
 2. Change the first item in the array to "Berlin".
