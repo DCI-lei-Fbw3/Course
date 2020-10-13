@@ -1,7 +1,8 @@
 // Length of a String
 function length(str){
-  if(!str) return 0;
-  
+  //base case
+    if(!str) return 0;
+  //recursion
   return 1 + length(str.substring(1));
 }
 length("abc")
@@ -12,9 +13,13 @@ length("abc")
                     n1 = !''                 // !f returns true
                     n2 = !'Cat'              // !t returns false
 
-2. In JavaScript the substr() method returns a string beginning at the specified location. 
+2. In JavaScript the substring() method returns a string beginning at the specified location. 
+In the substring method: substring(initialVal, endVal*)
 
-"Full" version:
+*the endVal is optional
+
+
+"Fuller" version:
 
 function length(str){
   if (str == ''){
@@ -28,14 +33,14 @@ console.log(length('abc'));
 
 So given input "abc", the steps of execution are as below:
 
-Check 'abc' == '' ==> false.
+Check 'abc' == '' ==> false.    //line 36 till line 45, length() is winding up
 Create substr = 'bc'.
 Invoke length('bc'):
     Check 'bc' == '' ==> false.
     Create substr = 'c'.
     Invoke length('c'):
         Check 'c' == '' ===> false.
-        Create substr = ''.
+        Create substr = ''. //substring will take out the single string if its only a single value
         Invoke length(''):
             Check '' == '' ===> true
             Return 0.
@@ -55,7 +60,7 @@ function reverse(str){
   //recursive
   return reverse(str.substring(1)) + str[0];
 }
-
+reverse('cat');
 /* 
 
 ‘cat’.substr(1) === ‘at’
@@ -75,6 +80,8 @@ Our recursive case is run one final time:
 return revStr(str.substr(1)) + str[0];
 // SAME AS
 return revStr('') + 't'
+
+// This is where the function has wound up
 
 This time our base case runs, and the function returns a blank string:
 if (str === '') return '';
