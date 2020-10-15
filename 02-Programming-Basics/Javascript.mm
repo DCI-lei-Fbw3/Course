@@ -233,13 +233,12 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
 </node>
 </node>
-<node TEXT="functions" FOLDED="true" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
+<node TEXT="functions" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
 <node TEXT="function definition" FOLDED="true" ID="ID_1800268111" CREATED="1602660577186" MODIFIED="1602660581136">
 <node TEXT="function FUNCTION_NAME(PARAM_A, PARAM_B, ...) {&#xa;    FUNCTION_BODY&#xa;}" ID="ID_1913354776" CREATED="1602660381515" MODIFIED="1602660444198"/>
 </node>
@@ -255,6 +254,27 @@
 </node>
 <node TEXT="functions can return a value via the &quot;return statement&quot;" ID="ID_139003883" CREATED="1602660745822" MODIFIED="1602660759675"/>
 <node TEXT="default return value is &quot;undefined&quot;" ID="ID_324179839" CREATED="1602660760335" MODIFIED="1602660777559"/>
+<node TEXT="immediateley invoked function expression (IIFE)" ID="ID_416203204" CREATED="1602743773348" MODIFIED="1602743855251"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (function (name){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;console.log(name);
+    </p>
+    <p>
+      })(&quot;Alice&quot;);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 </node>
 <node TEXT="terminology" POSITION="left" ID="ID_1545790948" CREATED="1599638782111" MODIFIED="1599638785630">
 <node TEXT="expression" FOLDED="true" ID="ID_1233784526" CREATED="1599638786493" MODIFIED="1599639004298">
@@ -367,7 +387,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="callback functions (aka callback)" ID="ID_1252529451" CREATED="1602660900902" MODIFIED="1602660909692">
