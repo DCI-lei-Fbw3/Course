@@ -217,25 +217,40 @@
 <node TEXT="do {} while" FOLDED="true" ID="ID_1151341993" CREATED="1600328126396" MODIFIED="1600328132246">
 <node TEXT="do {&#xa;    CODEBLOCK&#xa;} while (CONDITION) // tail directed / condition after / execution first" ID="ID_1989761449" CREATED="1600327714918" MODIFIED="1600328083974"/>
 </node>
-<node TEXT="for" FOLDED="true" ID="ID_1071468791" CREATED="1600328135669" MODIFIED="1600328136897">
+<node TEXT="for" ID="ID_1071468791" CREATED="1600328135669" MODIFIED="1600328136897">
 <node TEXT="for (INITIALIZATION; CONDITION; INCREMENT) {&#xa;    CODEBLOCK&#xa;}" ID="ID_1620323779" CREATED="1600327791965" MODIFIED="1600327870023">
 <node TEXT="for (let i=0; i&lt;maxValue; i++) {&#xa;    CODE&#xa;}" ID="ID_1748149032" CREATED="1600327872579" MODIFIED="1600327946549"/>
 </node>
+<node TEXT="for...in" ID="ID_532446107" CREATED="1602671035036" MODIFIED="1602671294245" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      iterate over an object's properties<br/>
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
 </node>
-<node TEXT="functions" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
-<node TEXT="function definition" ID="ID_1800268111" CREATED="1602660577186" MODIFIED="1602660581136">
+</node>
+<node TEXT="functions" FOLDED="true" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
+<node TEXT="function definition" FOLDED="true" ID="ID_1800268111" CREATED="1602660577186" MODIFIED="1602660581136">
 <node TEXT="function FUNCTION_NAME(PARAM_A, PARAM_B, ...) {&#xa;    FUNCTION_BODY&#xa;}" ID="ID_1913354776" CREATED="1602660381515" MODIFIED="1602660444198"/>
 </node>
-<node TEXT="arrow functions" ID="ID_1486979444" CREATED="1602660568834" MODIFIED="1602660573079">
+<node TEXT="arrow functions" FOLDED="true" ID="ID_1486979444" CREATED="1602660568834" MODIFIED="1602660573079">
 <node TEXT="const FUNCTION_NAME = (PARAM_A, ...) =&gt; {&#xa;    BODY&#xa;}" ID="ID_1633432818" CREATED="1602660446346" MODIFIED="1602660494717"/>
 <node TEXT="sample application" ID="ID_1457295147" CREATED="1602660596867" MODIFIED="1602660609519">
 <node TEXT="array.sort(..., (a, b) =&gt; a - b);&#xa;// &quot;a - b&quot; is the return value&#xa;// anonymous callback" ID="ID_839869206" CREATED="1602660611757" MODIFIED="1602660976112"/>
 <node TEXT="function custom_sort_callback(a, b) {&#xa;    return a - b;&#xa;}&#xa;&#xa;array.sort(..., custom_sort_callback); // named callback" ID="ID_1771370621" CREATED="1602660977950" MODIFIED="1602661032482"/>
 </node>
 </node>
-<node TEXT="assign a function to a constant" ID="ID_222450253" CREATED="1602660584389" MODIFIED="1602660594509">
+<node TEXT="assign a function to a constant" FOLDED="true" ID="ID_222450253" CREATED="1602660584389" MODIFIED="1602660594509">
 <node TEXT="const FUNCTION_NAME = function (PARAM_A, ...) {&#xa;    BODY&#xa;}" ID="ID_489245508" CREATED="1602660508772" MODIFIED="1602660542465"/>
 </node>
 <node TEXT="functions can return a value via the &quot;return statement&quot;" ID="ID_139003883" CREATED="1602660745822" MODIFIED="1602660759675"/>
@@ -340,8 +355,20 @@
 </node>
 <node TEXT="function body" ID="ID_1147734216" CREATED="1602661136586" MODIFIED="1602661146677"/>
 </node>
-<node TEXT="recursive function" ID="ID_1821354970" CREATED="1602661044428" MODIFIED="1602661087974">
-<node TEXT="a function calling itself" ID="ID_480468876" CREATED="1602661062671" MODIFIED="1602661094250"/>
+<node TEXT="recursive function" ID="ID_1821354970" CREATED="1602661044428" MODIFIED="1602671263474"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a function calling itself
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 <node TEXT="callback functions (aka callback)" ID="ID_1252529451" CREATED="1602660900902" MODIFIED="1602660909692">
 <node TEXT="application e. g. in array.sort(..., callback)" ID="ID_1651875563" CREATED="1602660911920" MODIFIED="1602660928162"/>
@@ -349,8 +376,13 @@
 <node TEXT="anonymous callback" ID="ID_1350186999" CREATED="1602660945932" MODIFIED="1602660949912"/>
 </node>
 </node>
-<node TEXT="Links" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
 <node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"/>
+<node TEXT="Open Web Application Security Project (OWASP)" ID="ID_360235335" CREATED="1602671101666" MODIFIED="1602671121155" LINK="https://owasp.org/">
+<node TEXT="OWASP Top Ten" ID="ID_965975281" CREATED="1602671122641" MODIFIED="1602671211186" LINK="https://owasp.org/www-project-top-ten/"/>
+<node TEXT="multiple useful checklists" ID="ID_135002795" CREATED="1602671127255" MODIFIED="1602671232558"/>
+</node>
 </node>
 </node>
 </map>
