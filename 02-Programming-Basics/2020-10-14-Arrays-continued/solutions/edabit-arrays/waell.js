@@ -1,4 +1,5 @@
-/* # Return the First Element in an Array
+/* 
+# Return the First Element in an Array
 Create a function that takes an array and returns the first element.
 
 ## Examples
@@ -7,7 +8,6 @@ Create a function that takes an array and returns the first element.
 getFirstValue([1, 2, 3]) ➞ 1
 getFirstValue([80, 5, 100]) ➞ 80
 getFirstValue([-500, 0, 50]) ➞ -500
-
 ```
 
 ## Notes
@@ -27,7 +27,8 @@ console.log(getFirstValue([1, 2, 3]));
 console.log(getFirstValue([80, 5, 100]));
 console.log(getFirstValue([-500, 0, 50]));
 
-/* # Reverse an Array
+/* 
+# Reverse an Array
 Write a function to reverse an array.
 ​
 ## Examples
@@ -44,16 +45,19 @@ If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab.
 */
 
-/* let arr = [1, 2, 3, 4];
-console.log(arr.reverse()) */
+/* 
+let arr = [1, 2, 3, 4];
+console.log(arr.reverse()) 
+*/
 
 function getReverse(arr) {
-    return arr.reverse()
+    return arr.reverse();
 }
 
 console.log(getReverse([1, 2, 3, 4]));
 
-/* # Return the Last Element in an Array
+/* 
+# Return the Last Element in an Array
 
 Create a function that accepts an array and returns the last item in the array.
 
@@ -73,17 +77,16 @@ If you're really stuck, unlock solutions in the Solutions tab.
 
 */
 
-​
-
 function getLastItem(arr) {
-    return arr[arr.length - 1]
+    return arr[arr.length - 1];
 }
 
 console.log(getLastItem([1, 2, 3]));
 console.log(getLastItem(["cat", "dog", "duck"]));
 console.log(getLastItem([true, false, true]));
 
-/* # Find the Index (Part 1)
+/*
+# Find the Index (Part 1)
 
 Create a function that finds the index of a given item.
 
@@ -98,26 +101,31 @@ search([1, 2, 3], 4) ➞ -1
 ## Notes
 
 If the item is not present, `return -1`.
-
 */
 
-/* let search = [1, 5, 3]
-console.log(search.includes(5)) */
+/* 
+let search = [1, 5, 3]
+console.log(search.includes(5)) 
+*/
 
-​/* function search(arr, n) {
+/*
+function search(arr, n) {
     if (!arr.includes(n))  return -1;
     else return arr.indexOf(n)
 }
 
 console.log(search([1, 5, 3], 5))
 console.log(search([9, 8, 3], 3))
-console.log(search([1, 2, 3], 4)) */
-​
-function search(arr, n) {return arr.indexOf(n)}
+console.log(search([1, 2, 3], 4)) 
+*/
 
-console.log(search([1, 5, 3], 5))
-console.log(search([9, 8, 3], 3))
-console.log(search([1, 2, 3], 4))
+function search(arr, n) {
+    return arr.indexOf(n);
+}
+
+console.log(search([1, 5, 3], 5));
+console.log(search([9, 8, 3], 3));
+console.log(search([1, 2, 3], 4));
 
 /*  # Check if an Array Contains a Given Number
 
@@ -203,8 +211,8 @@ console.log(monthName(12))
 console.log(monthName(6)) */
 
 function monthName(n) {
-    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    return monthNames[n-1]
+    let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    return monthNames[n-1];
 }
 
 console.log(monthName(3))
@@ -239,7 +247,8 @@ console.log(negate([1, 2, 3, 4]))
 console.log(negate([-1, 2, -3, 4]))
 console.log(negate([]))
 
-/* # Difference of Max and Min Numbers in Array
+/* 
+# Difference of Max and Min Numbers in Array
 
 Create a function that takes an array and returns the difference between the biggest and smallest numbers.
 
@@ -251,15 +260,16 @@ diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]) ➞ 82
 
 diffMaxMin([44, 32, 86, 19]) ➞ 67
 // Smallest number is 19, biggest is 86.
-``` */
+``` 
+*/
 
 function diffMaxMin(arr) {
     let arr1 = arr.sort((a, b) => {return a-b});
-    return arr1[arr.length-1] - arr1[0]
+    return arr1[arr.length-1] - arr1[0];
 }
 
-console.log(diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]))
-console.log(diffMaxMin([44, 32, 86, 19]))
+console.log(diffMaxMin([10, 4, 1, 4, -10, -50, 32, 21]));
+console.log(diffMaxMin([44, 32, 86, 19]));
 
 /* Array = [10, 4, 1, 4, -10, -50, 32, 21]
 
@@ -273,7 +283,7 @@ Array2 = (Array1[Array1.length-1] - Array1[0] )
 
 console.log(Array2)
 
- */
+*/
 
 /* # Unlucky 13
 
@@ -290,12 +300,15 @@ unlucky13([24, 316, 393, 458, 1279]) ➞ [24, 316, 393, 458, 1279]
 
 unlucky13([104, 351, 455, 806, 871]) ➞ []
 // All numbers in the array are divisible by 13.
-``` */
+``` 
+*/
+
+console.log("unlucky13");
 
 function unlucky13(arr) {
-    return arr.filter(n => { if ( n % 13 != 0) return n })
+    return arr.filter(n =>  n % 13 == 0? false : true );
 }
 
-console.log(unlucky13([53, 182, 435, 591, 637]))
-console.log(unlucky13([24, 316, 393, 458, 1279]))
-console.log(unlucky13([104, 351, 455, 806, 871]))
+console.log(unlucky13([53, 182, 435, 591, 637]));
+console.log(unlucky13([24, 316, 393, 458, 1279]));
+console.log(unlucky13([104, 351, 455, 806, 871]));
