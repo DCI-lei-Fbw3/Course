@@ -7,6 +7,14 @@ var person = {
 	firstname: "Thomas",
 	lastname: "Hofmann",
 	birthdate: "1975-07-14",
+
+	fullname: function(){
+		return this.firstname + " " + this.lastname;
+	},
+
+	details() {
+		return this.firstname + " " + this.lastname + "(*" + this.birthdate + ")";
+	}
 	//	1: "test",
 };
 
@@ -42,3 +50,6 @@ console.log(
 
 printHeadline('person.length only works on "native" arrays:');
 console.log(person.length);
+
+printHeadline("using person.fullname():")
+console.log(person.fullname());
