@@ -40,21 +40,21 @@
     ***fib(4)-level***
     Check 4 === 0 ==> false.
     Check 4 === 1 ==> false.
-    Invoke fib(3):
+    Invoke fib(4-1):
         ***fib(3)-level***
         Check 3 === 0 ==> false.
         Check 3 === 1 ==> false.
-        Invoke fib(2):
+        Invoke fib(3-1):
             ***fib(2)-level***
             Check 2 === 0 ==> false.
             Check 2 === 1 ==> false.
-            Invoke fib(1):
+            Invoke fib(2-1):
                 ***fib(1)-level***
                 Check 1 === 0 ==> false.
                 Check 1 === 1 ===> true.
                 Return 1.
             ***fib(2)-level***
-            Invoke fib(0):
+            Invoke fib(2-2):
                 ***fib(0)-level***
                 Check 0 === 0 ===> true.
                 Return 0.
