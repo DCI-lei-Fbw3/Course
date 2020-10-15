@@ -30,14 +30,14 @@ let arr = ["button", "breakfast", "border"];
 console.log(arr.filter(x => x.includes("bu")));
 
 function test_bu_callback(x) {
-	return x.includes("bu"); // define the search string not statically but dynamic (i. o. w. make it configurable)
+	return x.startsWith("bu"); // define the search string not statically but dynamic (i. o. w. make it configurable)
 }
 console.log(arr.filter(test_bu_callback));
 
 function createFilterCallback(needle) {
 	let callback;
 
-	callback = x => x.includes(needle);
+	callback = x => x.startsWith(needle);
 
 	return callback;
 }
