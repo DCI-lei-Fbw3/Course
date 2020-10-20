@@ -75,7 +75,7 @@ var GUEST_LIST = {
                    
                if(x == name){
                    
-                   return "Hi, My name is " + name + " and I am from " + GUEST_LIST[x];
+                   return "Hi, My name is " + name + " and I am from " + (GUEST_LIST[x]);
                }
            }
             }
