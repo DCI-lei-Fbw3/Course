@@ -22,12 +22,14 @@ from: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_O
 
 */
 
-/*
+
 const clone = Object.assign({}, original);
 /**/
 
 // compare with:
-//const clone = original;
+/*
+const clone = original;
+/**/
 
 console.log("original and clone after assign:");
 console.log("original =",original);
