@@ -27,11 +27,11 @@ getObjectValues({
     Example
 
 let person = {
-  firstName: "Michael",
-  lastName: "Smith",
-  job: "driver",
-  age: 20,
-  city: Paris
+firstName: "Michael",
+lastName: "Smith",
+job: "driver",
+age: 20,
+city: "Paris"
 }
 
 ### Example of Expected Output:
@@ -41,6 +41,7 @@ Michael Smith is a 20 year old driver in Paris.
 ```
 
 ---
+
 ## Bonus Questions
 
 ## 1. Convert keys and values into an array
