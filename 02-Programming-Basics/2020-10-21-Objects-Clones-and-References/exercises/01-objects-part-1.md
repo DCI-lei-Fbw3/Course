@@ -87,7 +87,7 @@ Create a function that returns an array of properties of a javascript object.
 ```
 let student = {
   name: "Mike",
-  class: "4A"
+  class: "4A",
   course: "English"
 }
 ```
