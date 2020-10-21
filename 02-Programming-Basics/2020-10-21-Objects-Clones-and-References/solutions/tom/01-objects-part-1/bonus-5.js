@@ -12,7 +12,9 @@ function keyValues(obj) {
 	return [k, v];
 }
 
-function keyValues2(obj) {
+function keyValues2(obj) { 
+	// use of Object.[keys,values] 
+	// by courtesy of Lewes
 	return [
 		Object.keys(obj), 
 		Object.values(obj)
