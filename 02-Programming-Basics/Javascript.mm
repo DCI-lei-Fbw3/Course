@@ -272,7 +272,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -395,9 +394,11 @@
 <node TEXT="anonymous callback" ID="ID_1350186999" CREATED="1602660945932" MODIFIED="1602660949912"/>
 </node>
 </node>
-<node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="Links" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
 <node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
-<node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"/>
+<node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">
+<node TEXT="Objects Overview" ID="ID_22210042" CREATED="1603272853852" MODIFIED="1603272866138" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"/>
+</node>
 <node TEXT="Open Web Application Security Project (OWASP)" ID="ID_360235335" CREATED="1602671101666" MODIFIED="1602671121155" LINK="https://owasp.org/">
 <node TEXT="OWASP Top Ten" ID="ID_965975281" CREATED="1602671122641" MODIFIED="1602671211186" LINK="https://owasp.org/www-project-top-ten/"/>
 <node TEXT="multiple useful checklists" ID="ID_135002795" CREATED="1602671127255" MODIFIED="1602671232558"/>
