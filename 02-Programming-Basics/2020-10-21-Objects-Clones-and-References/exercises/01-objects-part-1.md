@@ -2,7 +2,9 @@
 
 Please print each of your answers to the console.
 
-## 1. Object Person. Create an object named person. Loop through the object and print both the property and value of the object.
+## 1. Object Person.
+
+Create an object named person. Loop through the object and print both the property and value of the object.
 
 ## 2. Get Values. Create a function that returns an array of all values of an object's properties.
 
