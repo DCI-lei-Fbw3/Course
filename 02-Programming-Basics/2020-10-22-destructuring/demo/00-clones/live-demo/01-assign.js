@@ -8,10 +8,10 @@ const original = {
 };
 
 const clone = Object.assign({}, original);
-const clone = original; // here a reference is copied
+//const clone = original; // here a reference is copied
 
-original.name = "R.";
-original.family.mother = "E.";
+//original.name = "R.";
+//original.family.mother = "E.";
 
 console.log("original =", original);
 console.log("clone =", clone);
