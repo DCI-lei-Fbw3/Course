@@ -4,8 +4,12 @@ const original = {
     test: null,
     family: {
         father: 'Rob',
-        mother: 'Eve'
-    }
+        mother: 'Eve',
+        grandparents: {
+            father: "Richard",
+            mother: "Elizabeth",
+        },
+    },
 };
 
 
@@ -28,6 +32,7 @@ let clone = cloneDeep(original);
 
 original.name = "R.";
 original.family.mother = "E.";
+original.family.grandparents.father = "Lionheart";
 
 console.log("original =", original);
 console.log("clone =", clone);
