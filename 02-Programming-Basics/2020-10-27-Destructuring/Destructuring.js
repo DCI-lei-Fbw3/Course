@@ -15,7 +15,7 @@ Resources: https://javascript.info/destructuring-assignment#smart-function-param
     const y = arr[1];
 
     /* 
-    - With destructuring, the idea is that you can extrat multiple pieces of data at the same time via
+    - With destructuring, the idea is that you can extract multiple pieces of data at the same time via
     patterns in locations that receive data.
     - The left-hand side of the '=' operator in the example above is one such location.
     - In the following code, the square brackets in line 19 are a destructuring pattern:
