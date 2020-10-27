@@ -1,6 +1,7 @@
 # Destructuring
 
 **Instructions**
+
 #### 1. Array Destructuring
 * Declare the variables `fruit`, `vegetable`, `food`. Assign the following values to the variables respectively: "banana", "cucumber", "bread", "cakes", "pizza" (assign the "bread", "cakes" and "pizza" to `food`). Use array destructuring assignment to complete this task.
 
@@ -14,6 +15,8 @@
 ```javascript
 `Regina Spektor is a American-Russian singer/songwriter and pianist. The musician sings indie-pop and their greatest hit is "Us"`.
 ```
+
+# Bonus
 
 #### 4. We have an object:
 
