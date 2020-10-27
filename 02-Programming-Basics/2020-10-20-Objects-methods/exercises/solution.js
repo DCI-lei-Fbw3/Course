@@ -23,7 +23,7 @@
 console.log(product.my_function()); */
 
 
-/* var product = {
+var product = {
     name : "Cheese",
     price : 20,
     amount : 10,
@@ -55,7 +55,7 @@ function testFunc(){
 else{
     return;
 }
-console.log(testFunc());  */
+console.log(testFunc()); 
 
 
 /* let board = [[1, 2, 3],
