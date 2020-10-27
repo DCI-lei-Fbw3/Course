@@ -165,6 +165,13 @@ For example:
     /* 
     What this does if it creates an immutable copy (a copy that has no reference to the
         parent object)
+
     */
 
 
+/* 
+Important:
+- This way of Deep Clonning does not work with methods (i.e. it will not copy
+    methods from an object).
+- To copy methods, use the Object.assign() method 
+*/
