@@ -1,6 +1,6 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle">
+<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle" zoom="1.331">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
@@ -255,7 +255,7 @@
 </node>
 </node>
 </node>
-<node TEXT="functions" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
+<node TEXT="functions" FOLDED="true" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
 <node TEXT="function definition" FOLDED="true" ID="ID_1800268111" CREATED="1602660577186" MODIFIED="1602660581136">
 <node TEXT="function FUNCTION_NAME(PARAM_A, PARAM_B, ...) {&#xa;    FUNCTION_BODY&#xa;}" ID="ID_1913354776" CREATED="1602660381515" MODIFIED="1602660444198"/>
 </node>
@@ -292,7 +292,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="objects" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
+<node TEXT="objects" FOLDED="true" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
 <node TEXT="let obj = {&#xa;    ATTR_A: VALUE,&#xa;    METHOD_A: function(p1, ...) {&#xa;        // BODY&#xa;    },&#xa;    METHOD_B(p1, ...){&#xa;        // BODY&#xa;    },&#xa;    get a(){  // getter&#xa;        // some functionality&#xa;        return ATTR_A;&#xa;    },&#xa;    set a(p1){ // setter&#xa;        // some functionality&#xa;        this.ATTR_A = p1;&#xa;    },&#xa;}" ID="ID_890497751" CREATED="1603351267533" MODIFIED="1603351522336"/>
 <node TEXT="this - is used to refer to an object&apos;s instance itself" ID="ID_620124151" CREATED="1603351523835" MODIFIED="1603351550716"/>
 <node TEXT="referring to values&#xa;of an object" ID="ID_1039640920" CREATED="1603351754450" MODIFIED="1603351784597">
@@ -327,13 +327,12 @@
     after installing node, restart the terminal<br http-equiv="content-type" content="text/html; charset=utf-8"/>then the &quot;nvm&quot; command should be available, e. g. execute:<br/>$&gt; nvm list<br/>to show the installed node versions and<br/>install the most recent node version via:<br/>$&gt; nvm install node<br/>check the active version via:<br/>$&gt; node --versionHave fun.
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
 </node>
 </node>
-<node TEXT="terminology" POSITION="left" ID="ID_1545790948" CREATED="1599638782111" MODIFIED="1599638785630">
+<node TEXT="terminology" FOLDED="true" POSITION="left" ID="ID_1545790948" CREATED="1599638782111" MODIFIED="1599638785630">
 <node TEXT="expression" FOLDED="true" ID="ID_1233784526" CREATED="1599638786493" MODIFIED="1599639004298">
 <linktarget COLOR="#b0b0b0" DESTINATION="ID_1233784526" ENDARROW="Default" ENDINCLINATION="33;0;" ID="Arrow_ID_465183123" SOURCE="ID_33379930" STARTARROW="None" STARTINCLINATION="33;0;"/>
 <node TEXT="represents a value" ID="ID_91515749" CREATED="1599640989022" MODIFIED="1599641001826"/>
@@ -470,6 +469,7 @@
 <node TEXT="OWASP Top Ten" ID="ID_965975281" CREATED="1602671122641" MODIFIED="1602671211186" LINK="https://owasp.org/www-project-top-ten/"/>
 <node TEXT="multiple useful checklists" ID="ID_135002795" CREATED="1602671127255" MODIFIED="1602671232558"/>
 </node>
+<node TEXT="References" ID="ID_1253152835" CREATED="1603809669200" MODIFIED="1603809676310" LINK="https://daveceddia.com/javascript-references/"/>
 </node>
 </node>
 </map>
