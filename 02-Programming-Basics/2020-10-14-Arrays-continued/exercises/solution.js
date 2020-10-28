@@ -13,29 +13,25 @@ return arr.join("");
 console.log(toCamelCase("arr_sorted")); */
 
 function pigLatin(x){
-    let arr = Array.from(x);
-    console.log(arr); 
-    for (let i =0 ; i<=arr.length-1;i++){
-        if(arr[i]==" " && arr[i+1]!="" ){
-            console.log(i); 
-        }
+    let arr = x.split(" ");
+    let arr_empty = [];
+    for (let i=1; i<=arr.length; i++){
+        arr_empty.push(arr.slice(i-1,i)); 
     }
 
-    var arr_cat = arr.slice(0,4);
-    for (let i = 0 ; i<=arr_cat.length-1;i++){
-        if(arr_cat[i] != "a" || arr_cat[i] != "e" ||arr_cat[i] != "i" ||arr_cat[i] != "o"){
-            arr_cat[arr_cat.length-1] = arr_cat[0]+"ay";
-            arr_cat.shift();
+    let arr_sub = arr_empty;
+    console.log(arr_sub);
+    for (var j=0; j<=arr_sub.length-1;j++){
+        let inner = arr_sub[j];
+        for(var k =0; k<=inner.length -1;k++){
+                console.log(j,k, "=", inner[k]);
+            }
         }
-    }
-    var arr_cat = arr.slice(5,8);
-    for (let i = 0 ; i<=arr_cat.length-1;i++){
-        if(arr_cat[i] == "a" || arr_cat[i] == "e" ||arr_cat[i] == "i" ||arr_cat[i] != "o"){
-            arr_cat[arr_cat.length-1] = arr_cat[i] + "way";
-            arr_cat.shift();
         }
-    }
-    return arr_cat; 
-}
+    
+    
+  
+
 
 console.log(pigLatin("Cats are great pets")); 
+
