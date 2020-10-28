@@ -1,7 +1,7 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle" zoom="1.331">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
+<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle" background="#ffffff">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false" show_icon_for_attributes="true"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -293,7 +293,69 @@
 </node>
 </node>
 <node TEXT="objects" FOLDED="true" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
-<node TEXT="let obj = {&#xa;    ATTR_A: VALUE,&#xa;    METHOD_A: function(p1, ...) {&#xa;        // BODY&#xa;    },&#xa;    METHOD_B(p1, ...){&#xa;        // BODY&#xa;    },&#xa;    get a(){  // getter&#xa;        // some functionality&#xa;        return ATTR_A;&#xa;    },&#xa;    set a(p1){ // setter&#xa;        // some functionality&#xa;        this.ATTR_A = p1;&#xa;    },&#xa;}" ID="ID_890497751" CREATED="1603351267533" MODIFIED="1603351522336"/>
+<node TEXT="javascript code" ID="ID_1361335497" CREATED="1603882358683" MODIFIED="1603882465408"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      let obj = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ATTR_A: VALUE,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;METHOD_A: function(p1, ...) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// BODY
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;METHOD_B(p1, ...){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// BODY
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;get a(){&#160;&#160;// getter
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// some functionality
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return ATTR_A;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;set a(p1){ // setter
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// some functionality
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.ATTR_A = p1;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
 <node TEXT="this - is used to refer to an object&apos;s instance itself" ID="ID_620124151" CREATED="1603351523835" MODIFIED="1603351550716"/>
 <node TEXT="referring to values&#xa;of an object" ID="ID_1039640920" CREATED="1603351754450" MODIFIED="1603351784597">
 <node TEXT="dot-notation" ID="ID_975863885" CREATED="1603351764091" MODIFIED="1603351768781">
@@ -422,8 +484,8 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="functions" ID="ID_760779407" CREATED="1602660702568" MODIFIED="1602660707827">
-<node TEXT="signature" ID="ID_334642295" CREATED="1602660713402" MODIFIED="1602660717648">
+<node TEXT="functions" FOLDED="true" ID="ID_760779407" CREATED="1602660702568" MODIFIED="1602660707827">
+<node TEXT="signature" FOLDED="true" ID="ID_334642295" CREATED="1602660713402" MODIFIED="1602660717648">
 <node TEXT="RETURN VALUE function_name(P1, P2) RETURN VALUE" ID="ID_1369718045" CREATED="1602661259712" MODIFIED="1602661316665"/>
 <node TEXT="function-name" ID="ID_644807004" CREATED="1602660721401" MODIFIED="1602660729679"/>
 <node TEXT="parameters" ID="ID_228408595" CREATED="1602660730072" MODIFIED="1602660732436"/>
@@ -451,7 +513,7 @@
 <node TEXT="anonymous callback" ID="ID_1350186999" CREATED="1602660945932" MODIFIED="1602660949912"/>
 </node>
 <node TEXT="objects" FOLDED="true" ID="ID_1593518398" CREATED="1603351198905" MODIFIED="1603351202648">
-<node TEXT="properties" ID="ID_683708083" CREATED="1603351209960" MODIFIED="1603351212388">
+<node TEXT="properties" FOLDED="true" ID="ID_683708083" CREATED="1603351209960" MODIFIED="1603351212388">
 <node TEXT="attributes" ID="ID_594811236" CREATED="1603351215272" MODIFIED="1603351218646"/>
 <node TEXT="methods" ID="ID_86740970" CREATED="1603351219143" MODIFIED="1603351221723"/>
 <node TEXT="getters" ID="ID_805300427" CREATED="1603351229577" MODIFIED="1603351238558"/>
@@ -460,7 +522,7 @@
 <node TEXT="this" ID="ID_108101645" CREATED="1603351558215" MODIFIED="1603351585921"/>
 </node>
 </node>
-<node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="Links" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
 <node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
 <node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">
 <node TEXT="Objects Overview" ID="ID_22210042" CREATED="1603272853852" MODIFIED="1603272866138" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"/>
@@ -469,7 +531,43 @@
 <node TEXT="OWASP Top Ten" ID="ID_965975281" CREATED="1602671122641" MODIFIED="1602671211186" LINK="https://owasp.org/www-project-top-ten/"/>
 <node TEXT="multiple useful checklists" ID="ID_135002795" CREATED="1602671127255" MODIFIED="1602671232558"/>
 </node>
-<node TEXT="References" ID="ID_1253152835" CREATED="1603809669200" MODIFIED="1603809676310" LINK="https://daveceddia.com/javascript-references/"/>
+<node TEXT="References in Javascript" ID="ID_1253152835" CREATED="1603809669200" MODIFIED="1603882299438" LINK="https://daveceddia.com/javascript-references/"/>
+<node TEXT="Math" ID="ID_156753359" CREATED="1603889292677" MODIFIED="1603889294706">
+<node TEXT="Coordinate System" ID="ID_652247626" CREATED="1603882300292" MODIFIED="1603882317158" LINK="https://en.wikipedia.org/wiki/Coordinate_system"/>
+<node TEXT="Graph Theory" ID="ID_768193935" CREATED="1603889299171" MODIFIED="1603891440074" LINK="https://en.wikipedia.org/wiki/Graph_theory"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A graph consists of nodes, which may be connected via edges.
+    </p>
+    <p>
+      Edges can be directed and can have an associated weight.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      A graph may have cycles, that is paths allowing to go the same route again and again. A graph without cycles is acyclic.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Altogether one may describe a graph e. g. as being a &quot;weighted directed and acyclic graph&quot;.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Tree" ID="ID_133528623" CREATED="1603891149986" MODIFIED="1603891155044" LINK="https://en.wikipedia.org/wiki/Tree_(graph_theory)"/>
+<node TEXT="Directed Acyclig Graph (DAG)" ID="ID_934844499" CREATED="1603891521433" MODIFIED="1603891533844" LINK="https://en.wikipedia.org/wiki/Directed_acyclic_graph"/>
+<node TEXT="Dijkstra&apos;s Algorithm - Minimal Spanning Tree" ID="ID_1996964084" CREATED="1603889427504" MODIFIED="1603889454037" LINK="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"/>
+</node>
+</node>
 </node>
 </node>
 </map>
