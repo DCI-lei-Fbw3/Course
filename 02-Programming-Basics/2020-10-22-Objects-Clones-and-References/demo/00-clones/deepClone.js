@@ -15,40 +15,31 @@ const original = {
 
 
 function cloneDeep(objOrArray) {
-    if (Array.isArray(objOrArray)) {
-        let clone = [];
+    // the early bailout is courtesy of Raafat
+    if (typeof objOrArray !== 'object' 
+        || objOrArray == null
+    ) {
+        return objOrArray; // because it is a simple type
+    }
+
+    let clone = Array.isArray(objOrArray)? [] : {};
         
-        for(let i=0; i<objOrArray.length; i++) {
-            let v = objOrArray[i];
-            if (typeof v == 'object' && v != null) {
-                clone[i] = cloneDeep(objOrArray[i]);
-            } else {
-                clone[i] = v;
-            }
+    for (k in objOrArray) {
+        v = objOrArray[k];
+        if (typeof v == 'object' && v != null) {
+            clone[k] = cloneDeep(v);
+        } else {
+            clone[k] = v;
         }
-
-        return clone;
     }
 
-    // argument is an object:
-    if (typeof objOrArray == 'object' && objOrArray != null){
-        let clone = {};
-        
-        for (k in objOrArray) {
-            v = objOrArray[k];
-            if (typeof v == 'object' && v != null) {
-                clone[k] = cloneDeep(v);
-            } else {
-                clone[k] = v;
-            }
-        }   
-        return clone;
-    }
+    return clone;
 }
 
 let clone = cloneDeep(original);
 
 original.name = "R.";
+original.test_arr = ['a', 'b'];
 original.family.mother = "E.";
 original.family.grandparents.father = "Lionheart";
 
