@@ -31,7 +31,7 @@
         */
         console.warn('...::: Deep Clone :::...');
 
-        const original = {
+        const original2 = {
             fname: 'John',
             lname: 'Doe',
             age: 29,
@@ -42,6 +42,22 @@
             },
             gender: 'male'
         }
+
+        const original = {
+            name: 'Robert',
+            location: 'USA',
+            test: null,
+            test_arr: [1, 2, 3], 
+            family: {
+                father: 'Rob',
+                mother: 'Eve',
+                grandparents: {
+                    father: "Richard",
+                    mother: "Elizabeth",
+                },
+            },
+        };
+
 
         const deepClone = source => {
 
@@ -65,7 +81,7 @@
         console.log('clone:', clone);
         console.log('deepClone("apple"):', deepClone("apple"));
 
-        original.livesIn.city = 'San Francisco';
+        //original.livesIn.city = 'San Francisco';
 
         console.log('original:', original);
         console.log('clone:', clone);
