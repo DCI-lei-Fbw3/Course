@@ -2,6 +2,7 @@ const original = {
     name: 'Robert',
     location: 'USA',
     test: null,
+    test_arr: [1, 2, 3], 
     family: {
         father: 'Rob',
         mother: 'Eve',
@@ -13,19 +14,36 @@ const original = {
 };
 
 
-function cloneDeep(obj) {
-    let clone = {};
-
-    for (k in obj) {
-        v = obj[k];
-        if (typeof v == 'object' && v != null) {
-            clone[k] = cloneDeep(v);
-        } else {
-            clone[k] = v;
+function cloneDeep(objOrArray) {
+    if (Array.isArray(objOrArray)) {
+        let clone = [];
+        
+        for(let i=0; i<objOrArray.length; i++) {
+            let v = objOrArray[i];
+            if (typeof v == 'object' && v != null) {
+                clone[i] = cloneDeep(objOrArray[i]);
+            } else {
+                clone[i] = v;
+            }
         }
+
+        return clone;
     }
 
-    return clone;
+    // argument is an object:
+    if (typeof objOrArray == 'object' && objOrArray != null){
+        let clone = {};
+        
+        for (k in objOrArray) {
+            v = objOrArray[k];
+            if (typeof v == 'object' && v != null) {
+                clone[k] = cloneDeep(v);
+            } else {
+                clone[k] = v;
+            }
+        }   
+        return clone;
+    }
 }
 
 let clone = cloneDeep(original);
