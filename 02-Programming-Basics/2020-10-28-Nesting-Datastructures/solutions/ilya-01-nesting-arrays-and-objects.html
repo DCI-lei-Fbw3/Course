@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-01-nesting-arrays-and-objects</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+          
+        /* 
+        # Nests
+
+        1. 2D Array
+
+        - Given the 2D Array below, loop through the arrays to print the values.
+
+        ```javascript
+        let board = [
+        [1, 2, 3],
+        ["quick", "brown", "fox", "jumped", "over", "lazy", "dog"],
+        [true, false]
+        ];
+        ``` 
+        */
+        console.warn('...::: 2D Array :::...');
+
+        let board = [
+        [1, 2, 3],
+        ["quick", "brown", "fox", "jumped", "over", "lazy", "dog"],
+        [true, false]
+        ];
+
+       
+        console.log('||| forEach |||'.toUpperCase());
+        board.forEach(e => {e.forEach(e => console.log(e))});
+
+        console.log('||| for of |||'.toUpperCase());
+        for(e of board) for(e of e)console.log(e);
+
+        console.log('||| mixture |||'.toUpperCase());
+        board.forEach(e => {for(value of e) console.log(value)});
+
+
+        /*         
+        2. Doggo
+
+        2.1 Create a doggo object. Add name and breed as properties of the object.
+        2.2 Create an array within the doggo object named favorite foods and add the doggo's favorite foods to the array.
+        2.3 Access the second element of the doggo's favorite foods.
+        2.4 Add a method that loops through and print all the doggo's favorite food. 
+        */
+        console.warn('...::: 2. Doggo :::...');
+
+        const doggo = {
+                name:   'Johnny',
+                breed:  'Beagle',
+                'favourite foods': ['shoes', 'pizza', 'beer'],
+                get printFavFoods(){for(food of this['favourite foods'])console.log(food)}
+        }
+        
+        console.log(doggo);
+        console.log(doggo[Object.keys(doggo)[2]][1]);
+        console.log(doggo['favourite foods'][1]);
+        doggo.printFavFoods;
+
+
+        /* 
+        3.
+
+        3.1 Create an object called recipes.
+        3.2 Inside this object, you should create another object for ingredients and store ingredients as properties butter, sugar, flour etc. Each property should have a string as its value.
+        3.3 Without changing the previous code, add another ingredient - let's add ginger.
+        3.4 Change the ingredient sugar to brown sugar.
+        3.5 Write a method in the recipes object that prints the value of each ingredient in the ingredients object.
+        */
+        console.warn('...::: 3. :::...');
+
+        // 3.1 Create an object called recipes.
+        // 3.2 Inside this object, you should create another object for ingredients and store ingredients as properties butter, sugar, flour etc. Each property should have a string as its value.
+        let recipes = {
+            ingredients: {
+                butter: 'fat',
+                sugar:  'sweet',
+                flour:  'white',
+            }
+        }
+        console.log(recipes);
+
+        // 3.3 Without changing the previous code, add another ingredient - let's add ginger.
+        recipes.ingredients.ginger = 'intensive';
+        console.log(recipes);
+
+        // 3.4 Change the ingredient sugar to brown sugar.
+        delete recipes.ingredients.sugar;
+        console.log(recipes);
+         
+        recipes.ingredients['brown sugar'] = 'sweet and brown';
+        console.log(recipes); 
+
+        // 3.5 Write a method in the recipes object that prints the value of each ingredient in the ingredients object.
+        recipes = {...recipes,
+            
+                    get printAllIngs() {for(ingredient of Object.keys(this.ingredients)) console.log(this.ingredients[ingredient])},
+
+                    get keysOfIngredients() {console.log( Object.keys(this.ingredients))},
+
+                    get valuesOfIngredients1() {console.log( Object.values(this.ingredients))},
+
+                    get valuesOfIngredients2() {Object.values(this.ingredients).forEach(e => console.log(e))}, // as strings, seperated
+                    get valuesOfIngredients3() {console.log( Object.values(this.ingredients).toString())},       // as strings, array to string
+                    get propertiesOfIngredients() {console.log( Object.entries(this.ingredients))}
+        };
+
+        console.log(recipes);
+
+        console.warn('printAllIngs()');
+        recipes.printAllIngs;
+
+        console.warn('keysOfIngedients');
+        recipes.keysOfIngredients; 
+
+        console.warn('valuesOfIngredients1()');
+        recipes.valuesOfIngredients1; 
+
+        console.warn('valuesOfIngredients2()');
+        recipes.valuesOfIngredients2; 
+
+        console.warn('valuesOfIngredients3()');
+        recipes.valuesOfIngredients3; 
+
+        console.warn('propertiesOfIngredients()');
+        recipes.propertiesOfIngredients; 
+
+        // there is an issue with browsers, they show the most recent state of the object, use repl/node/... to view #3 solutions
+
+    </script>
+</body>
+
+</html>

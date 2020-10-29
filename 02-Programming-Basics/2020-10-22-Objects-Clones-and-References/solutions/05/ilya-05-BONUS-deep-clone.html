@@ -11,7 +11,8 @@
     <h1>Open the console please !</h1>
     <script>
         /*
-       # Deep Clone
+        2020-10-22-Objects-Clones-and-References/ilya-05-BONUS-deep-clone
+        # Deep Clone
 
         Create a function `deepClone(original)` which returns a deep clone of the original object.
 
@@ -31,10 +32,12 @@
         */
         console.warn('...::: Deep Clone :::...');
 
-        const original2 = {
+        const original = {
             fname: 'John',
             lname: 'Doe',
             age: 29,
+            test: null,
+            array: [1,2,3],
             livesIn: {
                 country:    'USA',
                 state:      'California',
@@ -43,37 +46,17 @@
             gender: 'male'
         }
 
-        const original = {
-            name: 'Robert',
-            location: 'USA',
-            test: null,
-            test_arr: [1, 2, 3], 
-            family: {
-                father: 'Rob',
-                mother: 'Eve',
-                grandparents: {
-                    father: "Richard",
-                    mother: "Elizabeth",
-                },
-            },
-        };
+        const deepClone = input => {
+      
+            if (typeof input !== "object" || input === null) return input;
+        
+            const output = Array.isArray(input) ? [] : {};
 
-
-        const deepClone = source => {
-
-            if (typeof (source) === 'object' &&
-                source !== null
-            ) {
-                const copy = {};
-
-                for([key, value] of Object.entries(source)) {
-                    copy[key] = deepClone(value);
-                }
-
-                return copy;
-            }
-            return source;
-        }
+            for (const [key, value] of Object.entries(input)) output[key] = deepClone(value);
+            
+            return output;
+            
+        }; 
 
         const clone = deepClone(original);
 
@@ -81,7 +64,7 @@
         console.log('clone:', clone);
         console.log('deepClone("apple"):', deepClone("apple"));
 
-        //original.livesIn.city = 'San Francisco';
+        original.livesIn.city = 'San Francisco';
 
         console.log('original:', original);
         console.log('clone:', clone);

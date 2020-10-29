@@ -1,19 +1,18 @@
-function log(string) {
-	console.log(string);
-}
+console.log("\n*** nesting arrays ***\n");
 
-log("nesting arrays:");
-
+console.log('starting from a 1-dimensional (1d) array:')
 let arr1 = [10, 20, 30];
-log(arr1);
+console.log(arr1);
 
+console.log('introducing a 2d array:')
 let arr2 = [
 	[10, 20, 30],
 	[11, 21, 31]
 ]
 
-log(arr2);
+console.log(arr2);
 
+console.log('and finally a 3d array:')
 let arr3 = [
 	[
 		[10, 20, 30],
@@ -24,18 +23,20 @@ let arr3 = [
 	]
 ]
 
-log(arr3);
+console.log(arr3);
 
-log("looping over 1d-array");
+console.log("\n*** now we introduce functions that work on the arrays ***\n");
+
+console.log("looping with a function over 1d-array");
 function loop_1d(arr){
 	for (let i=0; i < arr.length; i++) {
-		log(arr[i]);
+		console.log(arr[i]);
 	}
 }
 
 loop_1d(arr1);
 
-log("looping over 2d-array");
+console.log("looping with a function over 2d-array");
 function loop_2d(arr){
 	for (let i=0; i < arr.length; i++) {
 		let innerArr = arr[i];
@@ -47,7 +48,7 @@ function loop_2d(arr){
 
 loop_2d(arr2);
 
-log("looping over 3d-array");
+console.log("looping with a function over 3d-array");
 function loop_3d(arr){
 	for (let i=0; i < arr.length; i++) {
 		let arr1 = arr[i];
