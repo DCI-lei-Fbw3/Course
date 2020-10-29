@@ -20,12 +20,14 @@ function pigLatin(x){
     }
 
     let arr_sub = arr_empty;
-    console.log(arr_sub);
-    for (var j=0; j<=arr_sub.length-1;j++){
+    //console.log(arr_sub);
+    for (var j=0; j<arr_sub.length;j++){
         let inner = arr_sub[j];
-        for(var k =0; k<=inner.length -1;k++){
-                console.log(j,k, "=", inner[k]);
-            }
+        //console.log(j, "value is", inner[0]);
+        
+             inner.forEach(function(item,index,array){
+                 console.log(item,index);
+             });
         }
         }
     
