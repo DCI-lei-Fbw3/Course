@@ -88,5 +88,18 @@ uniqueArray = arr.filter(function(value, index, self) {
 console.log(uniqueArray); */
 
 
+//q7
 
 
+
+
+function check(x,y){
+    var value = x; 
+    var arr_empty = [];
+        for (let j=0;j<y;j++){
+            arr_empty.push(value);
+        }
+    return arr_empty; 
+}
+
+console.log(check("example",3));
