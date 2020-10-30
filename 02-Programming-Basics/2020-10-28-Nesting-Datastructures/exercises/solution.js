@@ -130,28 +130,23 @@ let finalArr = final_arr;
 const joined = finalArr.join(" ");
 /* let FinalArray = joined.split("");  */ 
 let FinalArray = joined.split(" ");
-
-return FinalArray.join(" ");
-/* var index;
-var Another_Arr = [];
-for (let o = 0; o<FinalArray.length; o++){
-    if(FinalArray[o].length>2){
-        var index = o; 
-        console.log("index values are", index);
+return FinalArray.join(" ").replace(" ", "").replace(" ", ""); 
+/* return FinalArray;  */
+/* for (let value = 0; value <FinalArray.length; value++){
+    if(FinalArray[value].length ==1){
+        console.log(FinalArray[value]+FinalArray[value+1]+" ");
     }
-}
-Another_Arr.push(FinalArray.slice(0,3));
-Another_Arr.push(FinalArray.slice(3,6));
-Another_Arr.push(FinalArray.slice(6,8));
-Another_Arr.push(FinalArray.slice(8,13));
-Another_Arr.push(FinalArray.slice(13,18));
-Another_Arr.push(FinalArray.slice(18,21));
-Another_Arr.push(FinalArray.slice(21,24));
-return Another_Arr;
-} */
+    else{
+        if(FinalArray[value].length >2){
+            FinalArray[value] + " ";
+        }
+    }
+    return FinalArray; 
+}; */
+
 }
 
-console.log(pigLatin("He told us a very exciting tale"));
+console.log(pigLatin("Cats are great pets"));
 
 
 
