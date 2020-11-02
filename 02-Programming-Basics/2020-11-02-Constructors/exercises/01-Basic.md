@@ -75,7 +75,9 @@ A constructor function called Student is given with the following parameters:
 - `marks2`
 
 ```
-Important Note: Both marks1 and marks2 should be assigned to protected variables, _marks1 and _marks2, during initialization. More on private Variables:https://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/
+Important Note: Both marks1 and marks2 should be assigned to protected variables,
+_marks1 and _marks2, during initialization. More on private
+Variables:https://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/
 
 ```
 Next, you have to define the following methods such that they can be shared by all object instances created:
