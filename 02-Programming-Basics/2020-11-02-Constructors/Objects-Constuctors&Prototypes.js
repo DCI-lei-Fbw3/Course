@@ -175,6 +175,7 @@
     This is why prototypes should be used for additons in the constructor functions!!!    
     */
 
+![Flow diagram showing relation between constructors and prototypes](https://github.com/DCI-lei-Fbw3/Course/blob/master/02-Programming-Basics/2020-11-02-Constructors/protoypeObject.png)
 
 //Using Prototype Objects - Adding Properties to Prototypes
 
