@@ -24,14 +24,15 @@ console.log(obj.subtract());
 console.log(obj.multiply());
 console.log(obj.divide());
 
-function Student(_marks1, _marks2) {
+function Student(marks1, marks2) {
+  let _marks1 = marks1;
+  let _marks2 = marks2;
   this.getMarks = function (markNumber) {
     if (markNumber === 1) return _marks1;
     if (markNumber === 2) return _marks2;
   };
   this.calcTotal = () => _marks1 + _marks2;
 }
-
 var student = new Student(60, 70);
 
 console.log(student.getMarks(1));
