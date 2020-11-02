@@ -16,17 +16,19 @@ const original = {
 
 function cloneDeep(objOrArray) {
     // the early bailout is courtesy of Raafat
-    if (typeof objOrArray !== 'object' 
-        || objOrArray == null
+    if (typeof objOrArray !== 'object' // => it is a simple datatype
+        || objOrArray == null // typeof null => 'object'
     ) {
         return objOrArray; // because it is a simple type
     }
 
+    // after the if => it is an object AND it is not null
+
     let clone = Array.isArray(objOrArray)? [] : {};
         
     for (k in objOrArray) {
-        v = objOrArray[k];
-        if (typeof v == 'object' && v != null) {
+        let v = objOrArray[k];
+        if (typeof v == 'object') {
             clone[k] = cloneDeep(v);
         } else {
             clone[k] = v;
