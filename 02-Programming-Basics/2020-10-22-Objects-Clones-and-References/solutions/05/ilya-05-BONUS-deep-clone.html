@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-05-BONUS-deep-clone</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+        /*
+        2020-10-22-Objects-Clones-and-References/ilya-05-BONUS-deep-clone
+        # Deep Clone
+
+        Create a function `deepClone(original)` which returns a deep clone of the original object.
+
+        A recursively implemented function will be handy.
+
+        ## Hint:
+
+        ```
+        typeof null
+        // => object
+        // and
+        typeof SOME_OBJECT;
+        // => object
+
+        // both are objects.
+        ```
+        */
+        console.warn('...::: Deep Clone :::...');
+
+        const original = {
+            fname: 'John',
+            lname: 'Doe',
+            age: 29,
+            test: null,
+            array: [1,2,3],
+            livesIn: {
+                country:    'USA',
+                state:      'California',
+                city:       'Los Angeles'
+            },
+            gender: 'male'
+        }
+
+        const deepClone = input => {
+      
+            if (typeof input !== "object" || input === null) return input;
+        
+            const output = Array.isArray(input) ? [] : {};
+
+            for (const [key, value] of Object.entries(input)) output[key] = deepClone(value);
+            
+            return output;
+            
+        }; 
+
+        const clone = deepClone(original);
+
+        console.log('original:', original);
+        console.log('clone:', clone);
+        console.log('deepClone("apple"):', deepClone("apple"));
+
+        original.livesIn.city = 'San Francisco';
+
+        console.log('original:', original);
+        console.log('clone:', clone);
+
+
+        // JSON.parse(JSON.stringify(object)); use that for deep copy, ! doesn't work with methods ! 
+        // future: use node method 'assert'
+
+
+
+    </script>
+</body>
+
+</html>
