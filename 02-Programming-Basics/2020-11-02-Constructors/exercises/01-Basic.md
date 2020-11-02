@@ -76,7 +76,7 @@ A constructor function called Student is given with the following parameters:
 
 ```
 Important Note: Both marks1 and marks2 should be assigned to protected variables,
-_marks1 and _marks2, during initialization. More on private
+_marks1 and _marks2, during initialization. More on Protected
 Variables:https://philipwalton.com/articles/implementing-private-and-protected-members-in-javascript/
 
 ```
