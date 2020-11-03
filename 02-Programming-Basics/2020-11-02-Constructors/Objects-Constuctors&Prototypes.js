@@ -192,6 +192,7 @@
         this.name = _name;
         this.age = _age;
         this.designation = _designation;
+        //name a method here
     }
 
     Employee.prototype.company = 'Google';
