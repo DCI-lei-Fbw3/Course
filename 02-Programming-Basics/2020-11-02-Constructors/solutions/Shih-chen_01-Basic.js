@@ -99,30 +99,6 @@ console.log(obj.modulus());
 // `getMarks(markNumber)`: a method which should return `_marks1` if `markNumber` equals 1 and `_marks2` if markNumber equals 2.
 // `calcTotal()`: the method should return the sum of `_marks1` and `_marks2`.
 
-//a failed attempt to emulate the code from the article. My VS does not recogniye line 104.
-// var Student = (function () {
-//     var _ = PrivateParts.createKey();  
-
-//     function Student (marks1, marks2) {
-//         _(this).marks1=marks1;
-//         _(this).marks2=marks2;
-//     }
-//     Student.prototype.getMarks=function(markNumber) {
-//         if (markNumber==1) {
-//             return _(this).marks1;
-//         } 
-//         if (markNumber==2) {
-//             return _(this).marks2;
-//         }
-//     }
-
-//     Student.prototype.calcTotal=function() {
-//         let total = _(this).marks1 + _(this).marks2;
-//         return total;
-//     }
-//     return Student;
-// }());
-
 function Student(marks1, marks2) {
     this._marks1=marks1;
     this._marks2=marks2;
