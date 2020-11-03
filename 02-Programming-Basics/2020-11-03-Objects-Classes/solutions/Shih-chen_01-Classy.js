@@ -126,19 +126,36 @@ console.log(cylinder1.cylinderVolume());
 // * Add a method to set the channel randomly. Let's say the TV has only 50 channels.
 // * Add a method to reset TV so it goes back to channel 1 and volume 50. 
 // * It's useful to write a status, that returns info about the TV status like: "Panasonic at channel 8, volume 75".
-
 class TV {
 
   constructor (brand){
     this.brand = brand;
-    this.channel = Math.floor(Math.random() * 50) + 1;
-    this.volume = Math.floor(Math.random() * 101);       
-    }
-     
-    getReset() {
+    this.channel = 1;
+    this.volume = 50;
+    this.reset = function() {
       this.channel = 1;
-      this.volume = 50; 
-      console.log(`${this.brand} is reset back at channel ${this.channel} and at volume ${this.volume}`); 
+      this.volume = 50;
+      console.log(`${this.brand} is reset back at channel ${this.channel} and at volume ${this.volume}`);
+    }     
+  }
+
+    volumeDown() {
+        if (this.volume>0) {
+        this.volume--;
+      }
+      return this.volume;
+    }  
+
+    volumeUp() {
+      if(this.volume<100) {
+        this.volume++;
+      }
+      return this.volume;
+    }   
+    
+    randomChannel() {
+      this.channel = Math.floor(Math.random() * 50) + 1;
+      return this.channel;
     }
 
     getStatus = function () {
@@ -147,5 +164,16 @@ class TV {
 }
 
 let tv1 = new TV("Panasonic");
+
 tv1.getStatus();
-tv1.getReset();
+console.log(tv1.volumeUp());
+console.log(tv1.volumeUp());
+console.log(tv1.volumeUp());
+console.log(tv1.randomChannel());
+tv1.reset();
+tv1.getStatus();
+console.log(tv1.volumeDown());
+console.log(tv1.volumeDown());
+console.log(tv1.volumeDown());
+console.log(tv1.randomChannel());
+tv1.getStatus();
