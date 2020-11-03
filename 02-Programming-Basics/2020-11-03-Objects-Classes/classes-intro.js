@@ -1,6 +1,6 @@
 // Welcome Fbw3!
 // Topic: Introduction to Object Classes
-// Reading:
+// Reading: https://eloquentjavascript.net/06_object.html
 
 //Intro
 
@@ -213,6 +213,7 @@
 
         }
         //nothing to add to the prototype object 
+
     }
 
         var student1 = new Student ('Ilya', 28, 'A');
@@ -232,4 +233,17 @@
         - 
         */
 
+
+        /* 
+        To Sum Up/Take-aways:
+
+        - ES6 gives us new systax for creating classes of objects in js --> called Class
+        - Class still needs a constructor function within it --> by using the constructor() syntax
+        - You can have internal and external methods in the class. The internal methods will be
+        passed down to individual objects instances. Whereas, the external methods are available to
+        the entire class of objects. 
+        - You can make properties private (using private variables) in the constructor so that they
+         are not visible in the object passed into the console (and beyond). The these private variables
+         will also not be visible to the rest of your program.
         
+        */
