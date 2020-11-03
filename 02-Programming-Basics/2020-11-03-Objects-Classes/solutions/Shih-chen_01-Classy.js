@@ -8,7 +8,7 @@ class Person{
         this._name = name;
         this._age = age;
         this.describe = function () {
-            return `${name} is ${age} years old.`;
+            return `${this._name} is ${this._age} years old.`;
         }
     }
 }
