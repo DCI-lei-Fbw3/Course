@@ -47,7 +47,7 @@ function Student(_mark1, _mark2) {
 		return this.mark1 + this.mark2;
 	};
 }
-var student = new Student(60, 70);
+const student = new Student(60, 70);
 console.log(student.showMark(1));
 console.log(student.showMark(2));
 console.log(student.calcTotal());
