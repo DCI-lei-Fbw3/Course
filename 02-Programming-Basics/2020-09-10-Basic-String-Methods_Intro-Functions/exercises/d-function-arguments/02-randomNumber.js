@@ -12,10 +12,20 @@
       - output some random numbers with min=0 and max=100
       - output some random numbers with min=1 and max=6    => like a dice
 
-    - Try to call "randomInteger" the following ways, see what is output:
+*/
+
+function rnd(min, max) {
+  if (max > 0 && min > 0 && max > min) {
+    a = Math.random() * (max - min + 1) + min;
+    return Math.floor(a);
+  }
+  return 100;
+}
+console.log(rnd(2, 4));
+/* - Try to call "randomInteger" the following ways, see what is output:
       - randomInteger(-1, 0)
       - randomInteger(-10, 10)
-*/
+
 
 console.log("[0, 1]:\t\t",   randomInteger(0, 1));
 console.log("[0, 100]:\t", randomInteger(0, 100));
@@ -41,4 +51,4 @@ function randomInteger(min, max) {
   //                         scaling the random number  and moving it by "min"
   let result2 = Math.floor(scalingFactor * Math.random() + min)
   return result2;
-}
+} */

@@ -2,7 +2,7 @@
 
 //Brief recap: An ARRAY is just a list in the JS. array can hold all sorts of values
 
-for (/* first item */, /* second item */, /* third item */);
+/* for (/* first item */ /* second item */, /* third item */)
 
 // First Item
 
