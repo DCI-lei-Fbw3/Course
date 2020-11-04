@@ -1,7 +1,8 @@
 function test() {
     if (true) {
-        //console.log(murks);
-        {
+        let murks = "nice";
+        console.log(murks);
+        
     } else {
         console.log("'else' was hit");
     }
