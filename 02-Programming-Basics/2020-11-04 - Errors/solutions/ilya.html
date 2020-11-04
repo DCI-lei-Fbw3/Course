@@ -39,13 +39,13 @@
             constructor(name) {
                 this.name = name;
             }
-            get bark() {
+            bark() {
                 console.log(`${this.name} says woof`);
             };
         }
 
         const fido = new Dog("Fido");
-        fido.bark;
+        fido.bark();
 
         /* 
         #### 2. Month Name
@@ -109,6 +109,7 @@
         }
         ```
         * Why doesn't the code work?
+        --> object type -> compares the addresses their variables point to, not the actual values
         * Fix the code (or restart) to solve the problem.
 
         * Examples of output
