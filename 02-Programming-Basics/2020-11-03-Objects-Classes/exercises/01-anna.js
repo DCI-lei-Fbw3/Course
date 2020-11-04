@@ -27,7 +27,7 @@ class Cylinder {
     this.height = height;
   }
   get getVolume() {
-    return Math.PI * (this.radius ^ 2) * this.height;
+    return Math.PI * this.radius ** 2 * this.height;
   }
 }
 
