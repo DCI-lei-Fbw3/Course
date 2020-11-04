@@ -70,7 +70,7 @@ class TV {
 			this.volume > 0 ? --this.volume : this.volume;
 		};
 		this.randomChannel = () =>
-			(this.channel = Math.floor(Math.random() * (50 - 1 + 1) + 50));
+			(this.channel = Math.floor(Math.random() * 50 + 1));
 		this.reset = () => {
 			this.channel = 1;
 			this.volume = 50;
