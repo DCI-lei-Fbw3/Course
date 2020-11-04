@@ -30,7 +30,7 @@ class Cylinder {
         this._r = r;
         this._h = h;
         this.cylinderVolume = function() {
-            let cylinderV = Math.PI*((this._r)**2)*this._h;
+            let cylinderV = (Math.PI*((this._r)**2)*this._h).toFixed(4);
             return `This volume of this cylinder of ${this._r} cm in radius and of ${this._h} cm in height is ${cylinderV}`; 
         } 
     }
