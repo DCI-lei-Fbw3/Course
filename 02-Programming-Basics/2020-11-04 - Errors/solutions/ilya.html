@@ -119,16 +119,32 @@
         */
         console.warn('...::: 4. Comparing Arrays :::...');
 
-        // works only for primitive types ! --> last test return false even though it's true, deepEquals needed
+        // works only for primitive types ! --> last test returns false even though it's true, deepEquals needed
         const compareArrays = (arr1, arr2) => arr1.every((e, i) => e === arr2[i]);
 
         console.log(compareArrays([1, 2], [1, 3]));
         console.log(compareArrays([1, 2], [1, 2]));
         console.log(compareArrays([4, 5, 6], [4, 5, 6]));
         console.log(compareArrays([4, 7, 6], [4, 5, 6])); 
-        console.log(compareArrays([[1], 7, 6], [[1], 5, 6])); 
+        console.log('using shallow comparison, input: [[1], 7, 6], [[1], 7, 6]', compareArrays([[1], 7, 6], [[1], 7, 6])); 
 
-        
+        const deepEqual = (value1, value2) => {
+
+            if (typeof (value1) === 'object' &&
+                typeof (value2) === 'object' &&
+                value1 !== null &&
+                value2 !== null
+            ) {
+                return (
+                    Object.keys(value1).every((key, i) => key === Object.keys(value2)[i]) &&
+                    Object.values(value1).every((e, i) => deepEqual(e, Object.values(value2)[i])
+                    )
+                );
+            }
+            return value1 === value2;
+        };
+
+        console.log('using custom deep equal, input: [[1], 7, 6], [[1], 7, 6]', deepEqual([[1], 7, 6], [[1], 7, 6])); 
 
 
         /* 
@@ -145,9 +161,13 @@
         */
         console.warn('...::: 5. Recursion :::...');
 
+        const sum = a => {
+            if(a.length === 1) return a[0];
+            return a.pop() + sum(a);
+        }
 
-
-
+        console.log(sum([1, 2, 3]));
+        console.log(sum([7, 4, 3]));
 
 
     </script>
