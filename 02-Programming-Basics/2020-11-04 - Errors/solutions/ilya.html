@@ -170,6 +170,35 @@
         console.log(sum([1, 2, 3]));
         console.log(sum([7, 4, 3]));
 
+         console.warn('...::: Permutations of String :::...');
+
+        // dirty recursion
+
+        const result = [];
+        const acc = []
+
+        //
+        const permutations = (s, acc, originalLength) => {
+
+            if (s.length === 1) {
+                
+                (acc.push(s));
+                result.push(acc);
+                acc = [];
+            }
+
+            else {
+                for (let i = 0; i < s.length; i++) {
+                    acc = acc.slice(0, originalLength - s.length);
+                    acc.push(s[i]);
+                    permutations(s.replace(s[i], ''), acc, originalLength);
+                }
+            }
+        }
+
+        permutations('abc', [], 3);
+        console.log('result equals to:', result);
+
 
     </script>
 </body>
