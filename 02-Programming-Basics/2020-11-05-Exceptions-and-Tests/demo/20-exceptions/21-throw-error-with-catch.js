@@ -11,19 +11,22 @@ function lastElement(array) {
 
 let last;
 
+/*
 try {
   last = lastElement([]);
   console.log(last);
 } catch (error) {
   console.log(error);
 }
+/**/
 
 
 try {
-  last = lastElement([1, 2, 3]);
+  last = lastElement([]);
   console.log(last);
 } catch (error) {
   console.log(error);
 } finally {
   console.log("finally will always be executed, - useful for cleanup or finishing/completing.");
 }
+/**/
