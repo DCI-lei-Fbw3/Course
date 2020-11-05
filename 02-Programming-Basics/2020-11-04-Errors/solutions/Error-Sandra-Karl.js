@@ -179,4 +179,3 @@ console.log(sum([1, 2, 3]));
 ## Bonus
 
 Make the elements of the returned array unique. In other words, if there are some elements doubled, remove the duplicates.
-
