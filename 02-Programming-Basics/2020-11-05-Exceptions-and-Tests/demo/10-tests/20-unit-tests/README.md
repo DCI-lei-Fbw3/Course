@@ -3,6 +3,7 @@
 ## Frameworks
 
 ---
+
 ### Mocha
 
 https://mochajs.org/
@@ -13,6 +14,15 @@ https://mochajs.org/
 
 https://jestjs.io
 
+Jest will execute files found in `__tests__/`-folders files ending in:
+
+-   test
+-   spec
+-   test.js
+-   spec.js
+
+refer to https://stackoverflow.com/questions/55995157/how-to-run-jest-on-files-not-ending-in-test-js-or-spec-js
+
 #### Getting Started
 
 https://jestjs.io/docs/en/getting-started
@@ -20,6 +30,7 @@ https://jestjs.io/docs/en/getting-started
 1. Install
 
     Either with:
+
     ```
     $> yarn add --dev jest
     # or
@@ -43,10 +54,10 @@ https://jestjs.io/docs/en/getting-started
     `sum.test.js`
 
     ```javascript
-    const sum = require('./sum');
+    const sum = require("./sum");
 
-    test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+    test("adds 1 + 2 to equal 3", () => {
+    	expect(sum(1, 2)).toBe(3);
     });
     ```
 
@@ -65,4 +76,5 @@ https://jestjs.io/docs/en/getting-started
     # execute tests:
     $> jest FILE_FILTER --notify --config=config.json
     ```
+
 ---
