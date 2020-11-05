@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-03-logical-thinking-3-pen-and-paper</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+
+        /* 
+        # Logical Thinking III
+
+        Write pseudo-code for the following exercises on pen and paper.
+
+        #### 1. Lowest to Highest
+
+        Given an array of numbers from 1-9:
+
+        ```javascript
+        [4, 2, 5, 3, 9, 7, 1, 8, 2, 6];
+        ```
+
+        Sort the array from lowest value to highest.
+        */
+        console.warn('...::: 1. Lowest to Highest :::...');
+
+        // using sort method
+        const sortLowestToHighest = arr => arr.sort((a,b) => a - b);
+
+        console.log('sortLowestToHighest:', sortLowestToHighest([4, 2, 5, 3, 9, 7, 1, 8, 2, 6]));
+
+        console.warn('Natural Approach');
+
+        console.log('original:', [4, 2, 5, 3, 9, 7, 1, 8, 2, 6]);
+
+        // using 'natural thinking'
+        const sortLowestToHighestNatural = arr => {
+            
+            for(let i = 0; i < arr.length - 1; i++){
+
+                console.warn('start of new iteration');
+
+                let min = arr[i];
+                let minPos = i;
+
+            
+                for(let j = i + 1; j < arr.length; j++){
+                    if(arr[j] < min) {
+                        min = arr[j];
+                        minPos = j;
+                    }
+                }
+                
+                console.log('arr:', arr);
+                console.log('min:', min);
+                console.log('minPos:', minPos);
+                arr.splice(minPos, 1);
+                console.log('arr after splice-removal:', arr);
+                arr.splice(i, 0, min);
+                console.log('arr after splice-insertion:', arr);
+            }
+
+            return arr;
+
+        }
+
+        const finalResult = sortLowestToHighestNatural([4, 2, 5, 3, 9, 7, 1, 8, 2, 6]);
+        console.warn('Final Result');
+        console.log(finalResult);
+
+
+
+        /*
+        #### 2. Alphabetical Order
+
+        Given an array of names:
+
+        ```javascript
+        ["Fran", "Leon", "Ale", "Jenna", "Bleda", "Hadi"];
+        ```
+
+        Sort the array based on alphabetical order from `a → z`.
+
+        **Bonuses**
+
+        1. Once you've wrote down your pen and paper solutions, create functions to solve the problems above with javascript.
+
+        2. Create a function that takes an array as a parameter. Order the array based off of the elements' length. Assume the elements are strings.
+        */
+        console.warn('...::: 2. Alphabetical Order :::...');
+
+        const sortAlpha = arr => arr.sort((a,b) => a > b);
+
+        console.log(sortAlpha(["Fran", "Leon", "Ale", "Jenna", "Bleda", "Hadi"]));
+
+
+        console.warn('...::: 3. Shortest to Longest :::...');
+
+        const sortShortestToLongest = arr => arr.sort((a,b) => a.length - b.length);
+
+        console.log(sortShortestToLongest(["Fran", "Leon", "Ale", "Jenna", "Bleda", "Hadi"]));
+
+        console.log(sortShortestToLongest(["def", "klmno", "bc", "a", "ghij", "pqrstu"]));
+        
+
+        
+
+    </script>
+</body>
+
+</html>

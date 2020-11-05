@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-01-objects-part-1</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+        /*
+        # Objects: Part 1
+
+        Please print each of your answers to the console.
+
+        ## 1. Object Person. 
+        
+        Create an object named person. Loop through the object and print both the property and value of the object.
+        */
+        console.warn('...::: 1. Object Person. :::...');
+
+        const person1 = {
+            name: 'name',
+            age: 45,
+        };
+
+        // for in loop
+        for (const property in person1) {
+            console.log(`${property}: ${person1[property]}`);
+        }
+
+        // entries method
+        console.log(Object.entries(person1));
+
+        /*      
+        ## 2. Get Values. 
+        
+        Create a function that returns an array of all values of an object's properties.
+
+        Examples:
+
+        ```
+        getObjectValues({
+        choice1: "tea",
+        choice2: "coffee",
+        choice3: "milk"
+        })
+        ```
+
+        ### Expected output:
+
+        ```
+        ["tea", "coffee", "milk"]
+        ``` 
+        */
+        console.warn('...::: 2. Get Values. :::...');
+
+        const getObjectValues = obj => Object.values(obj);
+
+        console.log(getObjectValues({
+            choice1: "tea",
+            choice2: "coffee",
+            choice3: "milk"
+        }));
+
+        /* 
+        ## 3. Add A Method. 
+        
+        Create an object and add a method to that object which prints the values of the objects in a string.
+
+        Example
+
+        let person = {
+        firstName: "Michael",
+        lastName: "Smith",
+        job: "driver",
+        age: 20,
+        city: Paris
+        }
+
+        ### Example of Expected Output:
+
+        ```
+        Michael Smith is a 20 year old driver in Paris.
+        ``` 
+        */
+        console.warn('...::: 3. Add A Method. :::...');
+
+        let person2 = {
+            firstName: "Michael",
+            lastName: "Smith",
+            job: "driver",
+            age: 20,
+            city: "Paris",
+            get info() { console.log(`${this.firstName} ${this.lastName} is a ${this.age} year old ${this.job} in ${this.city}.`) },
+            // testing
+            // add get for infinite recursion ;)
+            info2() {
+                const arr2 = Object.values(this) // second console.log comes from here, while evaluating info()
+
+                for (let i = 0; i < arr2.length; i++) {
+                    if (arr2[i] === undefined || typeof (arr2[i]) === 'function') {
+                        arr2.splice(i, 1);
+                        i--;
+                    }
+                };
+
+                return arr2;
+            }
+
+        }
+
+        person2.info;
+        console.log(person2.info2());
+
+
+        /* 
+        ---
+        ## Bonus Questions
+
+        ## 1. Convert keys and values into an array
+
+        Create a function that converts an object into an array of keys and values.
+
+        ### Examples:
+
+        ```
+        objectToArray({
+        A: 1,
+        B: 2,
+        C: 3
+        })
+        ```
+
+        Expected output:
+
+        ```
+        [["A", 1], ["B", 2], ["C", 3]]
+        ```
+
+        ```
+        objectToArray({
+        cats: 1,
+        dogs: 2,
+        turtles: 4
+        })
+        ```
+
+        Expected output:
+
+        ```
+        [["cats", 1], ["dogs", 2], ["turtles", 4]]
+        ``` 
+        */
+        console.warn('...::: 1. Convert keys and values into an array :::...');
+
+        const objectToArray = obj => Object.entries(obj);
+
+        console.log(
+            objectToArray({
+                A: 1,
+                B: 2,
+                C: 3
+            })
+        );
+
+        console.log(
+            objectToArray({
+                cats: 1,
+                dogs: 2,
+                turtles: 4
+            })
+        );
+
+        /*  
+        ## 2. List Properties
+
+        Create a function that returns an array of properties of a javascript object.
+
+        ### Example
+
+        ```
+        let student = {
+        name: "Mike",
+        class: "4A"
+        course: "English"
+        }
+        ```
+
+        Expected output:
+
+        ```
+        ["name", "class", "course"]
+        ``` 
+        */
+        console.warn('...::: 2. List Properties :::...');
+
+        const keysOnly = obj => Object.keys(obj);
+
+        console.log(
+            keysOnly({
+                name: "Mike",
+                class: "4A",
+                course: "English"
+            })
+        )
+
+
+        /*  
+        ## 3. Merge
+
+        Create a function that takes two objects as its parameters and merges them together into a new object.
+
+        Example
+
+        ```
+        let first = {firstName: "John"}
+        let last = {lastName: "Smith"}
+        ```
+
+        Expected output:
+
+        ```
+        {firstName: "John", lastName: "Smith"}
+        ```
+
+        Extra Credit: What happens if you merge two objects with the same property values? In merging these two objects, do you expect to change either or both of the original objects? Why or why not? Comment your answers. 
+        */
+        console.warn('...::: 3. Merge :::...');
+
+        let first = { firstName: "John" };
+        let last = { lastName: "Smith" };
+
+        const merge = (obj1, obj2) => Object.assign(obj1,obj2);
+
+        // spread operator
+        //const merge = (obj1, obj2) => {return{...obj1, ...obj2}};
+
+        // using reduce
+        // const merge = (obj1, obj2) => [obj1, obj2].reduce((result, obj) => {
+        //         result[Object.keys(obj)[0]] = obj[Object.keys(obj)[0]];
+        //         return result;
+        //     }
+        // )
+
+        console.log('merged:',merge(first, last));
+        console.log('first:',first);
+        console.log('last:',last);
+
+        // merge objects with same keys --> key-value of last object overrides the rest
+        // Object.assign and the spread operator define the first input obj as target, therefore, in this example, obj1 becomes the target and gets modified
+
+
+        /* 
+        ## 4. Switch Keys and Values.
+        
+        Create a function to get a copy of an object. The copy must switch the keys and values.
+
+        Example:
+
+        ```
+        let person = {
+        name: "John",
+        job: "teacher"
+        }
+        ```
+
+        Expected Output:
+
+        ```
+        {"John": name, "teacher": job}
+        ``` 
+        */
+        console.warn('...::: 4. Switch Keys and Values. :::...');
+
+        let person = {
+            name: "John",
+            job: "teacher"
+        }
+
+        const switchKeysAndValues = obj => {
+            const newObj = {};
+            for (key in obj) {
+                newObj[obj[key]] = key;
+            }
+            return newObj;
+        }
+
+        console.log(switchKeysAndValues(person));
+
+        /* 
+        ## 5. Return Keys and Values
+
+        Write a program that takes an object and returns an array which contains two arrays: one for the keys of the object and the other for the values of the object.
+
+        Examples:
+
+        ```
+        { a: 1, b: 2, c: 3 }
+        // ➞ [["a", "b", "c"], [1, 2, 3]]
+
+        {key: true}
+        //➞ [["key"], [true]]
+        ``` 
+        */
+        console.warn('...::: 5. Return Keys and Values :::...');
+
+        const keysAndValues = obj => [Object.keys(obj), Object.values(obj)];
+
+        console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
+        console.log(keysAndValues({key: true}));
+    
+
+
+    </script>
+</body>
+
+</html>

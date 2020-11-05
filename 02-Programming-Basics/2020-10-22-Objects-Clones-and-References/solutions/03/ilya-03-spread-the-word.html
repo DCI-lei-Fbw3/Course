@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-03-spread-the-word</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+        /* # Spread the Word
+
+        ## 1. Combining Arrays
+
+        Create two arrays. e.g. euroCountries and asianCountries. Add asianCountries items to the end of euroCountries array.
+        Once again create two arrays. Save all elements of both arrays to another variable.
+        */
+        console.warn('...::: 1. Combining Arrays :::...');
+
+        const euroCountries = ['Russia', 'Ukraine', 'France', 'Spain', 'Sweden'];
+        const asianCountries = ['Russia', 'China', 'India', 'Kazakhstan', 'Saudi Arabia'];
+
+        console.log('euroCountries =', euroCountries);
+        console.log('asianCountries =', asianCountries);
+        euroAndAsianCountries = euroCountries.concat(asianCountries);
+        console.log('euroAndAsianCountries =', euroAndAsianCountries);
+
+    
+        /* 
+        ## 2. Copying Arrays
+
+        Copy an array using the spread operator. Store the copied array in another variable. 
+        */
+        console.warn('...::: 2. Copying Arrays :::...');
+
+        const arr1 = [1, 2, 3, 'a', 'b', 'c', true];
+        const [...arr2] = arr1;
+
+        console.log('arr1:', arr1);
+        console.log('arr2:', arr2);
+        arr2[1] = 7;
+        console.log('arr1:', arr1);
+        console.log('arr2:', arr2);
+
+
+        /* 
+        ## 3. Find the Largest...
+
+        Create a function to find the largest number in an array. 
+        */
+        console.warn('...::: 3. Find the Largest... :::...');
+
+        const arr3 = [1,5,2,6,-10,66,-55,22,75];
+
+        // copy --> pure function
+        const largest = ([...copy]) => copy.sort((e1, e2) => e2 - e1 )[0];
+
+        console.log('largest:', largest(arr3));
+
+        console.log('arr3:', arr3);
+
+
+        /* 
+        ## 4. Find the Smallest
+
+        Create a function to find the smallest number in an array. 
+        */
+        console.warn('...::: 4. Find the Smallest :::...');
+
+        const arr4 = [9,8,66,6,-10,35,-75,2,96];
+
+        const arr5 = [10,2,-65,2,-550,245,-5,15,924];
+
+        // using sort, copy for purity
+        const smallestSort = ([...copy]) => copy.sort((e1, e2) => e1- e2 )[0];
+
+        console.log('smallestSort:', smallestSort(arr4));
+
+        console.log('arr4:', arr4);
+
+        // using reduce, no copy needed, original doesn't get altered
+        const smallestReduce = arr => arr.reduce((acc, e) => acc > e ? acc = e : acc = acc);
+
+        console.log('smallestReduce:', smallestReduce(arr5));
+
+        console.log('arr5:', arr5);
+
+
+        /* 
+        ## 5. Clone and Merge
+
+        Given two objects:
+
+        ```
+        const person = {name: "John"}
+        const job = {role: "Teacher"}
+        ``` 
+        */
+        console.warn('...::: 5. Clone and Merge :::...');
+
+        const person = {name: "John"};
+        const job = {role: "Teacher"};
+        
+        // 5.1 Clone the person object.
+        console.warn('5.1');
+        const {...personShallowClone} = person;
+        console.log('person:', person);
+        console.log('personShallowClone:', personShallowClone);
+
+        // 5.2 Merge these two objects into one object: "employee". Use the spread operator to do so.
+        console.warn('5.2');
+        const employee = {...person, ...personShallowClone};
+        console.log('person:', person);
+        console.log('personShallowClone:', personShallowClone);
+        console.log('employee:', employee);
+
+        // 5.3 Then change the values of the properties in the employee object.
+        console.warn('5.3');
+        employee.name = 'Gilbert';
+        console.log('person:', person);
+        console.log('personShallowClone:', personShallowClone);
+        console.log('employee:', employee);
+
+
+
+        /* 
+        ## Bonus: 6. Is the average a whole number?
+
+        Create a function that takes 4 integers as parameters and returns true or false depending on whether the average of all the arguments is a whole number or not.
+
+        ### Examples
+
+        ```
+            isWhole(1, 2, 3, 4);
+            // ➞ false
+
+            isWhole(9, 2, 2, 5);
+            // ➞ false
+        ``` 
+        Once you have created a function, pass in an array as an argument which contains four elements - check if this method still outputs the correct result!
+        */
+        console.warn('...::: Bonus: 6. Is the average a whole number? :::...');
+
+        const isWhole = (num1, num2, num3, num4) => (num1 + num2 + num3 + num4) / 4 % 1 === 0;
+
+        console.log(isWhole(1, 2, 3, 4));
+        console.log(isWhole(9, 2, 2, 5));
+        console.log(isWhole(9, 4, 2, 5));
+        console.log(isWhole([9, 4, 2, 5]));
+
+        const isWholeArrDestr = ({0:num1, 1:num2, 2:num3, 3:num4}) => (num1 + num2 + num3 + num4) / 4 % 1 === 0;
+
+        console.log(isWholeArrDestr([9, 4, 2, 5]));
+
+
+
+
+    </script>
+</body>
+
+</html>

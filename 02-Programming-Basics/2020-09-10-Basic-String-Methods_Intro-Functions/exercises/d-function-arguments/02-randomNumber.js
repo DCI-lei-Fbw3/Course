@@ -37,10 +37,20 @@ console.log(randomFloat(0));
 >>>>>>> 7d708aaef3c3c23865d2e7989d9fb03e739ef42e
 =======
 
-    - Try to call "randomInteger" the following ways, see what is output:
+*/
+
+function rnd(min, max) {
+  if (max > 0 && min > 0 && max > min) {
+    a = Math.random() * (max - min + 1) + min;
+    return Math.floor(a);
+  }
+  return 100;
+}
+console.log(rnd(2, 4));
+/* - Try to call "randomInteger" the following ways, see what is output:
       - randomInteger(-1, 0)
       - randomInteger(-10, 10)
-*/
+
 
 console.log("[0, 1]:\t\t",   randomInteger(0, 1));
 console.log("[0, 100]:\t", randomInteger(0, 100));
@@ -66,5 +76,9 @@ function randomInteger(min, max) {
   //                         scaling the random number  and moving it by "min"
   let result2 = Math.floor(scalingFactor * Math.random() + min)
   return result2;
+<<<<<<< HEAD
 }
 >>>>>>> 7c1f39f6ef19c9fea0004488acf01b7f21921a79
+=======
+} */
+>>>>>>> ef5849d880b65514da5a94ef748d8239a5fce83c

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-sliding-window</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+
+        console.warn('...::: sliding window :::...');
+
+        
+                const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+        
+                const slidingWindow = (arr, windowSize) => {
+        
+                    console.log(`Ilya's sliding window calculating the average over ${windowSize} elements`)
+
+                    const result = [];
+        
+                    arr.forEach((e, i, arr) => {
+                        let sum = null;
+                        let average = null;
+        
+                        // fill end with 0
+                        /*  
+                        for (let j = i; j < (i + windowSize); j++) {
+                            if (j > arr.length - 1) sum += 0;
+                            else sum += arr[j];
+                        } 
+                        */ 
+                        
+
+                        // fill start with 0
+                           
+                        for (let j = (i+ 1 - windowSize); j < (i + 1); j++) {
+                            if (j < 0) sum += 0;
+                            else sum += arr[j];
+                        }  
+                        
+                        
+
+                        // no 0 fillers
+                        /*  
+                        for (let j = i; j < i + windowSize; j++) {
+                            sum += arr[j];
+                            if(j > arr.length -1 ) break;
+                        } 
+                        */
+        
+                        average = sum / windowSize;
+                        
+                        // 'if' is needed for no fillers
+                        if(!Number.isNaN(average)) result.push(average);
+        
+                        //console.log('window-index:', i, 'window-value:', e, 'window-average:', average);
+        
+                    })
+
+                    return result;
+                }
+        
+                console.log(slidingWindow(arr, 5)); 
+                console.log("Thomas' sliding window calculating the average over 5 elements");
+                let prices = [11.2, 13.3, 15.2, 16.2, 17.5, 12.3, 10.3, 9.5, 10.1, 11.2];
+                let test = [1, 2, 3, 4, 5, 6, 7, 8];
+
+                function slidingAverage(element, index, array) {
+                    let windowSize = 5;
+
+                    let window = [];
+
+                    if (index + 1 < windowSize) { // zeroes need to be added
+                        let noOfZeroes = windowSize - (index + 1);
+
+                        // stuff the window with zeroes:
+                        for (let i = 0; i < noOfZeroes; i++) {
+                            window.push(0);
+                        }
+                    }
+
+                    for (let i = 0; window.length < windowSize; i++) {
+                        window.push(array[index - i]);
+                    }
+
+                    let sum = window.reduce((sum, element) => sum + element);
+                    let average = sum / windowSize;
+
+                    //console.log(index, "=>", window, "=>", sum, "=>", average);
+                    this.push(average);
+                }
+
+
+                let result = [];
+                test.forEach(slidingAverage, result);
+                console.log(result);
+
+
+
+    </script>
+</body>
+
+</html>

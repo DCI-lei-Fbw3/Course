@@ -1,0 +1,65 @@
+# Destructuring
+
+**Instructions**
+
+#### 1. Array Destructuring
+* Declare the variables `fruit`, `vegetable`, `food`. Assign the following values to the variables respectively: "banana", "cucumber", "bread", "cakes", "pizza" (assign the "bread", "cakes" and "pizza" to `food`). Use array destructuring assignment to complete this task.
+
+#### 2.Object Destructuring
+* Create an object which contains key pair values of names and the respective halloween costume e.g. `fran: "witch"`.   Assign each key-value pair to corresponding variable. Print out the object values. 
+
+#### 3. Parameters: Object Destructuring 
+* Create an object with band/musician details e.g. name of the band/musician, greatest hit, nationality, genre etc. 
+* Then, create a function to display all of the band/musician's data. 
+* Example
+```javascript
+`Regina Spektor is a American-Russian singer/songwriter and pianist. The musician sings indie-pop and their greatest hit is "Us"`.
+```
+
+# Bonus
+
+#### 4. We have an object:
+
+```javascript
+let user = {
+  name: "John",
+  years: 30
+};
+```
+
+Write the destructuring assignment that reads:
+
+`name` property into the variable name.
+`years` property into the variable age.
+`isAdmin` property into the variable isAdmin (false, if no such property)
+
+Here’s an example of the values after your assignment:
+
+```javascript
+let user = { name: "John", years: 30 };
+
+// your code to the left side:
+// ... = user
+
+alert( name ); // John
+alert( age ); // 30
+alert( isAdmin ); // false
+```
+
+#### 5. The maximal salary
+
+There is a salaries object:
+
+```javascript
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+```
+
+Create the function `topSalary(salaries)` that returns the name of the top-paid person.
+
+If `salaries` is empty, it should return null.
+If there are multiple top-paid persons, return any of them.
+P.S. Use Object.entries and destructuring to iterate over key/value pairs.

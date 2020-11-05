@@ -1,0 +1,12 @@
+{
+    "scripts": {
+      "test": "jest"
+    },
+    "name": "testing-unit",
+    "version": "1.0.0",
+    "main": "test-exercise.js",
+    "author": "",
+    "license": "ISC",
+    "description": ""
+  }
+  

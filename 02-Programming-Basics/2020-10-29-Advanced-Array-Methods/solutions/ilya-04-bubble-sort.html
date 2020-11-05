@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ilya-04-bubble-sort</title>
+</head>
+
+<body>
+    <h1>Open the console please !</h1>
+    <script>
+        /*  
+        # Bubble Sort
+
+        Please implement the sorting algorithm "Bubble Sort" inside of a function `bubbleSort(arr)` which takes the array to be sorted as its single parameter, it should return the sorted array.
+
+        For a description refer to:
+        https://en.wikipedia.org/wiki/Bubble_sort
+
+        ## sample code:
+
+        ```javascript
+        let numbers = [9, 5, 7, 1, 0, 2, 4, 1, 6, 3, 8];
+        // the "1" is doubled to have a test case
+
+        function bubbleSort(arr) {
+            // TODO: implement
+        }
+
+        console.log(bubbleSort(numbers));
+        ``` 
+        */
+        console.warn('...::: Bubble Sort :::...');
+
+        const bubbleSort = arr => {
+
+            let swaps = null;
+
+            while (swaps !== 0) {
+                swaps = 0;
+                for (let i = 0; i < arr.length - 1; i++) {
+                    if (arr[i] > arr[i + 1]) {
+                        const temp = arr[i];
+                        arr[i] = arr[i + 1];
+                        arr[i + 1] = temp;
+                        swaps++;
+                    }
+                }
+            }
+
+            return arr;
+
+        }
+
+        console.log(bubbleSort([9, 5, 7, 1, 0, 2, 4, 1, 6, 3, 8]));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

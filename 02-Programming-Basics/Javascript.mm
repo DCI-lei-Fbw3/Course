@@ -1,7 +1,7 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false"/>
+<node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle" background="#ffffff">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -62,7 +62,7 @@
 </map_styles>
 </hook>
 <font BOLD="true"/>
-<node POSITION="right" ID="ID_176756577" CREATED="1599636783734" MODIFIED="1599642676087"><richcontent TYPE="NODE">
+<node FOLDED="true" POSITION="right" ID="ID_176756577" CREATED="1599636783734" MODIFIED="1599642676087"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -201,25 +201,283 @@
 <node TEXT="CONDITION ? TRUE_CASE : FALSE_CASE" ID="ID_1345012530" CREATED="1599640092641" MODIFIED="1599640121191"/>
 </node>
 </node>
+<node TEXT="Arrays" FOLDED="true" ID="ID_203804678" CREATED="1603352062077" MODIFIED="1603352065355">
+<node TEXT="let arr = [value1, value2, ...];&#xa;&#xa;for (let element of arr) {&#xa;}&#xa;&#xa;for (let i=0; i&lt;arr.length; i++) {&#xa;    let element = arr[i];&#xa;}" ID="ID_324165611" CREATED="1603352071900" MODIFIED="1603352214368"/>
+<node TEXT="arrays have various inbuilt functions" FOLDED="true" ID="ID_281929991" CREATED="1603352227179" MODIFIED="1603352299920" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">
+<node TEXT="push" ID="ID_935266882" CREATED="1603352347502" MODIFIED="1603352348992"/>
+<node TEXT="pop" ID="ID_1126382305" CREATED="1603352349293" MODIFIED="1603352351033"/>
+<node TEXT="shift" ID="ID_1418221297" CREATED="1603352356992" MODIFIED="1603352397879"/>
+<node TEXT="unshift" ID="ID_1431856082" CREATED="1603352399877" MODIFIED="1603352404607"/>
+<node TEXT="join" ID="ID_1925787549" CREATED="1603352305118" MODIFIED="1603352482812"/>
+<node TEXT="map" ID="ID_334166966" CREATED="1603352319807" MODIFIED="1603352330626"/>
+<node TEXT="filter" ID="ID_746357483" CREATED="1603352330814" MODIFIED="1603352336318"/>
+<node TEXT="entries" ID="ID_1988437592" CREATED="1603352336781" MODIFIED="1603352341884"/>
+<node TEXT="indexOf" ID="ID_1784022606" CREATED="1603352342289" MODIFIED="1603352345552"/>
+<node TEXT="sort" ID="ID_645328328" CREATED="1603352387853" MODIFIED="1603352389287"/>
+<node TEXT="splice" ID="ID_814068481" CREATED="1603352412244" MODIFIED="1603352414122"/>
+<node TEXT="concat" ID="ID_1236672771" CREATED="1603352414588" MODIFIED="1603352452823"/>
 </node>
-<node TEXT="Control Structures &amp; Loops" POSITION="right" ID="ID_294955049" CREATED="1600327371816" MODIFIED="1600327397987">
+</node>
+</node>
+<node TEXT="Control Structures &amp; Loops" FOLDED="true" POSITION="right" ID="ID_294955049" CREATED="1600327371816" MODIFIED="1600327397987">
 <node TEXT="if" FOLDED="true" ID="ID_286131568" CREATED="1600327405030" MODIFIED="1600327421860">
 <node TEXT="if (CONDITION) {&#xa;   CODEBLOCK&#xa;} else if (CONDITION) {&#xa;   CODEBLOCK&#xa;} else {&#xa;   CODEBLOCK&#xa;}" ID="ID_1987772926" CREATED="1600327426678" MODIFIED="1600327484482"/>
 </node>
-<node TEXT="switch-case" ID="ID_893812530" CREATED="1600328109509" MODIFIED="1600328154879">
+<node TEXT="switch-case" FOLDED="true" ID="ID_893812530" CREATED="1600328109509" MODIFIED="1600328154879">
 <node TEXT="switch (DECISION_VARIABLE) {&#xa;    case &quot;CASE_A&quot;:&#xa;        CODE&#xa;        break; // optional, without it =&gt; fall through to the&#xa;                   // next case until a break is hit&#xa;    case &quot;CASE_B&quot;:&#xa;        ...&#xa;    default:&#xa;        CODE&#xa;        break;&#xa;}" ID="ID_1645435560" CREATED="1600327486212" MODIFIED="1600328183087"/>
 <node TEXT="ATTENTION: when falling through to the next case,&#xa;the condition of that next case is not checked, but&#xa;the code of that case is executed." ID="ID_1950516813" CREATED="1600335879284" MODIFIED="1600335921456"/>
 </node>
-<node TEXT="Loops" ID="ID_890895675" CREATED="1600327690984" MODIFIED="1600327698089">
+<node TEXT="Loops" FOLDED="true" ID="ID_890895675" CREATED="1600327690984" MODIFIED="1600327698089">
 <node TEXT="while" FOLDED="true" ID="ID_1246199304" CREATED="1600328116956" MODIFIED="1600328120528">
 <node TEXT="while (CONDITION) {&#xa;    CODEBLOCK&#xa;} // head directed / condition first" ID="ID_1713413871" CREATED="1600327700232" MODIFIED="1600328069343"/>
 </node>
 <node TEXT="do {} while" FOLDED="true" ID="ID_1151341993" CREATED="1600328126396" MODIFIED="1600328132246">
 <node TEXT="do {&#xa;    CODEBLOCK&#xa;} while (CONDITION) // tail directed / condition after / execution first" ID="ID_1989761449" CREATED="1600327714918" MODIFIED="1600328083974"/>
 </node>
-<node TEXT="for" FOLDED="true" ID="ID_1071468791" CREATED="1600328135669" MODIFIED="1600328136897">
+<node TEXT="for" ID="ID_1071468791" CREATED="1600328135669" MODIFIED="1600328136897">
 <node TEXT="for (INITIALIZATION; CONDITION; INCREMENT) {&#xa;    CODEBLOCK&#xa;}" ID="ID_1620323779" CREATED="1600327791965" MODIFIED="1600327870023">
 <node TEXT="for (let i=0; i&lt;maxValue; i++) {&#xa;    CODE&#xa;}" ID="ID_1748149032" CREATED="1600327872579" MODIFIED="1600327946549"/>
+</node>
+<node TEXT="for...in" ID="ID_532446107" CREATED="1602671035036" MODIFIED="1602671294245" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      iterate over an object's properties<br/>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="functions" FOLDED="true" POSITION="right" ID="ID_530812643" CREATED="1602660354514" MODIFIED="1602660361896">
+<node TEXT="function definition" FOLDED="true" ID="ID_1800268111" CREATED="1602660577186" MODIFIED="1602660581136">
+<node TEXT="function FUNCTION_NAME(PARAM_A, PARAM_B, ...) {&#xa;    FUNCTION_BODY&#xa;}" ID="ID_1913354776" CREATED="1602660381515" MODIFIED="1602660444198"/>
+</node>
+<node TEXT="arrow functions" FOLDED="true" ID="ID_1486979444" CREATED="1602660568834" MODIFIED="1602660573079">
+<node TEXT="const FUNCTION_NAME = (PARAM_A, ...) =&gt; {&#xa;    BODY&#xa;}" ID="ID_1633432818" CREATED="1602660446346" MODIFIED="1602660494717"/>
+<node TEXT="sample application" ID="ID_1457295147" CREATED="1602660596867" MODIFIED="1602660609519">
+<node TEXT="array.sort(..., (a, b) =&gt; a - b);&#xa;// &quot;a - b&quot; is the return value&#xa;// anonymous callback" ID="ID_839869206" CREATED="1602660611757" MODIFIED="1602660976112"/>
+<node TEXT="function custom_sort_callback(a, b) {&#xa;    return a - b;&#xa;}&#xa;&#xa;array.sort(..., custom_sort_callback); // named callback" ID="ID_1771370621" CREATED="1602660977950" MODIFIED="1602661032482"/>
+</node>
+</node>
+<node TEXT="assign a function to a constant" FOLDED="true" ID="ID_222450253" CREATED="1602660584389" MODIFIED="1602660594509">
+<node TEXT="const FUNCTION_NAME = function (PARAM_A, ...) {&#xa;    BODY&#xa;}" ID="ID_489245508" CREATED="1602660508772" MODIFIED="1602660542465"/>
+</node>
+<node TEXT="functions can return a value via the &quot;return statement&quot;" ID="ID_139003883" CREATED="1602660745822" MODIFIED="1602660759675"/>
+<node TEXT="default return value is &quot;undefined&quot;" ID="ID_324179839" CREATED="1602660760335" MODIFIED="1602660777559"/>
+<node TEXT="immediateley invoked function expression (IIFE)" ID="ID_416203204" CREATED="1602743773348" MODIFIED="1602743855251"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      (function (name){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;console.log(name);
+    </p>
+    <p>
+      })(&quot;Alice&quot;);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="objects" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
+<node TEXT="javascript code" ID="ID_1361335497" CREATED="1603882358683" MODIFIED="1603882465408"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      let obj = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;ATTR_A: VALUE,
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;METHOD_A: function(p1, ...) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// BODY
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;METHOD_B(p1, ...){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// BODY
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;get a(){&#160;&#160;// getter
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// some functionality
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return ATTR_A;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;set a(p1){ // setter
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// some functionality
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.ATTR_A = p1;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;},
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="this - is used to refer to an object&apos;s instance itself" ID="ID_620124151" CREATED="1603351523835" MODIFIED="1603351550716"/>
+<node TEXT="referring to values&#xa;of an object" ID="ID_1039640920" CREATED="1603351754450" MODIFIED="1603351784597">
+<node TEXT="dot-notation" ID="ID_975863885" CREATED="1603351764091" MODIFIED="1603351768781">
+<node TEXT="object.ATTR_NAME" ID="ID_941672963" CREATED="1603351786459" MODIFIED="1603351797183"/>
+</node>
+<node TEXT="bracket-notation" ID="ID_1959040446" CREATED="1603351769281" MODIFIED="1603351772792">
+<node TEXT="object[&quot;ATTR_NAME&quot;]" ID="ID_1791456121" CREATED="1603351801058" MODIFIED="1603351815899"/>
+</node>
+</node>
+<node TEXT="inbuilt object functions" ID="ID_927667513" CREATED="1603352526187" MODIFIED="1603352544132">
+<node TEXT="Object.values(obj); // =&gt; [v1, v2, ...]" ID="ID_563846290" CREATED="1603352545378" MODIFIED="1603352575396"/>
+<node TEXT="Object.keys(obj); // =&gt; [key1, key2, ...]" ID="ID_282058486" CREATED="1603352575864" MODIFIED="1603352598684"/>
+</node>
+<node TEXT="for (let key in object) {&#xa;     // typeof key == string&#xa;     let value = object[key];&#xa;     // object.key DOES NOT WORK in this context&#xa;}" ID="ID_1326524286" CREATED="1603351589150" MODIFIED="1603351994586"/>
+<node TEXT="constructor" ID="ID_1009238223" CREATED="1604478215754" MODIFIED="1604478445457"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      function ClassConstructor(propA, propB, ...) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;this.propA = propA;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;this.propB = propB;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;// ...
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // to instantiate an object of a given class:
+    </p>
+    <p>
+      let instance = new ClassConstruct(&quot;a&quot;, &quot;b&quot;, ...);
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="destructuring" POSITION="right" ID="ID_1488099798" CREATED="1604479441581" MODIFIED="1604479792074">
+<node TEXT="arrays" ID="ID_1310063777" CREATED="1604479456717" MODIFIED="1604479499918"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [a, b] = [1, 2, 3];
+    </p>
+    <p>
+      console.log(a, b);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="objects" ID="ID_822285671" CREATED="1604479450349" MODIFIED="1604479779703"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // in the object's case:
+    </p>
+    <p>
+      // renaming is possible (like in &quot;a:d&quot;)
+    </p>
+    <p>
+      // the order does not matter since to the actual values is refered via the attribute name.
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      ({a:d,b} = {a: 1, b: 2, c: 3});
+    </p>
+    <p>
+      console.log(a,b);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="node" POSITION="right" ID="ID_1622606716" CREATED="1603350677914" MODIFIED="1603350680066">
+<node TEXT="node is a javascript interpreter" ID="ID_305075892" CREATED="1603350793116" MODIFIED="1603350804751"/>
+<node TEXT="execute javascript files with:&#xa;$&gt; node FILENAME" ID="ID_1133501035" CREATED="1603350811107" MODIFIED="1603350826460"/>
+<node TEXT="nvm (node version manager)" ID="ID_1970958580" CREATED="1603350683383" MODIFIED="1603350787021" LINK="https://github.com/nvm-sh/nvm">
+<node TEXT="install" FOLDED="true" ID="ID_941861692" CREATED="1603350768967" MODIFIED="1603350855013" LINK="https://github.com/nvm-sh/nvm#installing-and-updating">
+<node TEXT="$&gt; curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash" ID="ID_92098622" CREATED="1603350859810" MODIFIED="1603350877089"/>
+</node>
+<node TEXT="basic usage" FOLDED="true" ID="ID_1026060510" CREATED="1603350722260" MODIFIED="1603350728765">
+<node ID="ID_146840298" CREATED="1603350706328" MODIFIED="1603350706328"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    after installing node, restart the terminal<br http-equiv="content-type" content="text/html; charset=utf-8"/>then the &quot;nvm&quot; command should be available, e. g. execute:<br/>$&gt; nvm list<br/>to show the installed node versions and<br/>install the most recent node version via:<br/>$&gt; nvm install node<br/>check the active version via:<br/>$&gt; node --versionHave fun.
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>
@@ -313,6 +571,331 @@
   </body>
 </html>
 </richcontent>
+</node>
+<node TEXT="functions" FOLDED="true" ID="ID_760779407" CREATED="1602660702568" MODIFIED="1602660707827">
+<node TEXT="signature" FOLDED="true" ID="ID_334642295" CREATED="1602660713402" MODIFIED="1602660717648">
+<node TEXT="RETURN VALUE function_name(P1, P2) RETURN VALUE" ID="ID_1369718045" CREATED="1602661259712" MODIFIED="1602661316665"/>
+<node TEXT="function-name" ID="ID_644807004" CREATED="1602660721401" MODIFIED="1602660729679"/>
+<node TEXT="parameters" ID="ID_228408595" CREATED="1602660730072" MODIFIED="1602660732436"/>
+<node TEXT="return value" ID="ID_219828913" CREATED="1602660733312" MODIFIED="1602660735892"/>
+</node>
+<node TEXT="function body" ID="ID_1147734216" CREATED="1602661136586" MODIFIED="1602661146677"/>
+</node>
+<node TEXT="recursive function" ID="ID_1821354970" CREATED="1602661044428" MODIFIED="1602671263474"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a function calling itself
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="callback functions (aka callback)" FOLDED="true" ID="ID_1252529451" CREATED="1602660900902" MODIFIED="1602660909692">
+<node TEXT="application e. g. in array.sort(..., callback)" ID="ID_1651875563" CREATED="1602660911920" MODIFIED="1602660928162"/>
+<node TEXT="named callback" ID="ID_830397588" CREATED="1602660933206" MODIFIED="1602660945279"/>
+<node TEXT="anonymous callback" ID="ID_1350186999" CREATED="1602660945932" MODIFIED="1602660949912"/>
+</node>
+<node TEXT="objects" ID="ID_1593518398" CREATED="1603351198905" MODIFIED="1603351202648">
+<node TEXT="properties" FOLDED="true" ID="ID_683708083" CREATED="1603351209960" MODIFIED="1603351212388">
+<node TEXT="attributes" ID="ID_594811236" CREATED="1603351215272" MODIFIED="1603351218646"/>
+<node TEXT="methods" ID="ID_86740970" CREATED="1603351219143" MODIFIED="1603351221723"/>
+<node TEXT="getters" ID="ID_805300427" CREATED="1603351229577" MODIFIED="1603351238558"/>
+<node TEXT="setters" ID="ID_1338859820" CREATED="1603351239009" MODIFIED="1603351241026"/>
+</node>
+<node TEXT="this" ID="ID_108101645" CREATED="1603351558215" MODIFIED="1603351585921"/>
+</node>
+<node TEXT="class" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
+<node TEXT="constructor" ID="ID_1128672964" CREATED="1604478162826" MODIFIED="1604480111542"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      class ClassName{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;constructor(){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//initializing class properties
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//methods can also initialized here
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="To instantiate an object the &quot;new&quot; keyword is used." ID="ID_1829262089" CREATED="1604478178878" MODIFIED="1604478305281"/>
+</node>
+<node TEXT="&quot;private&quot; attributes" ID="ID_516763904" CREATED="1604480277082" MODIFIED="1604481387130"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      class Student{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;constructor(name, age, grade){
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.a = 1; // public attribute
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//adding some hidden properties
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _name = name;&#160;&#160;// these are private because they only exist in the constructor's scope *
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _age = age;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _grade = grade;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// * therefore the following method can use them (closure would be the mechanism)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getname = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _name
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getage = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _age
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getgrade = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _grade
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;get b() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return this.getgrade() + 2;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;log() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log(this.getname(), this.getage(), this.getgrade());
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      let student = new Student(&quot;Alice&quot;, 26, 2);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //console.log(student._age);
+    </p>
+    <p>
+      student.log();
+    </p>
+    <p>
+      console.log(student.a);
+    </p>
+    <p>
+      console.log(student.b);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="prototype objects" ID="ID_1153804059" CREATED="1604478773708" MODIFIED="1604478778348"/>
+<node TEXT="nesting" ID="ID_1624472858" CREATED="1604478704516" MODIFIED="1604478759512">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_100223135" STARTINCLINATION="154;0;" ENDINCLINATION="154;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="destructuring" ID="ID_544064834" CREATED="1604478583559" MODIFIED="1604478587442"/>
+<node TEXT="clones" FOLDED="true" ID="ID_873731697" CREATED="1604478541463" MODIFIED="1604478546034">
+<node TEXT="simple vs. complex types" ID="ID_476641818" CREATED="1604478518435" MODIFIED="1604478540234"/>
+<node TEXT="a variable being of complex types points via a reference to the actual &quot;thing&quot;" ID="ID_1159929107" CREATED="1604478592111" MODIFIED="1604478635922"/>
+<node TEXT="shallow clones" ID="ID_1236172466" CREATED="1604478549743" MODIFIED="1604478553642"/>
+<node TEXT="deep clones" ID="ID_100223135" CREATED="1604478554023" MODIFIED="1604480010437"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      dynamic deep cloning would require a recursive function.
+    </p>
+    <p>
+      maybe use a library for that:
+    </p>
+    <p>
+      - lodash&#160;&#160;https://lodash.com
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // Javascript:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const lodash = require('./lodash');
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const original = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;name: 'Robert',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;location: 'USA',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;family: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;father: 'Rob',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mother: 'Eve'
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const clone = lodash.cloneDeep(original);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
+<node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">
+<node TEXT="Objects Overview" ID="ID_22210042" CREATED="1603272853852" MODIFIED="1603272866138" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"/>
+</node>
+<node TEXT="Open Web Application Security Project (OWASP)" ID="ID_360235335" CREATED="1602671101666" MODIFIED="1602671121155" LINK="https://owasp.org/">
+<node TEXT="OWASP Top Ten" ID="ID_965975281" CREATED="1602671122641" MODIFIED="1602671211186" LINK="https://owasp.org/www-project-top-ten/"/>
+<node TEXT="multiple useful checklists" ID="ID_135002795" CREATED="1602671127255" MODIFIED="1602671232558"/>
+</node>
+<node TEXT="References in Javascript" ID="ID_1253152835" CREATED="1603809669200" MODIFIED="1603882299438" LINK="https://daveceddia.com/javascript-references/"/>
+<node TEXT="Math" ID="ID_156753359" CREATED="1603889292677" MODIFIED="1603889294706">
+<node TEXT="Coordinate System" ID="ID_652247626" CREATED="1603882300292" MODIFIED="1603882317158" LINK="https://en.wikipedia.org/wiki/Coordinate_system"/>
+<node TEXT="Graph Theory" ID="ID_768193935" CREATED="1603889299171" MODIFIED="1603891440074" LINK="https://en.wikipedia.org/wiki/Graph_theory"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A graph consists of nodes, which may be connected via edges.
+    </p>
+    <p>
+      Edges can be directed and can have an associated weight.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      A graph may have cycles, that is paths allowing to go the same route again and again. A graph without cycles is acyclic.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Altogether one may describe a graph e. g. as being a &quot;weighted directed and acyclic graph&quot;.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="Tree" ID="ID_133528623" CREATED="1603891149986" MODIFIED="1603891155044" LINK="https://en.wikipedia.org/wiki/Tree_(graph_theory)"/>
+<node TEXT="Directed Acyclig Graph (DAG)" ID="ID_934844499" CREATED="1603891521433" MODIFIED="1603891533844" LINK="https://en.wikipedia.org/wiki/Directed_acyclic_graph"/>
+<node TEXT="Dijkstra&apos;s Algorithm - Minimal Spanning Tree" ID="ID_1996964084" CREATED="1603889427504" MODIFIED="1603889454037" LINK="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"/>
+</node>
+</node>
+<node TEXT="Unified Modeling Language (UML)" ID="ID_672730567" CREATED="1604479291162" MODIFIED="1604479371360" LINK="https://en.wikipedia.org/wiki/Unified_Modeling_Language">
+<node TEXT="Class Diagram" ID="ID_105863928" CREATED="1604479350887" MODIFIED="1604479359321" LINK="https://en.wikipedia.org/wiki/Class_diagram"/>
+<node TEXT="Sequence Diagram" ID="ID_492143935" CREATED="1604479407790" MODIFIED="1604479421293" LINK="https://en.wikipedia.org/wiki/Sequence_diagram"/>
 </node>
 </node>
 </node>
