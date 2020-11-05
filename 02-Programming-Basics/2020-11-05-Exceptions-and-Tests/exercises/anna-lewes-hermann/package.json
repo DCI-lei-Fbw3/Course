@@ -1,0 +1,11 @@
+{
+  "name": "anna-lewes-hermann",
+  "version": "1.0.0",
+  "description": "",
+  "main": "anna-lewes-hermann.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}
