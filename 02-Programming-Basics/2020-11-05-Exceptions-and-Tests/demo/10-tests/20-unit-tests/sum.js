@@ -2,4 +2,9 @@ function sum(a, b) {
 	return a + b;
 }
 
-module.exports = sum;
+function sumAlt(a, b) {
+	let result = a + b;
+	return result;
+}
+
+module.exports = {sum, sumAlt};

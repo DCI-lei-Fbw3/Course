@@ -106,3 +106,46 @@ console.log(obj.divide())
 // ```
 
 
+<<<<<<< HEAD
+=======
+// //creting a class named employee
+// class Employee{
+//   // creating the constructor function
+//   constructor(name, age, designation){
+//   this.name = name;
+//   this.age = age;
+//   this.designation = designation;
+//   this.displayName = function (){
+//   console.log("Name of emplyee is ", this.name)
+//   }
+//   }
+//   }
+  
+//   console.log(typeof Employee); 
+
+
+  class Employee{
+    // creating the constructor function
+    constructor(name, age, designation){
+    //all props defined as they were in the constructor function
+    this.name = name;
+    this.age = age;
+    this.designation = designation;
+    //inside methods
+    this.displayName = function (){
+    console.log("Name of emplyee is ", this.name)
+    }
+    }
+    //outside methods
+    getAge(){
+    return this.age;
+    }
+    }
+    
+    let employee1 = new Employee("John", 29, "Developer");
+    
+    employee1.displayName();
+    console.log("Age is ", employee1.getAge());
+    console.log("designation is: ", employee1.designation);
+    console.log(employee1); 
+>>>>>>> 2bb0a1746be4c2212a6a23fbee2709b1ac13b75b
