@@ -8,3 +8,6 @@ function lastElement(array) {
       return {element: array[array.length - 1]};
     }
 }
+
+let result = lastElement([]);
+let element = !result.failed? result.element : console.log("error occured");

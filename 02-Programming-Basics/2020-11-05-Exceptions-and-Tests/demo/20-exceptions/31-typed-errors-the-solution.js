@@ -11,11 +11,11 @@ function validate(value) {
 }
 
 try {
-    let dir = validateTYPO("invalid input"); // ← typo!
+    let dir = validateDDD("left"); // ← typo!
     console.log("You chose ", dir);
 } catch (e) {
     if (e instanceof ValidationError) {
-        console.log("Input not valid.");
+        console.log(e);
     } else {
         throw e;
     }
