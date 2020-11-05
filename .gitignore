@@ -1,4 +1,7 @@
 
+# Apple OS-X
+.DS_Store
+
 # npm projects:
 node_modules/
 npm-debug.log
