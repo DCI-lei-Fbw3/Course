@@ -174,8 +174,7 @@
 
         const permutations = s => {
 
-            let result = [];
-            const acc = '';
+            const result = [];
 
             const permut = (s, acc) => {
                 if (s.length === 1) {
@@ -190,7 +189,7 @@
                 }
             }
 
-            permut(s, acc);
+            permut(s, '');
 
             return result;
         }
