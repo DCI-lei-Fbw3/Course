@@ -1,5 +1,6 @@
 
 //! npm install --save-dev jest
+//! npm run test
 
 //const { difference, sum, product, quotient, remainder, abs, pow } = require('./test-exercise');
 
