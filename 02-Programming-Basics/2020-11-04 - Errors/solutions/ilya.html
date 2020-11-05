@@ -180,7 +180,7 @@
             const permut = (s, acc) => {
                 if (s.length === 1) {
                     acc += s;
-                    result.push(acc);
+                    if (result.indexOf(acc) === -1) result.push(acc);
                 } else {
                     for (let i = 0; i < s.length; i++) {
                         acc += s[i];
@@ -191,8 +191,6 @@
             }
 
             permut(s, acc);
-
-            result = [...new Set(result)];
 
             return result;
         }
