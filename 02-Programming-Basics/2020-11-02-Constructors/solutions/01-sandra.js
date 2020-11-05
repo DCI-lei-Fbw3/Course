@@ -106,6 +106,8 @@ console.log(obj.divide())
 // ```
 
 
+<<<<<<< HEAD
+=======
 // //creting a class named employee
 // class Employee{
 //   // creating the constructor function
@@ -146,3 +148,4 @@ console.log(obj.divide())
     console.log("Age is ", employee1.getAge());
     console.log("designation is: ", employee1.designation);
     console.log(employee1); 
+>>>>>>> 2bb0a1746be4c2212a6a23fbee2709b1ac13b75b
