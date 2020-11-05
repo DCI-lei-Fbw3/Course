@@ -34,6 +34,7 @@ https://jestjs.io/docs/en/getting-started
     ```
     $> yarn add --dev jest
     # or
+    $> npm init
     $> npm install --save-dev jest
     ```
 
