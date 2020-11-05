@@ -570,7 +570,7 @@ console.log(getDuplicateArrayElements(arr_1)); */
 
 
 
-function duplicate(x){
+/* function duplicate(x){
     var arr_sorted = x.sort();
     var arr_2 = [];
 
@@ -593,5 +593,20 @@ function duplicate(x){
 
 var arr_1 = [1,2,3,4,5,2,5]
 
-console.log(duplicate(arr_1)); 
+console.log(duplicate(arr_1));  */
 
+// Q1
+
+let arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+function check(x){
+for (let i =0 ; i<x.length; i++){
+    console.log("row", i); 
+    let sub_arr = x[i];
+        for(var j=0;j<sub_arr.length;j++){
+            console.log(sub_arr[j]);
+        }
+}
+}
+
+console.log(check(arr)); 

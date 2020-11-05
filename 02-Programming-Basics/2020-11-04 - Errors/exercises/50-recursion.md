@@ -10,3 +10,6 @@ function sum(array) {
 
 console.log(sum([1, 2, 3]));
 ```
+
+
+
