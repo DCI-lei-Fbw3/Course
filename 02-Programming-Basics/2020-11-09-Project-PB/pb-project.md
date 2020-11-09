@@ -10,7 +10,7 @@ Congratulations! You have made it through the Programming Basics module. In orde
  - You have the PDF of the chapter and the associated code attached to this folder.
  - If you do not want to work on setting up the program in your own environment, you can find a code-sandbox here:https://eloquentjavascript.net/code/#7
  However, as always, please do not look at he solutions otherwise whats the point to doing an exercise?
- - _Submission Deadline_: **12.11.20**
+ - _Submission Deadline_: **12.11.20** by 16:00
  
  ## Deliverables
 
