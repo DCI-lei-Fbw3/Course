@@ -25,5 +25,5 @@ Congratulations! You have made it through the Programming Basics module. In orde
     
     c. Make a few suggestions on how you can improve the program. Implementations of your suggestions would work better. 
     
-    d. Please elaborate what concepts of Javscript did you see being implemented in the program
+    d. Please elaborate what concepts of Javscript did you see being implemented in the program (functional programming, objects and array methods etc.)
   
