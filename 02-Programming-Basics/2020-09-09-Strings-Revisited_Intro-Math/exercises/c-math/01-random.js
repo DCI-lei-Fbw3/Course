@@ -2,4 +2,7 @@
 
 // Use the correct Math method to create a random number.
 
-console.log(METHOD_CALL_GOES_HERE);
+console.log(Math.random());//from 0 to 1;
+console.log(Math.floor(Math.random()*10)); //from 0 to 9
+console.log(Math.floor(Math.random()*100));//from 0 to 99
+
