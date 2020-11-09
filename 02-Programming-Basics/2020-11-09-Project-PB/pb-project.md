@@ -2,7 +2,7 @@
   
 Congratulations! You have made it through the Programming Basics module. In order to give you a chance to consolidate your new knowledge in JavaScript, you will be working on a pair-programming* project. The tasks are simple, and its not so much about coming up with new code, but rather to understand and use JavaScript in a given context. 
 
- *Pair-programming: you will work on the project in pairs (with one group of three). This will be announced in class.
+ *Pair-programming: you will work on the project in pairs (with one group of three). The pairing will be announced in class.
   
  ## Project details
 
