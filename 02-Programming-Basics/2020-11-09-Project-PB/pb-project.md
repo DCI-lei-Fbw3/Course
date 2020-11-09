@@ -18,8 +18,12 @@ Congratulations! You have made it through the Programming Basics module. In orde
  2. Make the program work. 
  3. Answer all three Exercises at the end of the chapter and sumit answers as JS file.
  4. Write a (max) two page report, explaining:
+ 
     a. Your understanding of the flow of the program (where does it start and where does it end?)
+    
     b. Does the program achieve its goals? How?
+    
     c. Make a few suggestions on how you can improve the program. Implementations of your suggestions would work better. 
+    
     d. Please elaborate what concepts of Javscript did you see being implemented in the program
   
