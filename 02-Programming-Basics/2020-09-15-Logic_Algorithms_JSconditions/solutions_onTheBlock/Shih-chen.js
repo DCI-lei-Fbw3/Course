@@ -10,7 +10,7 @@ if (x<0) {
     console.log(x);
 }
 else {
-    x="Greater or equal to 0"
+    x="Greater or equal to 0";
     console.log(x);
 }
 ​
@@ -23,19 +23,19 @@ a. If determiner is greater of equal to 0, updater's value should be "Greater or
 b. If determiner is less than 0, updater's value should be "Less than 0".
 ​
 * Question: What would happen if we tried to print "message" outside of the if statement? Comment your answer in the js file.*/
-var x = -1;
+//var x = -1;
+var update;
 if (x>=0) {
-    x="Greater or equal to 0";
+    //x="Greater or equal to 0";
+    update="Greater or equal to 0";
     let message="Positive Interger"; 
     console.log(message);
 }
 else {
-    x="Less than 0"
+    update="Less than 0";
     message="Negative Integer";
-    console.log("This is inside the scope,", x);   
-}
-​
-console.log("The number outside of the scope is", x);
+    console.log("This is inside the scope."); }
+console.log(update);
 //when using console.log to print out a message of x, x will be the most updated variable.
 ​
 /*3. Ternary v.s. If statement
@@ -56,7 +56,7 @@ else {
     console.log("The number has been updated to a number smaller than 7");
 }
 //Ternary is used more either/or, yes/no, whereas if and else is used when there is more than 2 options to examine.
-Collapse
+//Collapse
 
 
 

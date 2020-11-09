@@ -1,4 +1,4 @@
-# Inputs & Outputs
+/*# Inputs & Outputs
 
 Write down pseudo-code on pen and paper for the following patterns:
 
@@ -9,7 +9,18 @@ Write down pseudo-code on pen and paper for the following patterns:
 |  2, 5  |   5    |
 | 0, 100 |  100   |
 | 52, 35 |   52   |
+*/
 
+function compare1 (a, b) {
+    if (a>b) {
+        console.log(a);
+    } 
+    if (b>a) {
+        console.log(b);
+    }
+}
+
+/*
 #### 2.
 
 | Input  | Output |
@@ -17,7 +28,18 @@ Write down pseudo-code on pen and paper for the following patterns:
 |  5, 5  |  true  |
 | 40, 40 |  true  |
 | 50, 51 | false  |
+*/
 
+function compare2 (a, b) {
+    if (a==b) {
+        console.log("True");        
+    }
+    else {
+        console.log("False");
+    }
+}
+
+/*
 #### 3.
 
 |  Input   | Output |
@@ -25,7 +47,7 @@ Write down pseudo-code on pen and paper for the following patterns:
 | 110, 100 |  true  |
 | 150, 100 |  true  |
 | 50, 100  | false  |
-
+*/
 # Programming Basics: Conditionals Part 2
 
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / (height * height). (mass in kg, i.e. 72.5, and height in metres, i.e. 1.65).
