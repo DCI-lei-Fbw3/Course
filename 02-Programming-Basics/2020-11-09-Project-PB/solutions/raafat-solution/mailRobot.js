@@ -144,7 +144,7 @@ function goalOrientedRobot({ place, parcels }, route) {
 // !Measuring a robot
 function countTurns(state, robot, memory) {
 	for (let turn = 0; ; turn++) {
-		if (state.parcels.length == 0) return turn;
+		if (state.parcels.length == 0) return turn / 100;
 		let action = robot(state, memory);
 		state = state.move(action.direction);
 		memory = action.memory;
@@ -155,24 +155,22 @@ const compareRobots = () => {
 	let theRobots = [0, 0, 0, 0];
 	let state = VillageState.random();
 	for (let i = 0; i < 100; i++) {
-		theRobots[0] += countTurns(state, randomRobot, []) / 100;
-		theRobots[1] += countTurns(state, routeRobot, []) / 100;
-		theRobots[2] += countTurns(state, goalOrientedRobot, []) / 100;
-		theRobots[3] += countTurns(state, smarterRobot, []) / 100;
+		theRobots[0] += countTurns(state, randomRobot, []);
+		theRobots[1] += countTurns(state, routeRobot, []);
+		theRobots[2] += countTurns(state, goalOrientedRobot, []);
+		theRobots[3] += countTurns(state, smarterRobot, []);
 	}
-	console.log(
-		`the 1st Robot needed ${Math.round(
-			theRobots[0]
-		)} move to finish,\nthe 2nd Robot needed ${Math.round(
-			theRobots[1]
-		)} move to finish,\nthe 3rd Robot needed ${Math.round(
-			theRobots[2]
-		)} move to finish,\nthe 4th Robot needed ${Math.round(
-			theRobots[3]
-		)} move to finish`
-	);
+	return `the 1st Robot needed ${Math.round(
+		theRobots[0]
+	)} move to finish,\nthe 2nd Robot needed ${Math.round(
+		theRobots[1]
+	)} move to finish,\nthe 3rd Robot needed ${Math.round(
+		theRobots[2]
+	)} move to finish,\nthe 4th Robot needed ${Math.round(
+		theRobots[3]
+	)} move to finish`;
 };
-compareRobots();
+console.log(compareRobots());
 
 // !Robot efficiency
 function smarterRobot({ place, parcels }, memory) {
