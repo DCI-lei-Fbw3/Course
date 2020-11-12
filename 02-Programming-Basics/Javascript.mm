@@ -292,7 +292,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="objects" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
+<node TEXT="objects" FOLDED="true" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
 <node TEXT="javascript code" ID="ID_1361335497" CREATED="1603882358683" MODIFIED="1603882465408"><richcontent TYPE="NOTE">
 
 <html>
@@ -405,11 +405,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
-<node TEXT="destructuring" POSITION="right" ID="ID_1488099798" CREATED="1604479441581" MODIFIED="1604479792074">
+<node TEXT="destructuring" FOLDED="true" POSITION="right" ID="ID_1488099798" CREATED="1604479441581" MODIFIED="1604479792074">
 <node TEXT="arrays" ID="ID_1310063777" CREATED="1604479456717" MODIFIED="1604479499918"><richcontent TYPE="NOTE">
 
 <html>
@@ -425,7 +424,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="objects" ID="ID_822285671" CREATED="1604479450349" MODIFIED="1604479779703"><richcontent TYPE="NOTE">
@@ -455,11 +453,10 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
-<node TEXT="node" POSITION="right" ID="ID_1622606716" CREATED="1603350677914" MODIFIED="1603350680066">
+<node TEXT="node" FOLDED="true" POSITION="right" ID="ID_1622606716" CREATED="1603350677914" MODIFIED="1603350680066">
 <node TEXT="node is a javascript interpreter" ID="ID_305075892" CREATED="1603350793116" MODIFIED="1603350804751"/>
 <node TEXT="execute javascript files with:&#xa;$&gt; node FILENAME" ID="ID_1133501035" CREATED="1603350811107" MODIFIED="1603350826460"/>
 <node TEXT="nvm (node version manager)" ID="ID_1970958580" CREATED="1603350683383" MODIFIED="1603350787021" LINK="https://github.com/nvm-sh/nvm">
@@ -600,7 +597,7 @@
 <node TEXT="named callback" ID="ID_830397588" CREATED="1602660933206" MODIFIED="1602660945279"/>
 <node TEXT="anonymous callback" ID="ID_1350186999" CREATED="1602660945932" MODIFIED="1602660949912"/>
 </node>
-<node TEXT="objects" ID="ID_1593518398" CREATED="1603351198905" MODIFIED="1603351202648">
+<node TEXT="objects" FOLDED="true" ID="ID_1593518398" CREATED="1603351198905" MODIFIED="1603351202648">
 <node TEXT="properties" FOLDED="true" ID="ID_683708083" CREATED="1603351209960" MODIFIED="1603351212388">
 <node TEXT="attributes" ID="ID_594811236" CREATED="1603351215272" MODIFIED="1603351218646"/>
 <node TEXT="methods" ID="ID_86740970" CREATED="1603351219143" MODIFIED="1603351221723"/>
@@ -609,8 +606,8 @@
 </node>
 <node TEXT="this" ID="ID_108101645" CREATED="1603351558215" MODIFIED="1603351585921"/>
 </node>
-<node TEXT="class" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
-<node TEXT="constructor" ID="ID_1128672964" CREATED="1604478162826" MODIFIED="1604480111542"><richcontent TYPE="NOTE">
+<node TEXT="class" FOLDED="true" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
+<node TEXT="constructor" FOLDED="true" ID="ID_1128672964" CREATED="1604478162826" MODIFIED="1604480111542"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -637,7 +634,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="To instantiate an object the &quot;new&quot; keyword is used." ID="ID_1829262089" CREATED="1604478178878" MODIFIED="1604478305281"/>
 </node>
@@ -764,7 +760,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -843,7 +838,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
