@@ -199,3 +199,34 @@ function shortestParcelRoad(parcelToPick) {
 	}
 	return shortRoad;
 }
+
+// !Persistent group
+class PGroup {
+	constructor(item) {
+		this.item = item;
+	}
+
+	has = (val) => this.item.includes(val);
+
+	add = (val) => {
+		if (this.has(val)) return this;
+		return new PGroup(this.item.concat(val));
+	};
+
+	del = (val) => {
+		if (!this.has(val)) return this;
+		return new PGroup(this.item.filter((x) => x !== val));
+	};
+}
+
+PGroup.empty = new PGroup([]);
+
+let a = PGroup.empty.add("a");
+let ab = a.add("b");
+let b = ab.del("a");
+
+console.log(b.has("b"));
+
+console.log(a.has("b"));
+
+console.log(b.has("a"));
