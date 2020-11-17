@@ -1,9 +1,14 @@
-const sum = require("./sum");
-const { pow, abs } = require("./powAbs"); //import multiple functions from one file
-const difference = require("./difference");
-const product = require("./product");
-const quotient = require("./quotient");
-const remainder = require("./remainder");
+const {
+  difference,
+  product,
+  quotient,
+  remainder,
+  sum,
+  pow,
+  abs,
+} = require("./mathLibrary"); //import multiple functions from one file
+
+// const library = require("./mathLibrary")  //with dot notation (e.g. library.sum, library.difference)
 
 //Testing Sum
 test("adds 1 + 2 to equal 3", () => {
