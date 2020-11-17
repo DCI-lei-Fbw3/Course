@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+    <style> 
+    body {
+  background-color: lightblue;
+  font-size: 50px;
+  text-align: center;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 50px;
+  height: 50px;
+}
+button {
+  background-color: pink; 
+  border: solid red;  
+  border-radius: 25px;
+  padding: 50px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+}
+    </style>
+</head>
+
+<body>
+    <header>        
+        <h1>Guess a number!</h1>
+        <button onclick = "invitation()"> Want to play a game?
+        </button>
+        <h2>Any number!</h2>
+        
+        <h3>(from 1-10)</h3>
+    </header>
+    <ul>
+        <li>Guess a number from 1-10 in the prompt.</li>
+        <li>You have three attempts to guess the correct number!</li>
+        <li>Good luck!</li>       
+    </ul>
+     <button onclick = "pickNumber()"> Click here to enter a number of your choice from 1 to 10!
+        </button>
+
+    <script>
+        function invitation(){
+        let answer = window.prompt("Are you up for a number guessing game? Enter y for go ahead or n for go away");
+        if (answer == "y" || answer == "Y") {
+            window.alert ("Good for you!");
+        }
+        else if (answer == "n" || answer == "N") {
+            window.alert ("Hope you change your mind soon to come back to play the game!");
+        } 
+        else {
+            window.alert ("Not sure what your answer is, please try again, y for yes, n for no.");
+        }
+        }
+
+        function pickNumber (){
+            let number;
+            let failure=0;
+            let success=0;
+            for (let c=0; c<3; c++){
+                number = Number(window.prompt ("Guess a number between 1 to 10"));                        
+                let randomNumber = Math.floor(Math.random() * 10)+1;
+                if (number == randomNumber) {   
+                    success++;
+                    if(success!=0) {                         
+                    window.alert(`Hurray! You have won! The number: ${number}, the attempt: ${c+1}. Tata for now!`);
+                    break; 
+                    }                 
+                }
+                else {       
+                    failure++;       
+                    if (failure==3) {
+                        window.alert(`Sorry, you failed to guess the number in three attempts. The number was ${randomNumber}!`);
+                        break;
+                    } 
+                    window.alert("Wrong number! Try again");                                        
+                }                      
+        } 
+    }
+    </script>
+</body>
+
+</html>
