@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+</head>
+
+<body>
+    <header>
+        <h1>Guess a number!</h1>
+        <h2>Any number!</h2>
+        <h3>(from 1-10)</h3>
+    </header>
+    <ul>
+        <li>Guess a number from 1-10 in the prompt.</li>
+        <li>You have three attempts to guess the correct number!</li>
+        <li>Good luck!</li>
+
+    </ul>
+    <script>
+        let w = window.prompt("Guess a number between 1-10")
+        
+        function randoMizer(num){
+            var guessNum = Math.floor(Math.random()*10)
+            let guess = 1;
+            while (( num != guessNum) && (guess < 3)) {
+                window.prompt("Wrong try again") 
+                guess ++;
+            }
+            if ((num == guessNum) && (count <= 3)) 
+                return window.alert("Success, the number was " +  guessNum + " attempts " + guess)
+                
+            else 
+                return window.alert("Sorry, you lost to guess the number in " + guess + " attempts " + " number was " + guessNum)
+
+        }
+
+
+
+        randoMizer(w)
+
+    </script>
+</body>
+
+</html>
