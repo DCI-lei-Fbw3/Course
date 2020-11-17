@@ -1,7 +1,7 @@
 <!--Welcome FbW3-->
 <!--Intro to DOM: Using JS in the browser-->
 
-
+<!DOCTYPE html>
 <!--The Script Tag-->
 <!--In order to use JS in your HTML code, you can use the script tag. The script tag runs JS synchronously as your HTML renders -->
 
@@ -59,3 +59,34 @@ Read: - https://developer.mozilla.org/en-US/docs/Web/API/Window
       - (Some parts will not be clear the moment, but thats ok, just continue) https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
 
  -->
+
+ <!-- Native vs Host Objects -->
+
+    <!-- Notes
+    - Native objects are native to the programming language (JS), for example arrays, functions etc.
+    - Host objects are objects avilable only in certain environments, for example window object in browser or Nodelists object in Node
+
+
+
+        Window is a Host Object, meaning its only avaible within the browser environment
+        Document is a Host Object, meaning its only avaible within the browser environment
+    -->
+
+  <!-- The Document Object -->  
+
+  <!-- Notes
+    - The Document object represents any web page loaded in the browser window, and serves as an entry point into the web page's content, which is the DOM Tree.
+    - The DOM tree includes elements, such as <table> or <body>. 
+    - The DOM provides functionality globally to the document, like how to obtains the pages'URL and create new elements in the document.
+    - There is a contructor function for creating new documents dynamically, which is:
+   -->
+
+<script>
+    new Document(); // this is the sytanx for dynamically creating new Documents in the browser
+    let neuDoc = new Document(); //the variable neuDoc is a document in the browser and you can use it as such
+
+    neuDoc.selectbyID("div2");
+
+
+//The 2 window objects methods you will need for your exercise, are window.prompt() and window.alert()
+</script>
