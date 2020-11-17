@@ -15,7 +15,7 @@ const randomNumber = () => {
 			);
 			break;
 		}
-		attempts += 1;
+		attempts -= 1;
 	}
 	if (attempts == 0)
 		return window.alert(
