@@ -570,7 +570,7 @@ console.log(getDuplicateArrayElements(arr_1)); */
 
 
 
-function duplicate(x){
+/* function duplicate(x){
     var arr_sorted = x.sort();
     var arr_2 = [];
 
@@ -593,5 +593,91 @@ function duplicate(x){
 
 var arr_1 = [1,2,3,4,5,2,5]
 
-console.log(duplicate(arr_1)); 
+console.log(duplicate(arr_1));  */
 
+// Q1
+
+/* let arr = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+
+function check(x){
+for (let i =0 ; i<x.length; i++){
+    console.log("row", i); 
+    let sub_arr = x[i];
+        for(var j=0;j<sub_arr.length;j++){
+            console.log(sub_arr[j]);
+        }
+}
+}
+
+console.log(check(arr));
+
+
+ function pigLatin(str){
+    var arr_empty = [];
+
+
+
+
+
+
+
+
+console.log(arr.map(check));
+
+/* /* for (var i = 0; i<arr.length; i++){
+    
+    var arr_sub = arr[i];
+    
+    for (j=0;j<arr_sub.length;j++){
+           
+        if(arr_sub[0]!="a" && arr_sub[0]!="e" && arr_sub[0]!="i" &&  arr_sub[0]!="o" && arr_sub[0]!="u"){
+            arr_empty.push(arr_sub[j+1]);
+            
+        }
+        
+        else{
+            if(arr_sub[0]=="a" || arr_sub[0]=="e" || arr_sub[0]=="i" || arr_sub[0]=="o" || arr_sub[0]=="u"){
+                arr_empty.push(arr_sub[j]);
+            } 
+        }
+    }
+}
+return arr_empty;     
+
+
+}
+console.log(pigLatin("Cats are great pets"));  */
+
+
+
+let str = "Cats are great pets";
+let arr = str.split(" "); 
+function check(value){
+    
+    if ( value[0] != "a" && value[0] != "e" && value[0] != "i" &&
+    value[0] != "o" && value[0] != "u"){
+         var a = value.substring(0,1).toLowerCase();
+         var b = value+a+"ay";
+         return b.substring(1);  
+         
+    }
+    else{
+        if ( value[0] == "a" || value[0] == "e" || value[0] == "i" ||
+        value[0] == "o" || value[0] == "u"){ 
+        return value +"way";
+
+        }
+}
+}
+let before_uppercase = (arr.map(check).join(" "));
+
+// Extra practice part
+function pigLatin(x){
+    return x.charAt(0).toUpperCase() + x.substring(1); 
+}
+console.log(pigLatin(before_uppercase));
+
+
+
+
+ 

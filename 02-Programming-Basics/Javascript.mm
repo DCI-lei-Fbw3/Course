@@ -1,7 +1,7 @@
 <map version="freeplane 1.7.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="Javascript" FOLDED="false" ID="ID_1272397937" CREATED="1599636715238" MODIFIED="1600326700591"><hook NAME="MapStyle" background="#ffffff">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" fit_to_viewport="false" show_icon_for_attributes="true"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" show_note_icons="true" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -353,7 +353,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="this - is used to refer to an object&apos;s instance itself" ID="ID_620124151" CREATED="1603351523835" MODIFIED="1603351550716"/>
@@ -370,6 +369,92 @@
 <node TEXT="Object.keys(obj); // =&gt; [key1, key2, ...]" ID="ID_282058486" CREATED="1603352575864" MODIFIED="1603352598684"/>
 </node>
 <node TEXT="for (let key in object) {&#xa;     // typeof key == string&#xa;     let value = object[key];&#xa;     // object.key DOES NOT WORK in this context&#xa;}" ID="ID_1326524286" CREATED="1603351589150" MODIFIED="1603351994586"/>
+<node TEXT="constructor" ID="ID_1009238223" CREATED="1604478215754" MODIFIED="1604478445457"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      function ClassConstructor(propA, propB, ...) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;this.propA = propA;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;this.propB = propB;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;// ...
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // to instantiate an object of a given class:
+    </p>
+    <p>
+      let instance = new ClassConstruct(&quot;a&quot;, &quot;b&quot;, ...);
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="destructuring" FOLDED="true" POSITION="right" ID="ID_1488099798" CREATED="1604479441581" MODIFIED="1604479792074">
+<node TEXT="arrays" ID="ID_1310063777" CREATED="1604479456717" MODIFIED="1604479499918"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      [a, b] = [1, 2, 3];
+    </p>
+    <p>
+      console.log(a, b);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="objects" ID="ID_822285671" CREATED="1604479450349" MODIFIED="1604479779703"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // in the object's case:
+    </p>
+    <p>
+      // renaming is possible (like in &quot;a:d&quot;)
+    </p>
+    <p>
+      // the order does not matter since to the actual values is refered via the attribute name.
+    </p>
+    <p>
+      &#160;
+    </p>
+    <p>
+      ({a:d,b} = {a: 1, b: 2, c: 3});
+    </p>
+    <p>
+      console.log(a,b);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
 </node>
 <node TEXT="node" FOLDED="true" POSITION="right" ID="ID_1622606716" CREATED="1603350677914" MODIFIED="1603350680066">
 <node TEXT="node is a javascript interpreter" ID="ID_305075892" CREATED="1603350793116" MODIFIED="1603350804751"/>
@@ -394,7 +479,7 @@
 </node>
 </node>
 </node>
-<node TEXT="terminology" FOLDED="true" POSITION="left" ID="ID_1545790948" CREATED="1599638782111" MODIFIED="1599638785630">
+<node TEXT="terminology" POSITION="left" ID="ID_1545790948" CREATED="1599638782111" MODIFIED="1599638785630">
 <node TEXT="expression" FOLDED="true" ID="ID_1233784526" CREATED="1599638786493" MODIFIED="1599639004298">
 <linktarget COLOR="#b0b0b0" DESTINATION="ID_1233784526" ENDARROW="Default" ENDINCLINATION="33;0;" ID="Arrow_ID_465183123" SOURCE="ID_33379930" STARTARROW="None" STARTINCLINATION="33;0;"/>
 <node TEXT="represents a value" ID="ID_91515749" CREATED="1599640989022" MODIFIED="1599641001826"/>
@@ -521,8 +606,243 @@
 </node>
 <node TEXT="this" ID="ID_108101645" CREATED="1603351558215" MODIFIED="1603351585921"/>
 </node>
+<node TEXT="class" FOLDED="true" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
+<node TEXT="constructor" FOLDED="true" ID="ID_1128672964" CREATED="1604478162826" MODIFIED="1604480111542"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      class ClassName{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;constructor(){
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//initializing class properties
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//methods can also initialized here
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+</richcontent>
+<node TEXT="To instantiate an object the &quot;new&quot; keyword is used." ID="ID_1829262089" CREATED="1604478178878" MODIFIED="1604478305281"/>
 </node>
-<node TEXT="Links" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
+<node TEXT="&quot;private&quot; attributes" ID="ID_516763904" CREATED="1604480277082" MODIFIED="1604481387130"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      class Student{
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;constructor(name, age, grade){
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.a = 1; // public attribute
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;//adding some hidden properties
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _name = name;&#160;&#160;// these are private because they only exist in the constructor's scope *
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _age = age;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;var _grade = grade;
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;// * therefore the following method can use them (closure would be the mechanism)
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getname = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _name
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getage = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _age
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;this.getgrade = function() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return _grade
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;get b() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;return this.getgrade() + 2;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      &#160;&#160;&#160;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;log() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;console.log(this.getname(), this.getage(), this.getgrade());
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      let student = new Student(&quot;Alice&quot;, 26, 2);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      //console.log(student._age);
+    </p>
+    <p>
+      student.log();
+    </p>
+    <p>
+      console.log(student.a);
+    </p>
+    <p>
+      console.log(student.b);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="prototype objects" ID="ID_1153804059" CREATED="1604478773708" MODIFIED="1604478778348"/>
+<node TEXT="nesting" ID="ID_1624472858" CREATED="1604478704516" MODIFIED="1604478759512">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_100223135" STARTINCLINATION="154;0;" ENDINCLINATION="154;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="destructuring" ID="ID_544064834" CREATED="1604478583559" MODIFIED="1604478587442"/>
+<node TEXT="clones" FOLDED="true" ID="ID_873731697" CREATED="1604478541463" MODIFIED="1604478546034">
+<node TEXT="simple vs. complex types" ID="ID_476641818" CREATED="1604478518435" MODIFIED="1604478540234"/>
+<node TEXT="a variable being of complex types points via a reference to the actual &quot;thing&quot;" ID="ID_1159929107" CREATED="1604478592111" MODIFIED="1604478635922"/>
+<node TEXT="shallow clones" ID="ID_1236172466" CREATED="1604478549743" MODIFIED="1604478553642"/>
+<node TEXT="deep clones" ID="ID_100223135" CREATED="1604478554023" MODIFIED="1604480010437"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      dynamic deep cloning would require a recursive function.
+    </p>
+    <p>
+      maybe use a library for that:
+    </p>
+    <p>
+      - lodash&#160;&#160;https://lodash.com
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      // Javascript:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const lodash = require('./lodash');
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const original = {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;name: 'Robert',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;location: 'USA',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;family: {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;father: 'Rob',
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mother: 'Eve'
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      };
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      const clone = lodash.cloneDeep(original);
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
 <node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
 <node TEXT="Developer@Mozilla on Javascript" ID="ID_1065100469" CREATED="1602660850924" MODIFIED="1602660881090" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">
 <node TEXT="Objects Overview" ID="ID_22210042" CREATED="1603272853852" MODIFIED="1603272866138" LINK="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects"/>
@@ -561,12 +881,15 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Tree" ID="ID_133528623" CREATED="1603891149986" MODIFIED="1603891155044" LINK="https://en.wikipedia.org/wiki/Tree_(graph_theory)"/>
 <node TEXT="Directed Acyclig Graph (DAG)" ID="ID_934844499" CREATED="1603891521433" MODIFIED="1603891533844" LINK="https://en.wikipedia.org/wiki/Directed_acyclic_graph"/>
 <node TEXT="Dijkstra&apos;s Algorithm - Minimal Spanning Tree" ID="ID_1996964084" CREATED="1603889427504" MODIFIED="1603889454037" LINK="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm"/>
 </node>
+</node>
+<node TEXT="Unified Modeling Language (UML)" ID="ID_672730567" CREATED="1604479291162" MODIFIED="1604479371360" LINK="https://en.wikipedia.org/wiki/Unified_Modeling_Language">
+<node TEXT="Class Diagram" ID="ID_105863928" CREATED="1604479350887" MODIFIED="1604479359321" LINK="https://en.wikipedia.org/wiki/Class_diagram"/>
+<node TEXT="Sequence Diagram" ID="ID_492143935" CREATED="1604479407790" MODIFIED="1604479421293" LINK="https://en.wikipedia.org/wiki/Sequence_diagram"/>
 </node>
 </node>
 </node>

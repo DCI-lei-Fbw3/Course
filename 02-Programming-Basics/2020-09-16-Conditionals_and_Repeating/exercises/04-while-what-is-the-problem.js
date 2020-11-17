@@ -9,11 +9,43 @@ console.log("What happens if 'increment' is set to 3?");
 console.log("How can the code be improved (be made more robust)?");
 
 let i = 0;
-let increment = 2;
-
+//let increment = 2;
 console.log(i);
 while (true) {
-    i += increment;
+    //i += increment;
+    i+=2;
     console.log(i);
-    if (i == 20) break;
+    //if (i == 20) break;
+}
+
+//improved version
+let i = 0;
+
+console.log(i);
+while (i<20) {  
+    i+=2;
+    console.log(i);    
+}
+
+//increment at 1
+let i = 1;
+
+console.log(i);
+while (i<20) {  
+    i++;
+    console.log(i);    
+}
+
+//increment at 3
+let i = 0;
+
+console.log(i);
+while (i<20) {  
+    i+=3;
+    
+    if (i>=20) {
+        break;
+    }   
+    console.log(i); 
+    
 }

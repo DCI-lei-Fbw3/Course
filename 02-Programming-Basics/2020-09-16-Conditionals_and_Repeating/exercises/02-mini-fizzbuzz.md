@@ -1,4 +1,4 @@
-# Programming Basics: Fizzbuzz (using simple if conditionals)
+/*# Programming Basics: Fizzbuzz (using simple if conditionals)
 
 Let's play mini FizzBuzz! For any given number, if the number is:
 - divisible by 3, print "Fizz".
@@ -7,4 +7,4 @@ Let's play mini FizzBuzz! For any given number, if the number is:
 
 That is, if any of the above conditions apply, print the above words *instead of the number*.
 
-- Otherwise, just print the number.
+- Otherwise, just print the number.*/

@@ -4,6 +4,11 @@
 
 var str1 = "Hello ";
 var str2 = "World!";
+<<<<<<< HEAD
+console.log(str1+str2);
+console.log(str1,str2);
+console.log(`${str1}${str2}`);
+=======
 
 let a = str1 + str2
 console.log(a);
@@ -15,3 +20,4 @@ console.log(a == b);
 
 // actually not a concatenated string:
 console.log(str1, str2, "a", "b", "c");
+>>>>>>> 9f26c9b0e77a8bf1541550dc9b6d51918dc174e5

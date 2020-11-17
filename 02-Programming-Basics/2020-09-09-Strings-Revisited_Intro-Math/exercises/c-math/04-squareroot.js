@@ -2,3 +2,5 @@
 
 // Use the correct Math method to get the square root of 9.
 
+console.log(Math.sqrt(9));
+console.log(Math.pow(3, 2));

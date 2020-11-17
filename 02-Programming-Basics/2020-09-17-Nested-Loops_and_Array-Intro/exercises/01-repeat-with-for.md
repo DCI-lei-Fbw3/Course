@@ -5,6 +5,9 @@ These exercises are designed for practising "for" loops. Print all your results 
 1. **Addition.**
    Write a program to add up the numbers 1 to 20.
 
+let i=0;
+let sum=0;
+
 2. **There are i bottles of beer on the wall.**
    Write a program that will output, "There is one bottle of beer on the wall." "There are two bottles of beer on the wall" up until there are five bottles.
 

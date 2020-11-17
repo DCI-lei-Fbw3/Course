@@ -1,0 +1,92 @@
+<!--Welcome FbW3-->
+<!--Intro to DOM: Using JS in the browser-->
+
+<!DOCTYPE html>
+<!--The Script Tag-->
+<!--In order to use JS in your HTML code, you can use the script tag. The script tag runs JS synchronously as your HTML renders -->
+
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+    <h1>Testing Window Object</h1>
+    <button onclick = "createWindow()"> Open a window 
+    </button>
+   <!--  <script >
+    function test () { 
+    window.prompt("Enter some text");
+    };
+        test();
+    </script> -->
+ <!--    <script>  
+    
+    function test () { 
+        console.log("This is a test message")
+    };
+            
+    </script>  The browser will move from rendering to interpreting javasript -->
+   
+    <h1>End</h1>
+
+    <!--The Window Object -->
+
+    <!-- Window is a global interface, meaning it is globally available within our programs in the browser.
+    - The window object is used to control the browser window lifecycle.
+    - There is a global variable called "window", which rrepresents the current browser window in which the code is runnning.
+    - This variable can directly be accessed by using "window" literal.
+    - In case of a multi-tab browser, the window object represents a single tab.
+    - Whenever you open a new window or tab, a window object representing that window/tab is automatically created.
+    - The properties of a window object are used to retrieve information about the window that is currentöy open, 
+    whereas its methods are used to perform specific tasks like opening, maximizing, minimizing the window etc.
+    -->
+
+
+        <script >
+        function createWindow () { 
+       let url = "https://google.com";
+       let win = window.open(url, "Google", "width =600", "height=800");
+       let h = window.outerHeight;
+       let w = window.outerWidth;
+       
+       window.alert("Height and width of the window are " + h + "and" + w);
+        };
+        </script>
+</body>
+
+<!-- 
+TO-DOs:
+Read: - https://developer.mozilla.org/en-US/docs/Web/API/Window
+      - (Some parts will not be clear the moment, but thats ok, just continue) https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+
+ -->
+
+ <!-- Native vs Host Objects -->
+
+    <!-- Notes
+    - Native objects are native to the programming language (JS), for example arrays, functions etc.
+    - Host objects are objects avilable only in certain environments, for example window object in browser or Nodelists object in Node
+
+
+
+        Window is a Host Object, meaning its only avaible within the browser environment
+        Document is a Host Object, meaning its only avaible within the browser environment
+    -->
+
+  <!-- The Document Object -->  
+
+  <!-- Notes
+    - The Document object represents any web page loaded in the browser window, and serves as an entry point into the web page's content, which is the DOM Tree.
+    - The DOM tree includes elements, such as <table> or <body>. 
+    - The DOM provides functionality globally to the document, like how to obtains the pages'URL and create new elements in the document.
+    - There is a contructor function for creating new documents dynamically, which is:
+   -->
+
+<script>
+    new Document(); // this is the sytanx for dynamically creating new Documents in the browser
+    let neuDoc = new Document(); //the variable neuDoc is a document in the browser and you can use it as such
+
+    neuDoc.selectbyID("div2");
+
+
+//The 2 window objects methods you will need for your exercise, are window.prompt() and window.alert()
+</script>
