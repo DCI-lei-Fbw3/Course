@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node.appendChild()</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Node.appendChild() and Node.append()</h1>
+
+    from <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild">MDN: Node.appendChild()</a>
+
+    <h2>Node.appendChild()</h2>
+    <blockquote>
+    <p>
+        The Node.appendChild() method adds a node to the end of the list of children of a specified parent node. If the given child is a reference to an existing node in the document, appendChild() moves it from its current position to the new position (there is no requirement to remove the node from its parent node before appending it to some other node).
+    </p>
+    <p>
+        This means that a node can't be in two points of the document simultaneously. So if the node already has a parent, the node is first removed, then appended at the new position. The Node.cloneNode() method can be used to make a copy of the node before appending it under the new parent. Note that the copies made with cloneNode will not be automatically kept in sync.
+    </p>
+    <p>
+        If the given child is a DocumentFragment, the entire contents of the DocumentFragment are moved into the child list of the specified parent node.    </blockquote>
+    </p>
+    <blockquote>
+    <strong>Newer API available!</strong> <br>
+    The ParentNode.append() method supports multiple arguments and appending strings.
+    </blockquote>
+
+    <pre>
+        element.appendChild(aChild)
+    </pre>
+
+    <h2>Node.append()</h2>
+
+    from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append">MDN: Node.append()</a>
+
+    <blockquote>
+    <p>
+        The ParentNode.append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode. DOMString objects are inserted as equivalent Text nodes.
+    </p>
+    <p>
+        Differences from Node.appendChild():
+    </p>
+    <ul>
+        <li>
+            ParentNode.append() allows you to also append DOMString objects, whereas Node.appendChild() only accepts Node objects.
+        </li>
+        <li>
+            ParentNode.append() has no return value, whereas Node.appendChild() returns the appended Node object.
+        </li>
+        <li>
+            ParentNode.append() can append several nodes and strings, whereas Node.appendChild() can only append one node.
+        </li>
+    </ul>
+    </blockquote>
+
+    <hr>
+
+    <h2>Demonstration</h2>
+
+    <p id="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora velit iusto nam sapiente fugit a aliquid modi, nobis eius praesentium ex nulla atque numquam magnam beatae fuga inventore, voluptate alias.</p>
+
+    <hr>
+    <footer>
+        <a href="mailto:thomas.hofmann@digitalcareerinstiture.org">thomas.hofmann@digitalcareerinstiture.org</a>
+    </footer>
+</body>
+<script>
+
+    let anchor = document.getElementById("1");
+
+    let newElem = document.createElement("h3");
+    newElem.innerText = "Headline added via Node.appendChild(newElem)";
+    anchor.appendChild(newElem);
+
+    let newElem2 = document.createElement("h3");
+    newElem2.innerText = "Headline added via Node.append(element)";
+
+    anchor.append(newElem2);
+
+    anchor.append("Node.append('string') can also add strings.")
+
+
+</script>
+</html>

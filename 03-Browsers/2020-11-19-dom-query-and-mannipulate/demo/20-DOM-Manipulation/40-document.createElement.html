@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document.createElement()</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Document.createElement()</h1>
+
+    from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement">MDN: Node.appendChild()</a>
+
+    <blockquote>
+    In an HTML document, the document.createElement() method creates the HTML element specified by tagName, or an HTMLUnknownElement if tagName isn't recognized.
+    </blockquote>
+
+    <blockquote>
+    Note: Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear the document.
+    </blockquote>
+
+    <pre>
+        let element = document.createElement(tagName[, options]);
+    </pre>
+
+    <hr>
+
+    <h2>Demonstration</h2>
+
+    <p id="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora velit iusto nam sapiente fugit a aliquid modi, nobis eius praesentium ex nulla atque numquam magnam beatae fuga inventore, voluptate alias.</p>
+
+
+    <hr>
+    <footer>
+        <a href="mailto:thomas.hofmann@digitalcareerinstiture.org">thomas.hofmann@digitalcareerinstiture.org</a>
+    </footer>
+</body>
+<script>
+
+    let newElem = document.createElement("h3");
+
+    newElem.innerText = "Dynamically created Headline";
+
+    let anchor = document.getElementById("1");
+
+    document.body.insertBefore(newElem, anchor);
+
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Element.classList</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Element.classList</h1>
+
+    <h2>Links</h2>
+    <ul>
+        <li>
+            <a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">w3schools.com: HTML DOM classList Property</a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/classList">MDN: Element.classList</a>
+        </li>
+    </ul>
+
+    <h2>Methods of <code>classList</code></h2>
+    <ul>
+        <li>
+            <code>add(classname, ..., classnameN)</code>
+        </li>
+        <li>
+            <code>contains(classname)</code>
+        </li>
+        <li>
+            <code>item(index)</code>
+        </li>
+        <li>
+            <code>remove(classname, ..., classnameN)</code>
+        </li>
+        <li>
+            <code>toggle(classname, boolean)</code>
+        </li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque vero suscipit delectus deleniti mollitia! Ad sit assumenda beatae ducimus facilis voluptatum, inventore, eius veritatis, magni voluptas vitae quas. Repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ea totam iste quae expedita laborum maiores consequuntur magnam temporibus nemo, tenetur nobis laboriosam qui sunt ex saepe molestiae autem ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, tenetur modi. Officiis voluptates rem labore odit non iure laboriosam alias veritatis cumque, nihil pariatur neque atque aliquid. Tenetur, rerum voluptate!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor quisquam consequuntur aut voluptas, in at, asperiores harum esse doloribus ipsum nulla quas dolorem a magnam delectus maxime optio nam voluptatem.Eos autem itaque iusto facere magni deleniti laborum repellat ab, doloremque perspiciatis aut recusandae corporis natus explicabo optio labore sunt porro commodi voluptatem? Dolore velit pariatur aperiam, ut perspiciatis quam.</p>
+
+    <p>Lorem ipsum dolor sit amet <span id="1" class="c1 c2 c3 c4">consectetur</span> adipisicing elit. Molestias repudiandae, aspernatur sint laboriosam accusantium minus voluptatem consequatur, corporis dolores quo nesciunt delectus sequi cumque fugiat, unde quod totam dolorum aliquid.
+    Fugiat, illum! Rerum, ut et. Ducimus repellat, nobis magnam sequi dolore beatae aliquam iure eum rem? Enim laudantium dolores natus aliquid. Debitis fugit nemo necessitatibus perspiciatis officiis molestias. Quam, quidem!
+    Sunt iusto facere repellendus corporis repudiandae, doloribus, blanditiis mollitia ipsa ea distinctio culpa quis dolore qui nemo et amet eligendi! Tempore, neque recusandae porro voluptate possimus mollitia laborum nesciunt distinctio!
+    Reiciendis magni iste maiores minima. Reprehenderit quam, voluptatibus amet sunt quod recusandae doloremque! Commodi ratione officiis non, eius repellat eligendi, dolor et aspernatur dignissimos illo fuga optio, suscipit labore incidunt.
+    Totam exercitationem earum possimus illo ab quasi iste laborum magnam eveniet placeat voluptatibus excepturi pariatur iusto ex minus maiores necessitatibus, cumque minima ipsum? Doloribus non excepturi assumenda iusto, ratione maxime.</p>
+
+
+    <footer>
+        <a href="mailto:thomas.hofmann@digitalcareerinstiture.org">thomas.hofmann@digitalcareerinstiture.org</a>
+    </footer>
+
+</body>
+<script>
+
+    let elem = document.getElementById("1");
+    let cl = elem.classList;
+
+    console.log("compare:");
+    console.log("element class-attribute:", elem.className);
+    console.log("classlist:", cl);
+
+    cl.toggle("c4");
+    cl.toggle("c4");
+
+    console.log("element", cl.contains("c4")? "contains": "does not contain", "class 'c4'");
+
+    console.log("removing class 'c4'");
+    cl.remove("c4");
+    console.log("element", cl.contains("c4")? "contains": "does not contain", "class 'c4'");
+
+    console.log("adding class 'c4'");
+    cl.add("c4");
+    console.log("element", cl.contains("c4")? "contains": "does not contain", "class 'c4'");
+
+    console.log("class at index=0", cl.item(0));
+
+</script>
+</html>

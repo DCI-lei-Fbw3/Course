@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document.write()</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Document.write()</h1>
+
+    <blockquote>
+    The Document.write() method writes a string of text to a document stream opened by document.open().
+    </blockquote>
+
+    <blockquote>
+    Note: Because document.write() writes to the document stream, calling document.write() on a closed (loaded) document automatically calls document.open(), which will clear the document.
+    </blockquote>
+
+    <pre>
+        docoment.open(); // optional depending on the context
+            document.write(markup);
+        document.close();
+    </pre>
+
+    <h2>Notes</h2>
+        <blockquote>
+        <p>
+            The text you write is parsed into the document's structure model. In the example above, the h1 element becomes a node in the document.
+        </p>
+        <p>
+            Writing to a document that has already loaded without calling document.open() will automatically call document.open(). After writing, call document.close() to tell the browser to finish loading the page.
+        </p>
+
+        <p>
+            If the document.write() call is embedded within an inline HTML &lt;script&gt; tag, then it will not call document.open(). For example:
+        </p>
+
+        </blockquote>
+
+        <pre>
+        &lt;script&gt;
+            document.write(&lt;h1&gt;Main title&lt;/h1&gt;);
+        &lt;/script&gt;
+        </pre>
+
+    <h2>Links</h2>
+    <ul>
+        <li>
+            <a href="https://www.w3schools.com/jsref/met_doc_write.asp">w3schools.com: HTML DOM write() Method</a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/write">MDN: Document.write()</a>
+        </li>
+    </ul>
+
+
+    <h2>Security Implications</h2>
+    <p>
+        Adding user provided data to a document may have security implications.
+    </p>
+
+    <hr>
+
+    <div id="1"></div>
+
+    <hr>
+    <footer>
+        <a href="mailto:thomas.hofmann@digitalcareerinstiture.org">thomas.hofmann@digitalcareerinstiture.org</a>
+    </footer>
+</body>
+<script>
+
+    document.write('<script>console.log("injecting some javascript via document.write");</script\>');
+
+    let elem = document.getElementById("1");
+
+    elem.innerHTML = 'Injecting via Element.innerHTML does not work. <script>console.log("injecting some javascript via Element.innerHTML");</script\>';
+
+</script>
+</html>

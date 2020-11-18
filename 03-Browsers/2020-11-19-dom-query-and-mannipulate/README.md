@@ -13,7 +13,7 @@
 - Changing the HTML content: The `Element.innerHTML` property
 - Security risks: `document.write()` and script injection
 - Creating Elements: `document.createElement(<tag name>)`
-- Adding elements to the page: `Element.appendChild(<Element object>)`
+- Adding elements to the page: `Node.appendChild(<Element object>)`
 
 ## Traversing: Jumping from one element to its relative
 - Node vs. Element:

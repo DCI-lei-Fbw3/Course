@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTMLElement.innerText vs. Element.innerHTML</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>HTMLElement.innerText vs. Element.innerHTML</h1>
+
+    <h2>HTMLElement.innerText (MDN)</h2>
+
+    from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText">MDN: HTMLElement.innerText</a>
+
+    <blockquote>
+        The innerText property of the HTMLElement interface represents the "rendered" text content of a node and its descendants. As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.
+    </blockquote>
+    <blockquote>
+        Note: innerText is easily confused with Node.textContent, but there are important differences between the two. Basically, innerText is aware of the rendered appearance of text, while textContent is not.
+    </blockquote>
+
+    <h2>Usage</h2>
+    <pre>
+        const renderedText = htmlElement.innerText
+
+        htmlElement.innerText = string
+    </pre>
+
+
+    <h2>Element.innerHTML (MDN)</h2>
+
+    from: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML">MDN: Element.innerHTML</a>
+
+    <blockquote>
+        The Element property innerHTML gets or sets the HTML or XML markup contained within the element.
+    </blockquote>
+    <blockquote>
+        <strong>Note: </strong>If a <a href="/en-US/docs/Web/HTML/Element/div" title="The HTML Content Division element (<div>) is the generic container for flow content. It has no effect on the content or layout until styled using CSS."><code>&lt;div&gt;</code></a>, <a href="/en-US/docs/Web/HTML/Element/span" title="The HTML <span> element is a generic inline container for phrasing content, which does not inherently represent anything. It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang."><code>&lt;span&gt;</code></a>, or <a href="/en-US/docs/Web/HTML/Element/noembed" title="The <noembed> element is an obsolete, non-standard way to provide alternative, or &quot;fallback&quot;, content for browsers that do not support the <embed> element or do not support the type of embedded content an author wishes to use."><code>&lt;noembed&gt;</code></a> node has a child text node that includes the characters <code>(&amp;)</code>, <code>(&lt;)</code>, or <code>(&gt;)</code>, <code>innerHTML</code> returns these characters as the HTML entities <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> and <code>"&amp;gt;"</code> respectively. Use <a href="/en-US/docs/Web/API/Node/textContent"><code>Node.textContent</code></a> to get a raw copy of these text nodes' contents.
+    </blockquote>
+    <blockquote>
+        To insert the HTML into the document rather than replace the contents of an element, use the method insertAdjacentHTML().
+    </blockquote>
+
+    <h2>Usage</h2>
+    <pre>
+        const content = element.innerHTML;
+
+        element.innerHTML = htmlString;
+    </pre>
+
+    <hr>
+
+    <h3>Demonstrations</h3>
+    <h4>Set the content with HTMLElement.innerText:</h4>
+    <p id="1"></p>
+
+    <h4>What to do, if some HTML should also be added?</h4>
+    <p id="2"></p>
+
+    <hr>
+
+    <footer>
+        <a href="mailto:thomas.hofmann@digitalcareerinstiture.org">thomas.hofmann@digitalcareerinstiture.org</a>
+    </footer>
+
+</body>
+<script>
+
+    let elem1 = document.getElementById("1");
+
+    //elem1.innerText = "hello world";
+
+    let elem2 = document.getElementById("2");
+    //elem2.innerText = "text with some <strong>HTML</strong> in it"
+    //elem2.innerHTML = "text with some <strong>HTML</strong> in it"
+
+</script>
+</html>

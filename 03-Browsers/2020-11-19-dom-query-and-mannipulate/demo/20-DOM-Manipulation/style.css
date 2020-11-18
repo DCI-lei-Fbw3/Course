@@ -1,0 +1,31 @@
+html {
+    background-color: #111;
+    color: #ddd;
+    font-family: sans-serif;
+}
+
+a {
+    color: #f66;
+}
+
+footer {
+    text-align: right;
+    font-size: smaller;
+}
+
+.c1 {
+    font-weight: bold;
+}
+
+.c2 {
+    font-style: italic;
+}
+
+.c3 {
+    text-decoration: underline;
+}
+
+.c4 {
+    font-size: smaller;
+    text-transform: uppercase;
+}
