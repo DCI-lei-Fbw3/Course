@@ -2,6 +2,8 @@
 # Apple OS-X
 .DS_Store
 
+.vscode
+
 # npm projects:
 node_modules/
 npm-debug.log
