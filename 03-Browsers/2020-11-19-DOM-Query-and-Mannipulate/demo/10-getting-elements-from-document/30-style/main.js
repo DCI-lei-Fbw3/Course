@@ -27,10 +27,10 @@ function biggerHeader() {
         let elem = elements[i];
 
         console.log(i, elem.style.fontSize);
-
-        /*
+        
         let effectiveFontSize = window.getComputedStyle(elem, null).getPropertyValue('font-size');
         console.log("effective font size:", effectiveFontSize);
+        
         let effectiveSize = parseFloat(effectiveFontSize);
         console.log("effective font-size:", effectiveSize);
 
