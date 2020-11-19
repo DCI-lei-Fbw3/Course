@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementById()</title>
+	<style>
+
+		ul {
+			color: green;
+		}
+
+	</style>
+</head>
+<body>
+	Hello World
+	<ul>
+		<li id="1">a</li>
+		<li id="2">b</li>
+		<li id="3">c</li>
+	</ul>
+</body>
+
+<script>
+
+// this returns every matching item
+let ul = document.querySelector("ul");
+ul.style.color = "orange";
+
+let li = document.querySelector("li");
+//li.style.color = "blue";
+
+// setting the color of the ul
+ul.style.color = "red";
+
+</script>
+
+</html>

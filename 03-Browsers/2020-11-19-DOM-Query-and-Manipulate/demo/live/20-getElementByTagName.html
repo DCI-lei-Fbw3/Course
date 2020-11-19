@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementByTagName()</title>
+</head>
+<body>
+	<ul>
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+	</ul>
+</body>
+
+<script>
+
+// retrieve all element with the tagname "li" in a list
+let listItems = document.getElementsByTagName("li");
+
+// get the first element of that list
+let listItem = listItems[0];
+// a oneline alternative often seen would be:
+let listItemOneLinerAlternative = document.getElementsByTagName("li")[0];
+
+// change the textContent to "aa"
+listItem.textContent = "aa";
+
+</script>
+
+</html>

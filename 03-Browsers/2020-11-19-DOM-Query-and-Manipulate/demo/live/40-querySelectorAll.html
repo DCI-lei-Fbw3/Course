@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementById()</title>
+</head>
+<body>
+	<ul>
+		<li id="1">a</li>
+		<li id="2">b</li>
+		<li id="3">c</li>
+	</ul>
+
+	<ul>
+		<li>second UL</li>
+		<ul>
+			<li>nested list</li>
+		</ul>
+	</ul>
+</body>
+
+<script>
+
+// this returns every matching item in a list.
+let items = document.querySelectorAll("li");
+
+// iterate over each "elem" in that list "items"
+items.forEach((elem, index) => { // forEach expects a callback function as its argument, defined inplace
+	elem.innerText = elem.innerText.toUpperCase();
+	elem.style.color = "#f00";
+}
+);
+
+// example for every "ul"
+let uls = document.querySelectorAll("ul");
+uls[0].style.backgroundColor = "lightgrey";
+
+</script>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementById()</title>
+</head>
+<body>
+	<ul>
+		<li id="1">a</li>
+		<li id="2">b</li>
+		<li id="3">c</li>
+	</ul>
+</body>
+
+<script>
+
+// retrieve a single element by its ID
+let item = document.getElementById("2");
+
+// change its innerText
+item.innerText = "bbb";
+
+console.log(item.innerText);
+
+</script>
+
+</html>

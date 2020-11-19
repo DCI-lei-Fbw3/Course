@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document.getElementById()</title>
+</head>
+<body>
+	<ul>
+		<li id="1">a</li>
+		<li id="2">b</li>
+		<li id="3">c</li>
+	</ul>
+</body>
+
+<script>
+
+// this returns only the first matching item
+let item = document.querySelector("li");
+
+// change the innerText to "AAA"
+item.innerText = "AAA";
+
+// also log that innerText
+console.log(item.innerText);
+
+</script>
+
+</html>
