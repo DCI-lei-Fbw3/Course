@@ -20,15 +20,17 @@
 
 <script>
 
-// this returns every matching item
+// this returns every matching item in a list.
 let items = document.querySelectorAll("li");
 
-items.forEach((elem, index) => {
+// iterate over each "elem" in that list "items"
+items.forEach((elem, index) => { // forEach expects a callback function as its argument, defined inplace
 	elem.innerText = elem.innerText.toUpperCase();
 	elem.style.color = "#f00";
 }
 );
 
+// example for every "ul"
 let uls = document.querySelectorAll("ul");
 uls[0].style.backgroundColor = "lightgrey";
 
