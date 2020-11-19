@@ -59,8 +59,7 @@
 </body>
 
 <script>
-   
-  document.querySelector("body").style.fontFamily = "Georgia";
+    
   let body = document.querySelector("body");
   body.setAttribute("style", "font-weight: 800; font-family: Georgia");
   
@@ -76,7 +75,7 @@
   warning.style.textAlign = "center";
   warning.style.fontSize = "30px";
   
-  const categories = document.querySelectorAll(".category");
+  let categories = document.querySelectorAll(".category");
   categories.forEach(el=> {      
       el.style.textDecoration = "underline";
       el.style.fontStyle = "italic";
@@ -107,6 +106,7 @@
              allergy_food[i].style.backgroundColor = "LightSkyBlue";
          }
      }
+    
     let footer = document.querySelector (".footer");
     footer.setAttribute("style", "display: flex; display-direction: row; justify-content: center;");    
 
@@ -117,14 +117,7 @@
     el.style.borderRadius = "50%"; 
     el.style.padding = "2.75em"; 
     el.style.margin = "1em";          
-    });
-    
-
-    
-    
-    
-    
-    
+    });           
     
 </script>
 </html>
