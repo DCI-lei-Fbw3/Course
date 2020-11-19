@@ -82,8 +82,8 @@
       el.style.fontSize = "1.5em";
     });  
     
-    let main = document.querySelector ("main");
-    main.style.display = "flex";    
+    let main1 = document.querySelector ("main");
+    main1.style.display = "flex";    
 
     let food_categories = document.querySelectorAll(".food-category");
     food_categories.forEach (el=> {
@@ -117,7 +117,27 @@
     el.style.borderRadius = "50%"; 
     el.style.padding = "2.75em"; 
     el.style.margin = "1em";          
-    });           
+    }); 
+    
+    let main2 = document.querySelector("main");
+    //let food_categories2 = document.querySelectorAll(".food-category"); 
+    let deviceReset = window.matchMedia("(max-width: 700px)");
+
+    widthChange();
+    deviceReset.addListener(widthChange);
+
+    // media query change
+    function widthChange() {
+    if (deviceReset.matches) {
+        main2.style.width = "200%";
+        main2.style.height = "200%"; 
+        main2.style.display = "block";      
+  } 
+    else {
+    main2.style.display = "flex";
+    main2.style.width = "100%";     
+     }
+   }
     
 </script>
 </html>
