@@ -606,7 +606,7 @@
 </node>
 <node TEXT="this" ID="ID_108101645" CREATED="1603351558215" MODIFIED="1603351585921"/>
 </node>
-<node TEXT="class" FOLDED="true" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
+<node TEXT="class" ID="ID_681360658" CREATED="1604480036160" MODIFIED="1604480039237">
 <node TEXT="constructor" FOLDED="true" ID="ID_1128672964" CREATED="1604478162826" MODIFIED="1604480111542"><richcontent TYPE="NOTE">
 
 <html>
@@ -841,6 +841,109 @@
 </richcontent>
 </node>
 </node>
+<node TEXT="Errors" FOLDED="true" ID="ID_1567350321" CREATED="1605774836151" MODIFIED="1605774838305">
+<node TEXT="Types of" ID="ID_1674138925" CREATED="1605774643956" MODIFIED="1605774848344">
+<node TEXT="Compile Time Errors" ID="ID_88711634" CREATED="1605774671123" MODIFIED="1605774676663">
+<node TEXT="Syntax Error" ID="ID_1798116208" CREATED="1605774692554" MODIFIED="1605774698721"/>
+</node>
+<node TEXT="Runtime Errors" ID="ID_795430598" CREATED="1605774677125" MODIFIED="1605774681590">
+<node TEXT="Reference Error (e. g. a not defined method)" ID="ID_1471506211" CREATED="1605774715741" MODIFIED="1605774763028"/>
+<node TEXT="Logic Problems" ID="ID_1291371803" CREATED="1605774768354" MODIFIED="1605774792426"/>
+</node>
+</node>
+<node TEXT="Debugging" ID="ID_708436757" CREATED="1605774850567" MODIFIED="1605774853202">
+<node TEXT="Debugger" ID="ID_1623460793" CREATED="1605774855618" MODIFIED="1605774859169">
+<node TEXT="Breakpoints" ID="ID_707727458" CREATED="1605774860663" MODIFIED="1605774866906"/>
+<node TEXT="the &apos;breakpoint&apos; statement" ID="ID_1543049164" CREATED="1605774939420" MODIFIED="1605774958528"/>
+<node TEXT="inspect the state of the program&#xa;- breakpoints&#xa;- values of variable" ID="ID_360998801" CREATED="1605774880527" MODIFIED="1605774916134"/>
+</node>
+<node TEXT="print &quot;debugging&quot;&#xa;console.log-debugging" ID="ID_1067311176" CREATED="1605774974573" MODIFIED="1605774996359"/>
+</node>
+</node>
+<node TEXT="Exceptions" FOLDED="true" ID="ID_643745704" CREATED="1605775187216" MODIFIED="1605775190756">
+<node TEXT="throw and catch&#xa;- catching =&gt; handle the thrown exception" ID="ID_813444375" CREATED="1605775195927" MODIFIED="1605775218059"/>
+<node TEXT="catching only on your own type of error&#xa;=&gt; this would allow to see Runtime Error, because they would not be catched but thrown again." ID="ID_817523012" CREATED="1605775379373" MODIFIED="1605775419426"/>
+</node>
+<node TEXT="Testing" FOLDED="true" ID="ID_404236227" CREATED="1605775014207" MODIFIED="1605775024117">
+<node TEXT="testing framework &quot;Jest&quot;:&#xa;- expect(CALL_OWN_FUNCTION.toBe(VALUE));" ID="ID_1201331363" CREATED="1605775053549" MODIFIED="1605775166269" LINK="https://jestjs.io"/>
+</node>
+<node TEXT="Modules" FOLDED="true" ID="ID_1467769785" CREATED="1605775479457" MODIFIED="1605775483221">
+<node TEXT="export" ID="ID_1340377648" CREATED="1605775484216" MODIFIED="1605775541355"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // file &quot;./MathLib.js&quot;:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      function add(a, b) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return a+b;
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      module.exports = {add};
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="import the whole exported object" ID="ID_1497670668" CREATED="1605775486353" MODIFIED="1605775588155"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const math = require(&quot;./MathLib&quot;);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      console.log(math.add(1,2));
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="import with destructuring" ID="ID_6631218" CREATED="1605775617701" MODIFIED="1605775634696"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const {add} = require(&quot;./MathLib&quot;);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      console.log(add(1,2));
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 </node>
 <node TEXT="Links" FOLDED="true" POSITION="left" ID="ID_496285346" CREATED="1602660785120" MODIFIED="1602660789785">
 <node TEXT="Eloquent Javascript (online book)" ID="ID_1946312294" CREATED="1602670983446" MODIFIED="1602671001188" LINK="https://eloquentjavascript.net"/>
@@ -891,6 +994,84 @@
 <node TEXT="Class Diagram" ID="ID_105863928" CREATED="1604479350887" MODIFIED="1604479359321" LINK="https://en.wikipedia.org/wiki/Class_diagram"/>
 <node TEXT="Sequence Diagram" ID="ID_492143935" CREATED="1604479407790" MODIFIED="1604479421293" LINK="https://en.wikipedia.org/wiki/Sequence_diagram"/>
 </node>
+</node>
+<node TEXT="Modules" FOLDED="true" POSITION="right" ID="ID_1623828342" CREATED="1605775479457" MODIFIED="1605775483221">
+<node TEXT="export" ID="ID_320485010" CREATED="1605775484216" MODIFIED="1605775541355"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      // file &quot;./MathLib.js&quot;:
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      function add(a, b) {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;return a+b;
+    </p>
+    <p>
+      }
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      module.exports = {add};
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="import the whole exported object" ID="ID_589649908" CREATED="1605775486353" MODIFIED="1605775588155"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const math = require(&quot;./MathLib&quot;);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      console.log(math.add(1,2));
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="import with destructuring" ID="ID_1904055978" CREATED="1605775617701" MODIFIED="1605775634696"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      const {add} = require(&quot;./MathLib&quot;);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      console.log(add(1,2));
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="Exceptions" FOLDED="true" POSITION="right" ID="ID_1398286373" CREATED="1605775703939" MODIFIED="1605775707422">
+<node TEXT="throw" ID="ID_774146807" CREATED="1605775708323" MODIFIED="1605775710314"/>
+<node TEXT="try {} catch (e)" ID="ID_1970052720" CREATED="1605775710643" MODIFIED="1605775722039"/>
 </node>
 </node>
 </map>

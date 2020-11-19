@@ -1,7 +1,6 @@
 
 setTimeout(byTagName, 1000);
 
-/*
 setTimeout(byClass, 2000);
 setTimeout(byId, 3000);
 
