@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Makeshift Menu</title>
+</head>
+
+<body id="body">    
+    <h1 class="title">Menu ~ Delicious Carb Indulgences</h1>
+
+    <main class="main">
+
+        <ul class="food-category">
+            <label class="category">Starters</label>
+            <li class="food-item">Quiche</li>
+            <li class="food-item">Bread and dips</li>
+            <li class="food-item">All the pies</li>
+        </ul>
+
+        <ul class="food-category">
+            <label class="category">Mains</label>
+            <li class="food-item">Pizza</li>
+            <li class="food-item">Pasta</li>
+            <li class="food-item">Pie</li>
+        </ul>
+
+        <ul class="food-category">
+            <label class="category">Desserts</label>
+            <li class="food-item">Chocolate cake</li>
+            <li class="food-item">Strawberry pie</li>
+            <li class="food-item">Cheese cake</li>
+        </ul>
+    </main>
+    <section class="allergy-warning">
+        <h3 id="warning">All foods here contain gluten. Sorry ... And also:</h3>
+        <ul class="allergies">
+            <li class="allergy-info">eggs</li>
+            <li class="allergy-info">nuts</li>
+            <li class="allergy-info">fish</li>
+            <li class="allergy-info">milk</li>
+            <li class="allergy-info">soy</li>
+            <li class="allergy-info">shellfish</li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <section class="food-desc">
+            <h3>Delicious</h3>
+        </section>
+        <section class="food-desc">
+            <h3>Fresh</h3>
+        </section>
+        <section class="food-desc">
+            <h3>Tasty</h3>
+        </section>
+    </footer>
+</body>
+
+<script>
+    
+  let body = document.querySelector("body");
+  body.setAttribute("style", "font-weight: 800; font-family: Georgia");
+  
+  let h1= document.querySelector("h1");
+  h1.setAttribute("style", "text-align: center; font-size: 40px");
+
+  let food_items = document.querySelectorAll(".food-category>.food-item");
+  food_items.forEach(el=> {
+    el.style.lineHeight = "180%";
+  });
+
+  let warning = document.getElementById("warning");
+  warning.style.textAlign = "center";
+  warning.style.fontSize = "30px";
+  
+  let categories = document.querySelectorAll(".category");
+  categories.forEach(el=> {      
+      el.style.textDecoration = "underline";
+      el.style.fontStyle = "italic";
+      el.style.fontSize = "1.5em";
+    });  
+    
+    let main1 = document.querySelector ("main");
+    main1.style.display = "flex";    
+
+    let food_categories = document.querySelectorAll(".food-category");
+    food_categories.forEach (el=> {
+    el.style.width = "25%";
+    el.style.height = "25%";
+    el.style.margin ="5% 5%";   
+    });
+    food_categories[0].style.backgroundColor = "RosyBrown";
+    food_categories[1].style.backgroundColor = "Thistle";
+    food_categories[2].style.backgroundColor = "LightPink"; 
+
+    let allergy_food = document.querySelectorAll(".allergies > li");
+    allergy_food.forEach (el=> {
+    el.style.width ="15%";    
+    el.style.display = "flex";
+    el.style.margin = "auto";
+     });
+     for (let i=0; i<allergy_food.length; i++) {
+         if (i%2!=0) {
+             allergy_food[i].style.backgroundColor = "LightSkyBlue";
+         }
+     }
+    
+    let footer = document.querySelector (".footer");
+    footer.setAttribute("style", "display: flex; display-direction: row; justify-content: center;");    
+
+    let footer_h3 = document.querySelectorAll(".food-desc h3");
+    footer_h3.forEach (el=> {    
+    el.style.width="12%";
+    el.style.border = "0.2em solid orange"
+    el.style.borderRadius = "50%"; 
+    el.style.padding = "2.75em"; 
+    el.style.margin = "1em";         
+    }); 
+    
+    let main2 = document.querySelector("main");
+    //let food_categories2 = document.querySelectorAll(".food-category"); 
+    let deviceReset = window.matchMedia("(max-width: 700px)");
+
+    widthChange();
+    deviceReset.addListener(widthChange);
+
+    // media query change
+    function widthChange() {
+    if (deviceReset.matches) {
+        main2.style.width = "200%";
+        main2.style.height = "200%"; 
+        main2.style.display = "block";      
+  } 
+    else {
+    main2.style.display = "flex";
+    main2.style.width = "100%";     
+     }
+   }
+    
+</script>
+</html>
