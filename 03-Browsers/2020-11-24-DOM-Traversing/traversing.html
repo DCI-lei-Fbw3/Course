@@ -1,0 +1,145 @@
+<!-- Welcome FbW3!
+Topic: DOM Traversing
+Reference: https://javascript.info/dom-navigation
+-->
+
+<!-- Traversing -->
+
+        <!-- 
+        Definiton: Traversing is the simple idea of moving between your
+        elements, wthout having to always querySelectAll and then loop
+        over each element in the returned array. 
+
+        - You can Traverse: 
+            > Downwards
+            > Upwards
+            > Sideways
+
+        Note: its not just easier to Traverse, it also more reliable. But 
+        that's a advanced topic for another day.
+        -->
+
+    <!-- Traversing Downwards -->
+        <!-- 
+        - You can traverse downwards by either using querrySelector or 
+        querrySelectorAll, or by using children
+        - Children is a proerty of each HTML element, that lets you select
+        direct desecndants of that element (elements that are immediately nested in
+        another element).
+         -->
+         <Body>
+             <div class ="topmost">
+            <ul class="list">
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+              </ul>
+            </div>
+            
+        
+
+        <!--  <script>
+             const list = document.querySelector('.list');
+             const listItems = list.children;
+             console.log(listItems);
+         </script> -->
+
+         <!-- 
+             You can also select a specific child though traversing
+             - You can select the nth-item in the list from return 
+             array from children property.
+             -To do so, you use the index of the element, just like how you select
+             specific items from an Array.
+          -->
+    <!--       <script>
+            const list = document.querySelector('.list');
+            const listItems = list.children;
+            
+            const firstItem = listItems[0];
+            const secondItem = listItems[1];
+            const thirdItem = listItems[2];
+            const fourthItem = listItems[3];
+            const fifthItem = listItems[4];
+
+            console.log(firstItem);
+        </script> -->
+
+      <!-- Traversing Upwards -->  
+
+            <!-- 
+                You can traverse upwards using two methods: 
+                1. property of each element called "parentElement"
+                2. or using propoerty called "closest"
+            -->
+        
+          <!--  <script>
+                const list = document.querySelector('.list');
+                const listItems = list.children;
+            
+                const firstItem = listItems[0];
+
+                const parentElem = firstItem.parentElement;
+                
+                console.log(parentElem);
+            </script> 
+ -->
+
+            <!-- 
+             parentElement is great for selecting one level upwards.
+             To find an element that can be multiple levels above the
+             current element, you can use Closest method.
+
+             Closest lets you select the closes ancestor element 
+             that matches the selector
+             -->
+
+           <!--   <script>
+                const firstLink = document.querySelector('a');
+                const list = firstLink.closest('.topmost');
+                
+                console.log(list);
+            </script>  -->
+
+            <!-- Traversing Sideways -->
+    
+
+            <!-- 
+                There are three ways of traversing sideways: 
+                1. nextElementSibling > method
+                2. previouselementSibling > method
+                3. Combining parentElement, children, and index
+            
+             -->
+
+             <!-- 
+                1. nextElementSibling & 2. previouselementSibling
+              -->
+            <!-- 
+              <script>
+                  const firstListItem = document.querySelector('li');
+                  const nextSib = firstListItem.nextElementSibling;
+                  const previousSib = nextSib.previousElementSibling;
+
+                  console.log(nextSib);
+                  console.log(previousSib);
+
+              </script> -->
+
+               <!-- 
+                 3. Combining parentElement, children, and index
+              -->
+              <script>
+                const firstListItem = document.querySelector('li');
+                const list = firstListItem.parentElement;
+                const allItems = list.children;
+                const fourthItem = allItems[3];
+
+                console.log(fourthItem);
+                
+
+            </script> 
+
+              
+        </Body>
