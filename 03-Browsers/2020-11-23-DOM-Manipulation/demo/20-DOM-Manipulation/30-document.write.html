@@ -75,9 +75,12 @@
 
     document.write('<script>console.log("injecting some javascript via document.write");</script\>');
 
+    //document.write(USER_CREATED_CONTENT);
+
     let elem = document.getElementById("1");
 
-    elem.innerHTML = 'Injecting via Element.innerHTML does not work. <script>console.log("injecting some javascript via Element.innerHTML");</script\>';
+    elem.innerHTML = 'Injecting via Element.innerHTML does not work. '
+                    + '<script>console.log("injecting some javascript via Element.innerHTML");</script\>';
 
 </script>
 </html>
