@@ -18,6 +18,9 @@ board.innerHTML = '<table>'
     + '</tr>'
     + '</table>';
 
+// change title
+document.getElementsByTagName('title')[0].textContent = 'Tic-Tac-Toe';
+
 // add reset button
 const button = document.createElement('button');
 button.setAttribute('id', 'reset');
@@ -78,7 +81,7 @@ function checkWinCondition() {
                 throw shortCircuting;
             };
         });
-        
+
         // printing tie if all fields are full and no winner
         if (fieldArr.every(field => field.textContent !== '')) {
             alert(`It's a tie !`);
