@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document.createElement()</title>
+</head>
+<body>
+
+<h1>Document.createElement()</h1>
+
+<h2>First Location</h2>
+<div id="1"></div>
+
+<h2>Second Location</h2>
+<div id="2"></div>
+
+
+<script>
+
+	let element = document.createElement("p");
+	element.innerHTML = "sample <strong>text</strong> content for this paragraph.";
+
+	let element2 = document.createElement("p");
+	// adding HTML code would require to use .innerHTML, 
+	// else something like the following happens (refer to browser output):
+	element2.textContent = "Second: <em>sample</em> text content for this paragraph.";
+
+	let target = document.getElementById("1");
+	target.appendChild(element);
+
+	let target2 = document.getElementById("2");
+	target2.appendChild(element2); 
+
+	// use the inspector to see the difference between what is added
+	target2.appendChild(element.cloneNode());  // shallow clone
+	let clone = target2.appendChild(element.cloneNode(true)); // deep clone
+
+	// cloneNode will create an _independent_ object
+	let element3 = element.cloneNode();
+	element3.innerHTML = "some text for testing";
+	target2.appendChild(element3);
+
+	// new API Node.append();
+
+	let element4 = element.cloneNode();
+	element4.innerHTML = "Element 4";
+	target2.append(element4);
+
+	target2.append("some text adding is directly possible with Node.append('some string')");
+
+	let headline = document.createElement("h3");
+	headline.textContent = "Demonstrating adding multiple entities";
+	target2.append(headline, "adding multiple", "things", "with one call");
+
+</script>
+
+</body>
+</html>
