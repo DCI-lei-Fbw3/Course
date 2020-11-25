@@ -1,7 +1,11 @@
-class game {
+class Game {
 	constructor(height, width) {
 		this.height = height;
 		this.width  = width;
+	}
+
+	generateID(x, y) {
+		return x + "_" + y;
 	}
 
 	board() {
@@ -12,7 +16,8 @@ class game {
 			board.append(row);
 			for (let w=0; w<this.width; w++) {
 				let field = document.createElement("td");
-				field.textContent = `${h}${w}`;
+				field.id = this.generateID(h, w);
+				//field.textContent = `${h}${w}`;
 				row.append(field);
 			}
 		}
@@ -21,7 +26,7 @@ class game {
 	}
 }
 
-let g = new game(3,3);
+let g = new Game(3,3);
 
 let board = document.getElementById("board");
 board.innerHTML = '';

@@ -40,6 +40,23 @@ Now instead of adding static code to the div-container:
 
 ## Manipulating the Board
 
-Let's play a non-interactive game.
+Let's play a non-interactive game. The idea would be to mark fields with an "X" or "O". So some functionality to manipulate a specific field with a specific "Character" is needed.
 
--   we need functions, that move around
+Therefore:
+
+-   let's move the current content of the fields (the numbers referring to row and column) and use that as the `id` of the corresponding table-cell.
+-   create a method `mark(x, y, string)` with three parameters `x`, `y`, and `string`
+
+    that method should select the field by its `id`, the target `id` is built by combining the provided parameters `x` and `y`.
+
+-   in order to avoid id duplications in boards bigger than 9x9 fields introduce a separator between the numbers making up the id. Let the separator be the underscore "\_".
+
+-   finally setup a non-interactive game:
+
+```javascript
+// pseudo-code:
+let g = new Game(3, 3);
+g.mark(2, 2, "X");
+g.mark(1, 1, "O");
+//...
+```
