@@ -27,7 +27,7 @@ Let's head into the javascript direction.
 
 ## Make the Code more Dynamic
 
-Up to know it is quite static, to get a more dynamic solution let's create a class `game`. which has two attributes `width` and `height` and a method `board`.
+Up to know it is quite static, to get a more dynamic solution let's create a class `Game`. which has two attributes `width` and `height` and a method `board`.
 
 The `board` method should create an `Element` to represent a board with `width` and `height` as defined by the game's attributes.
 
@@ -51,6 +51,8 @@ Therefore:
 
 -   in order to avoid id duplications in boards bigger than 9x9 fields introduce a separator between the numbers making up the id. Let the separator be the underscore "\_".
 
+    - implement a method `generateID(x, y)` which returns the anticipated ID, i. e. `generateID(1, 2) // => `"1_2"`).
+
 -   finally setup a non-interactive game:
 
 ```javascript
@@ -60,3 +62,14 @@ g.mark(2, 2, "X");
 g.mark(1, 1, "O");
 //...
 ```
+
+## Styling Revisited
+
+- possibly now is the time for a little work on the css. If you removed the fields' text-content, then maybe the sizes change if later a field is marked. Compensate for that.
+- since we work in the context of the styling, also make the headline and the board being displayed horizontally centered.
+
+
+## New Concept "Pieces"
+
+Introduce a place to select a type of playing Piece from. That could be another table displaying the different available types of pieces.
+Create it in a way that allows to change the number of available types of pieces (e. g. `types = ["a", "b", "c"`).

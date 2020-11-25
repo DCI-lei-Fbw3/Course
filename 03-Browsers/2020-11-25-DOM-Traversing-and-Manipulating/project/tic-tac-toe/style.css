@@ -1,5 +1,11 @@
-html {
+html, body {
 	font-family: sans-serif;
+	text-align: center;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 table,
@@ -10,6 +16,14 @@ td {
 }
 
 td {
+	text-align: center;
 	padding: 1em;
 	padding-bottom: 1.1em;
+
+	width: 2em;
+	height: 2em;
+}
+
+#pieces {
+	margin-top: 2em;
 }
