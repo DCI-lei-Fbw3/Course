@@ -41,7 +41,6 @@ fieldArr.forEach(td => td.textContent = '');
 // initialize first player
 let player = 'x';
 
-
 // main onclick function for every field
 function fieldClick(field) {
     field.textContent = player;
@@ -50,8 +49,7 @@ function fieldClick(field) {
     field.removeAttribute('onclick');
 }
 
-// helper functions for onclick function
-
+// checks state of board and acts accordingly
 function checkWinCondition() {
 
     const win2dArr = [
@@ -71,18 +69,17 @@ function checkWinCondition() {
     // try catch to short circuit forEach
     try {
         win2dArr.forEach(win1dArr => {
-            let s = ''
+            let s = '';
             win1dArr.forEach(index => {
                 s += fieldArr[index].textContent;
             });
             if (s === 'xxx' || s === 'ooo') {
                 alert(`Player ${s[0].toUpperCase()} wins !`);
-                fieldArr.forEach(td => td.removeAttribute('onclick'));
+                fieldArr.forEach(field => field.removeAttribute('onclick'));
                 throw shortCircuting;
             };
         });
-
-        // printing tie if all fields are full and no winner
+        // alerts tie if all fields are full and no winner
         if (fieldArr.every(field => field.textContent !== '')) {
             alert(`It's a tie !`);
             fieldArr.forEach(field => field.removeAttribute('onclick'));
@@ -97,5 +94,3 @@ function reset() {
         field.setAttribute('onclick', 'fieldClick(this)');
     });
 }
-
-
