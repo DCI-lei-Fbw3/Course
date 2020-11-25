@@ -52,12 +52,14 @@ class Game {
 	}
 
 	copy(source, target) {
+		target.classList.value = '';
 		source.classList.forEach((cssClass) => {
 			target.classList.add(cssClass);
 		});
 	}
 
 	move(source, target) {
+		target.classList.value = '';
 		source.classList.forEach((cssClass) => {
 			console.log(cssClass);
 			source.classList.remove(cssClass);
@@ -67,8 +69,9 @@ class Game {
 
 	onclickHandler(eventParam) {
 		let id = eventParam.target.id;
-		this.history.push(id);
-		console.log(this.history);
+		console.log(id);
+		// this.history.push(id);
+		//console.log(this.history);
 	}
 
 	makeOnclickHandler() {
@@ -104,7 +107,7 @@ pieces.appendChild(game.pieces());
 
 let gameContainer = document.getElementById("game");
 //gameContainer.addEventListener("click", game.makeOnclickHandler());
-gameContainer.addEventListener("click", game.onclickHandler);
+gameContainer.addEventListener("click", game.makeOnclickHandler());
 
 let X = document.getElementById("X");
 let O = document.getElementById("O");
