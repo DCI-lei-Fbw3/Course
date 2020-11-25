@@ -2,6 +2,7 @@ class Game {
 	constructor(height, width) {
 		this.height = height;
 		this.width  = width;
+		this.history = [];
 	}
 
 	generateID(x, y) {
@@ -63,6 +64,32 @@ class Game {
 			target.classList.add(cssClass);
 		});
 	}
+
+	onclickHandler(eventParam) {
+		let id = eventParam.target.id;
+		this.history.push(id);
+		console.log(this.history);
+	}
+
+	makeOnclickHandler() {
+		return (eventParam) => {
+			let id = eventParam.target.id;
+			this.history.push(id);
+
+			if (this.history.length % 2 == 0) {
+				let source = document.getElementById(this.history[this.history.length-2]);
+				let boardOrPieces = source.parentElement.parentElement.parentElement.id;
+				let target = document.getElementById(this.history[this.history.length-1]);
+
+				if (boardOrPieces == "pieces") {
+					this.copy(source, target);
+				} else if (boardOrPieces == "board") {
+					this.move(source, target);
+				}
+			}
+		}
+	}
+
 }
 
 let game = new Game(3,3);
@@ -75,13 +102,16 @@ let pieces = document.getElementById("pieces");
 pieces.innerHTML = '';
 pieces.appendChild(game.pieces());
 
+let gameContainer = document.getElementById("game");
+//gameContainer.addEventListener("click", game.makeOnclickHandler());
+gameContainer.addEventListener("click", game.onclickHandler);
 
 let X = document.getElementById("X");
 let O = document.getElementById("O");
 
-game.copy(X, document.getElementById("2_2"));
-game.copy(O, document.getElementById("1_1"));
-game.move(document.getElementById("1_1"), document.getElementById("1_3"));
+//game.copy(X, document.getElementById("2_2"));
+//game.copy(O, document.getElementById("1_1"));
+//game.move(document.getElementById("1_1"), document.getElementById("1_3"));
 
 // game.mark(2, 2, "X");
 // game.mark(1, 1, "O");
