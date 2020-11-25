@@ -73,3 +73,36 @@ g.mark(1, 1, "O");
 
 Introduce a place to select a type of playing Piece from. That could be another table displaying the different available types of pieces.
 Create it in a way that allows to change the number of available types of pieces (e. g. `types = ["a", "b", "c"`).
+
+- `index.html`: add another `div` with `id=pieces`
+- `style.css`:
+    - for that new div-element add a `margin-top` with `2em`
+    - create classes `.piece_X` and `.piece_O` and assign red and green background colors.
+    - change the way the text-content is added, from javascript to css, like:
+- be aware to make use of the freshly created classes inside of the pieces-container.
+
+```css
+/* style.css */
+.piece_O:after {
+	content: "O";
+}
+```
+
+- `game.js`:
+    - introduce new methods
+        - `copy(source, target)` and
+        - `move(source, target)`
+
+        The parameters shall be of type Element.
+
+        Both methods work on the css-classes of the provided arguments. `copy` shall copy the classes while `move` moves them from `source` to `target`.
+
+        Usage:
+        ```
+        let X = document.getElementById("X");
+        let O = document.getElementById("O");
+
+        game.copy(X, document.getElementById("2_2"));
+        game.copy(O, document.getElementById("1_1"));
+        game.move(document.getElementById("1_1"), document.getElementById("1_3"));
+        ```

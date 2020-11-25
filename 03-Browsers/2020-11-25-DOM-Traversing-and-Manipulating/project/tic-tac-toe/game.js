@@ -35,8 +35,8 @@ class Game {
 		for (let i in pieceTypes) {
 			let type = pieceTypes[i];
 			let p = document.createElement("td");
+			p.id = type;
 			p.className = "piece_" + type;
-			p.textContent = type;
 			row.appendChild(p);
 		}
 
@@ -46,7 +46,22 @@ class Game {
 	mark(x, y, marker) {
 		let id = this.generateID(x, y);
 		let field = document.getElementById(id);
+
 		field.innerText = marker;
+	}
+
+	copy(source, target) {
+		source.classList.forEach((cssClass) => {
+			target.classList.add(cssClass);
+		});
+	}
+
+	move(source, target) {
+		source.classList.forEach((cssClass) => {
+			console.log(cssClass);
+			source.classList.remove(cssClass);
+			target.classList.add(cssClass);
+		});
 	}
 }
 
@@ -60,12 +75,20 @@ let pieces = document.getElementById("pieces");
 pieces.innerHTML = '';
 pieces.appendChild(game.pieces());
 
-game.mark(2, 2, "X");
-game.mark(1, 1, "O");
-game.mark(3, 3, "X");
-game.mark(3, 1, "O");
-game.mark(2, 1, "X");
-game.mark(2, 3, "O");
-game.mark(1, 2, "X");
-game.mark(3, 2, "O");
-game.mark(1, 3, "X");
+
+let X = document.getElementById("X");
+let O = document.getElementById("O");
+
+game.copy(X, document.getElementById("2_2"));
+game.copy(O, document.getElementById("1_1"));
+game.move(document.getElementById("1_1"), document.getElementById("1_3"));
+
+// game.mark(2, 2, "X");
+// game.mark(1, 1, "O");
+// game.mark(3, 3, "X");
+// game.mark(3, 1, "O");
+// game.mark(2, 1, "X");
+// game.mark(2, 3, "O");
+// game.mark(1, 2, "X");
+// game.mark(3, 2, "O");
+// game.mark(1, 3, "X");
