@@ -1,0 +1,32 @@
+table {
+  border: 2px solid black;
+}
+
+td {
+  font-size: 30px;
+  border: 1px solid black;
+  padding: 1em 1em 1.1em 1em;
+  height: 100px;
+  width: 100px;
+  text-align: center;
+}
+
+#pieces {
+  margin-top: 2em;
+}
+
+.piece_X {
+  background-color: aquamarine;
+}
+
+.piece_X:after {
+  content: "X";
+}
+
+.piece_O {
+  background-color: violet;
+}
+
+.piece_O:after {
+  content: "O";
+}
