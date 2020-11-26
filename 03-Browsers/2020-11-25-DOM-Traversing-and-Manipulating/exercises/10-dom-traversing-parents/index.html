@@ -24,5 +24,43 @@
         </section>
     </main>
 </body>
+<script>
+//     let mainArr = document.querySelectorAll("html, body, body *"); 
+//     console.log(mainArr);
+//     let mainArrNew = []; 
+//     mainArr.forEach(function(element) { 
+//            if (element.className) {                
+//                mainArrNew.push(element);
+//            }
+//            else {
+//                mainArrNew.push(element);
+//            }  
+//            return mainArrNew               
+//      }); 
+// console.log(mainArrNew);
 
-</html>
+// let tempList = [];
+// mainArrNew.forEach(function(element) {     
+//         tempList.push(element);
+//     });            
+    
+// console.log(tempList);
+
+
+//getElementByTagName does not seem to work
+const findParent = (aTag) => {
+let entryPoint = document.querySelector(aTag);  
+let parent = entryPoint; 
+let next = parent; 
+let tempList = [];  
+    while (parent.parentElement != null) {  
+        next = parent.parentElement; 
+        tempList.push(parent);
+        parent = next;
+        tempList
+    } console.log(tempList);
+}
+
+findParent("cite");
+</script>
+<html>
