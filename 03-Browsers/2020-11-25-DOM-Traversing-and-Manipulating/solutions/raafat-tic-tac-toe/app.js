@@ -1,8 +1,13 @@
 let cells = document.querySelectorAll(".cell");
 let resetButton = document.querySelector(".reset");
 let winner = document.querySelector(".winner");
+let score = document.querySelector(".score");
+let scoreX = document.querySelector(".Xscore");
+let scoreO = document.querySelector(".Oscore");
 let start = "X";
 let counter = 0;
+let scoreCounterX = 0;
+let scoreCounterO = 0;
 winner.innerHTML = `${start}'s turn`;
 
 cells.forEach((cell) => {
@@ -17,6 +22,7 @@ cells.forEach((cell) => {
 			let result = checkWinner(cells);
 			winner.innerHTML = `Player ${result} has won!`;
 			cells.forEach((cell) => (cell.innerHTML = result));
+			scoreFunction(result);
 		} else if (counter === 9) {
 			winner.innerHTML = `It's a tie, try again!`;
 		}
@@ -49,7 +55,7 @@ const checkWinner = (cells) => {
 		row.forEach((cell) => {
 			temp += cells[cell].innerHTML;
 		});
-		console.log(temp);
+
 		if (temp === "XXX") {
 			winner = "X";
 		} else if (temp === "OOO") {
@@ -58,3 +64,20 @@ const checkWinner = (cells) => {
 	});
 	return winner;
 };
+
+const scoreFunction = (fun) => {
+	if (fun === "X") {
+		scoreCounterX++;
+		scoreX.textContent = scoreCounterX;
+	} else if (fun === "O") {
+		scoreCounterO++;
+		scoreO.textContent = scoreCounterO;
+	}
+};
+
+score.addEventListener("click", (e) => {
+	scoreX.textContent = 0;
+	scoreCounterX = 0;
+	scoreO.textContent = 0;
+	scoreCounterO = 0;
+});

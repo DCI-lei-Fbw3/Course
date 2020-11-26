@@ -66,7 +66,7 @@
 <hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="DOM" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
 <edge COLOR="#ff0000"/>
-<node TEXT="Document" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
+<node TEXT="Document" FOLDED="true" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
 <node TEXT="methods" FOLDED="true" ID="ID_298183913" CREATED="1606221674468" MODIFIED="1606292571674"><richcontent TYPE="NOTE">
 
 <html>
@@ -79,7 +79,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="retrieving Elements" FOLDED="true" ID="ID_707189569" CREATED="1606294097151" MODIFIED="1606294105065">
 <node TEXT="getElementById" ID="ID_805018015" CREATED="1606220844514" MODIFIED="1606220850196"/>
@@ -90,8 +89,10 @@
 <node TEXT="querySelectorAll" ID="ID_995347144" CREATED="1606220877658" MODIFIED="1606220881219"/>
 </node>
 <node TEXT="changing the Document" FOLDED="true" ID="ID_1934101204" CREATED="1606294115517" MODIFIED="1606294124052">
-<node TEXT="appendChild()" ID="ID_1013286541" CREATED="1606294090886" MODIFIED="1606294094946"/>
-<node TEXT="write()" ID="ID_429294944" CREATED="1606293287218" MODIFIED="1606293317707"><richcontent TYPE="NOTE">
+<node TEXT="appendChild()" ID="ID_1013286541" CREATED="1606294090886" MODIFIED="1606378802672">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_339341967" STARTINCLINATION="40;0;" ENDINCLINATION="40;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="append()" ID="ID_339341967" CREATED="1606378713111" MODIFIED="1606379005623"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -99,7 +100,46 @@
   </head>
   <body>
     <p>
-      be aware of the security()
+      Instead of appendChild() the newer API append() is available.
+    </p>
+    <p>
+      Differences:
+    </p>
+    <p>
+      - possible to add &quot;Nodes&quot; and/or &quot;text&quot;:
+    </p>
+    <p>
+      &#160;&#160;let h1 = document.createElement(&quot;h1&quot;);
+    </p>
+    <p>
+      &#160;&#160;SOME_ELEMENT.append(h1);
+    </p>
+    <p>
+      &#160;&#160;SOME_ELEMENT.append(&quot;some text&quot;);
+    </p>
+    <p>
+      - also adding multiple entities at once possible (append(NODE_1, NODE_2, text_a, NODE_3))
+    </p>
+    <p>
+      &#160;&#160;SOME_ELEMENT.append(h1, &quot;some text&quot;);
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="write()" ID="ID_429294944" CREATED="1606293287218" MODIFIED="1606378709611"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Be aware of the security implications:
+    </p>
+    <p>
+      via write it is possible to inject Javascript, so if you would write user-contributed content to a document, that content would be required to be sanitized.
     </p>
   </body>
 </html>
@@ -117,7 +157,7 @@
 <node TEXT="isConnected" ID="ID_1718463444" CREATED="1606221591220" MODIFIED="1606221596086"/>
 <node TEXT="ownerDocument" ID="ID_1623684397" CREATED="1606221555396" MODIFIED="1606221558743"/>
 <node TEXT="textContent" ID="ID_846660310" CREATED="1606221528212" MODIFIED="1606221531383"/>
-<node TEXT="node-related" FOLDED="true" ID="ID_601345350" CREATED="1606292787054" MODIFIED="1606292799013">
+<node TEXT="node-related" ID="ID_601345350" CREATED="1606292787054" MODIFIED="1606292799013">
 <node TEXT="childNodes" ID="ID_584422580" CREATED="1606221573516" MODIFIED="1606221577711"/>
 <node TEXT="firstChild" ID="ID_1100143696" CREATED="1606221578140" MODIFIED="1606221580495"/>
 <node TEXT="lastChild" ID="ID_1548134722" CREATED="1606221596876" MODIFIED="1606221599919"/>
@@ -130,7 +170,7 @@
 <node TEXT="getRootNode()" ID="ID_417302396" CREATED="1606221545019" MODIFIED="1606221548047"/>
 </node>
 </node>
-<node TEXT="Element" FOLDED="true" ID="ID_281622734" CREATED="1606221041522" MODIFIED="1606292393950" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Element"><richcontent TYPE="NOTE">
+<node TEXT="Element" ID="ID_281622734" CREATED="1606221041522" MODIFIED="1606292393950" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Element"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -142,7 +182,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="attributes" FOLDED="true" ID="ID_82443669" CREATED="1606221276795" MODIFIED="1606221293605">
 <node TEXT="attributes" ID="ID_55928971" CREATED="1606221076155" MODIFIED="1606221080637"/>
@@ -154,7 +193,7 @@
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_846660310" STARTINCLINATION="283;0;" ENDINCLINATION="283;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 </node>
-<node TEXT="methods" FOLDED="true" ID="ID_906246789" CREATED="1606221352476" MODIFIED="1606221355710">
+<node TEXT="methods" ID="ID_906246789" CREATED="1606221352476" MODIFIED="1606221355710">
 <node TEXT="addEventListener()" ID="ID_1592501306" CREATED="1606221356619" MODIFIED="1606221396560"><richcontent TYPE="NOTE">
 
 <html>
@@ -184,7 +223,7 @@
 <node TEXT="Sandbox" POSITION="right" ID="ID_1275827979" CREATED="1606215857602" MODIFIED="1606215860422">
 <edge COLOR="#0000ff"/>
 </node>
-<node TEXT="Events" FOLDED="true" POSITION="left" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1606215889461">
+<node TEXT="Events" FOLDED="true" POSITION="right" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1606215889461">
 <edge COLOR="#00ff00"/>
 <node TEXT="MDN" FOLDED="true" ID="ID_98999539" CREATED="1606216606622" MODIFIED="1606216620769">
 <node TEXT="Introduction to Events" ID="ID_853650039" CREATED="1606216641702" MODIFIED="1606216654237" LINK="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"/>

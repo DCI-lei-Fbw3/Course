@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events "onclick"</title>
+</head>
+
+<body>
+    <h1 id="1">Events "onclick"</h1>
+    
+    <table id="table">
+        <tr>
+            <!-- registering handler() as the handler to the "onclick" EventListener -->
+            <td id="1_1" onclick="handler()">11</td>
+            <!-- registering the handler inplace also to the "onclick" EventListener -->
+            <td id="1_2" onclick="console.log('in place handler')">12</td>
+        </tr>
+        <tr>
+            <td id="2_1">21</td>
+            <td id="2_2">22</td>
+        </tr>
+    </table>
+
+</body>
+
+<script>	
+    function handler(event) {
+        // this handler will simply tell that it has been called
+	    console.log("handler called");
+    }
+
+    // a history to caputure the IDs of the clicked elements
+    let history = [];
+    function handler2(event) {
+        // tell that handler2 has been called
+        console.log("handler2 called");
+        // show what the original target has been by printing its ID
+        let id = event.target.id;
+
+        // add the target's id to the history
+        history.push(id);
+        // log the history to the console
+        console.log(history);
+        // will output the id of the clicked td-element (e. g. 21, 22, 11, ...)
+    }
+
+    // get the table by ID
+    let table = document.getElementById("table");
+    // add "handler2" as the handler for the Event "click"
+    table.addEventListener("click", handler2);
+
+</script>
+
+<body>
