@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@605&family=Indie+Flower&display=swap");
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Indie Flower", cursive;
+}
+body {
+	background: rgb(209, 209, 209);
+}
+.container {
+	flex-flow: column nowrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#header {
+	color: #a10099;
+	text-align: center;
+	font-size: 3rem;
+	text-shadow: 1px 1px 2px rgb(39, 0, 49);
+}
+.reset {
+	font-weight: bold;
+	font-size: 1rem;
+	margin: 20px;
+	background-color: rgb(255, 238, 0);
+	border: none;
+	border-radius: 5px;
+	color: rgb(59, 59, 59); /* Dark grey */
+	padding: 10px;
+	cursor: pointer;
+	outline: none;
+	box-shadow: 1px 1px 2px 2px rgb(173, 173, 173);
+}
+.reset:active {
+	box-shadow: inset 1px 1px 2px 2px rgb(173, 173, 173);
+}
+.game-table {
+	width: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-size: 4rem;
+}
+.cell {
+	font-family: "Caveat", cursive;
+	color: rgb(255, 0, 200);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	padding: 0 15px;
+	border: 1px solid #5f5f5f;
+}
+#item1,
+#item2,
+#item3 {
+	border-top: none;
+}
+#item1,
+#item4,
+#item7 {
+	border-left: none;
+}
+#item7,
+#item8,
+#item9 {
+	border-bottom: none;
+}
+#item6,
+#item9,
+#item3 {
+	border-right: none;
+}
+
+.winner {
+	color: rgb(225, 0, 255);
+	margin: 15px;
+	font-size: 2rem;
+	text-shadow: 1px 1px 2px rgb(17, 16, 4);
+}
