@@ -81,7 +81,7 @@ class Game {
 
 			if (this.history.length % 2 == 0) {
 				let source = document.getElementById(this.history[this.history.length-2]);
-				let boardOrPieces = source.parentElement.parentElement.parentElement.id;
+				let boardOrPieces = source.parentElement.parentElement.parentElement.id; // one of: "board", "pieces"
 				let target = document.getElementById(this.history[this.history.length-1]);
 
 				if (boardOrPieces == "pieces") {
