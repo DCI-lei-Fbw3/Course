@@ -5,11 +5,14 @@ Start creating a tic, tac, toe game in the browser.
 The goal is a general board game framework, with the following abstractions and constraints:
 
 -   rectangular board with rectangular fields, the board size is defined by width and height.
--   pieces/figures lie in a piece-box and can be copied from there to the board
--   pieces on the board can be moved
--   at most one piece per field is possible
+-   pieces/figures lie in a piece-box
+-   pieces can be copied from the piece-box to the board
+-   pieces can be moved inside of the board
+-   constraint: at most one piece per field is possible
 
 Rules will not be enforced.
+
+The overall development process outlined in this exercise is bottom-up. So starting with a functionless mockup and working in the functionality until finally interactivity is added.
 
 ## Initial Mockup
 

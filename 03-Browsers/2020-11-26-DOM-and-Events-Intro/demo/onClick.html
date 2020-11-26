@@ -47,10 +47,21 @@
         // will output the id of the clicked td-element (e. g. 21, 22, 11, ...)
     }
 
+    function handler3() {
+        console.log("this:", this.id);
+        console.log("handler3");
+    }
+
     // get the table by ID
     let table = document.getElementById("table");
     // add "handler2" as the handler for the Event "click"
     table.addEventListener("click", handler2);
+    // it is possible to add multiple handlers to the same event-type
+    table.addEventListener("click", handler3);
+    // the event-handlers will be executed in the order they have been added
+
+    // in-place definition of the callback function via arrow notation
+    table.addEventListener("click", (event) => {console.log("handler4")});
 
 </script>
 
