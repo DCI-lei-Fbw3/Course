@@ -104,7 +104,7 @@ makeOnclickHandler() {
 } // /Game
 
 let game = new Game(3, 3);
-game.pieceTypes = ['a', 'b', 'c'];
+//game.pieceTypes = ['a', 'b', 'c'];
 
 let board = document.getElementById("board");
 board.innerHTML = '';
