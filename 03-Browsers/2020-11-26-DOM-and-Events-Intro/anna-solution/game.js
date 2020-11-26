@@ -22,8 +22,12 @@ class Game {
     boardContainer.appendChild(gameboard);
   }
 
+  generateID(x, y) {
+    return `${x}_${y}`;
+  }
+
   mark(x, y, string) {
-    let targetCellId = `${x}_${y}`; //Used this instead of generateID method
+    let targetCellId = this.generateID(x, y);
     let targetCell = document.getElementById(targetCellId);
     targetCell.textContent = string;
   }
