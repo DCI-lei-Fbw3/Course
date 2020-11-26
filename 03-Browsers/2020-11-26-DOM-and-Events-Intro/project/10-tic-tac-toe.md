@@ -2,6 +2,15 @@
 
 Start creating a tic, tac, toe game in the browser.
 
+The goal is a general board game framework, with the following abstractions and constraints:
+
+-   rectangular board with rectangular fields, the board size is defined by width and height.
+-   pieces/figures lie in a piece-box and can be copied from there to the board
+-   pieces on the board can be moved
+-   at most one piece per field is possible
+
+Rules will not be enforced.
+
 ## Initial Mockup
 
 Create a visualization of the board. Therefore create an HTML-file `index.html` with a table consisting of three rows and three columns. Put numbers into the table cells, so that their positions are reflected, e. g.:
