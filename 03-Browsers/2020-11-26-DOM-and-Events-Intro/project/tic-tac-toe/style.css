@@ -43,16 +43,23 @@ td {
 	content: "O";
 }
 
-/*
+.piece_a {
+	background-color: red;
+}
 .piece_a:after {
 	content: "a";
 }
 
+.piece_b {
+	background-color: green;
+}
 .piece_b:after {
 	content: "b";
 }
 
+.piece_c {
+	background-color: blue;
+}
 .piece_c:after {
 	content: "c";
 }
-*/
