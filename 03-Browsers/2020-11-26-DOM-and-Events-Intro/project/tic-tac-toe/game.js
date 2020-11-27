@@ -44,10 +44,10 @@ pieces() {
 }
 
 /**
- * 
- * @param {number} x 
- * @param {number} y 
- * @param {string} marker 
+ *
+ * @param {number} x
+ * @param {number} y
+ * @param {string} marker
  */
 mark(x, y, marker) {
 	let id = this.generateID(x, y);
@@ -57,9 +57,9 @@ mark(x, y, marker) {
 }
 
 /**
- * 
- * @param {HTMLElement} source 
- * @param {HTMLElement} target 
+ *
+ * @param {HTMLElement} source
+ * @param {HTMLElement} target
  */
 copy(source, target) {
 	target.classList.value = '';
@@ -69,9 +69,9 @@ copy(source, target) {
 }
 
 /**
- * 
- * @param {HTMLElement} source 
- * @param {HTMLElement} target 
+ *
+ * @param {HTMLElement} source
+ * @param {HTMLElement} target
  */
 move(source, target) {
 	target.classList.value = '';
@@ -90,12 +90,12 @@ makeOnclickHandler() {
 
 		if (this.history.length % 2 == 0) {
 			let source = document.getElementById(this.history[this.history.length-2]);
-			let boardOrPieces = source.parentElement.parentElement.parentElement.id; // one of: "board", "pieces"
+			let boardOrPieces = source.parentElement.parentElement.parentElement.classList; // one of: "board", "pieces"
 			let target = document.getElementById(this.history[this.history.length-1]);
 
-			if (boardOrPieces == "pieces") {
+			if (boardOrPieces.contains("pieces")) {
 				this.copy(source, target);
-			} else if (boardOrPieces == "board") {
+			} else if (boardOrPieces.contains("board")) {
 				this.move(source, target);
 			}
 		}
@@ -106,11 +106,11 @@ makeOnclickHandler() {
 let game = new Game(3, 3);
 //game.pieceTypes = ['a', 'b', 'c'];
 
-let board = document.getElementById("board");
+let board = document.getElementsByClassName("board")[0];
 board.innerHTML = '';
 board.append(game.board());
 
-let pieces = document.getElementById("pieces");
+let pieces = document.getElementsByClassName("pieces")[0];
 pieces.innerHTML = '';
 pieces.appendChild(game.pieces());
 
