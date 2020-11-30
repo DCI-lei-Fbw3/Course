@@ -43,6 +43,8 @@ class Game {
         return rowNum  + "_" + cellNum;
     }
 
+    
+
     mark(rowNum, cellNum, str) {
         let id = this.generateIDName(rowNum,cellNum); // get the string being used as the ID.
         let element = document.getElementById(id);
@@ -59,11 +61,28 @@ class Game {
         //for (let index=0; index < pieces.length; index++) {
             let td = document.createElement("td");
             td.textContent = this.setOfPieces[index];
+            if (td.textContent === "X") {
+                td.classList.add('piece_x');
+            } else if (td.textContent === "O") {
+                td.classList.add('piece_o')
+            }
             row.append(td);
         }
 
         return table;
     }
+
+    // copy(source, target){
+    //     let first = document.querySelector('.piece_x')
+    //     td.textContent(first)
+    //     //source is the piece board 
+    //     // element by class 
+    //     // target is the game board  // element by id 
+    // }
+    // move(source, target){
+
+    //}
+   
 } 
 
 let g = new Game(3, 3);
@@ -75,10 +94,17 @@ let boardTable = g.board();
 board.append(boardTable);
 
 let pieces = document.getElementById('pieces');
+pieces.style.marginTop = "2em";
+
 pieces.textContent = "";
 let piecesTable = g.pieces();
 pieces.append(piecesTable);
 
 g.mark(1, 1, "x");
-g.mark(2, 2, "o");
+g.mark(3, 3, "o");
 
+
+
+// create two different classes: piece_x & piece_0
+// on click function that will check if content is x or o, to change the color 
+// on click call the class? piece_x or piece_o? 

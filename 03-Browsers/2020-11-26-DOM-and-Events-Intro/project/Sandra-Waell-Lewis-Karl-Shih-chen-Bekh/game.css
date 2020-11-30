@@ -20,3 +20,10 @@ td {
     text-align: center;
 }
 
+.piece_x {
+    background-color: red;
+}
+
+.piece_o {
+    background-color: green;
+}
