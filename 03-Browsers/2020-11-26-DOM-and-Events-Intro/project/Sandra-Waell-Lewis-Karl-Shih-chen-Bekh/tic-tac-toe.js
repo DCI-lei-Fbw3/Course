@@ -71,7 +71,15 @@ class Game {
 
         return table;
     }
+    copy(source, target) {
+        let sourceClass = source.className;
+        target.className = sourceClass;
+      }
 
+    move(source, target) {
+        this.copy(source, target);
+        source.className = ``;
+      }
     // copy(source, target){
     //     let first = document.querySelector('.piece_x')
     //     td.textContent(first)
