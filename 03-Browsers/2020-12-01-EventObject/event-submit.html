@@ -1,0 +1,35 @@
+
+<body>
+    <!-- 
+  An example of working with "submit events"
+   -->
+      
+   <form id = "form">
+        <label> Test field: <input type = "text"></label>
+        <button type = "submit">Submit test form</button> <!-- type = "submit" allows this butotn to handle submit events-->
+   </form>
+
+   <p id = "log"></p>
+      
+      <script>
+        function logSubmit(event){
+            const myLog = document.getElementById("log");
+            myLog.textContent = `Form submitted! Time stamp: ${event.timeStamp}`;
+            event.preventDefault();
+            console.log(event);
+        }
+
+          var form = document.getElementById("form");
+          var log = document.getElementById("log");
+          
+          form.addEventListener('submit', logSubmit );
+
+          //console.log(elem.localName); // localName only return the information on the element type as a string
+          
+      
+    
+      </script>
+  
+      
+      
+      </body>

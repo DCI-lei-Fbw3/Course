@@ -16,7 +16,7 @@ switch (true) {
         daysLeft = "Only one day left until weekend!";
         break;
     default:
-        daysLeft = `Only ${5 - today} days left until weekend!`
+        daysLeft = `Only ${5 - today} days left until weekend!`;
         break;
   }
 
