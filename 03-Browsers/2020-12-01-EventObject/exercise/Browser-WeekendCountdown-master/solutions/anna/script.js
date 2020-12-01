@@ -34,7 +34,7 @@ button.addEventListener("click", () => {
       break;
   }
   let weekendphrase =
-    dayNum >= 6
+    dayNum === 6 || dayNum === 0
       ? "It's the weekend!"
       : dayNum === 5
       ? "Tomorrow is the weekend!"
