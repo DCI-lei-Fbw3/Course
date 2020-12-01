@@ -1,0 +1,26 @@
+<!-- 
+An example of geting pointer coordiates from the event object
+ -->
+
+ 
+<body>
+    <!-- Event Handlers: onclick -->
+    <input id= "test" value= "Click here"  type="button">
+    
+    <script>
+        var elem = document.getElementById("test");
+        console.log(elem.localName); // localName only return the information on the element type as a string
+        
+        elem.onclick = function (event){
+            //show, event type, element and coordinates of the click event
+            alert(event.type + " at " + event.currentTarget); //currentTarget return the element as an object
+            console.log(event);
+            console.log(event.currentTarget);
+            alert ("Coordinates: " + event.clientX + ":" + event.clientY);
+        }
+  
+    </script>
+
+    
+    
+    </body>

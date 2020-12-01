@@ -1,0 +1,29 @@
+.game {
+    display : flex;
+}
+
+body {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    margin: 0 auto;
+}
+
+td {
+    width: 4em;
+    height: 4em;
+    border: 1px solid black ;
+    padding: 1em 1em 1.1em 1em;
+    text-align: center;
+}
+
+.piece_x {
+    background-color: red;
+}
+
+.piece_o {
+    background-color: green;
+}

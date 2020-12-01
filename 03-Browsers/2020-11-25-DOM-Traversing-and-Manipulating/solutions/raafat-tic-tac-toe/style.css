@@ -23,7 +23,7 @@ body {
 .reset {
 	font-weight: bold;
 	font-size: 1rem;
-	margin: 20px;
+	margin: 0 20px 10px 20px;
 	background-color: rgb(255, 238, 0);
 	border: none;
 	border-radius: 5px;
@@ -55,6 +55,7 @@ body {
 	padding: 0 15px;
 	border: 1px solid #5f5f5f;
 }
+
 #item1,
 #item2,
 #item3 {
@@ -81,4 +82,15 @@ body {
 	margin: 15px;
 	font-size: 2rem;
 	text-shadow: 1px 1px 2px rgb(17, 16, 4);
+}
+
+.score {
+	align-self: flex-start;
+	margin-left: 50px;
+	font-size: 1.5rem;
+}
+.score > div {
+	display: inline-block;
+	margin: 15px;
+	font-weight: bold;
 }

@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	font-family: sans-serif;
 	text-align: center;
 }
@@ -24,7 +25,7 @@ td {
 	height: 2em;
 }
 
-#pieces {
+.pieces {
 	margin-top: 2em;
 }
 
@@ -40,4 +41,25 @@ td {
 }
 .piece_O:after {
 	content: "O";
+}
+
+.piece_a {
+	background-color: red;
+}
+.piece_a:after {
+	content: "a";
+}
+
+.piece_b {
+	background-color: green;
+}
+.piece_b:after {
+	content: "b";
+}
+
+.piece_c {
+	background-color: blue;
+}
+.piece_c:after {
+	content: "c";
 }
