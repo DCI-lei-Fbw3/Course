@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <title>DOM traversing: parents list</title>
+</head>
+
+<body>
+    <main class="page">
+        <section>
+            <blockquote class="quote">
+                <p class="quote-text">
+                    &quot;Begin at the beginning,&quot; the King said, very gravely, &quot;and go on till you come to the end: then
+                    stop.&quot;
+                </p>
+                <footer class="quote-footer">
+                    ― Lewis Carroll, <cite>Alice in Wonderland</cite>
+                </footer>
+            </blockquote>
+        </section>
+    </main>
+</body>
+<script>
+
+const findParent = (aTag) => {
+let entryPoint = document.querySelector(aTag);  
+let parent = entryPoint; 
+let next = parent; 
+let tempList = [];  
+    while (parent.parentElement != null) {  
+        next = parent.parentElement; 
+        tempList.push(parent.tagName);
+        parent = next;
+        tempList
+    } return tempList;
+}
+
+let collection = findParent("cite");
+console.log(collection);
+
+let arrayCollection = Array.from(collection).reverse();
+console.log(arrayCollection);
+
+let addPageArray = [];
+let addPage = arrayCollection.forEach((el) => {
+    el=el+".page";
+    addPageArray.push(el);     
+});
+
+console.log(addPageArray);
+
+
+
+</script> 
+</html>
+

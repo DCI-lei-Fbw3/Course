@@ -25,6 +25,76 @@
     </main>
 </body>
 <script>
+
+// let cite = document.querySelector("cite");
+// let citeParent = cite.parentElement;
+// cons
+// let cite = document.querySelector("cite");
+// let citeParent = cite.parentElement;
+// console.log(cite, citeParent);
+// let citefirstGP = cite.closest(".quote");
+// console.log(citefirstGP.tagName);
+// let citeSection = cite.closest("section");
+
+// let pTag = cite.parentElement.previousElementSibling;
+// console.log(pTag.tagName);
+
+// cite.setAttribute("id", "AliceRabbit");
+
+// cite.addEventListener("click", function(event) {
+//     console.log(event.target.id); 
+// })
+
+// let Stion = document.querySelector("section");
+// Stion.className = "section1";
+
+// let ulStion = document.createElement("ul");
+// Stion.appendChild(ulStion);
+// console.log(Stion);
+
+//     let mainArr = document.querySelectorAll("html, body, body *"); 
+//     console.log(mainArr);
+//     let mainArrNew = []; 
+//     mainArr.forEach(function(element) { 
+//            if (element.className) {                
+//                mainArrNew.push(element);
+//            }
+//            else {
+//                mainArrNew.push(element);
+//            }  
+//            return mainArrNew               
+//      }); 
+// console.log(mainArrNew);
+
+// let tempList = [];
+// mainArrNew.forEach(function(element) {     
+//         tempList.push(element);
+//     });            
+    
+// console.log(tempList);
+
+
+//getElementByTagName does not seem to work ole.log(cite, citeParent);
+// let citefirstGP = cite.closest(".quote");
+// console.log(citefirstGP.tagName);
+// let citeSection = cite.closest("section");
+
+// let pTag = cite.parentElement.previousElementSibling;
+// console.log(pTag.tagName);
+
+// cite.setAttribute("id", "AliceRabbit");
+
+// cite.addEventListener("click", function(event) {
+//     console.log(event.target.id); 
+// })
+
+// let Stion = document.querySelector("section");
+// Stion.className = "section1";
+
+// let ulStion = document.createElement("ul");
+// Stion.appendChild(ulStion);
+// console.log(Stion);
+
 //     let mainArr = document.querySelectorAll("html, body, body *"); 
 //     console.log(mainArr);
 //     let mainArrNew = []; 
@@ -55,12 +125,28 @@ let next = parent;
 let tempList = [];  
     while (parent.parentElement != null) {  
         next = parent.parentElement; 
-        tempList.push(parent);
+        tempList.push(parent.tagName);
         parent = next;
         tempList
-    } console.log(tempList);
+    } return tempList;
 }
 
-findParent("cite");
-</script>
-<html>
+let collection = findParent("cite");
+console.log(collection);
+
+let arrayCollection = Array.from(collection).reverse();
+console.log(arrayCollection);
+
+let addPageArray = [];
+let addPage = arrayCollection.forEach((el) => {
+    el=el+".page";
+    addPageArray.push(el);     
+});
+
+console.log(addPageArray);
+
+
+
+</script> 
+</html>
+

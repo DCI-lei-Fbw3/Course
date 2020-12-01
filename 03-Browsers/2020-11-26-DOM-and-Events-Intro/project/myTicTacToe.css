@@ -23,3 +23,23 @@ td {
 	width: 2em;
 	height: 2em;
 }
+
+#pieces {
+	margin-top: 2em;
+}
+
+.piece_X {
+	background-color: red;
+}
+
+.piece_X:after {
+	content: "X";
+}
+
+.piece_O {
+	background-color: green;
+}
+.piece_O:after {
+	content: "O";
+}
+
