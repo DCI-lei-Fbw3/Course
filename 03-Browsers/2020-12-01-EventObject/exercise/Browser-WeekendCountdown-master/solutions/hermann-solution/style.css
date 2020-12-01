@@ -1,0 +1,11 @@
+.container1 {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.container2 {
+  width: 70%;
+  padding: 100px 50px;
+  border: 2px solid red;
+}
