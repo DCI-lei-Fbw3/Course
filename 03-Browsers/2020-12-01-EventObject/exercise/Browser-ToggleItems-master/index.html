@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          
+          <title>Favorite Destination</title>
+        </head>
+    <header>
+        <h1>My Favorite Destination</h1>
+    </header> 
+<body>
+    <div class="container mt-3">
+        <h2>Choose your favorite destination</h2>
+
+        <h3>Toggle a list of my favorite destination</h3>
+        
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#myList">Show List</button>
+        
+        <div id="myList" class="collapse">
+            <nav class="navbar bg-light">
+                <ul class="navbar-nav">
+                  <li class="nav-item">                      
+                    <a class="nav-link" href="#">Boston</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Leipzig</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Kaohsiung</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Manchester</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tokyo</a>
+                  </li>
+                </ul>
+              </nav>
+          
+        </div>
+      </div>      
+      
+</body>
+  <script>
+  let changeButton = document.querySelector("button");
+
+  changeButton.addEventListener("click", clickToView);
+  
+  let history = [];
+  function clickToView (e) {
+      
+    //div.classList.toggle("visible")
+    //data-toggle="collapse";
+   
+      changeButton.innerHTML = "Hide List";
+
+      if (changeButton.innerHTML == "Hide List") {
+          changeButton.classList
+      }
+  }
+  </script>
+    </html>

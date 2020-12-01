@@ -30,29 +30,25 @@
 <script>
 //get current time
 let today = new Date();
-let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-let dateTime = date+' '+time;
+let date = today.getDay(); 
+let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let theDay = weekday[date];
 
 //query attribute
-    let labelChange = document.querySelector("button");
-    
+    let labelChange = document.querySelector("button");    
     labelChange.addEventListener("click", runEvent)    
 
-    function runEvent(e){ 
-            
+    function runEvent(){             
     let queryPoint = document.getElementById("name");
-
     let fullName = queryPoint.value;    
       
-    let timeDifference = 6-parseInt(today.getDate());
+    let timeDifference = 6-parseInt(today.getDay());
     
-    let message = "Hello, " + fullName + "! " + "Today is " + date + ", only " + timeDifference + " days to go until the weekend!";
+    let message = "Hello, " + fullName + "! " + "Today is " + theDay + ", only " + timeDifference + " days to go until the weekend!";
     
     let labelFinder = document.getElementById("labelChange");
     labelFinder.textContent = message;  
     }
-
 </script>
 
 </html>
