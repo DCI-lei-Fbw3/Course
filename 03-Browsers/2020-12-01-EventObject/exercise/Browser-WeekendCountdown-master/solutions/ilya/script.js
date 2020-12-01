@@ -1,5 +1,5 @@
 const p = document.getElementsByTagName('p')[0];
-const userInputField = document.getElementsByTagName('input')[0];
+const input = document.getElementsByTagName('input')[0];
 const button = document.getElementsByTagName('button')[0];
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const today = new Date().getDay();
@@ -20,10 +20,10 @@ switch (true) {
         break;
   }
 
-
 const updateMessage = () => {
-    p.textContent = `Hello ${userInputField.value}. Today is ${days[today]}. ${daysLeft}`;
-    userInputField.value = '';
+    p.textContent = `Hello ${input.value}. Today is ${days[today]}. ${daysLeft}`;
+    input.value = '';
 }
 
 button.addEventListener('click', updateMessage);
+input.addEventListener('keyup', event => {if(event.code === 'Enter' || event.code === 'NumpadEnter') button.click()});
