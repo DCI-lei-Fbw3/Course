@@ -73,11 +73,27 @@ All DOM nodes generate such signals (but events are not limited to DOM)
 
    */
 
-   
+   class somObjectClass{
+       constructor(){
+           this.someProperty = "some property",
+        }
+    
    print() {
-       console.log(this.history)
+       console.log(this.someProperty)
    }
+}
 
 
-   var box = document.getElementById("");
-   box.addEventListener("click", function (){someClassofObject.print()});
+   var box = document.getElementById("box");
+   box.addEventListener("click",  /* event => {somObjectClass.print()}  */);
+
+   /* 
+   
+   on click --> function print() {
+              console.log(this.someProperty)
+   }
+   
+    Shorter version of all this:
+    Use arrow functions when working with event handlers.
+
+   */
