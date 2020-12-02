@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          
+          <title>Favorite Destination</title>
+        </head>
+    <header>
+        <h1 class="text-lg-center">My Favorite Destination</h1>
+    </header> 
+<body>
+    <div class="container mt-3">                          
+        </br>               
+            <nav class="navbar navbar-light bg-success">
+                <h2 class="navbar-brand text-center">Toggle a list of my favorite destination</h2>
+            </nav>
+        <div id="myList" class="collapse"> 
+        <br>           
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">Boston</a>
+        </nav> 
+        <br>              
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Leipzig</a>
+            </nav>
+        <br>              
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Manchester</a>
+            </nav>
+        <br>               
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Kaohsiung</a>
+            </nav>
+        <br>              
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Tokyo</a>
+            </nav>
+        <br>           
+    </div>
+     <div id="buttonSelection"> 
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#myList">Show List</button>  
+
+                            <!--<ul class="navbar-nav">
+                  <li class="nav-item">                      
+                    <a class="nav-link" href="#">Boston</a> 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Leipzig</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Kaohsiung</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Manchester</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tokyo</a>
+                  </li>
+                </ul>
+              </nav>-->
+        </div>
+    </div>      
+      
+</body>
+  <script>
+  let changeButton = document.querySelector("button");
+  let collapseStatus = document.querySelector("#myList");
+    
+  let highLight = document.getElementsByTagName("a");
+  
+  for (let item of highLight) {
+  item.addEventListener("mouseover", function(hoverToSelect){      
+      item.parentElement.classList.value = "bg-warning";  
+      let masterDiv = document.querySelector("#buttonSelection");
+      
+      let newN = document.createElement("nav");
+      newN.classList = "navbar navbar-light bg-info";     
+      masterDiv.append(newN);
+
+      let newP = document.createElement("p");
+      let newMessage = document.createTextNode("You have selected " + item.textContent);
+      newP.append(newMessage);
+      newN.append(newP);         
+
+      setTimeout(function(){
+        newP.textContent=" ";
+        item.parentElement.classList.value = "bg-light";
+        newN.classList.value = "bg-light";        
+       }, 2000);
+      }, false);
+    }
+
+  changeButton.addEventListener("click", clickToView);   
+  
+  function clickToView() {
+     if (collapseStatus.classList.value === "collapse show"){
+          changeButton.textContent = "Show List";
+     } 
+     if (collapseStatus.classList.value === "collapse"){
+         changeButton.textContent = "Hide List"
+     }    
+  } 
+  
+  </script>
+    </html>
