@@ -1,0 +1,24 @@
+h1 {
+    background-color: #000;
+    font-family: serif;
+    font-weight: 900;
+}
+.nav {
+    background-color: #00b7fd;
+}
+.nav-tabs .nav-item {
+    margin-bottom: 0;
+}
+.dropdown-menu {
+    transform: translate3d(0px, 40px, 0px) !important;
+}
+
+.show .nav-link{
+    background-color: #000 !important; 
+    color: #01f3f3 !important;
+}   
+
+.show ul, .show ul li:hover {
+    background-color: #000;
+    color: white;
+}
