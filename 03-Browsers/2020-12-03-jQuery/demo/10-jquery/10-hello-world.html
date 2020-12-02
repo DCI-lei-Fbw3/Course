@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>jQuery-Demo</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+
+    <a href="http://jquery.com/">jQuery</a>
+	<div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas sit molestiae laborum maiores repellat, voluptates doloribus modi odit, illum voluptatum sint ut quidem, deserunt aliquid. Aut sapiente id beatae cupiditate.</div>
+	<div class="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos temporibus, sit velit ipsam vitae, necessitatibus ex adipisci ratione odio expedita! At harum obcaecati asperiores voluptatem sint! Rem, quae quas.</div>
+
+	<div id="game"></div>
+
+<script>
+ 
+$(document).ready(function() {
+	$("a").click(function(event) {
+		alert("Thanks for visiting!");
+		event.preventDefault();
+	});
+});
+
+$("div.content").addClass("class_a");
+$("div.footer").addClass("class_b");
+
+$("div").addClass("class_c");
+
+//$("div.footer").removeClass("class_b");
+
+$("div.footer").click(function(event) {
+	event.preventDefault();
+ 	$(this).hide("slow");
+});
+
+</script>
+</body>
+</html>
