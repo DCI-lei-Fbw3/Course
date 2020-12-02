@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>jQuery-Demo</title>
+
+    <link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+</head>
+<body>
+
+    <h1>Musicians</h1>
+
+    <div id="musiciansShort"></div>
+
+    <h2>Details</h2>
+    <table id="musicians">
+    </table>
+
+</body>
+
+<script>
+    // compile the template
+    let template = Handlebars.compile(
+        "<tr>\n"
+        + "\t<td>Name</td>\n"
+        + "\t<td>{{name}}</td>\n"
+        + "</tr>"
+        + "\t<tr>\n"
+        + "\t<td>Instrument</td>\n"
+        + "\t<td>{{instrument}}</td>\n"
+        + "</tr>"
+        + "\t<tr>\n"
+        + "\t<td>Band</td>\n"
+        + "\t<td>{{band}}</td>\n"
+        + "</tr>"
+    );
+
+    // execute the compiled template and use the output
+
+    let bruce = {
+        name: "Bruce Dickinson",
+        instrument: "vocals",
+        band: "Iron Maiden"
+    };
+
+    let steve = {
+        name: "Steve Harris",
+        instrument: "bass",
+        band: "Iron Maiden"
+    };
+
+    let renderedBruce = template(bruce);
+    let renderedSteve = template(steve);
+
+
+    let musiciansElement = document.getElementById("musicians");
+    musiciansElement.innerHTML = renderedBruce;
+    musiciansElement.innerHTML+= renderedSteve;
+
+
+    let musicians = [bruce, steve];
+
+    let shortMusicians = Handlebars.compile(
+        "{{#each musician}}"
+        +    "<p>{{this.name}} ({{this.band}})</p>\n"
+        +"{{/each}}"
+    );
+
+    let musiciansShort = document.getElementById("musiciansShort");
+    musiciansShort.innerHTML = shortMusicians({musician: musicians})
+
+</script>
+
+</html>
