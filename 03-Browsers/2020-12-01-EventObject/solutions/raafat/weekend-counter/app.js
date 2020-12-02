@@ -5,9 +5,7 @@ let button = document.querySelector("button");
 
 form.addEventListener("submit", (event) => {
 	event.preventDefault();
-
 	let value = input.value;
-
 	para.innerHTML = `Hello ${value}, ${myDate()}`;
 });
 
