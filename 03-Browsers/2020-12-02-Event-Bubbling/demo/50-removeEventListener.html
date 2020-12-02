@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>RemoveEventListener</title>
+	<title>RemoveEventListener()</title>
 </head>
 <body>
 
-<h1>RemoveEventListener</h1>
+<h1>Element.RemoveEventListener()</h1>
 
-<div id="1">click 
-	<em id="2">on (2)</em> 
-	or maybe even 
-	<strong id="3">(3) on <em id="4">deepest level</em></strong>
+<dl>
+  	<dt>What to Remove?</dt>
+  	<dd>
+		<ul>
+			<li>Handler</li>
+		</ul>
+	</dd>
+  	<dt>Where to Remove from?</dt>
+  	<dd>
+	  	<ul>
+			<li>Element</li>
+			<li>Event Type</li>
+			<li>Phase (Capture, Bubble)</li>
+		</ul>
+  </dd>
+</dl>
+
+<div id="1">
+	<strong id="3"><em id="4">click on deepest nested element</em></strong>
 </div>
 
 </body>
