@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>event.stopImmediatePropagation()</title>
+</head>
+<body>
+
+<h1>event.stopImmediatePropagation()</h1>
+
+<div id="1">click 
+	<em id="2">on (2)</em> 
+	or maybe even 
+	<strong id="3">on me (3)</strong>
+</div>
+
+</body>
+
+<script>
+	let elementWithListener = document.getElementById("1");
+	elementWithListener.addEventListener("click", handler1);
+
+	let element2 = document.getElementById("2");
+	element2.addEventListener("click", handler2);
+
+	let element3 = document.getElementById("3");
+	element3.addEventListener("click", handler1);
+	// event handling will stop after handler2 (since stopImmediatePropagation is used there)
+	element3.addEventListener("click", handler2);
+	// handler3 will not be executed, 
+	// since the event-propagation is immediately stopped after handler2
+	element3.addEventListener("click", handler3);
+
+	function handler1(event) {
+		console.log("handler1");
+	}
+	
+	function handler2(event) {
+		console.log("handler2");
+		// stopImmediatePropagation will stop the handling of this event
+		// right after the current event-handler
+		event.stopImmediatePropagation();
+	}
+	
+	function handler3(event) {
+		console.log("handler3");
+	}
+</script>
+</html>
