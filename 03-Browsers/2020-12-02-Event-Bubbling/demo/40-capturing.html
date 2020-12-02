@@ -20,29 +20,28 @@
 </body>
 
 <script>	
-	function handler1(event) {
-		console.log("handler1");
-	}
-	
-	function handler2(event) {
-		console.log("handler2");
-	}
-		
-	function handler3(event) {
-		console.log("handler3");
-	}
+let div = document.getElementById("1")
+let strong = document.getElementById("3");
+let deepest = document.getElementById("4");
 
-	let div = document.getElementById("1")
-	let strong = document.getElementById("3");
-	let deepest = document.getElementById("4");
+let isCapturingEnabled = true; // false => Bubbling
+// enablee "capturing" via object
+div.addEventListener("click", handler1, {capture: isCapturingEnabled});
+// enable "capturing with a true-boolean"
+strong.addEventListener("click", handler2, {capture: false});
+deepest.addEventListener("click", handler3, isCapturingEnabled);
+
+function handler1(event) {
+	console.log("handler1");
+}
+
+function handler2(event) {
+	console.log("handler2");
+}
 	
-	let isCapturingEnabled = true; // false => Bubbling
-	// enablee "capturing" via object
-	div.addEventListener("click", handler1, {capture: isCapturingEnabled});
-	// enable "capturing with a true-boolean"
-	strong.addEventListener("click", handler2, {capture: false});
-	deepest.addEventListener("click", handler3, isCapturingEnabled);
-	
+function handler3(event) {
+	console.log("handler3");
+}
 </script>
 
 </html>
