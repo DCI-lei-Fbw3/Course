@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>RemoveEventListener()</title>
+</head>
+<body>
+
+<h1>Element.RemoveEventListener()</h1>
+
+<dl>
+  	<dt>What to Remove?</dt>
+  	<dd>
+		<ul>
+			<li>Handler</li>
+		</ul>
+	</dd>
+  	<dt>Where to Remove from?</dt>
+  	<dd>
+	  	<ul>
+			<li>Element</li>
+			<li>Event Type</li>
+			<li>Phase (Capture, Bubble)</li>
+		</ul>
+  </dd>
+</dl>
+
+<div id="1">
+	<strong id="3"><em id="4">click on deepest nested element</em></strong>
+</div>
+
+</body>
+
+<script>	
+	let div = document.getElementById("1")
+	let strong = document.getElementById("3");
+	let deepest = document.getElementById("4");
+	
+	let isCapturingEnabled = true; // false => Bubbling
+	// adding "capturing" handlers (1, 2, 3) to elements (div, strong, deepest) 
+	div.addEventListener("click", handler1, {capture: isCapturingEnabled});
+	strong.addEventListener("click", handler2, {capture: isCapturingEnabled});
+	deepest.addEventListener("click", handler3, {capture: isCapturingEnabled});
+
+	// adding "bubbling" handlers (1, 2, 3) to elements (div, strong, deepest) 
+	isCapturingEnabled = false;
+	div.addEventListener("click", handler1, {capture: isCapturingEnabled});
+	strong.addEventListener("click", handler2, {capture: isCapturingEnabled});
+	deepest.addEventListener("click", handler3, {capture: isCapturingEnabled});
+
+	// remove handler2 from strong during capturing
+	strong.removeEventListener("click", handler2, {capture: true});
+
+	// remove handler1 from div on bubbling
+	//div.removeEventListener("click", handler1, {capture: false});
+	div.removeEventListener("click", handler1);
+
+	function handler1(event) {
+		console.log("handler1");
+	}
+	
+	function handler2(event) {
+		console.log("handler2");
+	}
+		
+	function handler3(event) {
+		console.log("handler3");
+	}
+
+</script>
+
+</html>

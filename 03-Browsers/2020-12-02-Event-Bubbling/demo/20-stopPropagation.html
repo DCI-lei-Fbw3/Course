@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>event.stopPropagation()</title>
+</head>
+<body>
+
+<h1>event.stopPropagation()</h1>
+
+<div id="1">click 
+	<em id="2">on (2)</em> 
+	or maybe even 
+	<strong id="3">on me (3)</strong>
+</div>
+
+</body>
+
+<script>
+	let elementWithListener = document.getElementById("1");
+	elementWithListener.addEventListener("click", handler1);
+
+	let element2 = document.getElementById("2");
+	element2.addEventListener("click", handler2);
+
+	let element3 = document.getElementById("3");
+	// every event-handler on the same element will be executed,
+	// independent of the order they were added.
+	element3.addEventListener("click", handler2);
+	element3.addEventListener("click", handler3);
+
+	function handler1(event) {
+		console.log("handler1");
+	}
+	
+	function handler2(event) {
+		console.log("handler2");
+		// stopPropagation will stop bubbling the event to the parent
+		// still every event-handler associated with the current element
+		// will be executed.
+		event.stopPropagation();
+	}
+	
+	function handler3(event) {
+		console.log("handler3");
+	}
+</script>
+</html>
