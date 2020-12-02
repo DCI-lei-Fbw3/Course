@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+          
+          <title>Weekend Countdown</title>
+        </head>         
+
+    <body class="container-fluid">
+        <header>
+        <h1>Welcome to Weekend Countdown</h1>        
+        </header>
+        <label id=labelChange>Please enter your name  &#128512; </label>            
+            
+        <div class="form-row align-items-center">
+            <div class="col-auto">
+            <input id= "name" value= "name" name = "fullName" class="form-control mb-3" type="text" placeholder="Enter your name">
+            </div>
+         
+         <div class="col-auto">
+            
+            <button input type="submit" class="btn btn-primary form-control mb-3">go!</button>
+            </div> 
+            </div>       
+    </body>
+<script>
+//get current time
+let today = new Date();
+let date = today.getDay(); 
+let weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let theDay = weekday[date];
+
+//query attribute
+    let labelChange = document.querySelector("button");    
+    labelChange.addEventListener("click", runEvent)    
+
+    function runEvent(){             
+    let queryPoint = document.getElementById("name");
+    let fullName = queryPoint.value;    
+      
+    let timeDifference = 6-parseInt(today.getDay());
+    
+    let message = "Hello, " + fullName + "! " + "Today is " + theDay + ", only " + timeDifference + " days to go until the weekend!";
+    
+    let labelFinder = document.getElementById("labelChange");
+    labelFinder.textContent = message;  
+    }
+</script>
+
+</html>
