@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: rgb(125, 55, 133);
+}
+.dropbtn {
+	font-weight: bold;
+	color: rgb(31, 31, 31);
+}
+.list-group-item:hover {
+	background: rgba(17, 50, 65, 0.933);
+	color: #fff;
+	cursor: pointer;
+}
+.list-group-item:hover .dropbtn {
+	background: rgba(17, 50, 65, 0.933);
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+}
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.drop-menu {
+	margin-top: 10px;
+	display: none;
+	position: absolute;
+	left: 0;
+	background-color: rgba(17, 50, 65, 0.933);
+	width: inherit;
+	z-index: 1;
+}
+.drop-menu a {
+	color: rgb(255, 255, 255);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.menu-toggle {
+	display: block;
+}
