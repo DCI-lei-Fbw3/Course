@@ -34,18 +34,6 @@
 </body>
 
 <script>	
-	function handler1(event) {
-		console.log("handler1");
-	}
-	
-	function handler2(event) {
-		console.log("handler2");
-	}
-		
-	function handler3(event) {
-		console.log("handler3");
-	}
-
 	let div = document.getElementById("1")
 	let strong = document.getElementById("3");
 	let deepest = document.getElementById("4");
@@ -68,6 +56,19 @@
 	// remove handler1 from div on bubbling
 	//div.removeEventListener("click", handler1, {capture: false});
 	div.removeEventListener("click", handler1);
+
+	function handler1(event) {
+		console.log("handler1");
+	}
+	
+	function handler2(event) {
+		console.log("handler2");
+	}
+		
+	function handler3(event) {
+		console.log("handler3");
+	}
+
 </script>
 
 </html>
