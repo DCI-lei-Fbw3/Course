@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie director dropdown menu</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        background-image: linear-gradient(
+          to left,
+          red,
+          orange,
+          yellow,
+          green,
+          blue,
+          indigo,
+          violet
+        );
+      }
+
+      header {
+        color: white;
+        font-size: 3.5rem;
+        height: 35%;
+        text-align: center;
+        background-color: black;
+      }
+
+      .outerFlexBox {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .collapsible {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+        padding: 20px 60px;
+        width: 100%;
+        height: 40%;
+        border: none;
+        text-align: center;
+        font-size: 2.2rem;
+      }
+
+      ul {
+        visibility: collapse;
+      }
+
+      li {
+        display: flex;
+        list-style-type: none;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>宮崎駿(Hayao Miyazaki)'s Movies</h1>
+    </header>
+    <main>
+      <div class="outerFlexBox">
+        <div class="innerFlexBox">
+          <button type="button" class="collapsible">となりのトトロ</button>
+          <ul>
+            <li>サツキ（草壁サツキ）</li>
+            <li>トトロ（大トトロ）</li>
+            <li>メイ（草壁メイ）</li>
+          </ul>
+        </div>
+
+        <div class="innerFlexBox">
+          <button type="button" class="collapsible">魔女の宅急便</button>
+          <ul>
+            <li>キキ</li>
+            <li>ジジ</li>
+            <li>先輩魔女</li>
+          </ul>
+        </div>
+
+        <div class="innerFlexBox">
+          <button type="button" class="collapsible">もののけ姫</button>
+          <ul>
+            <li>アシタカ</li>
+            <li>サン</li>
+            <li>乙事主（おっことぬし）</li>
+          </ul>
+        </div>
+
+        <div class="innerFlexBox">
+          <button type="button" class="collapsible">千と千尋の神隠し</button>
+          <ul>
+            <li>荻野千尋（おぎのちひろ）/千（せん）</li>
+            <li>ハク/ニギハヤミコハクヌシ</li>
+            <li>カオナシ</li>
+          </ul>
+        </div>
+
+        <div class="innerFlexBox">
+          <button type="button" class="collapsible">ハウルの動く城</button>
+          <ul>
+            <li>ハウル</li>
+            <li>ソフィー・ハッター</li>
+            <li>荒地の魔女</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    let movieTitle = document.querySelectorAll(".collapsible");
+
+    for (let item of movieTitle) {
+      item.addEventListener("mouseenter", hoverToView);
+
+      function hoverToView() {
+        let actorListOn = item.nextElementSibling;
+        actorListOn.setAttribute("style", "visibility: visible");
+        item.setAttribute("style", "color: green; background-color: pink");
+        item.parentElement.setAttribute("style", "background-color: pink");
+      }
+    }
+
+    for (let item of movieTitle) {
+      item.addEventListener("mouseleave", leaveToHide);
+
+      function leaveToHide() {
+        let actorListOff = item.nextElementSibling;
+        actorListOff.setAttribute("style", "visibility: collapse");
+        item.setAttribute("style", "color: white; background-color: blue");
+        item.parentElement.setAttribute("style", "background-color: none");
+      }
+    }
+  </script>
+</html>
