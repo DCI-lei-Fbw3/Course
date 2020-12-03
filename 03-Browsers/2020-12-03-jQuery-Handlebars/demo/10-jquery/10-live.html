@@ -11,6 +11,8 @@
 <body>
 
 	<a href="http://jquery.com/">jQuery</a>
+	<a href="https://learn.jquery.com/about-jquery/how-jquery-works/">Source for this Demonstration</a>
+
 	<div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas sit molestiae laborum maiores repellat, voluptates doloribus modi odit, illum voluptatum sint ut quidem, deserunt aliquid. Aut sapiente id beatae cupiditate.</div>
 	<div class="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos temporibus, sit velit ipsam vitae, necessitatibus ex adipisci ratione odio expedita! At harum obcaecati asperiores voluptatem sint! Rem, quae quas.</div>
 
@@ -22,8 +24,8 @@
 $(document).ready(function() {
 	$("a").click(function(event) {
 		alert("Thanks for visiting!");
-		// prevent following the link
-		event.preventDefault();
+		// optionally prevent following the link
+		//event.preventDefault();
 	});
 });
 
