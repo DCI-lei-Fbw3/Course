@@ -11,28 +11,31 @@
 
     <h1>Musicians</h1>
 
-    <div id="musiciansShort"></div>
-
+    
     <h2>Details</h2>
-    <table id="musicians">
-    </table>
+    <table id="musicians"></table>
 
+    <h2>Short Musicians List</h2>
+    <div id="musiciansShort"></div>
+    
 </body>
 
 <script>
     // compile the template
+    // in Handlebars placeholders are defined 
+    // with double curly-brackets surrounding the placeholder's name
     let template = Handlebars.compile(
-        "<tr>\n"
-        + "\t<td>Name</td>\n"
-        + "\t<td>{{name}}</td>\n"
+        "<tr>"
+        + "<td>Name</td>"
+        + "<td>{{ name }}</td>"
         + "</tr>"
-        + "\t<tr>\n"
-        + "\t<td>Instrument</td>\n"
-        + "\t<td>{{instrument}}</td>\n"
+        + "<tr>"
+        + "<td>Instrument</td>"
+        + "<td>{{ instrument }}</td>"
         + "</tr>"
-        + "\t<tr>\n"
-        + "\t<td>Band</td>\n"
-        + "\t<td>{{band}}</td>\n"
+        + "<tr>"
+        + "<td>Band</td>"
+        + "<td>{{ band }}</td>"
         + "</tr>"
     );
 
@@ -53,23 +56,32 @@
     let renderedBruce = template(bruce);
     let renderedSteve = template(steve);
 
-
     let musiciansElement = document.getElementById("musicians");
     musiciansElement.innerHTML = renderedBruce;
     musiciansElement.innerHTML+= renderedSteve;
+/**/
 
-
-    let musicians = [bruce, steve];
-
+    // compile() will return the function used to actually 
+    // render the template with the provided object's content.
     let shortMusicians = Handlebars.compile(
-        "{{#each musician}}"
-        +    "<p>{{this.name}} ({{this.band}})</p>\n"
-        +"{{/each}}"
+    // "#each" defines the start of the loop
+    // like "for (this of musician)"
+    // if will loop over the array provided later by the attribute "musician"
+    "{{#each musician}}"
+         //     "this" refers to the current item looped over
+         //     and hence to that items attributes can be referred to
+    +    "<p>{{ this.name }} ({{ this.band }})</p>\n"
+    +"{{/each}}" // "/each" is the end of the loop
     );
-
+    
     let musiciansShort = document.getElementById("musiciansShort");
-    musiciansShort.innerHTML = shortMusicians({musician: musicians})
-
+    // the provided object must have an attribute "musician", 
+    // since that is used in the definition of the template-function "shortMusicians"
+    // and over "musician" a loop is defined in the template, 
+    // therefore the "musician"-attribute's value must be an array.
+    musiciansShort.innerHTML = shortMusicians({musician: [bruce, steve]})
+    
+/**/
 </script>
 
 </html>
