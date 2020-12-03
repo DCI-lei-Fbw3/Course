@@ -1,16 +1,5 @@
-/* let body = document.querySelector("body");
-let divButton = document.createElement("div");
-divButton.classList = "my-2 h5_div text-primary";
-divButton.setAttribute("style=", "border-radius: 5px");
-
-let h5 = document.createElement("h5");
-h5.classList = "py-3 pl-3";
-h5.textContent = "You selected ";
-divButton.append(h5);
-body.append(divButton); */
 let li = document.querySelectorAll("li");
 for (let i = 0; i < li.length; i++) {
-  let finalText = li[i].textContent;
   li[i].addEventListener("mouseover", overIt);
   li[i].addEventListener("mouseout", goOut);
   li[i].addEventListener("click", clickFunction);

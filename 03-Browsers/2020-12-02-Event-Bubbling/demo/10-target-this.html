@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>"event.target" and "this"</title>
+</head>
+<body>
+
+<h1>event.target and this</h1>
+
+<div id="1">click 
+	<em id="2">on (2)</em> 
+	or maybe even 
+	<strong id="3">on me (3)</strong>
+</div>
+
+</body>
+
+<script>
+	let div = document.getElementById("1");
+	div.addEventListener("click", handler1);
+
+	let strong = document.getElementById("3");
+	strong.addEventListener("click", 
+		// beware in an anonymous/arrow function
+		// beware "this" is referring to the "window"
+		//() => { console.log("What type:", this) } 
+		
+		handler2
+	);
+
+	function handler1(event) {
+		console.log("handler1");
+		// event.target will select the most specific element/tag, - 
+		// the one the click has been exercised on
+		console.log("event.target:", event.target.tagName, event.target.id);
+
+		// this refers to the element the eventHandler was added to.
+		console.log("this:", this.tagName, this.id);
+	}
+
+	function handler2(event) {
+		console.log("handler2");
+		console.log(this.tagName, this.id)
+	}
+
+</script>
+
+</html>

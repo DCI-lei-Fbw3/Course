@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Capturing</title>
+</head>
+<body>
+
+<h1>Capturing</h1>
+
+
+<div id="1">click 
+	<em id="2">on (2)</em> 
+	or maybe even 
+	<strong id="3">(3) on <em id="4">deepest level</em></strong>
+</div>
+
+</body>
+
+<script>	
+let div = document.getElementById("1")
+let strong = document.getElementById("3");
+let deepest = document.getElementById("4");
+
+let isCapturingEnabled = true; // false => Bubbling
+// enablee "capturing" via object
+div.addEventListener("click", handler1, {capture: isCapturingEnabled});
+// enable "capturing with a true-boolean"
+strong.addEventListener("click", handler2, {capture: false});
+deepest.addEventListener("click", handler3, isCapturingEnabled);
+
+function handler1(event) {
+	console.log("handler1");
+}
+
+function handler2(event) {
+	console.log("handler2");
+}
+	
+function handler3(event) {
+	console.log("handler3");
+}
+</script>
+
+</html>
