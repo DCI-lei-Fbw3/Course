@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+#navbar {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  height: 3rem;
+}
+#navbar div {
+  padding: 10px;
+}
+div.selected {
+  background-color: beige;
+}
+
+#navbar li {
+  font-size: 2rem;
+  display: inline-block;
+  padding-inline-start: 0;
+}
+
+#navbar .dropdownmenu li {
+  font-size: 1rem;
+  display: block;
+  padding-top: 10px;
+}
+
+#navbar .dropdownmenu {
+  display: none;
+}
+
+#navbar .dropdownmenu.selected {
+  display: block;
+  background-color: beige;
+  padding-inline-start: 0;
+  padding-top: 10px;
+}

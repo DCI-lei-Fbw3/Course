@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser-Dropdown</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container-fluid" style="background-color: black">
+      <h1 class="text-center text-white py-2">Hermann's Movies</h1>
+    </div>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-info"
+      style="height: 50px"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="navbar-nav mr-auto bg-info ul_all" style="margin-left: 120px">
+        <li class="nav-item">
+          <a
+            class="nav-link text-white"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            The Prestige
+          </a>
+          <div
+            class="bg-dark dropdown-menu simo1"
+            aria-labelledby="navbarDropdown"
+          >
+            <div class="one"></div>
+            <a class="dropdown-item text-danger" href="#">Chirstian Bale</a>
+            <a class="dropdown-item text-danger" href="#">Hugh Jackmann</a>
+            <a class="dropdown-item text-danger" href="#">Sir Michael Caine</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
