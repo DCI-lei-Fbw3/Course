@@ -13,16 +13,16 @@
 
 <script>
     // compile the template
+    // Template specified as argument
+    // => returns a template-function
     let template = Handlebars.compile("{{greeting}}");
 
-    // execute the compiled template and use the output
+    // execute the compiled template-function and use the output
     let content = template({ greeting: "hello world" });
 
     let h1 = document.getElementById("1");
     console.log(content);
     h1.innerHTML = content;
-
-
 </script>
 
 </html>
