@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>jQuery-Demo</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+
+<body>
+
+	<a href="http://jquery.com/">jQuery</a>
+	<a href="https://learn.jquery.com/about-jquery/how-jquery-works/">Source for this Demonstration</a>
+
+	<div class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas sit molestiae laborum maiores repellat, voluptates doloribus modi odit, illum voluptatum sint ut quidem, deserunt aliquid. Aut sapiente id beatae cupiditate.</div>
+	<div class="footer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eos temporibus, sit velit ipsam vitae, necessitatibus ex adipisci ratione odio expedita! At harum obcaecati asperiores voluptatem sint! Rem, quae quas.</div>
+
+</body>
+<script>
+
+// To jQuery either via "jQuery" or via "$" is referred to.
+
+$(document).ready(function() {
+	$("a").click(function(event) {
+		alert("Thanks for visiting!");
+		// optionally prevent following the link
+		//event.preventDefault();
+	});
+});
+
+// the following two lines would do the same thing - they are equivalent.
+//$("div.content").addClass("class_a");
+jQuery("div.content").addClass("class_a");
+
+// compare the following two lines, which virtually achieve the same:
+//document.querySelector("div.footer").classList.add("class_b");
+$("div.footer").addClass("class_b");
+
+// select every "div" 
+// and add the class "class_c" 
+// from the css-file to them
+$("div").addClass("class_c");
+// even more complex selectors are possible:
+$("div:nth-child(even)").addClass("class_c");
+
+$("div.footer").click(function(event) {
+	event.preventDefault();
+ 	$(this).hide("slow");
+});
+
+</script>
+</html>

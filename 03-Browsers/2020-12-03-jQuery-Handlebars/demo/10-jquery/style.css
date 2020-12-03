@@ -1,0 +1,21 @@
+body {
+	padding: 0 6%;
+}
+
+div {
+	padding: 6%;
+	text-align: justify;
+	margin-top: 2em;
+}
+
+.class_a {
+	background-color: lightskyblue;
+}
+
+.class_b {
+	background-color: lightsalmon;
+}
+
+.class_c {
+	font-family: sans-serif;
+}

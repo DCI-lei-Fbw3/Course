@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>jQuery - ajax</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+	<h1>jQuery - ajax</h1>
+
+	<div id="ext1"></div>
+	<div id="ext2"></div>
+
+	<div class="class_b">FOOTER</div>
+
+<script>
+ 
+$("div").addClass("class_a");
+$("div").addClass("class_c");
+
+//$("div.footer").removeClass("class_b");
+
+$("div.footer").click(function(event) {
+	event.preventDefault();
+ 	$(this).hide("slow");
+});
+
+$.get("20a-resource.txt", function(response) {
+	$("#ext1").text(response);
+	//console.log(response);
+});
+
+// Using .load() to populate an element
+//$("#ext2").load("20b-resource.html");
+
+$("#ext2").load("20b-resource.html h2:first");
+$('#ext2').click(function(event) {
+	$('#ext2').load("20b-resource.html");
+});
+
+</script>
+</body>
+</html>
