@@ -1,0 +1,27 @@
+/* body {
+    display: flex;
+    flex-direction: column;
+} */
+
+body {
+    margin: 3em;
+    font-size: large;
+}
+
+button {
+    margin: 2em 0 0 0;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+p {
+    opacity: 0.6;
+}
+
+#myDiv {
+    margin-top: 1.5em;
+}
