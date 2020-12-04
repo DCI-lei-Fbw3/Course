@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="main.css" />
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<title>My Little Tea Shop</title>
+	</head>
+
+	<body>
+		<header class="header">
+			<h1 class="text-center mb-2">My little tea shop</h1>
+			<nav class="nav bg-warning">
+				<ul
+					class="w-100 h-auto d-flex flex-row flex-wrap justify-content-around align-items-center mb-2"
+				>
+					<li class="text-secondary">About</li>
+					<li class="text-secondary">Contact</li>
+					<li class="text-secondary">Shop</li>
+				</ul>
+			</nav>
+		</header>
+		<section
+			class="intro d-flex flex-row flex-wrap align-items-center justify-content-around border-bottom border-warning"
+		>
+			<section class="intro__about m-1">
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Incidunt eum sunt nesciunt dolore asperiores impedit
+					repellendus quod veniam illo harum iusto, tenetur debitis
+					vel voluptatibus facere? Omnis soluta dolore nobis!
+				</p>
+			</section>
+			<img class="image teapot" src="teapot.png" alt="Tea Pot" />
+			<section class="intro__about m-1">
+				<p>
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+					Officiis ipsum facere excepturi. Dolor magni dolores,
+					officiis accusantium doloribus itaque libero perferendis?
+					Incidunt et odio, officiis similique ut quasi! Ab, placeat.
+				</p>
+			</section>
+		</section>
+
+		<main class="main">
+			<section
+				class="selection d-flex flex-row flex-wrap justify-content-around align-items-start"
+			>
+				<section
+					class="selection__option d-flex flex-column align-items-center justify-content-around m-2"
+				>
+					<img
+						class="selection__image"
+						src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6MtC9zmO-sSEqoj4nKhSrrgDKafYGSfk6afyWRtbQLDonw3CLDQ"
+						alt="Tea Option"
+					/>
+					<p class="tea-desc border-top border-warning pt-3">
+						Tea Option 1
+					</p>
+				</section>
+				<section
+					class="selection__option d-flex flex-column align-items-center justify-content-around m-2"
+				>
+					<img
+						class="selection__image"
+						src="https://www.cfteas.com/images/185/225/packets1.jpg?h=97c71140"
+						alt="Tea Option"
+					/>
+					<p class="tea-desc border-top border-warning pt-3">
+						Tea Option 2
+					</p>
+				</section>
+				<section
+					class="selection__option d-flex flex-column align-items-center justify-content-around m-2"
+				>
+					<img
+						class="selection__image"
+						src="http://content.oppictures.com/Master_Images/Master_Variants/Variant_1500/122820.JPG"
+						alt="Tea Option"
+					/>
+					<p class="tea-desc border-top border-warning pt-3">
+						Tea Option 3
+					</p>
+				</section>
+			</section>
+		</main>
+
+		<section class="info d-flex flex-column align-items-center">
+			<h2>Love Tea?</h2>
+			<h3>Tell us who you are for more information & win tea prizes!</h3>
+			<section
+				class="info__form d-flex flex-column justify-content-center"
+			>
+				<form class="d-flex flex-column">
+					First name:<br />
+					<input
+						type="text"
+						name="firstname"
+						class="border border-warning"
+					/><br />
+					Last name:<br />
+					<input
+						type="text"
+						name="lastname"
+						class="border border-warning"
+					/><br />
+					Email address:<br />
+					<input type="email" class="border border-warning" />
+					<!-- <input type="submit" class="submit mt-2"> -->
+				</form>
+				<input
+					type="submit"
+					class="submit m-2"
+					data-toggle="modal"
+					data-target="#myModal"
+				/>
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button
+									type="button"
+									class="close"
+									data-dismiss="modal"
+								>
+									&times;
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-align-center">
+									Thank you for your submission! & Good Luck!
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button
+									type="button"
+									class="btn btn-default"
+									data-dismiss="modal"
+								>
+									Close
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="info__description">
+				<p class="m-4">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Necessitatibus quibusdam maxime repudiandae quisquam quam
+					provident sed nostrum laborum eos, sunt soluta vero
+					molestias beatae officia reiciendis consequatur alias iure?
+					Distinctio!
+				</p>
+			</section>
+		</section>
+
+		<!-- Modal -->
+
+		<footer class="footer bg-warning">
+			<ul
+				class="links d-flex flex-row flex-wrap justify-content-around align-items-center w-100"
+			>
+				<li class="link">
+					<a class="text-seconary" href="#" target="_blank"
+						>Some social media site</a
+					>
+				</li>
+				<li class="link">
+					<a class="text-seconary" href="#" target="_blank"
+						>Some social media site</a
+					>
+				</li>
+				<li class="link">
+					<a class="text-seconary" href="#" target="_blank"
+						>Some social media site</a
+					>
+				</li>
+			</ul>
+		</footer>
+
+		<script
+			type="text/javascript"
+			src="http://code.jquery.com/jquery-latest.min.js"
+		></script>
+		<script src="index.js"></script>
+	</body>
+</html>
