@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Places</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="loo.css">
+</head>
+
+<body>
+    <h1 class="d-flex justify-content-center ">My Favorite Destinations</h1>
+    <p class="p-3 mb-2 bg-info text-dark list-group">Toggle the list of my favorite destinations</p>
+
+
+    <div id="myDiv">
+        <ul class="list-group">
+            <li class="list-group-item active">Berlin</li>
+            <li class="list-group-item">Paris</li>
+            <li class="list-group-item">London</li>
+            <li class="list-group-item">Athens</li>
+            <li class="list-group-item">Rome</li>
+        </ul>
+    </div>
+
+    <button class="float-right btn btn-primary btn-lg float-left" onclick="list()" type="button">Hide
+        Destinations</button>
+
+
+    <script src="lew.js"></script>
+</body>
+
+</html>
