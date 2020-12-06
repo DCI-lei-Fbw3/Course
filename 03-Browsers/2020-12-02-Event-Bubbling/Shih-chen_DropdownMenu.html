@@ -121,7 +121,7 @@
       function hoverToView() {
         let actorListOn = item.nextElementSibling;
         actorListOn.setAttribute("style", "visibility: visible");
-        //item.setAttribute("style", "color: green; background-color: pink");
+        item.setAttribute("style", "color: green; background-color: pink");
         item.parentElement.setAttribute("style", "background-color: pink");
       }
       
@@ -130,30 +130,10 @@
       function leaveToHide() {
         let actorListOff = item.nextElementSibling;
         actorListOff.setAttribute("style", "visibility: collapse");
-        //item.setAttribute("style", "color: white; background-color: blue");
+        item.setAttribute("style", "color: white; background-color: blue");
         item.parentElement.setAttribute("style", "background-color: none");
       }
-    }
-
-    // for (let item of movieTitle) {
-    //   item.addEventListener("mouseenter", hoverToView);
-
-    //   function hoverToView() {
-    //     let actorListOn = item.nextElementSibling;
-    //     actorListOn.setAttribute("style", "visibility: visible");
-    //     item.setAttribute("style", "color: green; background-color: pink");
-    //     item.parentElement.setAttribute("style", "background-color: pink");
-    //   }
-      
-    //   item.addEventListener("mouseleave", leaveToHide);
-
-    //   function leaveToHide() {
-    //     let actorListOff = item.nextElementSibling;
-    //     actorListOff.setAttribute("style", "visibility: collapse");
-    //     item.setAttribute("style", "color: white; background-color: blue");
-    //     item.parentElement.setAttribute("style", "background-color: none");
-    //   }
-    // }
+    }    
     
   </script>
 </html>
