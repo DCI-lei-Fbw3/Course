@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>"event.target" and "this"</title>
+</head>
+<body>
+
+	<form id="form" action="">
+		<input type="text">
+		<input type="text">
+		<input id="last" type="text">
+ 	</form>
+
+</body>
+<script>
+
+document.getElementById("form").addEventListener("keypress", handler, {capture: false});
+// without the following line an error occurs when hitting RETURN inside the last box.
+document.getElementById("last").addEventListener("keypress", stopPropagation);
+
+function handler(event) {
+	if (event.keyCode == 13) { // 13 => RETURN
+		//console.log(event.target.id)
+		//console.log(event.keyCode);
+
+		let next = event.target.nextElementSibling;
+		//console.log(next);
+		next.focus();
+	} 
+}
+
+function stopPropagation(event) {
+	event.stopPropagation();
+}
+
+</script>
+</html>

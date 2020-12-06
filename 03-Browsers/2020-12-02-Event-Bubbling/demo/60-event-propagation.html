@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>"event.target" and "this"</title>
+</head>
+<body>
+
+	<form id="1" action="">
+		<div id="2">
+			<p id="3">
+				Content
+			</p>
+		</div>
+	</form>
+
+</body>
+<script>
+
+function handler(event) {
+	alert("handler at " + this.tagName + ", clicked on " + event.target.tagName);
+}
+
+// adding a HANDLER to a listener
+// the "location" of a listener is defined by (ELEMENT, TYPE, PHASE)
+// ELEMENT                                     TYPE    HANDLER  PHASE
+document.getElementById("1").addEventListener("click", handler, {capture: true});
+document.getElementById("1").addEventListener("click", handler, false);
+
+document.getElementById("2").addEventListener("click", handler, {capture: true});
+document.getElementById("2").addEventListener("click", handler, false);
+
+document.getElementById("3").addEventListener("click", handler, {capture: true});
+document.getElementById("3").addEventListener("click", handler, false);
+
+</script>
+</html>

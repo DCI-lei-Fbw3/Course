@@ -63,8 +63,8 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="3" RULE="ON_BRANCH_CREATION"/>
-<node TEXT="DOM" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
+<hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="DOM" FOLDED="true" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
 <edge COLOR="#ff0000"/>
 <node TEXT="Document" FOLDED="true" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
 <node TEXT="methods" FOLDED="true" ID="ID_298183913" CREATED="1606221674468" MODIFIED="1606292571674"><richcontent TYPE="NOTE">
@@ -218,7 +218,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Events" POSITION="right" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1606215889461">
+<node TEXT="Events" FOLDED="true" POSITION="right" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1606215889461">
 <edge COLOR="#00ff00"/>
 <node TEXT="MDN" ID="ID_98999539" CREATED="1606216606622" MODIFIED="1606216620769">
 <node TEXT="Introduction to Events" ID="ID_853650039" CREATED="1606216641702" MODIFIED="1606216654237" LINK="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"/>
@@ -399,6 +399,114 @@
 </node>
 <node TEXT="User Events" ID="ID_288959838" CREATED="1606215890530" MODIFIED="1606215893813"/>
 <node TEXT="Browser Events" ID="ID_1154467125" CREATED="1606215894234" MODIFIED="1606215897918"/>
+</node>
+<node TEXT="Libraries" POSITION="right" ID="ID_862613355" CREATED="1606998796810" MODIFIED="1606998802850">
+<edge COLOR="#ff00ff"/>
+<node TEXT="jQuery" ID="ID_396276590" CREATED="1606998811531" MODIFIED="1606998888301"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Javascript Library
+    </p>
+    <p>
+      - manipulate DOM
+    </p>
+    <p>
+      - allows interacting with the DOM via kind of css-selector
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Links" ID="ID_1516986592" CREATED="1606999858930" MODIFIED="1606999860583">
+<node TEXT="https://en.wikipedia.org/wiki/JQuery" ID="ID_1484343406" CREATED="1606999925358" MODIFIED="1606999925358" LINK="https://en.wikipedia.org/wiki/JQuery"/>
+<node TEXT="https://jquery.com/" ID="ID_168717078" CREATED="1606999944143" MODIFIED="1606999944143" LINK="https://jquery.com/"/>
+<node TEXT="https://learn.jquery.com/about-jquery/how-jquery-works/" ID="ID_43313932" CREATED="1606999907068" MODIFIED="1606999907068" LINK="https://learn.jquery.com/about-jquery/how-jquery-works/"/>
+<node TEXT="Cheatsheet: https://oscarotero.com/jquery/" ID="ID_1186687560" CREATED="1607000070355" MODIFIED="1607000080232" LINK="https://oscarotero.com/jquery/"/>
+</node>
+<node TEXT="Selector" ID="ID_139500400" CREATED="1606998890265" MODIFIED="1606998896877"/>
+<node TEXT="DOM interaction" FOLDED="true" ID="ID_164244827" CREATED="1606998897444" MODIFIED="1606998902343">
+<node TEXT="change" ID="ID_557895489" CREATED="1606998908879" MODIFIED="1606998914703">
+<node TEXT="add" ID="ID_1135582219" CREATED="1606998927194" MODIFIED="1606998929518"/>
+<node TEXT="add EventListeners" ID="ID_1287593937" CREATED="1606998949902" MODIFIED="1606998956099"/>
+<node TEXT="remove" ID="ID_1236787806" CREATED="1606998931554" MODIFIED="1606998934698"/>
+<node TEXT="styles via addClass" ID="ID_1379097021" CREATED="1606999002157" MODIFIED="1606999017118"/>
+</node>
+<node TEXT="read" ID="ID_239037401" CREATED="1606998914945" MODIFIED="1606998922055"/>
+<node TEXT="retrieve resources" ID="ID_433816985" CREATED="1606998971657" MODIFIED="1606998984921">
+<node TEXT="get" ID="ID_1224918247" CREATED="1606998990246" MODIFIED="1606998993472"/>
+<node TEXT="load" ID="ID_1287836767" CREATED="1606998994870" MODIFIED="1606998996372"/>
+</node>
+</node>
+</node>
+<node TEXT="Handlebars" FOLDED="true" ID="ID_1480059931" CREATED="1606998816690" MODIFIED="1606999199477"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Template Engine in a library
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Links" ID="ID_429726623" CREATED="1606999987386" MODIFIED="1606999988989">
+<node TEXT="https://handlebarsjs.com/" ID="ID_1686246253" CREATED="1606999993653" MODIFIED="1606999993653" LINK="https://handlebarsjs.com/"/>
+<node TEXT="https://handlebarsjs.com/guide/" ID="ID_1364085350" CREATED="1607000004629" MODIFIED="1607000004629" LINK="https://handlebarsjs.com/guide/"/>
+</node>
+<node TEXT="template" FOLDED="true" ID="ID_736896615" CREATED="1606999042141" MODIFIED="1606999254138">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_195068196" STARTINCLINATION="224;0;" ENDINCLINATION="224;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<node TEXT="{{ PLACEHOLDER_NAME }}" ID="ID_959664492" CREATED="1606999212122" MODIFIED="1606999235548"/>
+</node>
+<node TEXT="compile a template to a template-function" ID="ID_195068196" CREATED="1606999064187" MODIFIED="1606999261367">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_384910861" STARTINCLINATION="166;0;" ENDINCLINATION="166;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="template-function" ID="ID_384910861" CREATED="1606999082245" MODIFIED="1606999422367"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Use template-function and provide it with an OBJECT, that &quot;fullfills&quot; the interface the template describes. The template by the names of its placeholders, specifies the names of the attributes the OBJECT must have.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      It will return the rendered template.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="It is also possible to loop over an array." FOLDED="true" ID="ID_1764804864" CREATED="1606999427221" MODIFIED="1606999500548">
+<node TEXT="{{#each ATTR_NAME}}&#xa;    this.ATTR_B_NAME&#xa;{{/each}}" ID="ID_1946343116" CREATED="1606999502070" MODIFIED="1606999600013"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Inside of the loop &quot;this&quot; refers to the current element of the array.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Sandbox" POSITION="right" ID="ID_1275827979" CREATED="1606215857602" MODIFIED="1606215860422">
 <edge COLOR="#0000ff"/>
