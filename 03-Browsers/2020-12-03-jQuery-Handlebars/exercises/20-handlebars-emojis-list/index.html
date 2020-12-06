@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Handlebars: emojis</title>
 </head>
 <body>
-    <section id="output"></section>
+    <section id="output">
+
+    </section>
 </body>
+<script>
+    // let template = Handlebars.compiler (
+    //     "<div>"
+    //     +"<p>{{emoji}}</p>"
+    //     +"<p>{{slogan}}</p>"
+    //     +"</div>"
+    // );
+
+let nameList = ["div1", "div2", "div3", "div4", "div5", "div6", "div7"];
+let emojiList = ["&#128175;", "&#128290;", "&#128077;", "&#128078;", "🥇", "🥈", "🥉"];
+let sloganList = ["100", "1234", "+1", "-1", "1st_place_metal", "2nd_place_metal", "3rd_place_metal"];
+ 
+function createObject(num) {
+    let theObjects=[]
+    for(let i=0; i<num; i++){
+        nameList[i] = new Object();
+        nameList[i].emoji = emojiList[i];
+        nameList[i].slogan = sloganList[i];
+        //console.log(nameList[i].emoji + " " + nameList[i].slogan);
+        theObjects.push(nameList[i]);
+    } return theObjects;
+}
+createObject(sloganList.length);
+
+let objectCompilation = Handlebars.compile(
+    "{{each theObject}}"
+    +   "<p>{{this.emoji}} {{this.slogan}}</p>\n"
+    +"{{/each}}" 
+);
+
+let theOutput = document.getElementById("output");
+theOutput.innerHTML = objectCompilation({theObject: theObjects}); 
+
+</script>
 </html>
