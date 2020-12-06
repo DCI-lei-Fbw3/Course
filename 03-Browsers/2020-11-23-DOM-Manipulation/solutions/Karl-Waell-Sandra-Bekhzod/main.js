@@ -112,12 +112,13 @@ for (i=0; i <cardBody.length; i++){
   // this at first, is populated by a boolean value: 
   btn[i].textContent = books[i].alreadyRead
   // we need the if statement to create different styles depending on whether the book was read or not: 
+  // (because it is "textContent" "true" has to be in "")
   if (btn[i].textContent == "true"){
     btn[i].style.backgroundColor = 'green'
     btn[i].textContent = "read"
   } 
-  else {btn[i].style.backgroundColor = 'grey'} 
-  btn[i].textContent = "read"
+  else {btn[i].style.backgroundColor = 'grey'
+  btn[i].textContent = "To read"} 
 }
 
 }
