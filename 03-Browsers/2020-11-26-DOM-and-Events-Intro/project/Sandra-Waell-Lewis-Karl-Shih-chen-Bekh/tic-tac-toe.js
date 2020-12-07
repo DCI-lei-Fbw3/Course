@@ -44,7 +44,6 @@ class Game {
     }
 
     
-
     mark(rowNum, cellNum, str) {
         let id = this.generateIDName(rowNum,cellNum); // get the string being used as the ID.
         let element = document.getElementById(id);
@@ -74,12 +73,16 @@ class Game {
     copy(source, target) {
         let sourceClass = source.className;
         target.className = sourceClass;
+        let copySource = document.querySelector(sourceClass);
       }
 
     move(source, target) {
         this.copy(source, target);
         source.className = ``;
       }
+
+   
+
     // copy(source, target){
     //     let first = document.querySelector('.piece_x')
     //     td.textContent(first)
@@ -90,7 +93,14 @@ class Game {
     // move(source, target){
 
     //}
-   
+    // THE EVENTS: 
+    // on first click we copy the source, on second click we paste it to the target field; 
+    // add an event handler where? WHERE LEWES???? WHERE THE FUCK DO WE ADD IT??!?!? 
+    // create a function that passes an event handler 
+    // 
+     
+
+
 } 
 
 let g = new Game(3, 3);
@@ -116,3 +126,5 @@ g.mark(3, 3, "o");
 // create two different classes: piece_x & piece_0
 // on click function that will check if content is x or o, to change the color 
 // on click call the class? piece_x or piece_o? 
+
+

@@ -46,6 +46,17 @@
     let anchor = document.getElementById("1");
 
     document.body.insertBefore(newElem, anchor);
-
+    
+    //playing around
+    let newH3Item = document.querySelector("h3");
+    let newPara = document.createdElement("p");
+    newPara.innerHTML ="This is <strong> my </strong> text";
+    newH3Item.appendChild(newPara);
+    // let newImage = document.createElement(img);
+    // oImg.setAttribute('src', "https://upload.wikimedia.org/wikipedia/commons/f/f2/The_original_Winnie_the_Pooh_toys.jpg");
+    // oImg.setAttribute('alt', 'na');
+    // oImg.setAttribute('height', '20px');
+    // oImg.setAttribute('width', '20px');
+    // newH3Item.insertAdjacentHTML(newImage, anchor);
 </script>
 </html>

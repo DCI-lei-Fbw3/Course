@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,11 +60,7 @@
 </body>
 
 <script>
-<<<<<<< HEAD
-   
-=======
     
->>>>>>> 1d59f9fe5513c2854366d2c10cd53b98bf2d43e3
   let body = document.querySelector("body");
   body.setAttribute("style", "font-weight: 800; font-family: Georgia");
   
@@ -88,18 +85,13 @@
     
     let main1 = document.querySelector ("main");
     main1.style.display = "flex";    
-<<<<<<< HEAD
 
-    let food_categories = document.querySelectorAll(".food-category");    
-=======
->>>>>>> 1d59f9fe5513c2854366d2c10cd53b98bf2d43e3
-
+    let food_categories = document.querySelectorAll(".food-category");
     food_categories.forEach (el=> {
-    el.style.width = "50%";
-    el.style.height = "40%";
-    el.style.margin ="5%";   
+    el.style.width = "25%";
+    el.style.height = "25%";
+    el.style.margin ="5% 5%";   
     });
-
     food_categories[0].style.backgroundColor = "RosyBrown";
     food_categories[1].style.backgroundColor = "Thistle";
     food_categories[2].style.backgroundColor = "LightPink"; 
@@ -119,34 +111,13 @@
     let footer = document.querySelector (".footer");
     footer.setAttribute("style", "display: flex; display-direction: row; justify-content: center;");    
 
-    let footer_h3 = document.querySelectorAll(".food-desc > h3");
+    let footer_h3 = document.querySelectorAll(".food-desc h3");
     footer_h3.forEach (el=> {    
-    el.style.width="15%";
+    el.style.width="12%";
     el.style.border = "0.2em solid orange"
     el.style.borderRadius = "50%"; 
-<<<<<<< HEAD
-    el.style.padding = "2.5em"; 
-    el.style.margin = "0.5em";          
-    });       
-
-let main2 = document.querySelector("main");
-//let food_categories2 = document.querySelectorAll(".food-category"); 
-let deviceReset = window.matchMedia("(max-width: 700px)");
-
-widthChange();
-deviceReset.addListener(widthChange);
-
-// media query change
-function widthChange() {
- if (deviceReset.matches) {
-    main2.style.width = "200%";
-    main2.style.height = "200%"; 
-    main2.style.display = "block";      
-
-  } else {
-=======
     el.style.padding = "2.75em"; 
-    el.style.margin = "1em";          
+    el.style.margin = "1em";         
     }); 
     
     let main2 = document.querySelector("main");
@@ -164,7 +135,6 @@ function widthChange() {
         main2.style.display = "block";      
   } 
     else {
->>>>>>> 1d59f9fe5513c2854366d2c10cd53b98bf2d43e3
     main2.style.display = "flex";
     main2.style.width = "100%";     
      }
