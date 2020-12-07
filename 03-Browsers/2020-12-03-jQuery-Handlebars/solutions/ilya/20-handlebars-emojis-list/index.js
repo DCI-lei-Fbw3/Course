@@ -95,4 +95,6 @@ let emojiList = Handlebars.compile(
 
  Object.keys(emojis).forEach(key => {
       output.innerHTML += `<tr><td><img src=${emojis[key]}></td><td>${key}</td></tr>`
- })
+ });
+
+ 
