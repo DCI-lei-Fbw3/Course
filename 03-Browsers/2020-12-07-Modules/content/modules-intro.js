@@ -125,3 +125,27 @@ with either "/", "./", or "../"
 
 
 */
+
+// Advantages of using modules
+
+/* 
+- Code can be split into smaller files of self-contained functionality.
+- Multiple script can be concatenated thereby increasing performance.
+- Debugging becomes easier.
+- Any code referecing a module understands it is a dependency. If the module
+file is changed or moved, the problem is immediately obvious.
+- Modules (usually) helps eradicating naming conflicts.
+- ES6 modules help you organize your code better
+*/
+
+// Conclusions
+
+/* 
+- ES6 Modules are one of the biggest features in modern browsers.
+- Modern JS frameowrks like Vue JS and React JS use this features.
+- You should also know that ES6 modules are not supported by all browsers
+(the list of suported browsers can be found in the MDN reference above.)
+- Becuase not all browsers supprt ES6 modules yet, we have to rely on 
+Transpilers which will transpile code from ES6 to ES5 or ES4.
+*/
+
