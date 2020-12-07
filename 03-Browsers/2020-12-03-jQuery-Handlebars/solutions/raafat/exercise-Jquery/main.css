@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.image {
+    height: 45vmin;
+}
+
+.intro__about {
+    width: 25rem;
+}
+
+.selection__option p {
+    width: 19rem;
+}
+
+.selection__image {
+    height: 10rem;
+}
+
+.footer {
+    height: 5rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding-bottom: 20px;
+    border: 1px solid #888;
+    width: 70%;
+}
+.modal-content p {
+    text-align: center;
+}
+.modal-close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;  
+}
+
+.modal-close:hover, .modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.teapot {
+  transition: all 0.5s ease;
+}
+
+.teapot-rotate {
+    transform: rotate(20deg);
+}
+
