@@ -1,4 +1,4 @@
-function scrollWindow() {
+export default function scrollWindow() {
     const siteNav = document.getElementById("site-title");
     const siteHeading = document.getElementById("heading");
     window.addEventListener("scroll", () => {
@@ -14,5 +14,3 @@ function scrollWindow() {
         }
     });
 }
-
-export { scrollWindow };
