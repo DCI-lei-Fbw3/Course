@@ -1,0 +1,17 @@
+{
+  "name": "browser-modules-imports-exports-master",
+  "version": "1.0.0",
+  "description": "**Instructions**: * Look through the starting files provided in this repository. You will find the logic of the calculator app in `percentage.js` and `aspect-ratio.js`.  * Import the files to `index.js` and add the functionality to the UI in the `index.js` file. * Do not forget to add the `index.js` file at the end of the `index.html` file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7"
+  }
+}
