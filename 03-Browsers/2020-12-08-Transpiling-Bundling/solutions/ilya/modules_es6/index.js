@@ -1,10 +1,7 @@
-/*   Your code goes here! */
-
-/* imports */
+// Your code goes here!
 import percentage from './percentage.js';
 import aspectratio from './aspect-ratio.js';
 
-/* capture all necessary input fields */
 const modulo1 = document.getElementById('modulo_1');
 const modulo2 = document.getElementById('modulo_2');
 const moduloResult = document.getElementById('modulo_result');
@@ -26,51 +23,51 @@ const ratio2 = document.getElementById('ratio_2');
 const ratioResultWidth = document.getElementById('ratio_result-width');
 const ratioResultHeight = document.getElementById('ratio_result-height');
 
-/* add event listeners and e-handlers to each input field */
+
 modulo1.addEventListener('change', e => {
     moduloResult.value = percentage.modulo(modulo1.value, modulo2.value); 
-});
+})
 modulo2.addEventListener('change', e => {
     moduloResult.value = percentage.modulo(modulo1.value, modulo2.value); 
-});
+})
 
 percentage1.addEventListener('change', e => {
     percentageResult.value = percentage.percentage(percentage1.value, percentage2.value); 
-});
+})
 percentage2.addEventListener('change', e => {
     percentageResult.value = percentage.percentage(percentage1.value, percentage2.value); 
-});
+})
 
 percentageOf1.addEventListener('change', e => {
     percentageOfResult.value = percentage.percentageOf(percentageOf1.value, percentageOf2.value); 
-});
+})
 percentageOf2.addEventListener('change', e => {
     percentageOfResult.value = percentage.percentageOf(percentageOf1.value, percentageOf2.value); 
-});
+})
 
 difference1.addEventListener('change', e => {
     differenceResult.value = percentage.difference(difference1.value, difference2.value); 
-});
+})
 difference2.addEventListener('change', e => {
     differenceResult.value = percentage.difference(difference1.value, difference2.value); 
-});
+})
 
 difference1.addEventListener('change', e => {
     differenceResult.value = percentage.difference(difference1.value, difference2.value); 
-});
+})
 difference2.addEventListener('change', e => {
     differenceResult.value = percentage.difference(difference1.value, difference2.value); 
-});
+})
 
 ratio1.addEventListener('change', e => {
     ratioResultWidth.value = aspectratio.calculateAspectRatio(ratio1.value, ratio2.value, ratioResultHeight.value, 'h');
 });
 ratio2.addEventListener('change', e => {
     ratioResultHeight.value = aspectratio.calculateAspectRatio(ratio1.value, ratio2.value, ratioResultWidth.value, 'w');
-});
+})
 ratioResultWidth.addEventListener('change', e => {
     ratioResultHeight.value = aspectratio.calculateAspectRatio(ratio1.value, ratio2.value, ratioResultWidth.value, 'w');
-});
+})
 ratioResultHeight.addEventListener('change', e => {
     ratioResultWidth.value = aspectratio.calculateAspectRatio(ratio1.value, ratio2.value, ratioResultHeight.value, 'h');
-});
+})
