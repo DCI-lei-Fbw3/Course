@@ -5,7 +5,7 @@
 
 
 /* 
-Learning Objectives for today
+Learning Objectives
 
 - Understand common use cases and advantages of separating JS files into modules
 - Add module based JS files to an HTML document
