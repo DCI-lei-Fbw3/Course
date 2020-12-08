@@ -1,7 +1,7 @@
 
-Introduction: The request response cycle - Client perspective
+## Introduction: The request response cycle - Client perspective
 
-Non-Blocking Promises:
+## Non-Blocking Promises:
 - Blocking vs. Non-Blocking code: A brief example, `window.setTimeout()`
 - Race conditions: Reading non blocking code
 
@@ -13,8 +13,10 @@ Non-Blocking Promises:
 - Breaking Promises:
   `Promise.reject()`, `Promise.catch()`, `Promise.finally()`
 
+### Reading:
+https://eloquentjavascript.net/11_async.html
 
-JSON: "JSON is JS Objects in text"
+## JSON: "JSON is JS Objects in text"
 - Converting objects to JSON: `JSON.stringify(<object>)`
 - Parsing JSON objects: `JSON.parse(<JSON string>)`
 - JSON pitfalls: strict notation, `JSON.parse()` causes runtime errors
