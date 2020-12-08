@@ -54,5 +54,42 @@ for browser compatibility
     - Run "npm init", to initialise a node app
     - Install babel using instructions from: https://babeljs.io/setup#installation
     - Run the transpiled code in node by running "node <folder>/<file.js>"
-    
+
+
+    One last note: 
+
+    - Using babel with Vanilla JS is an overkill at the moment, 
+    - You will run into errors (as always), but the idea to work throught them
+    and understand how things work in the process. 
+    - Babel is mostly used with node or frameworks like React, Vue or Angular.
+
         */
+
+//Bundling -- A (very brief) intro to Webpack
+
+    //Reference: https://webpack.js.org/guides/getting-started/
+
+    /* 
+    - Module bundlers are used to bundle several modules into one or more
+    optimized bundles for the browser. This lets you use require('modules')
+    in the browser by bundling up all of your dependencies.  
+    - A great way of working with Babel in the browser is to use code 
+    bundkers such as Webpack, Browserify, Parcel etc. 
+    
+   */ 
+
+
+//Conclusions
+
+    /* 
+    - Babel is a toolchain that is mainly used to convert ECMAScript 2015+
+    code into a bakcwards compatible version of JS in current or older browser
+    environments.
+    - Here are some of the main things that Babel can do for you:
+        - Transform synatax
+        - Codemods, so you can control how/if to change the transpiled code
+        in comparison to the source code.
+        - Polyfills, Babel lets you to add features that are missing in your
+        target environment. 
+
+    */
