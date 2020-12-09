@@ -402,7 +402,7 @@
 </node>
 <node TEXT="Libraries" POSITION="right" ID="ID_862613355" CREATED="1606998796810" MODIFIED="1606998802850">
 <edge COLOR="#ff00ff"/>
-<node TEXT="jQuery" ID="ID_396276590" CREATED="1606998811531" MODIFIED="1606998888301"><richcontent TYPE="NOTE">
+<node TEXT="jQuery" FOLDED="true" ID="ID_396276590" CREATED="1606998811531" MODIFIED="1606998888301"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -420,7 +420,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Links" ID="ID_1516986592" CREATED="1606999858930" MODIFIED="1606999860583">
 <node TEXT="https://en.wikipedia.org/wiki/JQuery" ID="ID_1484343406" CREATED="1606999925358" MODIFIED="1606999925358" LINK="https://en.wikipedia.org/wiki/JQuery"/>
@@ -455,7 +454,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Links" ID="ID_429726623" CREATED="1606999987386" MODIFIED="1606999988989">
 <node TEXT="https://handlebarsjs.com/" ID="ID_1686246253" CREATED="1606999993653" MODIFIED="1606999993653" LINK="https://handlebarsjs.com/"/>
@@ -486,7 +484,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="It is also possible to loop over an array." FOLDED="true" ID="ID_1764804864" CREATED="1606999427221" MODIFIED="1606999500548">
@@ -502,10 +499,14 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
+</node>
+<node TEXT="Modules" ID="ID_861249178" CREATED="1607501843559" MODIFIED="1607501849342">
+<node TEXT="Providing functionality in small encapsulated bundles." ID="ID_1779651826" CREATED="1607501889539" MODIFIED="1607501921408"/>
+<node TEXT="ES6: import/export&#xa;HTML: &lt;script type=&quot;module&quot; src=&quot;FILENAME&quot;&gt;&#xa;=&gt; in order support older browser &quot;transpiling&quot; is needed&#xa;      e. g. transpile with &quot;babel&quot;" ID="ID_1187068324" CREATED="1607501927971" MODIFIED="1607502078246"/>
+<node TEXT="Continueing with an already existing project:&#xa;$&gt; npm install&#xa;installs dependencies recursively (specified in package.json)" ID="ID_1304461208" CREATED="1607501921670" MODIFIED="1607502289824"/>
 </node>
 </node>
 <node TEXT="Sandbox" POSITION="right" ID="ID_1275827979" CREATED="1606215857602" MODIFIED="1606215860422">

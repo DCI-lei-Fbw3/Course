@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Promise</title>
+	<title>Promise.prototype.finally()</title>
 </head>
 <body>
 
-    <h1>Promise</h1>
+    <h1>Promise.prototype.finally()</h1>
 
     MDN:
     <blockquote>
@@ -30,16 +30,20 @@
 <script>
 
     let p = new Promise( (resolve, reject) => {
-        let isSuccess = true
+        // actual action goes here
+        let isSuccess = true;
         if (isSuccess) {
-            resolve("VALUE_RESOLVED");
+            // actual action goes here
+            let value = { a: "VALUE_RESOLVED", b: "2"};
+            return resolve(value);
         } else {
-            reject("VALUE_REJECTED");
+            // actual code goes here
+            return reject("VALUE_REJECTED");
         }
     });
 
-    p.then( (v) => console.log("then - resolved with value", v) )
-    .catch( value  => console.error("rejected with", value) )
+    p.then( (value) => console.log("then - resolved with value", value) )
+    .catch( value => console.error("rejected with", value) )
     .finally(
         () => { console.log("finally called on promise 'p'")}
     );
@@ -71,7 +75,7 @@
     .catch(e => console.error("error", e));
     /**/
 
-    element.append(" 0 ");
+    //element.append(" 0 ");
 
     function wait(milliseconds) {
         return new Promise( (resolve, reject) => window.setTimeout(resolve, milliseconds));
