@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Promise.resolve()</title>
+</head>
+<body>
+
+    <h1>Promise.resolve()</h1>
+
+    MDN: <blockquote>
+        "The Promise.resolve() method returns a Promise object that is resolved with a given value. If the value is a promise, that promise is returned; if the value is a thenable (i.e. has a "then" method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise the returned promise will be fulfilled with the value. This function flattens nested layers of promise-like objects (e.g. a promise that resolves to a promise that resolves to something) into a single layer."
+    </blockquote>
+
+    <h2>Links</h2>
+    MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Resolve</a>
+    <br>
+
+    <hr>
+
+    <h2>Demonstration</h2>
+
+    <div id="target"></div>
+
+</body>
+<script>
+
+    // get the target element
+    let element = document.getElementById("target");
+
+    // lets resolve some promises
+    let p1 = Promise.resolve(" 1 ");
+    // and then append that promise's value to it
+    p1.then(function(value) {
+        element.append(value);
+    });
+
+    let p2 = Promise.resolve(" 2 ");
+    p2.then(function(value) {
+        element.append(value);
+    });
+
+    // the primises
+    let p3 = Promise.resolve(" 3 ");
+    let p4 = Promise.resolve(p3);
+    p4.then(
+        (p4) => element.append(p4)
+    );
+
+    element.append(" 0 ");
+
+</script>
+</html>
