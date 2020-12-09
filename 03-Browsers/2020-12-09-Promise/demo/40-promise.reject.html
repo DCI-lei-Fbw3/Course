@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Promise.reject()</title>
+</head>
+<body>
+
+    <h1>Promise.reject()</h1>
+
+    MDN:
+    <cite>
+        The Promise.reject() method returns a Promise object that is rejected with a given reason.
+    </cite>
+
+    <h2>Links</h2>
+
+    MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject">Promise.reject()</a>
+
+    <div id="target"></div>
+
+</body>
+<script>
+
+function resolved(result) {
+  console.log('Resolved');
+}
+
+function rejected(result) {
+  console.error(result);
+}
+
+// then takes two parameters:
+// parameter1: callback on resolved/success
+// parameter2: callback on rejected/failure
+Promise.reject(new Error('fail')).then(resolved, rejected);
+Promise.reject('Reject-Reason').then(resolved, rejected);
+// expected output: Error: fail
+
+</script>
+</html>

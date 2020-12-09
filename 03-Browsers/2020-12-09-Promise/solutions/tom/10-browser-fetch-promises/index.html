@@ -1,0 +1,36 @@
+// The following line makes sure your styles are included in the project. Don't remove this.
+import '../styles/main.scss';
+// Import any additional modules you want to include below \/
+
+
+// \/ All of your javascript should go here \/
+
+let modal = document.getElementById("myModal");
+
+window.setTimeout(makeShowFunction(modal), 1000);
+
+let closeSensitive = document.querySelector(".close");
+addCloseBehaviour(modal, closeSensitive);
+
+/**
+ * "where" is the sensitive element and "what" should be closed?
+ * @param {HTMLElement} what
+ * @param {HTMLElement} where
+ */
+function addCloseBehaviour(what, where) {
+    where.addEventListener("click", (event) => {
+        let what = document.getElementById("myModal");
+        what.style.display = "none";
+    });
+}
+
+/**
+ *
+ * @param {HTMLElement} what
+ */
+function makeShowFunction(what) {
+    return () => {
+        what.style.display = "block";
+        console.log("showModal");
+    }
+}

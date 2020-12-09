@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    border: 2px solid black;
+    width: 10rem;
+    height: 10rem;
+    font-size: 8rem;
+    font-family: sans-serif;
+}
+
+#pieces {
+    margin-top: 2em;
+}
+
+.piece_X {
+    background-color: red;
+}
+.piece_X:after {
+	content: "X";
+}
+
+.piece_O {
+    background-color: green;
+}
+.piece_O:after {
+	content: "O";
+}

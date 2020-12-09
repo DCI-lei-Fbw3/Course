@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Promise</title>
+</head>
+<body>
+
+    <h1>Promise</h1>
+
+    MDN:
+    <blockquote>
+    The finally() method returns a Promise. When the promise is settled, i.e either fulfilled or rejected, the specified callback function is executed. This provides a way for code to be run whether the promise was fulfilled successfully or rejected once the Promise has been dealt with.
+    <br>
+    This helps to avoid duplicating code in both the promise's then() and catch() handlers.
+    </blockquote>
+
+    <h2>Links</h2>
+    MDN: <a href="">Promise.prototype.finally()</a>
+
+    <hr>
+
+    <h2>Demonstration</h2>
+
+    <div id="target"></div>
+
+</body>
+<script>
+
+    let p = new Promise( (resolve, reject) => {
+        let isSuccess = true
+        if (isSuccess) {
+            resolve("VALUE_RESOLVED");
+        } else {
+            reject("VALUE_REJECTED");
+        }
+    });
+
+    p.then( (v) => console.log("then - resolved with value", v) )
+    .catch( value  => console.error("rejected with", value) )
+    .finally(
+        () => { console.log("finally called on promise 'p'")}
+    );
+
+    /*
+    let promiseWithError = new Promise( (resolve, reject) => {
+        reject("REJECTED");
+        throw new Error("in promise 'promiseWithError'");
+    });
+
+    promiseWithError.then()
+    .catch( value => console.error("rejected with value", value))
+    .finally(
+        () => { console.log("finally called on promise 'promiseWithError'")}
+    )
+    /**/
+
+    /*
+    let element = document.getElementById("target");
+    wait(1000)
+    .then( () => { throw new Error("1")})
+    //.catch( e => console.error("caught", e) );
+    /**/
+
+    /*
+    wait(2000)
+    .then( () => { throw new Error("2") })
+    .then( () => { element.append("3")  })
+    .catch(e => console.error("error", e));
+    /**/
+
+    element.append(" 0 ");
+
+    function wait(milliseconds) {
+        return new Promise( (resolve, reject) => window.setTimeout(resolve, milliseconds));
+    }
+
+</script>
+</html>
