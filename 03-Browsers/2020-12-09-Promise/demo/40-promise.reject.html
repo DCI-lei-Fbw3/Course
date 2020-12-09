@@ -25,7 +25,7 @@
 <script>
 
 function resolved(result) {
-  console.log('Resolved');
+  console.log('Resolved', result);
 }
 
 function rejected(result) {
@@ -38,6 +38,8 @@ function rejected(result) {
 Promise.reject(new Error('fail')).then(resolved, rejected);
 Promise.reject('Reject-Reason').then(resolved, rejected);
 // expected output: Error: fail
+
+Promise.resolve("RESOLVED_VALUE").then(resolved, rejected);
 
 </script>
 </html>
