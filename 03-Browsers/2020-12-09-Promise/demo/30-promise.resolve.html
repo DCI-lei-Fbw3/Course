@@ -30,10 +30,13 @@
     // get the target element
     let element = document.getElementById("target");
 
+    element.append(" 0 ");
+
     // lets resolve some promises
-    let p1 = Promise.resolve(" 1 ");
+    // resolve() is a static method => can be called on the class (without an object)
+    let p1 = Promise.resolve(" 1 "); // resolve returns a Promise.
     // and then append that promise's value to it
-    p1.then(function(value) {
+    p1.then(function(value) { // "then" is an object method, so it can only be called on an "Promise" object
         element.append(value);
     });
 
@@ -45,11 +48,11 @@
     // the primises
     let p3 = Promise.resolve(" 3 ");
     let p4 = Promise.resolve(p3);
-    p4.then(
-        (p4) => element.append(p4)
+    let p5 = Promise.resolve(p4);
+    p5.then(
+        (p5) => element.append(p5)
     );
-
-    element.append(" 0 ");
+    
 
 </script>
 </html>
