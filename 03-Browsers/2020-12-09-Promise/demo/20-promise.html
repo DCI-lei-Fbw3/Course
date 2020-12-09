@@ -39,8 +39,16 @@
 <script>
 
     function wait(milliseconds) {
-                                            // after the time out the callback "resolve" will be called, - that callback yields a fullfilled promise.
-        return new Promise( resolve => window.setTimeout(resolve, milliseconds));
+        // after the time out the callback "resolve" will be called, - that callback yields a fullfilled promise.
+        return new Promise( 
+            // parameter is a callback function
+            // with two parameters:
+            // 1) function to call on success (if the promise resolves)
+            // 2) function to call on failure (if the promise is rejected)
+            (resolve, reject) => {
+                window.setTimeout(resolve, milliseconds)
+            }
+        );
     }
 
     function errorHandler(value) {
@@ -49,7 +57,8 @@
 
     let element = document.getElementById("target");
 
-    /*
+    element.append(" 0 ");
+    
     wait(1000)
     .then( () => element.append(" 1 "), errorHandler) // the errorHandler-callback is optional
     /**/
@@ -65,7 +74,6 @@
     .then( () => element.append(" 4 "));
     /**/
 
-    element.append(" 0 ");
 
 </script>
 </html>

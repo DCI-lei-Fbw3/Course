@@ -28,7 +28,6 @@
 <script>
 
     function wait(milliseconds) {
-                                            // after the time out the callback "resolve" will be called, - that callback yields a fullfilled promise.
         return new Promise( resolve => window.setTimeout(resolve, milliseconds));
     }
 
@@ -37,21 +36,21 @@
     }
 
     let element = document.getElementById("target");
-
-    /*
-    wait(1000)
-    .then( () => { throw new Error("1")})
-    //.catch( e => console.error(e) );
-    /**/
-
-    /*
-    wait(2000)
-    .then( () => { throw new Error("2") })
-    .then( () => { element.append("3")  })
-    .catch(e => console.error("error", e));
-    /**/
-
+    
     element.append(" 0 ");
+    
+    wait(1000)
+    .then( () => { throw new Error("promise execution failed")} )
+    .catch( e => console.error(e) );
+    /**/
+
+    wait(2000)
+    .then( () => { throw new Error("promise execution failed (2)") }) // => returns a rejected Promise
+    // move the catch around to see the different behaviour.
+    .catch(e => console.error("error", e)) // => returns a resolved Promise
+    .then( () => { element.append("3")  }); // the first parameter of "then" is executed on a resolved Promise only
+    /**/
+
 
 </script>
 </html>

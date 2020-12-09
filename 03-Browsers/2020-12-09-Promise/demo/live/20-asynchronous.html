@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Asynchronous</title>
+</head>
+<body>
+
+    <h1>Synchronous</h1>
+
+    <div id="target"></div>
+
+</body>
+<script>
+
+function random() {
+	console.log(Math.ceil(Math.random() * 6));
+}
+
+console.log("before setTimeout");
+// asynchronous/non-blocking call
+window.setTimeout(random, 0);
+//window.setTimeout(() => console.log(1), 1000);
+//window.setTimeout(() => console.log(2), 2000);
+//window.setTimeout(() => console.log(3), 3000);
+
+console.log("after setTimeout");
+
+</script>
+</html>

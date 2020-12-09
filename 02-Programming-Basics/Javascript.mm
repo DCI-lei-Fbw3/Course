@@ -292,7 +292,7 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="objects" FOLDED="true" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1603351260753">
+<node TEXT="objects/class" POSITION="right" ID="ID_501238878" CREATED="1603351256609" MODIFIED="1607508068248">
 <node TEXT="javascript code" ID="ID_1361335497" CREATED="1603882358683" MODIFIED="1603882465408"><richcontent TYPE="NOTE">
 
 <html>
@@ -353,6 +353,27 @@
     </p>
   </body>
 </html>
+</richcontent>
+</node>
+<node TEXT="class properties vs. object properties" ID="ID_484879306" CREATED="1607507881226" MODIFIED="1607508047767"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Class properties are often also called static properties, both attributes and methods can be class/static properties. They can be used directly on the class, without an instance (object) of that class.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      In order to use object properties (attributes, methods), an instance of that class is necessary.
+    </p>
+  </body>
+</html>
+
 </richcontent>
 </node>
 <node TEXT="this - is used to refer to an object&apos;s instance itself" ID="ID_620124151" CREATED="1603351523835" MODIFIED="1603351550716"/>
@@ -898,7 +919,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="import the whole exported object" ID="ID_1497670668" CREATED="1605775486353" MODIFIED="1605775588155"><richcontent TYPE="NOTE">
@@ -919,7 +939,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="import with destructuring" ID="ID_6631218" CREATED="1605775617701" MODIFIED="1605775634696"><richcontent TYPE="NOTE">
@@ -940,7 +959,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
