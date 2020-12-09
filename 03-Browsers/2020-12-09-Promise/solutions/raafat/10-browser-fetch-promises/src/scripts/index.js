@@ -8,8 +8,7 @@ let runTime = Promise.resolve(
 	window.setTimeout(() => {
 		document.querySelector(".modal").style.display = "block";
 	}, 6000)
-);
-runTime
+)
 	.then(() => {
 		document.querySelector(".close").addEventListener("click", () => {
 			document.querySelector(".modal").style.display = "none";
