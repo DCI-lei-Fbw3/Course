@@ -12,4 +12,4 @@ function calculateAspectRatio(originalWidth, originalHeight, newValue, valueType
     return fixRoundingErrors(formula * newValue);
 }
 
-export{fixRoundingErrors, calculateAspectRatio}
+export{ calculateAspectRatio }

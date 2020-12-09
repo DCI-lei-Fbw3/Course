@@ -10,6 +10,7 @@ function calculateAspectRatio(originalWidth, originalHeight, newValue, valueType
         originalWidth / originalHeight :
         originalHeight / originalWidth;
     return fixRoundingErrors(formula * newValue);
+    // return parseFloat((formula * newValue).toFixed(2))
 }
 
-export {fixRoundingErrors, calculateAspectRatio}
+export { calculateAspectRatio };
