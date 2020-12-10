@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>async/await</title>
+</head>
+<body>
+
+    <h1>async/await</h1>
+
+    <pre id="target"></pre>
+
+</body>
+<script>
+    let element = document.getElementById("target");
+
+    // async functions return always a promise
+    async function f(param) {
+        console.log("f("+param+") called");
+        return param; // so this value will be wrapped in a Promise - remember the "flattening" behaviour
+    }
+    // equivalent function to the above:
+    /*
+    async function f(param) {
+        console.log("f("+param+") called");
+        return Promise.resolve(param);
+    }
+    /**/
+
+    f(1)
+    .then( (v) => element.append("The Promise returned by f("+v+") settled, then the CALLBACK executed.\n") );
+    // demonstrate the non-blocking/asynchronous behaviour of the function f():
+    element.append("Is this executed later than the CALLBACK in f(1).then(CALLBACK)?\n=> No, before. \n");
+
+    /*
+    async function waitForPromise() {
+        console.log("before await f(2)");
+        let promisedValue = await f(2);
+        console.log("after await f(2)");
+        element.append('In order to wait for a promise to be returned, "await" is used.' + "\n");
+    }
+
+    waitForPromise();
+    /**/
+
+    // ADVANCED TOPIC
+    /*
+    // demonstrating timed out execution
+    async function fWithTimeout() {
+        return new Promise( () => {
+            // the callback is executed after a timeout
+            setTimeout( callback, 1000 ); // the callback must return a settled promise
+        });
+    }
+
+    // the callback
+    function callback() {
+        console.log("fWithTimeout() called");
+        return Promise.resolve(); // here the settled promise is a resolved one
+    }
+
+    console.log("before calling f(1)");
+    fWithTimeout(1)
+    .then( (value_returned_by_f) => element.append("f.then(" + value_returned_by_f + ")\n\n") );
+    console.log("after calling f(1)");
+    /**/
+
+
+</script>
+</html>

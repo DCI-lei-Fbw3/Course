@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>fetch()</title>
+</head>
+<body>
+
+    <h1>fetch()</h1>
+
+    MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Using fetch()</a>
+    <br>
+    MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a>
+
+    <br><br>
+    <hr>
+    <br>
+
+    <pre id="target"></pre>
+
+</body>
+<script>
+
+    let element = document.getElementById("target");
+
+    // fetch returns a Response object
+    // refer to: https://developer.mozilla.org/en-US/docs/Web/API/Response
+
+
+
+    fetch("./30-object.json") // fetching a resource
+    .then(response => response.text()) // returns the response's body as text.
+    //.then(response => response.json()) // returns an object - like calling JSON.parse(response.text())
+    .then(value => {
+        element.append(value);
+    });
+
+    /*
+    fetch("https://api.cryptonator.com/api/ticker/btc-usd") // on that server CORS (Cross Origin Resource Sharing) is enabled, else no content would be available
+    .then(
+        response => {
+            return response.text(); // the response-body's text
+            //return response.json(); // or already parsed to an object
+    })
+    .then( (value) => {
+        console.log(value);
+        element.append("\n\nFetch from cryptonator.com:\n")
+        element.append(value);
+        //element.append(`1 ${value.ticker.base} = ${value.ticker.price} ${value.ticker.target}`)
+    });
+    /**/
+
+</script>
+</html>

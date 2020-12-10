@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>JSON.stringify()</title>
+</head>
+<body>
+
+    <h1>JSON.stringify</h1>
+
+    <pre id="target"></pre>
+
+</body>
+<script>
+
+    "use strict";
+
+    let object = {
+        a: 1,
+        b: 2
+    };
+
+    let element = document.getElementById("target");
+
+    // the object is made to a string representing the object (JSON => JavaScript Object Notation)
+	let json = JSON.stringify(object);
+	element.append(json + "\n\n");
+
+    // parse the json and store the returned value in a variable
+    let obj = JSON.parse(json); // the returned value is an object
+    element.append(`obj.a = ${obj.a} \n`);
+    element.append(`obj.b = ${obj.b} \n`);
+
+
+</script>
+</html>

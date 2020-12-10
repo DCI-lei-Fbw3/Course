@@ -2,4 +2,5 @@
 set -e
 
 npm install
+#npm start # equivalent to: $> npm run start
 npm run start
