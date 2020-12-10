@@ -28,29 +28,60 @@
     // fetch returns a Response object
     // refer to: https://developer.mozilla.org/en-US/docs/Web/API/Response
 
-
-
+    /*
     fetch("./30-object.json") // fetching a resource
     .then(response => response.text()) // returns the response's body as text.
     //.then(response => response.json()) // returns an object - like calling JSON.parse(response.text())
     .then(value => {
         element.append(value);
-    });
 
-    /*
+        //element.append(`a: ${value.a}\n`);
+        //element.append(`b: ${value.b}`);
+    });
+    /**/
+    
+    /* // text version
     fetch("https://api.cryptonator.com/api/ticker/btc-usd") // on that server CORS (Cross Origin Resource Sharing) is enabled, else no content would be available
     .then(
         response => {
             return response.text(); // the response-body's text
-            //return response.json(); // or already parsed to an object
     })
     .then( (value) => {
         console.log(value);
         element.append("\n\nFetch from cryptonator.com:\n")
         element.append(value);
-        //element.append(`1 ${value.ticker.base} = ${value.ticker.price} ${value.ticker.target}`)
     });
     /**/
+
+    /* // json version
+    fetch("https://api.cryptonator.com/api/ticker/btc-usd") // on that server CORS (Cross Origin Resource Sharing) is enabled, else no content would be available
+    .then(
+        response => {
+            return response.json(); // or already parsed to an object
+    })
+    .then( (value) => {
+        console.log(value);
+        element.append("\n\nFetch from cryptonator.com:\n")
+        element.append(`1 ${value.ticker.base} = ${value.ticker.price} ${value.ticker.target}`)
+    });
+    /**/
+
+    // Introduction of Error Handling in case the response is not ok
+    fetch("ResourceNotExisting")
+    .then( (response) => {
+            if (! response.ok ) {
+                throw new Error(
+                    "response is not ok "
+                    + "(HTTP-status: " 
+                        + response.status + " " 
+                        + response.statusText 
+                    + ")"
+                );
+            }
+        }
+    )
+    .catch( error => console.error(error)
+    ); 
 
 </script>
 </html>
