@@ -14,7 +14,7 @@ const renderRecipes = () => {
 				i.image
 			}" alt="Card image cap" style="height: 12rem;">
 			<div class="card-header">
-			  <h5 class="card-title">${i.title}</h5>
+			  <h3 class="card-title">${i.title}</h3>
 			  <p class="card-text">${i.author}</p>
 			  </div><div class="card-body">
 			  <p class="card-text">${i.ingredients.join(", ")}</p>
