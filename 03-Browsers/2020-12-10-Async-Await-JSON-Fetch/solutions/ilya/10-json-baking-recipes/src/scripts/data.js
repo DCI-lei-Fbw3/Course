@@ -1,4 +1,4 @@
-const recipes = {
+export default {
     cakes: [{
         type: "cakes",
         author: "John Smith",
