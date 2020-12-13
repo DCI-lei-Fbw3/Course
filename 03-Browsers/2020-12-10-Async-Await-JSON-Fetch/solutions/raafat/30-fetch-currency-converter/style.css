@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+:root {
+	--primary-color: #0da000;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: linear-gradient(
+		to bottom,
+		#723424 0%,
+		#d45837 60%,
+		#81aab3 60%,
+		#46555c 100%
+	);
+	font-family: "Muli", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+	padding: 20px;
+}
+
+.btn {
+	border: 1px solid #d3e1e6;
+	background-color: #b4ccd3;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 50%;
+	padding: 10px 12px;
+	margin-left: 10px;
+	box-shadow: 2px 2px 5px rgb(146, 146, 146);
+}
+
+.swap-img {
+	width: 25px;
+	height: 25px;
+}
+
+.money-img {
+	width: 150px;
+}
+
+.currency {
+	padding: 40px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.currency select {
+	padding: 10px 20px 10px 10px;
+	appearance: none;
+	border: 0;
+	font-size: 16px;
+	background: transparent;
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+	background-position: right 10px top 50%, 0, 0;
+	background-size: 12px auto, 100%;
+	background-repeat: no-repeat;
+}
+
+.currency input {
+	border: 0;
+	background: transparent;
+	font-size: 30px;
+	text-align: right;
+}
+
+.swap-rate-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rate {
+	color: var(--primary-color);
+	background-color: #d3e1e6;
+	border: 2px solid #b4ccd3;
+	border-radius: 50px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	padding: 0 10px;
+	margin: 30px 15px 30px 25px;
+	box-shadow: 2px 2px 5px rgb(146, 146, 146);
+}
+
+select:focus,
+input:focus,
+button:focus {
+	outline: 0;
+}
+
+@media (max-width: 600px) {
+	.currency input {
+		width: 200px;
+	}
+}
+
+.money-img {
+	animation: flip-vertical-right 8s cubic-bezier(0.6, -0.28, 0.735, 0.045) 2s
+		infinite both;
+}
+@keyframes flip-vertical-right {
+	0% {
+		transform: rotateY(0);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(0);
+	}
+}

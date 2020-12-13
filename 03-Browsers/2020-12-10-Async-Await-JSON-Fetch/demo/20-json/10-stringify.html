@@ -19,7 +19,11 @@
 
     let object = {
         a: 1,
-        b: 2
+        b: 2,
+        complex: {
+            c: "hello",
+            d: [1, 2, "world"]
+        }
     };
 
     let element = document.getElementById("target");
@@ -28,11 +32,13 @@
 	let json = JSON.stringify(object);
 	element.append(json + "\n\n");
 
+    
     // parse the json and store the returned value in a variable
     let obj = JSON.parse(json); // the returned value is an object
     element.append(`obj.a = ${obj.a} \n`);
     element.append(`obj.b = ${obj.b} \n`);
-
+    console.log(obj);
+    /**/
 
 </script>
 </html>

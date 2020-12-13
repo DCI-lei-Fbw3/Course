@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Currency-Converter</title>
+</head>
+
+<body>
+    <div class="container-fluid w-75 mt-5">
+
+        <h1>Crypto-Rate</h1>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text bg-primary text-white" for="inputGroupSelect01">Crypto-currency</label>
+            <select id='crypto' class="form-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="BTC">BTC</option>
+                <option value="XRP">XRP</option>
+                <option value="EOS">EOS</option>
+                <option value="LTC">LTC</option>
+                <option value="ETH">ETH</option>
+                <option value="fail">fail</option>
+            </select>
+        </div>
+
+        <input id='amount' class="form-control mb-3" type="number" placeholder="Amount"
+            aria-label="amount of currency units">
+
+        <div class="input-group mb-3">
+            <label class="input-group-text bg-danger" for="inputGroupSelect01">Currency</label>
+            <select id='currency' class="form-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="AUD">AUD</option>
+                <option value="HK">HK</option>
+            </select>
+        </div>
+
+        <input id='result' class="form-control mb-3" type="text" placeholder="Result"
+            aria-label="Disabled input example" disabled readonly>
+
+        <button type="button" class="btn btn-primary">Convert</button>
+
+    </div>
+
+    <script>
+        const crypto = document.querySelector('#crypto');
+        const amount = document.querySelector('#amount');
+        const currency = document.querySelector('#currency');
+        const result = document.querySelector('#result');
+        const btn = document.querySelector('button');
+
+        /*   works without getResponse function
+        const calculateResult = async () => {
+
+            console.clear();
+ 
+             try {
+                 const response = await fetch(`https://api.cryptonator.com/api/ticker/${crypto.value}-${currency.value}`);
+                 const object = await response.json();
+                 const price = object.ticker.price;
+                 result.value = (amount.value * price).toFixed(2) + ' ' + currency.value;
+             } catch (e) { console.log('Something went wrong:', e) };
+
+         } 
+         */
+
+
+        const getResponse = async () => {
+            const response = await fetch(`https://api.cryptonator.com/api/ticker/${crypto.value}-${currency.value}`);
+            return await response.json();
+        }
+
+        const calculateResult = () => {
+            getResponse()
+                .then(respObj => respObj.ticker.price)
+                .then(price => result.value = (amount.value * price).toFixed(2) + ' ' + currency.value)
+                .catch(e => console.log('Something went wrong:', e));
+        }
+
+        btn.addEventListener('click', calculateResult);
+
+    </script>
+</body>
+
+</html>

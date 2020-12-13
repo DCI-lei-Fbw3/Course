@@ -22,19 +22,32 @@
         return param; // so this value will be wrapped in a Promise - remember the "flattening" behaviour
     }
     // equivalent function to the above:
-    /*
-    async function f(param) {
+    async function f2(param) {
+        console.log("f("+param+") called");
+        return Promise.resolve(param);
+    }
+
+    // now with additional error-detection and 
+    // return in that case returning a rejected promise
+    async function f3(param) {
+        if (param == 1) return Promise.reject("because the parmeter is " + param);
+
         console.log("f("+param+") called");
         return Promise.resolve(param);
     }
     /**/
 
-    f(1)
-    .then( (v) => element.append("The Promise returned by f("+v+") settled, then the CALLBACK executed.\n") );
+    /*
+    f(2)
+    .then(v => element.append("The Promise returned by the function ("+v+") settled, then the CALLBACK executed.\n"))
+    .catch( v => console.error("function failed:", v) )
+    ;
     // demonstrate the non-blocking/asynchronous behaviour of the function f():
     element.append("Is this executed later than the CALLBACK in f(1).then(CALLBACK)?\n=> No, before. \n");
 
-    /*
+    element.append("______________________\n");
+    console.log("demo for await:");
+
     async function waitForPromise() {
         console.log("before await f(2)");
         let promisedValue = await f(2);
@@ -46,25 +59,37 @@
     /**/
 
     // ADVANCED TOPIC
-    /*
-    // demonstrating timed out execution
-    async function fWithTimeout() {
-        return new Promise( () => {
-            // the callback is executed after a timeout
-            setTimeout( callback, 1000 ); // the callback must return a settled promise
-        });
+    async function awaitingDemo() {
+
+        element.append("___ delayed execution ___\n");
+        console.log("___ delayed execution ___");
+        // demonstrating delayed execution
+        async function delayed(value) {
+            return new Promise( (resolve, reject) => {
+                // the callback is executed after a timeout
+                setTimeout( () => {
+                    console.log("executed delayed("+value+")"); 
+                    resolve(value);
+                }, 3000 ); // the callback must return a settled promise
+            });
+        }
+
+        /**/
+        console.log("before delayed(1)");
+        delayed(1)
+        .then( (value) => element.append("executed delayed.then()\n\n") );
+        console.log("after delayed(1)");
+        /**/
+
+        /**/
+        console.log("before delayed(2)");
+        let awaitedValue = await delayed(2);
+        console.log("awaitedValue", awaitedValue);
+        console.log("after delayed(2)");        
+        /**/
     }
 
-    // the callback
-    function callback() {
-        console.log("fWithTimeout() called");
-        return Promise.resolve(); // here the settled promise is a resolved one
-    }
-
-    console.log("before calling f(1)");
-    fWithTimeout(1)
-    .then( (value_returned_by_f) => element.append("f.then(" + value_returned_by_f + ")\n\n") );
-    console.log("after calling f(1)");
+    awaitingDemo();
     /**/
 
 
