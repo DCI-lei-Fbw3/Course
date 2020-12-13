@@ -16,7 +16,7 @@ const calculate = () => {
 			rateEl.innerHTML = `1 ${valueOne} = ${data.ticker.price} ${valueTwo}`;
 			amountTwo.value = (data.ticker.price * amountOne.value).toFixed(3);
 		})
-		.catch((err) => alert(`this item is not exist, try again!`));
+		.catch((err) => alert(`this item does not exist, try again!`));
 };
 
 currencyOne.addEventListener("change", calculate);
