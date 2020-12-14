@@ -67,3 +67,10 @@ const recipes = {
     ],
 };
 
+// recipeJSON = (theData, () => {
+//     let newRecipe = JSON.stringify(theData);
+//     return newRecipe;
+// });
+
+let theRecipes = JSON.stringify(recipes);
+export { theRecipes }
