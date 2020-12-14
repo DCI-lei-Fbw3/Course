@@ -27,6 +27,8 @@ function append (parent, el){
 const ul = document.getElementById('user');
 const url = 'https://5fd724129dd0db0017ee8da8.mockapi.io/test/users';
 
+
+
 fetch(url)
   .then(response => response.json()) //Transform the data to JSON
   //.then(data => console.log(data)) //--> Comment this "data" out, beaucse you can only use the data object once in a fetch request
