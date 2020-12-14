@@ -69,7 +69,7 @@
                 setTimeout(() => {
                     div.style.width = radius * 2 + 'px';
                     div.style.height = radius * 2 + 'px';
-                }, 1);
+                }, 200);
 
                 return new Promise(r => div.ontransitionend = () => r(div));
             }
