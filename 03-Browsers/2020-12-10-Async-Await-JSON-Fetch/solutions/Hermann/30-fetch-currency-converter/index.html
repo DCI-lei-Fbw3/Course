@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="container mt-5">
+      <h1>Cripto-Rate</h1>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text text-white bg-primary"
+            id="inputGroup-sizing-default"
+            >Cripto-currency</span
+          >
+        </div>
+        <select class="form-control cripto_currency">
+          <!-- <option selected>Choose...</option> -->
+          <option selected>Choose...</option>
+          <option>BTC</option>
+          <option>XRP</option>
+          <option>EOS</option>
+          <option>LTC</option>
+          <option>ETH</option>
+        </select>
+      </div>
+      <input value="0" type="text" class="form-control my-5 input_1" />
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span
+            class="input-group-text text-white bg-danger"
+            id="inputGroup-sizing-default"
+            >Currency</span
+          >
+        </div>
+        <select class="form-control currency">
+          <!--  <option selected>Choose...</option> -->
+          <option selected>Choose...</option>
+          <option>USD</option>
+          <option>EUR</option>
+          <option>GBP</option>
+          <option>AUD</option>
+        </select>
+      </div>
+      <div
+        class="bg-light result d-flex align-items-center text-primary"
+        style="
+          padding-left: 20px;
+          height: 38px;
+          border: 2px solid rgb(230, 227, 227);
+          border-radius: 5px;
+          margin: 5vh 0;
+        "
+      ></div>
+
+      <button type="submit" class="btn btn-primary">Convert</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
