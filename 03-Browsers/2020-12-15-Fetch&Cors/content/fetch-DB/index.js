@@ -1,15 +1,22 @@
 /* 
 Welcome Fbw3!
-Reference: https://mockapi.io
+Reference: https://sheet2api.com
 Reading assignment: https://javascript.info/promise-basics
 Reading assignment: http://ccoenraets.github.io/es6-tutorial/promises/#:~:text=A%20promise%20is%20a%20holder,support%20for%20promises%20to%20JavaScript.
 Reference: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+Open-souce alternative: https://github.com/SteinHQ/Stein
+
+Third assignment: Please recreate the project below with your own data API from mockAPI
+*/
+
+/* 
+    - google@sheet2api.com 
+    - in regards to the endpoint and sheets, each sheet is an endpoint in your sheet2api API
 */
 
 /* Notes:
 - Fetch requests by default are set to GET method
-- I will try to Fetch data from my Google Sheet (using sheet2api.com), and I will
+- I will try to Fetch data from my MockAPI (mockapi.io), and I will
 (again) try to create an unordered list with the data response. 
 - I will be using Fetch to get my data from the API
 - The reponse of the Fetch request, will be in the shape of JSON
@@ -24,12 +31,13 @@ function append (parent, el){
 }
 
 const ul = document.getElementById('user');
-const url = 'https://5fd724129dd0db0017ee8da8.mockapi.io/test/users';
+
+//const url = 'https://5fd724129dd0db0017ee8da8.mockapi.io/test/users';
 
     //To POST data to the API/backend
     //Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
     //To Watch: https://vimeo.com/96425312
-    
+const url = 'https://sheet2api.com/v1/Iay6lq8Sk6VI/mydb/users';
     /* 
     With POST requestions, you need:
     - Add headers, which have the request options,
@@ -54,19 +62,21 @@ let newData = {
     headers: new Headers()
 }); */
 
-/* fetch(url, 
+fetch(url, 
     {
     method: 'POST',
     body: JSON.stringify(newData),
     headers: {
         'Content-Type': 'application/json',
-    }
+    },
 })
     .then(function(){
     //Handle response we get from the API 
     });
- */
-    // fetch  being handled by https://sheet2api.com/v1/template.js
+
+
+
+
     //To GET data from the API/backend
 
 fetch(url)
@@ -86,13 +96,4 @@ fetch(url)
   })
   .catch(function(error){
     console.log(error);
-  });
-
-
-  /* To-Dos:
-  - Read up on HTTP Post method, and using POST in Fetch
-  - Set up a google sheet API
-  - Connect it it your HTML
-  - Create a form that will take name, time, and date and store it to the google sheet (which will be our database)
-  - The best implementation will get to be the class 1-1 feedback signup form.
-  */
+  }); 
