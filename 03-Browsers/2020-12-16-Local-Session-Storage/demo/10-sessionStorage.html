@@ -21,7 +21,8 @@
 	console.log("storage.length:", storage.length);
 	if (storage.getItem("question")) {
 		console.log(storage.getItem("question"), "It survives a page reload.");
-	} // but not the closing of the tab/window
+	} // but not the closing of the tab/window, also on a new tab it will not be available.
+	//   in other words: it will only be available in the same tab
 
 	console.log();
 	console.log('setItem("key", "value")');
