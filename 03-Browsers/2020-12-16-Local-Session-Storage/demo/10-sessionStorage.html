@@ -19,18 +19,44 @@
 
 	let storage = sessionStorage;
 	console.log("storage.length:", storage.length);
-	
-	console.log("store something");
+	if (storage.getItem("question")) {
+		console.log(storage.getItem("question"), "It survives a page reload.");
+	} // but not the closing of the tab/window
+
+	console.log();
+	console.log('setItem("key", "value")');
 	storage.setItem("key", "value");
 	console.log("storage.length:", storage.length);
 
-	console.log("store something");
-	storage.removeItem("key", "value");
+	console.log();
+	console.log('setItem("name", "Alice")');
+	storage.setItem("name", "Alice");
 	console.log("storage.length:", storage.length);
 
+	console.log();
+	console.log("iterating over storage to show keys and values")
 	for (let i=0; i<storage.length; i++) {
-		console.log("key", i, storage.key(i));
+		let key = storage.key(i);
+		let value = storage.getItem(key);
+		console.log(i + ".", key + ":", value );
 	}
+
+	console.log();
+	console.log('removing item "key"');
+	storage.removeItem("key");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("clearing storage");
+	storage.clear();
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("adding item to demonstrate lifecycle");
+	storage.setItem("question", "How long does it live?");
+	console.log(storage.getItem("question"));
+	console.log("storage.length:", storage.length);
+
 
 </script>
 </html>
