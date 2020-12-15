@@ -27,7 +27,49 @@ function append (parent, el){
 const ul = document.getElementById('user');
 const url = 'https://5fd724129dd0db0017ee8da8.mockapi.io/test/users';
 
+    //To POST data to the API/backend
+    //Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST
+    //To Watch: https://vimeo.com/96425312
+    
+    /* 
+    With POST requestions, you need:
+    - Add headers, which have the request options,
+    - Add a body, which has the data to be sent/POSTed
+    - When you POST something using fetch, you should add headers, and a body into the request itself,
+    - Stringify your body before POSTing it to the API,
+    - The sytax for fetching a POST request is: fetch (url, <OPTIONS>)
+    */
 
+    //Let's create some new data, here we take it statically. You could, e.g., take this data from a <form>
+
+let newData = {
+    "id": "54",
+    "createdAt": "2020-12-14T09:50:40.316Z",
+    "name": "Taimur Khan 3"
+  };
+
+/* let request = new Request(url, {
+    method: 'POST',
+    body: JSON.stringify(newData),
+    headers: new Headers()
+}); */
+
+fetch(url, 
+    {
+    method: 'POST',
+    body: JSON.stringify(newData),
+    headers: {
+        'Content-Type': 'application/json',
+    }
+})
+    .then(function(){
+    //Handle response we get from the API 
+    });
+
+
+
+
+    //To GET data from the API/backend
 
 fetch(url)
   .then(response => response.json()) //Transform the data to JSON

@@ -1,0 +1,85 @@
+<!-- Animated circle with promise: https://javascript.info/promise-basics -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+    
+        .circle {
+            transition-property: width, height, margin-left, margin-top;
+            transition-duration: 2s;
+            position: fixed;
+            transform: translateX(-50%) translateY(-50%);
+            border-radius: 50%;
+
+            text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+            font-size: 20px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="showCircle(150, 150, 100)">showCircle(150, 150, 100)</button>
+
+    <script>
+        const genColors = () => {
+
+            const randomColor = [   
+                                    Math.floor(Math.random() * 256),
+                                    Math.floor(Math.random() * 256),
+                                    Math.floor(Math.random() * 256)
+                                ];
+
+            const complColor = [ 
+                                    255 - randomColor[0],
+                                    255 - randomColor[1],
+                                    255 - randomColor[2]   
+                                ];
+            
+            return [    `rgb(   ${randomColor[0]},
+                                ${randomColor[1]},
+                                ${randomColor[2]}
+                        `,  
+                        `rgb(   ${complColor[0]},
+                                ${complColor[1]},
+                                ${complColor[2]}`
+                    ];
+        }
+
+        const showCircle = (cx, cy, radius) => {
+
+            function drawCircle(cx, cy, radius) {
+                const colors = genColors();
+                let div = document.createElement('div');
+                div.style.width = 0;
+                div.style.height = 0;
+                div.style.left = cx + 'px';
+                div.style.top = cy + 'px';
+                div.style.backgroundColor = colors[0];
+                /* console.log('div.style.backgroundColor:', div.style.backgroundColor); */
+                div.style.color = colors[1];
+               /*  console.log('div.style.color', div.style.color); */
+                div.className = 'circle';
+                document.body.append(div);
+
+                setTimeout(() => {
+                    div.style.width = radius * 2 + 'px';
+                    div.style.height = radius * 2 + 'px';
+                }, 200);
+
+                return new Promise(r => div.ontransitionend = () => r(div));
+            }
+
+            drawCircle(150, 150, 100).then(div => div.append("Hello, world!"));
+        }
+
+    </script>
+
+
+</body>
+
+</html>
