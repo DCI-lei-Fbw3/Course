@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>window.sessionStorage</title>
+</head>
+<body>
+
+    <h1>window.sessionStorage</h1>
+
+	MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">sessionStorage</a>
+
+    <div id="target"></div>
+
+</body>
+<script>
+
+	let storage = sessionStorage;
+	console.log("storage.length:", storage.length);
+	if (storage.getItem("question")) {
+		console.log(storage.getItem("question"), "It survives a page reload.");
+	} // but not the closing of the tab/window, also on a new tab it will not be available.
+	//   in other words: it will only be available in the same tab
+
+	console.log();
+	console.log('setItem("key", "value")');
+	storage.setItem("key", "value");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log('setItem("name", "Alice")');
+	storage.setItem("name", "Alice");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("iterating over storage to show keys and values")
+	for (let i=0; i<storage.length; i++) {
+		let key = storage.key(i);
+		let value = storage.getItem(key);
+		console.log(i + ".", key + ":", value );
+	}
+
+	console.log();
+	console.log('removing item "key"');
+	storage.removeItem("key");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("clearing storage");
+	storage.clear();
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("adding item to demonstrate lifecycle");
+	storage.setItem("question", "How long does it live?");
+	console.log(storage.getItem("question"));
+	console.log("storage.length:", storage.length);
+
+
+</script>
+</html>
