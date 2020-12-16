@@ -18,6 +18,14 @@
 <script>
 
 	let storage = sessionStorage;
+
+	// the first time the page is loaded in a new tab
+	// the storage will be empty.
+	// But on reload the "question" will be set.
+	let storage = sessionStorage;
+	console.log("first:", storage.getItem("question"));
+
+	console.log();
 	console.log("storage.length:", storage.length);
 	if (storage.getItem("question")) {
 		console.log(storage.getItem("question"), "It survives a page reload.");
