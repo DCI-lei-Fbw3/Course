@@ -14,8 +14,8 @@ const get = async (month, row) => {
     const r = await fetch(`https://api.sheetson.com/v2/sheets/${month}${row}`,
         {
             headers: {
-                "Authorization": "Bearer OwcSn47JlTtIcMtfRv3yRRVF-h9Wd1V2lvXC3jqoEG3WKa8jPtw5OpeO3bA",
-                "X-Spreadsheet-Id": "1Sv_DAFalR-QNYVV9_q2NEmk9J7WlP8ltm6Tw5s4m3JI"
+                "Authorization": "Bearer <INSERT TOKEN HERE !>",
+                "X-Spreadsheet-Id": "<INSERT ID HERE !>"
             }
         })
     const rObj = await r.json();
