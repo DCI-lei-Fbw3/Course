@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>window.localStorage</title>
+</head>
+<body>
+
+    <h1>window.localStorage</h1>
+
+	MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">localStorage</a>
+
+	<hr>
+
+	<button onclick="localStorage.clear();">localStorage.clear()</button>
+
+</body>
+<script>
+
+	let storage = window.localStorage;
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("setItem(key, value)");
+	storage.setItem("key", "value");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("getItem(key)", storage.getItem("key"));
+
+	console.log();
+	console.log("removeItem(key)");
+	storage.removeItem("key");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+	console.log("setItem(key, value)");
+	storage.setItem("key", "value");
+	console.log();
+	console.log("setItem(key, value)");
+	storage.setItem("name", "Alice");
+	console.log("storage.length:", storage.length);
+
+	console.log();
+
+
+	storage.setItem(1, "test");
+	console.log(storage.getItem(1));
+
+	// window.storage can only store strings, therefore:
+	// for complex datastructures encoding/decoding to/from strings is necessary.
+	let stringRepresentation = JSON.stringify([1, 2, 3]);
+	storage.setItem(2, stringRepresentation);
+	console.log(JSON.parse(storage.getItem(2)));
+
+	storage.setItem(3, JSON.stringify({a: 1, b: 2}));
+	let obj = JSON.parse(storage.getItem(3));
+	console.log(obj);
+
+	console.log();
+	console.log(storage.length);
+
+	for (let i=0; i<storage.length; i++) {
+		let key = storage.key(i);
+		console.log(key+":", storage.getItem(key));
+	}
+
+	console.log();
+	storage.clear();
+	console.log("after storage.clear(): length =", storage.length);
+
+</script>
+</html>
