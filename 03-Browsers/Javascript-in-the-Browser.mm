@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="6" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="DOM" FOLDED="true" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
 <edge COLOR="#ff0000"/>
 <node TEXT="Document" FOLDED="true" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
@@ -247,7 +247,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="Request Types" ID="ID_1297107914" CREATED="1608194464000" MODIFIED="1608194470210">
 <node TEXT="default: GET Request" ID="ID_1934941835" CREATED="1608194454692" MODIFIED="1608194463566"/>
@@ -267,7 +266,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT=".text()" ID="ID_1566397667" CREATED="1608194699092" MODIFIED="1608194712416"/>
@@ -286,7 +284,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -313,7 +310,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="sessionStorage" ID="ID_466646317" CREATED="1608195274862" MODIFIED="1608195484475"><richcontent TYPE="NOTE">
@@ -328,7 +324,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -644,7 +639,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <node TEXT="new Promise()" ID="ID_1016660334" CREATED="1608193328836" MODIFIED="1608193811343">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_966408088" STARTINCLINATION="40;0;" ENDINCLINATION="40;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
@@ -666,12 +660,11 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="pending Promise" ID="ID_966408088" CREATED="1608193394444" MODIFIED="1608193446000">
-<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1711583186" STARTINCLINATION="53;0;" ENDINCLINATION="53;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_487145174" STARTINCLINATION="73;0;" ENDINCLINATION="73;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1711583186" STARTINCLINATION="53;0;" ENDINCLINATION="53;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 </node>
 <node TEXT=".resolve()" ID="ID_1711583186" CREATED="1608193346434" MODIFIED="1608193462602">
 <arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1041379083" STARTINCLINATION="46;0;" ENDINCLINATION="46;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
@@ -716,10 +709,13 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
+</node>
+<node TEXT="Links" POSITION="right" ID="ID_537263944" CREATED="1608224245164" MODIFIED="1608224246847">
+<edge COLOR="#00007c"/>
+<node TEXT="https://github.com/kamranahmedse/developer-roadmap" ID="ID_921180060" CREATED="1608224249422" MODIFIED="1608224249422" LINK="https://github.com/kamranahmedse/developer-roadmap"/>
 </node>
 </node>
 </map>
