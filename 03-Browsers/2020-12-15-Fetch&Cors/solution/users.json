@@ -1,0 +1,32 @@
+[
+  {
+    "id":1,
+    "name":"Winnie",
+    "email":"winnie@gmail.com"
+  },
+  {
+    "id":2,
+    "name":"Piglet",
+    "email":"piglet@gmail.com"
+  },
+  {
+    "id":3,
+    "name":"Roo",
+    "email":"roo@gmail.com"
+  },
+  {
+    "id":4,
+    "name":"Owl",
+    "email":"owl@gmail.com"
+  },
+  {
+    "id":5,
+    "name":"Tiger",
+    "email":"tiger@gmail.com"
+  },
+  {
+    "id":6,
+    "name":"Christopher Robin",
+    "email":"christopher@gmail.com"
+  }
+]

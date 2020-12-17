@@ -1,0 +1,50 @@
+<!DOCTYPE html5>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>fetchAPI</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<html>    
+    <body>
+    <h1>My Fetch API</h1>
+    <div class="d-flex">
+        <button class="btn btn-success mr-4" id="getLocalText">Get Local Text</button>
+        <button class="btn btn-success mr-4" id="getWebText">Get Web Text</button>
+        <button class="btn btn-success mr-4" id="getLocalImage">Get Local Image</button>
+        <button class="btn btn-success mr-4" id="getWebImage">Get Web Image</button>
+        <button class="btn btn-success mr-4" id="getLocalJSON">Get Local JSON</button>
+        <button class="btn btn-warning mr-4" id="getWebJSON">Get API DATA</button>
+        <button class="btn btn-primary mr-4" id="getGHapi">Get GitHub API</button>
+
+    </div>
+    <div id="database">    
+        <img src='' id="winnie" width="480">
+        <img src='' id="puppy" width="480">  
+    </div>
+    <br>
+
+    <form id="addPost">
+        <div class="form-group">
+          <input type="text" id="title" class="form-control" placeholder="Title">
+        </div>
+        <div class="form-group">
+          <textarea id="body" class="form-control" placeholder="Body"></textarea>
+        </div>
+        <br>
+        <div id = "googleSheet">
+            <form data-spreadsheet-api="https://sheet2api.com/v1/7i260eUkToGI/mydatabase/testSignup">
+                <input type="text" id="idGoogle" name="id" placeholder="Id" />
+                <input type="text" id="nameGoogle" name="student_name" placeholder="Student Name" />
+                <input type="text" id="dateGoogle" name="date" placeholder=" One To One Date" />
+                <input type="text" id="timeGoogle" name="time_slot" placeholder="Time Slot" />
+                <button type="submit" onClick="alert('Submitted')">Submit</button>
+            </form>
+            <script src="https://sheet2api.com/v1/template.js"></script>
+        </div>
+    </body>
+    <script src='index.js'>
+
+    </script>
+</html>

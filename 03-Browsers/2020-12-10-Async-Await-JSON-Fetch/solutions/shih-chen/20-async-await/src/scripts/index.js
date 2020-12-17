@@ -8,16 +8,26 @@ let asyncModal = async function() {
         theModal.style.display = "block";
     }, (1000));    
     
-    await window.setTimeout(() => {
-    document.querySelector(".close").addEventListener("click",() => {
+    await document.querySelector(".close").addEventListener("click",() => {
         theModal.style.display = "none";
-    }, (1000*2));
-    });
+        });
 
     await alert("3"); //just a test
 };
 
 asyncModal();
+
+const theButton = async function () {
+    await setTimeout(()=> {
+    document.getElementById("continue").style.backgroundColor = "pink";
+    }, (2000)); 
+    document.getElementById("continue").addEventListener("mouseleave", ()=> {
+        document.getElementById("continue").style.backgroundColor = "violet";
+        alert("Continue to subscribe!");
+    });
+};
+
+theButton();
 
 // const runModal = async function () {
 // 	await window.setTimeout(() => {

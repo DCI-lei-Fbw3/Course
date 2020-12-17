@@ -67,10 +67,15 @@ const recipes = {
     ],
 };
 
-// recipeJSON = (theData, () => {
-//     let newRecipe = JSON.stringify(theData);
-//     return newRecipe;
-// });
+const recipesCakes = JSON.stringify(recipes.cakes);
+// const recipesBis = JSON.stringify(recipes.biscuits);
+// const recipesBread = JSON.stringify(recipes.bread);
+//const recipesAll = JSON.stringify(recipes);
 
-let theRecipes = JSON.stringify(recipes);
-export { theRecipes }
+console.log(recipesCakes[2]);
+
+//export { recipesCakes, recipesBis, recipesBread };
+
+// console.log(recipesAll.cakes.title);
+// console.log(recipesAll.cakes.ingredients);
+// console.log(recipesAll.cakes.image);
