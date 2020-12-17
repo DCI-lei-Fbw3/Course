@@ -1,0 +1,78 @@
+<!-- NOT WORKING -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>fetchAPI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+  <body>
+  
+    <div class="container-fluid w-50 p-5">
+
+   
+  <form>
+    <div class="form-group mb-2">
+      <label for="student">Name</label>
+      <select id='student' class="form-select" aria-label="students">
+        <option selected>Please Choose...</option>
+        <option value="Bekhzod">Bekhzod</option>
+        <option value="Hermann">Hermann</option>
+        <option value="Ilya">Ilya</option>
+        <option value="Karl">Karl</option>
+        <option value="Lewes">Lewes</option>
+        <option value="Saad">Saad</option>
+        <option value="Sandra">Sandra</option>
+        <option value="Waell">Waell</option>
+      </select>
+    </div>
+    <div class="form-group mb-2">
+      <label for="month">Month</label>
+      <select id='month' class="form-select" aria-label="Default select example">
+        <option selected>Please Choose...</option>
+        <option value="December">December</option>
+        <option value="January">January</option>
+        <option value="February">February</option>
+      </select>
+    </div>
+    <div class="form-group mb-2">
+      <label for="time">Time</label>
+      <select id='time' class="form-select" aria-label="tutors">
+        <option selected>Please Choose...</option>
+        <option value="15:30">15:30</option>
+        <option value="15:45">15:45</option>
+        <option value="16:00">16:00</option>
+      </select>
+    </div>
+    <div class="form-group mb-3">
+      <label for="tutor">Tutor</label>
+      <select id='tutor' class="form-select" aria-label="tutors">
+        <option selected>Please Choose...</option>
+        <option value="Taimur">Taimur</option>
+        <option value="Thomas">Thomas</option>
+        <option value="Anna">Anna</option>
+        <option value="Raafat">Raafat</option>
+      </select>
+    </div>
+    <button id="submit" type="submit" class="btn btn-primary mb-5">Submit</button>
+  </form>
+
+    <h1 class="text-center mb-4">Database</h1>
+
+
+    <div id="spinner" class="text-center">
+      <div class="spinner-border" role="status">
+      </div>
+    </div>
+
+
+    <table id="database" class="table">
+    </table>
+    <script src="index.js" ></script>
+  </div>
+
+  </body>
+</html>
