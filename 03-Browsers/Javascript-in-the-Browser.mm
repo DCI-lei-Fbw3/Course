@@ -63,7 +63,20 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="7" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="8" RULE="ON_BRANCH_CREATION"/>
+<node TEXT="HTTP" FOLDED="true" POSITION="right" ID="ID_614710247" CREATED="1608224767671" MODIFIED="1608224819610">
+<edge COLOR="#007c00"/>
+<node TEXT="Client-Server" ID="ID_1277151278" CREATED="1608224795143" MODIFIED="1608224802164"/>
+<node TEXT="Request-Response" ID="ID_1201755844" CREATED="1608224802534" MODIFIED="1608224807779"/>
+<node TEXT="Methods" ID="ID_1517537818" CREATED="1608224770727" MODIFIED="1608224772989">
+<node TEXT="GET" ID="ID_877964970" CREATED="1608224778167" MODIFIED="1608224781521"/>
+<node TEXT="POST" ID="ID_426686952" CREATED="1608224781807" MODIFIED="1608224783188"/>
+<node TEXT="PUT" ID="ID_874611321" CREATED="1608224783559" MODIFIED="1608224785298"/>
+<node TEXT="DELETE" ID="ID_1688622450" CREATED="1608224785598" MODIFIED="1608224787464"/>
+<node TEXT="HEAD" ID="ID_262053525" CREATED="1608224787679" MODIFIED="1608224789320"/>
+<node TEXT="TRACE" ID="ID_1278689087" CREATED="1608224789678" MODIFIED="1608224791723"/>
+</node>
+</node>
 <node TEXT="DOM" FOLDED="true" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
 <edge COLOR="#ff0000"/>
 <node TEXT="Document" FOLDED="true" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
@@ -168,7 +181,7 @@
 <node TEXT="getRootNode()" ID="ID_417302396" CREATED="1606221545019" MODIFIED="1606221548047"/>
 </node>
 </node>
-<node TEXT="Element" ID="ID_281622734" CREATED="1606221041522" MODIFIED="1606292393950" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Element"><richcontent TYPE="NOTE">
+<node TEXT="Element" FOLDED="true" ID="ID_281622734" CREATED="1606221041522" MODIFIED="1606292393950" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Element"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -218,9 +231,9 @@
 </node>
 </node>
 </node>
-<node TEXT="Browser" POSITION="right" ID="ID_440232407" CREATED="1608194248910" MODIFIED="1608194252224">
+<node TEXT="Browser" FOLDED="true" POSITION="right" ID="ID_440232407" CREATED="1608194248910" MODIFIED="1608194252224">
 <edge COLOR="#7c0000"/>
-<node TEXT=".fetch(URL)" ID="ID_1639188317" CREATED="1608194295781" MODIFIED="1608194528958"><richcontent TYPE="NOTE">
+<node TEXT=".fetch(URL)" FOLDED="true" ID="ID_1639188317" CREATED="1608194295781" MODIFIED="1608224626667" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -248,12 +261,13 @@
   </body>
 </html>
 </richcontent>
-<node TEXT="Request Types" ID="ID_1297107914" CREATED="1608194464000" MODIFIED="1608194470210">
+<node TEXT="Using Fetch" ID="ID_78280437" CREATED="1608224640887" MODIFIED="1608224646535" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch"/>
+<node TEXT="Request Types" FOLDED="true" ID="ID_1297107914" CREATED="1608194464000" MODIFIED="1608194470210">
 <node TEXT="default: GET Request" ID="ID_1934941835" CREATED="1608194454692" MODIFIED="1608194463566"/>
 <node TEXT="POST" ID="ID_669756305" CREATED="1608194476144" MODIFIED="1608194479723"/>
 <node TEXT="..." ID="ID_1526278031" CREATED="1608194480256" MODIFIED="1608194481930"/>
 </node>
-<node TEXT="Response" ID="ID_1830572900" CREATED="1608194576764" MODIFIED="1608194580016">
+<node TEXT="Response" FOLDED="true" ID="ID_1830572900" CREATED="1608194576764" MODIFIED="1608194580016">
 <node TEXT=".ok" ID="ID_1675667900" CREATED="1608194615222" MODIFIED="1608194673620"><richcontent TYPE="NOTE">
 
 <html>
@@ -288,9 +302,9 @@
 </node>
 </node>
 </node>
-<node TEXT="CORS - Cross Origin Resource Sharing" ID="ID_120743034" CREATED="1608194872106" MODIFIED="1608194903265"/>
-<node TEXT="window.Storage" ID="ID_1717519374" CREATED="1608195102611" MODIFIED="1608195110037">
-<node TEXT="properties" ID="ID_19403177" CREATED="1608195385971" MODIFIED="1608195390959">
+<node TEXT="CORS - Cross Origin Resource Sharing" ID="ID_120743034" CREATED="1608194872106" MODIFIED="1608224687548" LINK="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS"/>
+<node TEXT="window.Storage" FOLDED="true" ID="ID_1717519374" CREATED="1608195102611" MODIFIED="1608224591105" LINK="https://developer.mozilla.org/de/docs/Web/API/Storage">
+<node TEXT="properties" FOLDED="true" ID="ID_19403177" CREATED="1608195385971" MODIFIED="1608195390959">
 <node TEXT="length" ID="ID_1824067966" CREATED="1608195378507" MODIFIED="1608195382933"/>
 <node TEXT="setItem(key, value)" ID="ID_1686157107" CREATED="1608195312568" MODIFIED="1608195323080"/>
 <node TEXT="getItem(key) =&gt; value" ID="ID_1106973948" CREATED="1608195323624" MODIFIED="1608195343313"/>
@@ -298,7 +312,7 @@
 <node TEXT="clear()" ID="ID_1648415159" CREATED="1608195360332" MODIFIED="1608195365166"/>
 <node TEXT="key(index)" ID="ID_1675507070" CREATED="1608195365924" MODIFIED="1608195377787"/>
 </node>
-<node TEXT="localStorage" ID="ID_1540782903" CREATED="1608195245066" MODIFIED="1608195459552"><richcontent TYPE="NOTE">
+<node TEXT="localStorage" ID="ID_1540782903" CREATED="1608195245066" MODIFIED="1608224575784" LINK="https://developer.mozilla.org/de/docs/Web/API/Window/localStorage"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -312,7 +326,7 @@
 </html>
 </richcontent>
 </node>
-<node TEXT="sessionStorage" ID="ID_466646317" CREATED="1608195274862" MODIFIED="1608195484475"><richcontent TYPE="NOTE">
+<node TEXT="sessionStorage" ID="ID_466646317" CREATED="1608195274862" MODIFIED="1608224598904" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><richcontent TYPE="NOTE">
 
 <html>
   <head>
@@ -328,9 +342,23 @@
 </node>
 </node>
 </node>
-<node TEXT="Events" FOLDED="true" POSITION="right" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1606215889461">
+<node TEXT="Events" FOLDED="true" POSITION="right" ID="ID_1716215482" CREATED="1606215886642" MODIFIED="1608224956409">
 <edge COLOR="#00ff00"/>
-<node TEXT="MDN" ID="ID_98999539" CREATED="1606216606622" MODIFIED="1606216620769">
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      An EventHandler is pinned to an Element's EventListener for a specific Phase (Capturing/Bubbling).
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="MDN" FOLDED="true" ID="ID_98999539" CREATED="1606216606622" MODIFIED="1606216620769">
 <node TEXT="Introduction to Events" ID="ID_853650039" CREATED="1606216641702" MODIFIED="1606216654237" LINK="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"/>
 <node TEXT="Event Reference" FOLDED="true" ID="ID_1920444375" CREATED="1606216622845" MODIFIED="1606216631821" LINK="https://developer.mozilla.org/en-US/docs/Web/Events">
 <node TEXT="Resource" FOLDED="true" ID="ID_449234748" CREATED="1606220045296" MODIFIED="1606220061859">
@@ -507,11 +535,28 @@
 </node>
 </node>
 </node>
+<node TEXT="Terminology" FOLDED="true" ID="ID_1933630139" CREATED="1608224957855" MODIFIED="1608224971075">
+<node TEXT="EventHandler" ID="ID_521946772" CREATED="1608224981288" MODIFIED="1608224983850"/>
+<node TEXT="EventListener" ID="ID_1880471220" CREATED="1608224984183" MODIFIED="1608224987241"/>
+<node TEXT="Event Bubbling" FOLDED="true" ID="ID_214520722" CREATED="1608224869343" MODIFIED="1608224873187">
+<node TEXT="Phases" ID="ID_409370276" CREATED="1608224874326" MODIFIED="1608224877274">
+<node TEXT="Capture" ID="ID_1529822190" CREATED="1608224878214" MODIFIED="1608224880545"/>
+<node TEXT="Bubbling" ID="ID_1083792512" CREATED="1608224880719" MODIFIED="1608224884169"/>
+</node>
+</node>
+<node TEXT="Event Types" FOLDED="true" ID="ID_866850115" CREATED="1608224991327" MODIFIED="1608224997531">
 <node TEXT="User Events" ID="ID_288959838" CREATED="1606215890530" MODIFIED="1606215893813"/>
 <node TEXT="Browser Events" ID="ID_1154467125" CREATED="1606215894234" MODIFIED="1606215897918"/>
 </node>
-<node TEXT="Libraries" POSITION="right" ID="ID_862613355" CREATED="1606998796810" MODIFIED="1606998802850">
+</node>
+</node>
+<node TEXT="Libraries" FOLDED="true" POSITION="right" ID="ID_862613355" CREATED="1606998796810" MODIFIED="1606998802850">
 <edge COLOR="#ff00ff"/>
+<node TEXT="Modules" FOLDED="true" ID="ID_861249178" CREATED="1607501843559" MODIFIED="1607501849342">
+<node TEXT="Providing functionality in small encapsulated bundles." ID="ID_1779651826" CREATED="1607501889539" MODIFIED="1607501921408"/>
+<node TEXT="ES6: import/export&#xa;HTML: &lt;script type=&quot;module&quot; src=&quot;FILENAME&quot;&gt;&#xa;=&gt; in order support older browser &quot;transpiling&quot; is needed&#xa;      e. g. transpile with &quot;babel&quot;" ID="ID_1187068324" CREATED="1607501927971" MODIFIED="1607502078246"/>
+<node TEXT="Continueing with an already existing project:&#xa;$&gt; npm install&#xa;installs dependencies recursively (specified in package.json)" ID="ID_1304461208" CREATED="1607501921670" MODIFIED="1607502289824"/>
+</node>
 <node TEXT="jQuery" FOLDED="true" ID="ID_396276590" CREATED="1606998811531" MODIFIED="1606998888301"><richcontent TYPE="NOTE">
 
 <html>
@@ -613,11 +658,6 @@
 </node>
 </node>
 </node>
-<node TEXT="Modules" FOLDED="true" ID="ID_861249178" CREATED="1607501843559" MODIFIED="1607501849342">
-<node TEXT="Providing functionality in small encapsulated bundles." ID="ID_1779651826" CREATED="1607501889539" MODIFIED="1607501921408"/>
-<node TEXT="ES6: import/export&#xa;HTML: &lt;script type=&quot;module&quot; src=&quot;FILENAME&quot;&gt;&#xa;=&gt; in order support older browser &quot;transpiling&quot; is needed&#xa;      e. g. transpile with &quot;babel&quot;" ID="ID_1187068324" CREATED="1607501927971" MODIFIED="1607502078246"/>
-<node TEXT="Continueing with an already existing project:&#xa;$&gt; npm install&#xa;installs dependencies recursively (specified in package.json)" ID="ID_1304461208" CREATED="1607501921670" MODIFIED="1607502289824"/>
-</node>
 </node>
 <node TEXT="Sandbox" POSITION="right" ID="ID_1275827979" CREATED="1606215857602" MODIFIED="1606215860422">
 <edge COLOR="#0000ff"/>
@@ -713,9 +753,10 @@
 </node>
 </node>
 </node>
-<node TEXT="Links" POSITION="right" ID="ID_537263944" CREATED="1608224245164" MODIFIED="1608224246847">
+<node TEXT="Links" FOLDED="true" POSITION="right" ID="ID_537263944" CREATED="1608224245164" MODIFIED="1608224246847">
 <edge COLOR="#00007c"/>
 <node TEXT="https://github.com/kamranahmedse/developer-roadmap" ID="ID_921180060" CREATED="1608224249422" MODIFIED="1608224249422" LINK="https://github.com/kamranahmedse/developer-roadmap"/>
+<node TEXT="RFC 2616 - HTTP/1.1" ID="ID_720724966" CREATED="1608224734727" MODIFIED="1608224758110" LINK="https://tools.ietf.org/html/rfc2616"/>
 </node>
 </node>
 </map>
