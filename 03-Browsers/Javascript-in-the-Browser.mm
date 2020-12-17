@@ -63,7 +63,7 @@
 </stylenode>
 </map_styles>
 </hook>
-<hook NAME="AutomaticEdgeColor" COUNTER="4" RULE="ON_BRANCH_CREATION"/>
+<hook NAME="AutomaticEdgeColor" COUNTER="6" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="DOM" FOLDED="true" POSITION="right" ID="ID_91758520" CREATED="1606215793747" MODIFIED="1606215799048" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">
 <edge COLOR="#ff0000"/>
 <node TEXT="Document" FOLDED="true" ID="ID_1293149164" CREATED="1606220839978" MODIFIED="1606221486822" LINK="https://developer.mozilla.org/en-US/docs/Web/API/Document">
@@ -215,6 +215,121 @@
 <node TEXT="Keyboard" ID="ID_1172400948" CREATED="1606221311571" MODIFIED="1606221313654"/>
 <node TEXT="Mouse" ID="ID_800424163" CREATED="1606221304020" MODIFIED="1606221306229"/>
 <node TEXT="Touch" ID="ID_1204707729" CREATED="1606221306563" MODIFIED="1606221310790"/>
+</node>
+</node>
+</node>
+<node TEXT="Browser" POSITION="right" ID="ID_440232407" CREATED="1608194248910" MODIFIED="1608194252224">
+<edge COLOR="#7c0000"/>
+<node TEXT=".fetch(URL)" ID="ID_1639188317" CREATED="1608194295781" MODIFIED="1608194528958"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;fetch&quot; is already asynchronous and returns a Promise:
+    </p>
+    <p>
+      =&gt; .then()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;.catch()
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;...
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Often used when interacting with an foreign API.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="Request Types" ID="ID_1297107914" CREATED="1608194464000" MODIFIED="1608194470210">
+<node TEXT="default: GET Request" ID="ID_1934941835" CREATED="1608194454692" MODIFIED="1608194463566"/>
+<node TEXT="POST" ID="ID_669756305" CREATED="1608194476144" MODIFIED="1608194479723"/>
+<node TEXT="..." ID="ID_1526278031" CREATED="1608194480256" MODIFIED="1608194481930"/>
+</node>
+<node TEXT="Response" ID="ID_1830572900" CREATED="1608194576764" MODIFIED="1608194580016">
+<node TEXT=".ok" ID="ID_1675667900" CREATED="1608194615222" MODIFIED="1608194673620"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .ok will be true if the HTTP.status of the Response is in the 200s.
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT=".text()" ID="ID_1566397667" CREATED="1608194699092" MODIFIED="1608194712416"/>
+<node TEXT=".json()" ID="ID_1127449854" CREATED="1608194713188" MODIFIED="1608194829173"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      .json() will parse the Response's body-text through JSON.parse()
+    </p>
+    <p>
+      =&gt; it will return an Object
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="CORS - Cross Origin Resource Sharing" ID="ID_120743034" CREATED="1608194872106" MODIFIED="1608194903265"/>
+<node TEXT="window.Storage" ID="ID_1717519374" CREATED="1608195102611" MODIFIED="1608195110037">
+<node TEXT="properties" ID="ID_19403177" CREATED="1608195385971" MODIFIED="1608195390959">
+<node TEXT="length" ID="ID_1824067966" CREATED="1608195378507" MODIFIED="1608195382933"/>
+<node TEXT="setItem(key, value)" ID="ID_1686157107" CREATED="1608195312568" MODIFIED="1608195323080"/>
+<node TEXT="getItem(key) =&gt; value" ID="ID_1106973948" CREATED="1608195323624" MODIFIED="1608195343313"/>
+<node TEXT="removeItem(key)" ID="ID_101103608" CREATED="1608195344733" MODIFIED="1608195358687"/>
+<node TEXT="clear()" ID="ID_1648415159" CREATED="1608195360332" MODIFIED="1608195365166"/>
+<node TEXT="key(index)" ID="ID_1675507070" CREATED="1608195365924" MODIFIED="1608195377787"/>
+</node>
+<node TEXT="localStorage" ID="ID_1540782903" CREATED="1608195245066" MODIFIED="1608195459552"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      is durable across sessions
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="sessionStorage" ID="ID_466646317" CREATED="1608195274862" MODIFIED="1608195484475"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      removed after the session closes (closing the tab/window).
+    </p>
+  </body>
+</html>
+
+</richcontent>
 </node>
 </node>
 </node>
@@ -503,7 +618,7 @@
 </node>
 </node>
 </node>
-<node TEXT="Modules" ID="ID_861249178" CREATED="1607501843559" MODIFIED="1607501849342">
+<node TEXT="Modules" FOLDED="true" ID="ID_861249178" CREATED="1607501843559" MODIFIED="1607501849342">
 <node TEXT="Providing functionality in small encapsulated bundles." ID="ID_1779651826" CREATED="1607501889539" MODIFIED="1607501921408"/>
 <node TEXT="ES6: import/export&#xa;HTML: &lt;script type=&quot;module&quot; src=&quot;FILENAME&quot;&gt;&#xa;=&gt; in order support older browser &quot;transpiling&quot; is needed&#xa;      e. g. transpile with &quot;babel&quot;" ID="ID_1187068324" CREATED="1607501927971" MODIFIED="1607502078246"/>
 <node TEXT="Continueing with an already existing project:&#xa;$&gt; npm install&#xa;installs dependencies recursively (specified in package.json)" ID="ID_1304461208" CREATED="1607501921670" MODIFIED="1607502289824"/>
@@ -511,6 +626,100 @@
 </node>
 <node TEXT="Sandbox" POSITION="right" ID="ID_1275827979" CREATED="1606215857602" MODIFIED="1606215860422">
 <edge COLOR="#0000ff"/>
+</node>
+<node TEXT="Javascript" FOLDED="true" POSITION="right" ID="ID_1027574476" CREATED="1608193239975" MODIFIED="1608193243308">
+<edge COLOR="#00ffff"/>
+<node TEXT="Promise" ID="ID_565472553" CREATED="1608193247630" MODIFIED="1608193312178"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      asynchronous/parallel calls/execution of code
+    </p>
+    <p>
+      - Multithreading
+    </p>
+  </body>
+</html>
+
+</richcontent>
+<node TEXT="new Promise()" ID="ID_1016660334" CREATED="1608193328836" MODIFIED="1608193811343">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_966408088" STARTINCLINATION="40;0;" ENDINCLINATION="40;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      new Promise( (resolve, reject) =&gt; {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;// call resolve() or reject() depending on success or failure
+    </p>
+    <p>
+      })
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+<node TEXT="pending Promise" ID="ID_966408088" CREATED="1608193394444" MODIFIED="1608193446000">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1711583186" STARTINCLINATION="53;0;" ENDINCLINATION="53;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_487145174" STARTINCLINATION="73;0;" ENDINCLINATION="73;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT=".resolve()" ID="ID_1711583186" CREATED="1608193346434" MODIFIED="1608193462602">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1041379083" STARTINCLINATION="46;0;" ENDINCLINATION="46;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT=".reject()" ID="ID_487145174" CREATED="1608193355178" MODIFIED="1608193478295">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1041379083" STARTINCLINATION="40;0;" ENDINCLINATION="40;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+<node TEXT="settled" ID="ID_1041379083" CREATED="1608193413760" MODIFIED="1608193416454"/>
+<node TEXT=".then(resolvedCallback[, rejectedCallback])" ID="ID_1958935916" CREATED="1608193508801" MODIFIED="1608193578408"/>
+<node TEXT=".catch(rejectedCallback)" ID="ID_1852558639" CREATED="1608193512246" MODIFIED="1608193619304"/>
+<node TEXT=".finally(callback)" ID="ID_1034916502" CREATED="1608193635707" MODIFIED="1608193682719"/>
+</node>
+<node TEXT="async/await" ID="ID_1396154974" CREATED="1608193838776" MODIFIED="1608193852647">
+<node TEXT="async function FUNCTION_NAME() {&#xa;   // this function will execute asynchronously&#xa;   // and it will return by default a resolved Promise&#xa;}" ID="ID_184926447" CREATED="1608193864344" MODIFIED="1608193958510"/>
+<node TEXT="&quot;await&quot; keyword is available inside of an async function" ID="ID_1251008659" CREATED="1608193959468" MODIFIED="1608194205143"><richcontent TYPE="NOTE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      async function A() {}
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      async function B() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;await A(); // will wait until &quot;A&quot; returns
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;let value = await A(); // same here: will wait until &quot;A&quot; returns, but with an additional assignment
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;....
+    </p>
+    <p>
+      }
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 </node>
 </node>
 </map>
