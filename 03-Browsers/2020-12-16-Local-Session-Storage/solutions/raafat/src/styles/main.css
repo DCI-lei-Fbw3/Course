@@ -1,0 +1,108 @@
+:root {
+  font-size: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title {
+  margin: 2rem;
+}
+
+.movie-input {
+  height: 1.1rem;
+  font-size: 0.7rem;
+  width: 9rem;
+  margin: 0.25rem;
+  border-radius: 5px;
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.movie-display {
+  width: 9rem;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+@media screen and (min-width: 570px) {
+  .movie-display {
+    width: 15rem;
+  }
+}
+
+.movie-meta {
+  border-bottom: 1px solid black;
+  margin-bottom: 0.25rem;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.btn-save,
+.btn-reset {
+  background: none;
+  color: inherit;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 0.1rem;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.btn-save:hover,
+.btn-reset:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 1px 2px 5px #747474;
+          box-shadow: 1px 2px 5px #747474;
+}
+
+.btn-save:active,
+.btn-reset:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=main.css.map */
