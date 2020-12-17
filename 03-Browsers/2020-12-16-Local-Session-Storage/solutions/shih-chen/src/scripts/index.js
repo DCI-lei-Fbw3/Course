@@ -35,10 +35,7 @@ theInput.addEventListener('keyup', (event)=> {
         movieData.push(data);    
         } 
         else (alert ("You already picked this movie!"))
-        console.log(movieData);
-
-        //let newMovieData = JSON.stringify(movieData); 
-        //console.log(newMovieData)//newMovieArray(newMovieList);                         
+        console.log(movieData);                              
         });   
     }  
 })
@@ -52,11 +49,6 @@ function onlyOnce (something){
         return exists;
     }    
 }
-
-// function newMovieArray (someinfo) {
-//     console.log(someinfo)
-// }
-
 
 function toSave(){ 
 document.querySelector('.btn-save').addEventListener("click", (()=>{ 
@@ -84,18 +76,3 @@ function toReset() {
 toReset();
 
 
-// let movieOrNot = new Promise (function(resolve, reject){
-//    let theMovieData = Client.getMovieData(theMovie); 
-//    resolve(() => {           
-//         if(theMovieData.Response === "True"){        
-//         theMovieData.forEach((filmdata)=> {
-//         View.displayMovieOnPage(filmdata);        
-//     });  
-// }
-//     reject(() => {
-//         if(theMovieData.Response === "False"){    
-//         return View.displayMovieOnPage(theMovieData);
-//         }
-//     });    
-//     })
-// }); 
