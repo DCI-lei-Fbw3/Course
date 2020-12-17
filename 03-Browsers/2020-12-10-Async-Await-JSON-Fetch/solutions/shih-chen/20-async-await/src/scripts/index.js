@@ -29,27 +29,4 @@ const theButton = async function () {
 
 theButton();
 
-// const runModal = async function () {
-// 	await window.setTimeout(() => {
-// 		document.querySelector(".modal").style.display = "block";
-// 	}, 6000);
-// 	await document.querySelector(".close").addEventListener("click", () => {
-// 		document.querySelector(".modal").style.display = "none";
-// 	});
-// };
-// runModal();
-
-// promiseOfModal.then(function(val) {
-//     console.log("User has been on the page for 60 seconds");
-//     val.style.display = "block";
-// })
-
-// modal.addEventListener("click", (e) => {
-//     switch(e.target.className) {
-//         case "close":
-//         case "modal":
-//         modal.style.display = "none"
-//         break;
-//     }
-// })
 
