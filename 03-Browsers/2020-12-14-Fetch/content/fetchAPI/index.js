@@ -5,6 +5,7 @@ Reading assignment: https://javascript.info/promise-basics
 Reading assignment: http://ccoenraets.github.io/es6-tutorial/promises/#:~:text=A%20promise%20is%20a%20holder,support%20for%20promises%20to%20JavaScript.
 Reference: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods
+
 */
 
 /* Notes:
