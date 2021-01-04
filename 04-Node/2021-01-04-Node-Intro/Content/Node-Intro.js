@@ -3,6 +3,11 @@
 //Reading: https://medium.com/jspoint/introduction-to-node-js-a-beginners-guide-to-node-js-and-npm-eca9c408f9fe
 //Reference: https://nodejs.dev/learn/introduction-to-nodejs
 
+/* Learning Outcomes
+- List use cases for running JS on the operating system
+- Use the process object to accept arguments from the terminal
+- Add and use third party modules from the npm registry
+*/
 
 // Intro to Node
 
@@ -69,4 +74,14 @@
     - process.env --> Meta data on the process environment (which is the environment where the processes runs)
     
     
+    */
+
+// Capturing user input in Node CLI
+// Reference: https://nodejs.org/api/readline.html
+// Resource: https://www.npmjs.com/package/inquirer --> creating interactive CLI applications
+
+    /* 
+    - You can use the readline core mdoule of Node to create an input/output logic
+    with the CLI.
+    - You can create CLI question using Readline.interface.question propoerty (https://nodejs.org/api/readline.html#readline_rl_question_query_callback)
     */
