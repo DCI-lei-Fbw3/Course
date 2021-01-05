@@ -1,6 +1,6 @@
 //How to capute input on the Node CLI
 
-//Import the core mdoule called redline
+//Import the core mdoule called readline
 
 const readline = require('readline').createInterface({
     input: process.stdin,
