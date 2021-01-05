@@ -12,13 +12,13 @@ const content = 'Today is a very cold day.';
        } 
     }) */
 
-     //appends to old content
+   /*   //appends to old content
     fs.writeFile('./test.txt', content, {flag: 'a+'}, (err) => {
         if (err) {
             console.log(err)
             return
         } 
-     })
+     }) */
 
 
 //To Read a file
@@ -32,18 +32,32 @@ fs.readFile('./test.txt', 'utf8', (err, data) => {
 
 // To see File stats
 
-fs.stat('./test.txt', (err, stats)=>{
+/* fs.stat('./test.txt', (err, stats)=>{
     if (err) {
         console.log(err)
         return
     } 
     console.log(stats)
-})
+}) */
 
 // To Delete a File
-fs.rm('./test2.txt', (err)=>{
+/* fs.rm('./test2.txt', (err)=>{
     if (err) {
         console.log(err)
         return
     }
+}) */
+
+//Convert data to JSON strings
+
+fs.readFile('./test.txt', 'utf8', (err, data) => {
+    if (err){
+        console.log(err)
+        return
+    }
+    /* The reason I convert the data to a string here is because
+    our data is in a text "format".
+     */
+    let obj = JSON.stringify(data);
+    console.log(obj);
 })

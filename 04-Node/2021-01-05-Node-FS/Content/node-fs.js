@@ -85,5 +85,50 @@ fs.rm('./test.txt', (err)=>{
 })
 
 
+//Reviewing Asynchronous Programming -- In the Node JS
 
-    
+/* Keypoints:
+1) Synchronosity is an isssue, and we want to avoid callbacks
+2) Method functions in node js have "Sync" suffix which provide synchronosity
+3) When you work with the network modules in node, you want to avoid too many callbacks.
+When you start to have too many callbacks, nesting increases the complexity of your code.
+4) To avoid callbacks, you want to avoid the use "sync" versions of the method functions. 
+5) To use promises in your node js function methods, add (dot)promise after your require statement:
+for example -->
+
+const fs = require(fs).promise;
+
+will allow you to use promises instead of callbacks.
+*/
+    /*
+    - Computers are asynchronous by design.
+    - Async programming means that things can happen independently of the main program flow.
+    - For example:
+    */
+
+    function one(){};
+    function two(){};
+    function three(){};
+    function four(){};
+
+    one(); //program triggers this and moves on to two
+    two();//program triggers this and moves on to three
+    three(); //program triggers this and moves on to four
+    four();
+
+    /* 
+    - In Node JS, callbacks are a hell.
+    - Node JS has created the same methods as above with "Sync" as a suffix to each
+    method function. These methods with the "Sync" suffix are the same functions,
+    only that they run synchronously. 
+    - Promise
+    */
+
+
+//JSON in Node
+
+    /*
+    - JSON data format is the one format most important to a web developer
+    - Node has method functions for handling JSON data
+    */
+
