@@ -83,5 +83,5 @@
     /* 
     - You can use the readline core mdoule of Node to create an input/output logic
     with the CLI.
-    - You can create CLI question using Readline.interface.question propoerty (https://nodejs.org/api/readline.html#readline_rl_question_query_callback)
+    - You can create CLI question using Readline.interface.question property (https://nodejs.org/api/readline.html#readline_rl_question_query_callback)
     */
