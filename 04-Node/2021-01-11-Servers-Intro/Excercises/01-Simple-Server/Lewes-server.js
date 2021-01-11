@@ -14,7 +14,7 @@ const server = http.createServer((request, response) => {              //!<--Cre
 
     let oops = 'Oops there is an error!'
 
-    //*Calling it by routing
+    //*
     if (request.url === '/keyboard') {
         fs.createReadStream(__dirname + '/keyboard.txt').pipe(response);
     }
