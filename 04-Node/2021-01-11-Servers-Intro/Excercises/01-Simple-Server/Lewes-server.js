@@ -27,7 +27,7 @@ const server = http.createServer((request, response) => {              //!<--Cre
     }
     //* 
 
-    //Piping
+    //Piping (Used normally for one response and not multiple)
 
     //?Print keyboard
     // const myReadStream = fs.createReadStream(__dirname + '/keyboard.txt', 'utf8');
