@@ -19,7 +19,7 @@ app.get("/", (req,res) => {
 
 app.get("/message", (req,res) => {
 
-    res.status(200).send(" anything ");
+    res.status(200).send(" Anything ");
 
 });
 

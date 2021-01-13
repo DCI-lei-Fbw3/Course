@@ -37,3 +37,16 @@ app.listen(port, () => {
 
 
 
+// Terminal
+/* 
+1- npm init
+2- npm -i -d nodemon
+3- npm i exepress
+4- npm __filename.js
+ */
+
+ // package.json 
+/* 
+    "scripts": {
+      "dev": "nodemon ./index.js" }, 
+ */
