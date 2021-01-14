@@ -1,5 +1,6 @@
 const express = require("express");
 const server = express();
+const path = require('path');
 
 // use a middleware to parse the body of a request
 server.use(express.json());
@@ -20,22 +21,14 @@ server.get("/blog", (request, response) => {
     response.json(responseBody);
 });
 
-server.get("/keyboard", (request, response) => {
-    const responseBody = [{
-        title: "Keyboard",
-    }];
-
-    // use functions introduced by express to create the response
-    response.status(200);
-    response.json(responseBody);
-});
-
 server.post("/user", (request, response) => {
     // when method POST is used in a request, we can access request.body to access the data
     // (see line 5 where we set up the middleware for this)
     console.log(request.body);
     response.send(request.body.name);
 });
+
+server.use("/keyboard", express.static(path.join(__dirname, 'keyboard.txt')));
 
 
 // start listening to the port
