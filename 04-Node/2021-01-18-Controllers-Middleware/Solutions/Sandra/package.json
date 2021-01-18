@@ -1,0 +1,17 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "random-token": "0.0.8"
+  },
+  "devDependencies": {},
+  "description": ""
+}
