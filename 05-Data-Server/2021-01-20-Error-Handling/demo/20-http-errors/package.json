@@ -1,0 +1,15 @@
+{
+  "name": "20-http-errors",
+  "version": "1.0.0",
+  "description": "demo for handling HTTP errors with the node package http-errors",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-errors": "^1.7.2"
+  }
+}
