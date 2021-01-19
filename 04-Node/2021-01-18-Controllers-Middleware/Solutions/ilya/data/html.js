@@ -1,7 +1,5 @@
-const db = require('./db');
-
 module.exports = {
-        landing:`
+        login:`
         <!DOCTYPE html>
         <html lang="en">
         
@@ -20,7 +18,7 @@ module.exports = {
         
             <div id="log-in-wrapper" class="w-25 mx-auto mb-5">
         
-            <form id="log-in-form" action="/auth" method="POST">
+            <form id="log-in-form" action="/public/auth" method="POST">
                 <div class="mb-3">
                 <label for="iban" class="form-label">IBAN</label>
                 <input type="text" class="form-control" id="iban" name="iban" aria-describedby="iban">
@@ -40,7 +38,7 @@ module.exports = {
         
         </html>
         `,
-        loggedIn:  function({token, action, balanceInput, balanceButton}){ return `
+        authorized:  function({token, action, balanceInput, balanceButton}){ return `
     <!DOCTYPE html>
     <html lang="en">
     
@@ -63,7 +61,7 @@ module.exports = {
           
         <div class="d-flex justify-content-around">
     
-          <form id="transfer-form" class="w-25 m-3" action="/transfer" method="POST">
+          <form id="transfer-form" class="w-25 m-3" action="/authorized/transfer" method="POST">
             <div class="mb-3">
               <label for="transfer" class="form-label">Amount in €</label>
               <input type="text" class="form-control" id="transfer" name="transfer" aria-describedby="transfer">
@@ -115,7 +113,7 @@ module.exports = {
           
         <div class="d-flex justify-content-around">
     
-          <form id="transfer-form" class="w-25 m-3" action="/transfer" method="POST">
+          <form id="transfer-form" class="w-25 m-3" action="/authorized/transfer" method="POST">
             <div class="mb-3">
               <label for="transfer" class="form-label">Amount in €</label>
               <input type="text" class="form-control" id="transfer" name="transfer" aria-describedby="transfer">
@@ -140,7 +138,7 @@ module.exports = {
     
     </html>
     `},
-        invalidLogIn: `
+        unauthorized: `
     <!DOCTYPE html>
     <html lang="en">
     
@@ -163,7 +161,7 @@ module.exports = {
     
         <div id="log-in-wrapper" class="w-25 mx-auto mb-5">
     
-        <form id="log-in-form" action="/auth" method="POST">
+        <form id="log-in-form" action="/public/auth" method="POST">
             <div class="mb-3">
             <label for="iban" class="form-label">IBAN</label>
             <input type="text" class="form-control" id="iban" name="iban" aria-describedby="iban">
@@ -183,5 +181,5 @@ module.exports = {
     
     </html>
     `
-    };
+     };
 
