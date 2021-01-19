@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "iban": "DE99285377142102900",
+      "pin": 8314,
+      "balance": 8000,
+      "token": "0cb8336c6f0b502c0a2c00ea85dfcc9b37eb4ec0f68d2f03bc6c76761a5548f4"
+    }
+  ]
+}
