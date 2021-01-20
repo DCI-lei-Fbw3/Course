@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
+})
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 })
 
 // *** error handling ***
@@ -16,8 +16,23 @@ app.listen(port, () => {
 
 // If an error is thrown (in synchronous code), Express catches and handles it:
 app.get('/error', function (req, res) {
+    // do some real stuff
+    //if (error_condition_is_met)
     throw new Error('BROKEN') // Express will catch this on its own.
 });
+
+// plain Javascript:
+/*
+try {
+  // do some stuff
+
+  if (parameter < 0) {
+    throw new Error("Parameter must be positive.")
+  }
+} catch (error) {
+  console.log(error);
+}
+/**/
 
 app.get('/pass_error', function (req, res, next) {
     var err = new Error('error - created and passed');
@@ -28,11 +43,11 @@ app.get('/pass_error', function (req, res, next) {
 app.get('/error_in_async_code', function (req, res, next) {
     setTimeout(function () {
       try {
-        throw new Error('error in asynchronous code catched and relayed to Express')
+        throw new Error('error in asynchronous code "catched" and relayed to Express')
       } catch (err) {
-        next(err) // error in async. code must be relayed to Express
+        next(err) // error in async. code must explicitly be relayed to Express
       }
-    }, 500)
+    }, 500) // 500 ms timeout
   })
 
 // if an Error is thrown inside a promise
@@ -46,17 +61,20 @@ app.get('/promise_catch', function (req, res, next) {
 })
 
 // customized 404 error handling
+// @TODO: link for customization of 404s
 app.use(function(req, res) {
     res.status(404).send('404 - Page not Found');
 });
+/**/
 
 // logging
-function logErrors (err, req, res, next) {
-    console.error("logErrors(): " + err.stack)
+function logErrors(err, req, res, next) { // 4 parameters
+    console.error("logErrors(): " + err.toString()) 
+    // if a stacktrace is needed one could use "err.stack"
     next(err)
 }
 
-app.use(logErrors);
+app.use(logErrors); // introduce the logError method as a middleware
 
 // default error handler:
 // Express' default error handler must be used if any header has already been sent:
