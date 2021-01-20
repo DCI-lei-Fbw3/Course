@@ -11,9 +11,16 @@ app.listen(3000, (err) => {
 
 app.use((req, res, next) => {
     if (!req.user) return next(
-        createError(401, 'Please Login')
+        createError(401, 'Please Login ')
     );
 
     next(); 
 });
+
+app.use(errorHandlerLogging);
+
+function errorHandlerLogging(err, req, res, next) {
+    console.log("ERROR - ", err.toString(), '( query-parameters:', 'a =', req.query.a, ')');
+    next();
+}
 
