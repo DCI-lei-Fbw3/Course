@@ -24,7 +24,7 @@ app.get('/api/user_delayed', cors(), getUserDelayed)
 
 function getUserDelayed(req, res, next) {
 	setTimeout(
-		() => {
+		() => {  // the closure behaviour allows access to "res" in this case
 			res.json( { id: 1, name: "alice" } );
 			next();
 		}, 3000);
