@@ -11,10 +11,11 @@ app.listen(port, function () {
   })
 
 var corsOptions = {
+	//methods: "GET,HEAD", //defaults to "GET,HEAD,PUT,PATCH,POST,DELETE"
 	origin: 'http://localhost:3000', // only requests from webpages from that server
 	optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
-  
+
 
 //app.use(cors(corsOptions)) // enable cors globally
 
