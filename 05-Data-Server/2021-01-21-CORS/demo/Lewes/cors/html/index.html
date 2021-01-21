@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="target"></p>
+    <p id="target2"></p>
+    <p id="target3"></p>
+
+    <script>
+
+        let element = document.getElementById("target");
+
+        fetch("http://localhost:7001/cors/app1")
+            .then(res => res.text())
+            .then(value => {
+                element.append(value);
+                var user = JSON.parse(value);
+
+                // element.append("\nid: \t", user.id);
+                //element.append("\nname: \t", user.name);
+            })
+
+        let element2 = document.getElementById("target2");
+
+        fetch("http://localhost:7001/cors/app2")
+            .then(res => res.text())
+            .then(value => {
+                element2.append(value);
+                var user = JSON.parse(value);
+
+                // element.append("\nid: \t", user.id);
+                //element.append("\nname: \t", user.name);
+            })
+
+        let element3 = document.getElementById("target3");
+
+        fetch("http://localhost:7001/cors/app3")
+            .then(res => res.text())
+            .then(value => {
+                element3.append(value);
+                var user = JSON.parse(value);
+
+                // element.append("\nid: \t", user.id);
+                //element.append("\nname: \t", user.name);
+            })
+
+    </script>
+</body>
+
+</html>
