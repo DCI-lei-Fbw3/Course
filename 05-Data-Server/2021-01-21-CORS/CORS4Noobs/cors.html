@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="target1"></p>
+    <p id="target2"></p>
+    <p>Hello</p>
+
+    <script>
+
+        let target1 = document.getElementById('target1');
+
+        fetch('http://localhost:3000/apple')
+            .then(res => res.text())
+            .then(res => {
+                target1.append(res);
+            });
+
+
+        let target2 = document.getElementById('target2');
+
+        fetch('http://localhost:3000/banana')
+            .then(res => res.text())
+            .then(res => {
+                target2.append(res);
+            });
+
+    </script>
+
+</body>
+
+</html>
