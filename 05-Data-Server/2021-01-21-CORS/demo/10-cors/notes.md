@@ -38,7 +38,7 @@ This allows our server to be accessible by everyone, and ignore the default beha
 // app.use(cors()) <-- 'Approve' all requests on all my routes
 
 CORS: Communication between different servers <-- Sometimes want to enable this
-Within the same server: "Shared Origin" or "Single Origin" <-- Default
+Within the same server: "Same Origin", "Shared Origin" or "Single Origin" <-- Default
 
 // Task:
 
