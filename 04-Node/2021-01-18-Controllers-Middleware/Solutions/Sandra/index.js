@@ -7,15 +7,17 @@ const login = require("./controllers/login")
 const transfer = require("./controllers/transfer")
 const balance = require("./controllers/balance")
 const withdraw = require("./controllers/withdraw")
+const tokenExists = require('./Middleware/tokenExists');
+const validateToken = require('./Middleware/validateToken')
 
 
 app.post("/login", login)
 
-app.post("/transfer", transfer)
+app.post("/transfer", tokenExists, validateToken, transfer)
 
-app.post("/balance", balance)
+app.post("/balance", tokenExists, validateToken, balance)
 
-app.post("/withdraw", withdraw)
+app.post("/withdraw", tokenExists, validateToken, withdraw)
 
 app.listen(port, () => {
     console.log(`Server running on ${port}`)
