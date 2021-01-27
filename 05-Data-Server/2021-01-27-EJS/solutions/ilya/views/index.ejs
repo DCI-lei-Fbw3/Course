@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJS Views</title>
+</head>
+
+<body>
+<!-- 
+    be careful with comments: inside the ejs tags, the content has to be commented out in js comments
+    ejs element: <%=// SOME VALUE%> -> value, <%-/* SOME VALUE */%> -> interpreted as html  
+--> 
+
+    <fieldset>
+        <h1>
+            <%=h1%>
+        </h1>
+    </fieldset>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, cupiditate. Impedit omnis excepturi
+            voluptatibus, illo quaerat reiciendis, optio error nostrum laboriosam assumenda rerum aut laudantium rem
+            dignissimos quas obcaecati quasi.</p>
+        <%-secondP%>
+
+       
+        <h5>full array</h5>
+        <%-fruits%>
+
+        <h5>aray, accessing using the index</h5>
+        <ol>
+            <li><%- fruits[0] %></li>
+            <li><%- fruits[1] %></li>
+            <li><%- fruits[2] %></li>
+        </ol>
+
+        <h5>aray, accessing using a for loop</h5>
+        <ol>
+            <% for(let i = 0; i < fruits.length; i++){ %>
+                <li> <%= fruits[i] %> </li>
+            <%}%>              
+        </ol>
+
+        <h5>aray, accessing using map</h5>
+
+        <ol>
+            <% fruits.map( fruit =>  {%> <li> <%= fruit %> </li> <% }) %>
+        </ol>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+    
+</body>
+
+</html>

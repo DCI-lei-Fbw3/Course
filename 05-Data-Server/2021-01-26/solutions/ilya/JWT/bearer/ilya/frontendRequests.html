@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Requests</title>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- bs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="align-items-center container-fluid d-flex flex-column  mt-5">
+
+        <button id='btn1' type="button" class="btn btn-primary m-3" style="width: 150px">GET ROOT</button>
+        <button id='btn2' type="button" class="btn btn-primary m-3" style="width: 150px">POST LOGIN</button>
+        <button id='btn3' type="button" class="btn btn-primary m-3" style="width: 150px">GET USER</button>
+        <button id='btn4' type="button" class="btn btn-primary m-3" style="width: 150px">CLEAR LIST</button>
+
+        <ul id='responses' class="list-unstyled text-center mt-5 w-75"></ul>
+
+    </div>
+
+    <script>
+
+        const log = console.log;
+
+        const getRoot = async () => {
+            try {
+                const response = await axios.get('http://localhost:8080');
+                log('RESPONSE:', response);
+                log('RESPONSE.BODY:', response);
+                responses.innerHTML += `
+                    <li class="my-3 text-break">
+                         Token: ${response.data}
+                    </li>
+                `;
+            } catch (e) { log('Error occurred:', e) }
+        }
+        btn1.onclick = getRoot;
+
+        let token = '';
+        const postLogin = async () => {
+            try {
+                const response = await axios.post('http://localhost:8080/login', { name: 'Bob' });
+                log('RESPONSE:', response);
+                responses.innerHTML += `
+                    <li class="my-3 text-break">
+                         Token: ${response.data.token}
+                    </li>
+                `;
+                token = response.data.token;
+            } catch (e) { log('Error occurred:', e) }
+        }
+        btn2.onclick = postLogin;
+
+        const getUser = async () => {
+            try {
+                const config = {
+                    headers:{
+                        authorization: `Bearer ${token}`
+                    }                
+                };
+                const response = await axios.get('http://localhost:8080/user', config);
+                log('RESPONSE:', response);
+            } catch (e) { log('Error occurred:', e) }
+        }
+        btn3.onclick = getUser;
+
+        const clearList = () => {
+            try { responses.innerHTML = '' } catch (e) { log('Error occurred:', e) }
+        }
+        btn4.onclick = clearList;
+
+
+    </script>
+</body>
+
+</html>

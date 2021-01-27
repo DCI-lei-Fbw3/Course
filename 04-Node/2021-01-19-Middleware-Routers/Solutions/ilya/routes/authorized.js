@@ -9,7 +9,7 @@ module.exports = () => {
     router.post("/transfer", transfer);
     router.post("/balanceShow", balanceShow);
     router.post("/balanceHide", balanceHide);
-
+    console.log('router:', router);
     return router;
 }
 
