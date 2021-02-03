@@ -1,8 +1,14 @@
 const express = require("express"); 
 const bodyParser = require("body-parser"); 
+const cookieParser = require('cookie-parser')
 const app = express(); 
+
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cookieParser());
+app.use(express.json());
+
 const port = process.env.PORT || "3001"; 
+
 const login = require("./controllers/login")
 const transfer = require("./controllers/transfer")
 const balance = require("./controllers/balance")

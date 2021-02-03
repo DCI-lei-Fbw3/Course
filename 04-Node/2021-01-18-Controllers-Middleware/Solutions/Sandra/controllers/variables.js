@@ -1,7 +1,7 @@
 let  randomToken = Math.floor(Math.random() * Math.floor(10000))
 
-let balance = 1100; 
-let amount = 150; 
+let balance = 100; 
+let amount = 100; 
 
 function addMoney(){
     return balance += amount
