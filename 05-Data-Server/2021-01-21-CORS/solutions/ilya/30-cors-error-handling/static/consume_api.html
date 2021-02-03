@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>fetch()</title>
+</head>
+<body>
+	<h1>Fetching Resource from remote Server (CORS)</h1>
+    <pre id="target"></pre>
+
+</body>
+<script>
+
+    let element = document.getElementById("target");
+
+    var timer;
+    Promise.race( 
+        // race takes an array of Promises as argument
+        // the state (resolved/rejected) of the first finished Promise 
+        // determines how to procede (.then/.catch)
+        // the other Promise(s) continue to run
+        [
+            fetch("http://localhost:4000/api/user_delayed"), // fetching a resource
+            new Promise((resolve, reject) => {
+                timer = setTimeout(
+                    () => reject(new Error("timeout after two seconds")),
+                    2000
+                );
+            }),
+        ]
+    ).then(
+        response => {
+            clearTimeout(timer);   // stop the timer, so that it won't execute
+            return response.text() // or directly parse with "response.json()"
+        }
+    ).then(value => {
+		element.append(value);
+		var user = JSON.parse(value);
+		element.append("\nid: \t", user.id);
+		element.append("\nname: \t", user.name);
+	}).catch((e) => {
+        alert(
+            "\nhttp://localhost:4000/api/user_delayed\ndid not respond\n\n" 
+            + "Error-Name: " + e.name + "\n" 
+            + "Error-Message: " + e.message
+            );
+    });
+
+</script>
+</html>
