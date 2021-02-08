@@ -37,3 +37,5 @@ conformities is called validation. However, validation usually also involves the
 - Validation is usually programmed to happen right at the doorstep of the doorstep,
 right when the data is being sent to (before being stored).
  */
+
+ 
