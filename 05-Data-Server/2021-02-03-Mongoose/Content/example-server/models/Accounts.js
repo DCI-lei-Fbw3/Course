@@ -40,8 +40,17 @@ function getAccount(iban) {
     });
 }
 
+function updateBalance(iban, money){
+    return new Promise((resolve, reject) => {
+        Account.update({ IBAN:iban}, { money })
+        .then(result => resolve(result))
+        .catch(error => reject(error));
+    });
+}
+
 
 module.exports = {
     getAccount,
     addAccount,
+    updateBalance
 };

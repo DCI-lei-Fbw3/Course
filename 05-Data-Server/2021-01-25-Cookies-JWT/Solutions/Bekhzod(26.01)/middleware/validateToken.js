@@ -1,4 +1,4 @@
-
+var gandtoken = require("../controllers/login.js")
 var data = require("../controllers/data.js");
 
 const validateToken = (req,res,next) => {
@@ -7,10 +7,10 @@ const validateToken = (req,res,next) => {
     //     //  return res.status(500).send('please specify token number')
     // }
          // data.tokens  !=  data.tokens
-    res.local = {};
-    res.local.token = data.tokens; 
+    // res.local = {};
+    // res.local.token = data.tokens; 
 
-    if (data.tokens != req.cookies.token) {
+    if (gandtoken.jwToken != req.cookies.jwToken) {
        
         return res.status(200).send(`token incorrect`);
     };

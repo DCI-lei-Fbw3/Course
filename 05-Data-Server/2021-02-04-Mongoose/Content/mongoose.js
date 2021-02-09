@@ -37,6 +37,19 @@ mongoose.connect(process.env.MONGODB_URI, {
         // link the schema to the collection products
         const Product = mongoose.connection.model("products", productSchema);
 
+        const newProduct = new Product({
+            articleNo: 5,
+            name: "V.V.Putin",
+            description: "The G.O.A.T",
+            price: "democracy"
+        })
+        newProduct.save()
+        .then(result => {
+            console.log(result)
+        } )
+        .cath(error => {
+            console.log(error)
+        })
 
         // find products
         Product.find({})
