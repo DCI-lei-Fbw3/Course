@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const createError = require("http-errors");
 require("dotenv").config();
 let uri = process.env.MONGODB_URI;
 
@@ -33,7 +34,7 @@ const connect = async () => {
 			useNewUrlParser: true,
 		});
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 
@@ -48,7 +49,7 @@ const addProducts = async (articleNo, name, description, price) => {
 		});
 		await newProduct.save();
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 
@@ -58,7 +59,7 @@ const getProducts = async () => {
 		let response = await Product.find();
 		return response;
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 const getOneProduct = async (articleNo) => {
@@ -67,7 +68,7 @@ const getOneProduct = async (articleNo) => {
 		let response = await Product.find({ articleNo });
 		return response;
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 
@@ -77,7 +78,7 @@ const deleteOneProduct = async (articleNo) => {
 		let response = await Product.findOneAndDelete({ articleNo });
 		return response;
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 
@@ -90,7 +91,7 @@ const updateProducts = async (articleNo, price) => {
 			{ useFindAndModify: false }
 		);
 	} catch (err) {
-		console.log(err);
+		createError(500, err);
 	}
 };
 
