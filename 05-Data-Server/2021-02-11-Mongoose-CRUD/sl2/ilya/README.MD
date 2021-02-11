@@ -1,5 +1,6 @@
 # curl commands
 resource: https://www.youtube.com/watch?v=7XUibDYw4mc&t=6s
+FTP not included (last 2 minutes)
 - GET: curl <url> ==> normal GET request
     - example: curl localhost:3000/get-all-products 
 - GET: curl -o <filename> <url>  ==> gets the resource the from url and saves it in a file
@@ -16,10 +17,16 @@ resource: https://www.youtube.com/watch?v=7XUibDYw4mc&t=6s
 
 
 - flags: 
-    -i: includes headers
-    -I: headers only
-    -o: save response under following file name
-    -O: download the resource and save it under recourse name
-    --limit-rate <amount of bytes>B: sets a limit to the download request
-    -d, --data: data to pass along with the post request
-    -X, --request <command>: Specify request command to use
+    -i: includes headers  
+    -I: headers only  
+    -o: save response under following file name  
+    -O: download the resource and save it under recourse name\
+    --limit-rate <amount of bytes>B: sets a limit to the download request  
+    -d, --data: data to pass along with the post request  
+    -X, --request <command>: Specify request command to use  
+    -u, --user <user:password>: Server user and password, need when secured routes present  
+            -example: curl -u bob:pw123 http://localhost:3000/someSecuredRoute
+    -L, --location: Follow redirects  
+        -example: curl http://google.com  
+        vs  
+        -example: curl -L http://google.com  
