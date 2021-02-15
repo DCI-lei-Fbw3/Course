@@ -20,6 +20,7 @@ const getOne = async (req, res, next) => {
 };
 
 const create = async (req, res, next) => {
+    
     try {
         const product = await Product.createProduct({
             articleNo: req.body.articleNo,

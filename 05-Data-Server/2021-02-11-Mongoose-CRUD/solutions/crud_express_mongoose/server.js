@@ -5,12 +5,15 @@ const productsRouter = require("./routes/products");
 const errorHandlerMiddleware = require("./middleware/errorHandler");
 require("./lib/database");
 
-
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use("/products", productsRouter());
+
+app.get('/',function(req,res) {
+    res.sendFile(path.join(__dirname+'/index.html'));
+  });
 
 
 app.use(errorHandlerMiddleware);

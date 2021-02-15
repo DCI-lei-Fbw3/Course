@@ -1,3 +1,4 @@
+//TK: this file creates the data model 
 const mongoose = require("mongoose");
 
 const schema = new mongoose.Schema({
