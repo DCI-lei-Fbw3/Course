@@ -19,7 +19,7 @@ const transfer = (req, res) => {
     db.get("users").find({ token }).set("balance", +res.locals.user.balance + +amount).write();
 
     // send success status to client
-    res.status(200).send("transfer succeded.");
+    res.status(200).send("transfer succeeded.");
 };
 
 

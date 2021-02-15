@@ -7,7 +7,7 @@ var { AddProduct, ArrayProduct, ArticleInObject, UpdateProduct, DeleteProduct } 
 
 
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+(app.use(bodyParser.urlencoded({ extended: true }));)
 app.get("/products", async (req,res) => {
     const product = await ArrayProduct()
     res.json(product);

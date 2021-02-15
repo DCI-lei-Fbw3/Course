@@ -47,7 +47,7 @@ mongoose.connect(process.env.MONGODB_URI, {
         .then(result => {
             console.log(result)
         } )
-        .cath(error => {
+        .catch(error => {
             console.log(error)
         })
 

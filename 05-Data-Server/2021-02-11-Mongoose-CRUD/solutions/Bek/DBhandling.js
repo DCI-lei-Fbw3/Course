@@ -31,7 +31,7 @@ const productSchema = new mongoose.Schema({
 
 const Products = mongoose.connection.model("products", productSchema);
 
-function AddProduct(bodyArticle, bodyName, bodyDes, bodyPrice) {
+function AddProduct(artical) {
     return new Promise((resolve,reject) => {
         const newProduct = new Products({
             articleNo: bodyArticle,
