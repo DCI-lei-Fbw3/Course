@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <%- include('partials/htmlHead')%>
+   <!-- body -->
+   <body class="main-layout">
+      <%- include('partials/header', {page: 'register'})%>
+      <!-- section -->
+      <div class="section layout_padding">
+         <div class="container">
+            
+                <form id="registerForm" method="POST" action="/register" > 
+                    <!-- action to set the handler -->
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputfName">First Name</label>
+                        <input type="text" class="form-control" name="fName" id="inputfName" placeholder="First Name" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputLname">Last Name</label>
+                        <input type="text" class="form-control" name="lName" id="inputLname" placeholder="Last Name" required>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" name="email" id="inputEmail" placeholder="Email" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword">password</label>
+                        <input type="password" class="form-control" name="password" id="inputPassword" placeholder="password" required>  
+                        <!-- name to send data to server side -->
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputrePassword">Re-Password</label>
+                        <input type="password" class="form-control" id="inputrePassword" placeholder="Re-Password" required>
+                      </div>
+
+                    </div>
+
+                    
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary">Register</button>
+                  </form>
+            
+         </div>
+      </div>
+      <!-- end section -->
+      <%- include('partials/footer')%>
+      <%- include('partials/scripts')%>
+
+      <script>
+          document.querySelector('#submitBtn').addEventListener('click', e => {
+            e.preventDefault(); // doesn't alow the form to submit as default
+            const pass = document.querySelector('#inputPassword').value;
+            const repass = document.querySelector('#inputrePassword').value;
+            if (pass !== repass) {
+                //return false;
+                alert("Password is not matching the Re-Password")
+            } else {
+                document.querySelector('#registerForm').submit();
+            }
+          })
+      </script>
+
+   </body>
+</html>
