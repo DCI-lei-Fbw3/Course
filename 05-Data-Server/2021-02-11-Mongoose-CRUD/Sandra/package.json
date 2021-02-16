@@ -1,0 +1,16 @@
+{
+  "name": "sandra",
+  "version": "1.0.0",
+  "description": "Create a server with the following endpoints:     - GET /products         => returns all products as an array",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15"
+  }
+}
