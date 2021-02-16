@@ -23,7 +23,7 @@ const getOne = async (req, res, next) => {
 const create = async (req, res, next) => {
     
     try {
-        
+        //TK: lines 27-30 are from express-validator
         const errors = validationResult(req)
         if (!errors.isEmpty()) {
           return res.status(422).json({ errors: errors.array() })
