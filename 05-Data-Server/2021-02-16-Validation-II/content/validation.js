@@ -40,7 +40,7 @@ Assumptions--
 
 */
 
-const { body, validationResult } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 
 //1. Create POST request
 //2. Create "Checks" using express-validator middleware

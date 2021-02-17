@@ -35,6 +35,7 @@ const connect = async () => {
 		});
 	} catch (err) {
 		createError(500, err);
+		process.exit(1);
 	}
 };
 
