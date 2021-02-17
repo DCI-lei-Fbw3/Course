@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <form class="form-horizontal" action="/products" method="post">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Product Data</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">articleNo.</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="articleNo" type="text" placeholder="string" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Name</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="name" type="text" placeholder="string" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Description</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="description" type="text" placeholder="string" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Price</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="price" type="number" placeholder="Number" class="form-control input-md">
+            
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit">Submit</label>
+          <div class="col-md-4">
+            <button id="submit"  type="submit" class="btn btn-success">Submit Form</button>
+          </div>
+        </div>
+        
+        </fieldset>
+      </form>
+        
+</body>

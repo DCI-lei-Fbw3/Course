@@ -11,12 +11,17 @@ const app = express();
 
 app.use(bodyParser.urlencoded( { extended:true})); 
 app.use(express.json()); 
+app.set("view engine", "ejs"); 
 
 const port = process.env.PORT || 3000; 
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`)
 });
+
+app.get("/", (req, res) => {
+    res.render("index")
+})
 
 //mongoose has a connect method used to connect with the mongodb database, the first argument is the URI (taken from the .env file), second argument is an object with god knows what.  
 // the connect method uses a promise,
@@ -54,7 +59,7 @@ const laptopSchema = new mongoose.Schema ({
 
 // in a new const we care storing the collection with the applied schema; 
 // this validates whether the incoming data has matches the structure of our schema
-const Products = mongoose.connection.model("laptops", laptopSchema); 
+const Products = mongoose.connection.model("computers", laptopSchema); 
 
 function getProducts() {
     return new Promise ((resolve, reject)=> {
@@ -91,13 +96,14 @@ function addProduct(bodyArticleNo, bodyName, bodyDescription, bodyPrice){
             price: bodyPrice
         })
         newLaptop.save()
-        .then(result => resolve(result))
+        .then(result=> resolve())
         .catch(error => reject(error))
     })
 }
 app.post('/products', async(req, res) => {
     await addProduct(req.body.articleNo, req.body.name, req.body.description, req.body.price)
     res.send("Product added successfully")
+   
 })
 
 function updateProduct(getArticleNo, name, description, price){
