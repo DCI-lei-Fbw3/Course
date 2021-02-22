@@ -1,9 +1,10 @@
 const users = require("../models/user");
 
-const registrNewUser = async(req, res) => { 
-    res.status(200).json(await users.registrNewUser())
+const registerNewUser = async(req, res) => { 
+    await users.registerNewUser(req.body.username, req.body.email, req.body.password)
+    res.status(200).send("Successful registration")
 }
 
-module.exports = {
-    registrNewUser
-}
+
+module.exports = registerNewUser
+
