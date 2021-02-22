@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/user/products", verifyToken, products);
+app.use("/products", verifyToken, products);
 app.use("/user", users);
 app.use(errorHandler);
 
