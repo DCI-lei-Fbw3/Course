@@ -2,9 +2,10 @@
 // this is the way we require the router method: 
 const router = require("express").Router()
 const controllersProducts = require("../controllers/products.control")
-const controllersUsers = require("../controllers/users.control")
-// instead of app, we need to use the const router
-router.get("/", controllers.home)
+const registerNewUser = require("../controllers/users.control")
+
+//instead of app, we need to use the const router
+router.get("/", controllersProducts.home)
 
 
 router.get('/products', controllersProducts.getProducts);
@@ -22,7 +23,7 @@ router.put('/products/:articleNo', controllersProducts.updateProduct);
 router.delete('/products/:articleNo', controllersProducts.deleteProduct);
 
 
-router.post('/registration', controllersUsers.registerNewUser)
+router.post('/registration', registerNewUser)
 
 
 module.exports = router;
