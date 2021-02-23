@@ -25,9 +25,9 @@ const myProducts = mongoose.connection.model('products', productsSchema); // app
 
 
 
-function getProducts() {
+function findProducts() {
     return new Promise((resolve, reject) => {
-        myProducts.find({})
+        myProducts.find()
         .then(result => resolve(result))
         .catch(error => reject(error))
     })
@@ -60,7 +60,7 @@ function addProduct(articleNo, name, description, price){
 
 
 module.exports = {
-    getProducts,
+    findProducts,
     getProduct,
     addProduct,
 };

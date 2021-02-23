@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
         validate: [isEmail, 'invalid Email'],
+        unique: true,
     },
 });
 
@@ -64,10 +65,9 @@ function addUser(username, password, email){
 
 const checkIfEmail = (email) => {
     return new Promise((res, rej)=>{
-        User.findOne(email).then(data =>{
-            console.log(data)
-            if(data) { rej('email is not valid') }
-            else res('email is valid')
+        User.findOne({email}).then(data =>{
+            if(data) res("isEmail");
+           else res("notEmail");
     })
     
         .catch(err => rej(err)) 

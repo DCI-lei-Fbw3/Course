@@ -24,10 +24,13 @@ const getUser = async (req, res) => {
     res.status(200).json(user);
 };
 
-
+const logoutUser = (req,res) => {
+    res.clearCookie("cookieToken")
+    res.send("you logged out")
+}
 
 module.exports = {
     addUser,
     getUser,
-    
+    logoutUser,
 }

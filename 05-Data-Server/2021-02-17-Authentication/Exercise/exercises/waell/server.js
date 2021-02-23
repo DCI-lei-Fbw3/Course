@@ -1,14 +1,13 @@
 require('dotenv').config();
-
-const mongoose = require('mongoose');
 const express = require('express')
-const bcrypt = require('bcrypt');
-const  user = require('./model/user.js');
-const  product = require('./model/product');
+
+
+
 const { addUser, getUser } = require('./controllers/userControls')
 const { getProducts, getProduct, addProduct, } = require('./controllers/productControls')
 const { checkEmail, checkIfLoggedIn } = require('./middleware/validator');
-
+const userRouter = require('./routes/userRouts')
+const productsRouter = require('./routes/productsRoutes')
 
 const cookieParser = require('cookie-parser')
 
@@ -29,6 +28,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(express.json());
 
+app.use('/user', checkIfLoggedIn, userRouter)
+app.use('/products', checkIfLoggedIn, productsRouter)
 
 /* 
 mongoose.connect(process.env.MONGODB_URI, {
@@ -48,25 +49,5 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 //const user = mongoose.connection.model('users', userSchema);
 
-
-
-
-// Registration
-
-app.post('/register', addUser);
-
-// login
-
-app.post('/login', getUser);
-
-// Products
-
-
-
-app.get('/products', getProducts);
-
-app.get('/products/:num', checkIfLoggedIn, getProduct);
-
-app.post('/products', checkIfLoggedIn, addProduct);
 
 
