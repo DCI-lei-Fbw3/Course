@@ -4,6 +4,8 @@
 require("dotenv").config(); 
 const express = require("express"); 
 const bodyParser = require("body-parser"); 
+const cookieParser = require("cookie-parser");
+const expressValidator = require("express-validator");
 
 //one of the ways to connect to mongodb is by using the module mongoose. It handles your mongo database. It's kind of like an assistant that helps you work with mongodb. 
 //const mongoose = require("mongoose"); 
@@ -18,6 +20,7 @@ const app = express();
 app.use(bodyParser.urlencoded( { extended:true})); 
 app.use(express.json()); 
 app.set("view engine", "ejs"); 
+app.use(cookieParser())
 app.use(routes);
 
 const port = process.env.PORT || 3000; 

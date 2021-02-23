@@ -53,6 +53,7 @@ app.post('/form', [
     //the validationResult method will return the errors thrown by our validation chain
     const error  = validationResult(req)
     if(!error.isEmpty()){
+        console.log("where the fuck am I?")
         //IF validation fails, the server here responds with an object that has an array of error values representing the failed validation
         return res.status(422).json({ error : error.array()})
     }
