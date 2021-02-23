@@ -16,7 +16,7 @@ const getProduct = async(req, res) => {
     }
 
 const addProduct = async(req, res) => {
-        console.log(req.body)
+        //console.log(req.body)
         await products.addProduct(req.body.articleNo, req.body.name, req.body.description, req.body.price)
         res.send("Product added successfully")
        
