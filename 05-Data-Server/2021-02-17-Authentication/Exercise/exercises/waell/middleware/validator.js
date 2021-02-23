@@ -2,16 +2,19 @@ const mongoose = require('mongoose');
 const {isEmail} = require('validator');
 const cookieParser = require('cookie-parser');
 const { JsonWebTokenError } = require('jsonwebtoken');
-const { checkIfEmail } = require('../model/user')
+const db = require('../model/user')
 const jwt = require('jsonwebtoken');
 
 
 
 async function checkEmail(req,res,next){
     try{
-        await checkIfEmail(req.body.email)
-        //res.status(201).send(data)
-        next() 
+        let result = await db.checkIfEmail(req.body.email)
+        if(result === "isEmail") {
+            return res.status(401).send("not allowed");
+        } else {
+            next();
+        }
     }
     catch{ (err) => console.log(err) }
 }
