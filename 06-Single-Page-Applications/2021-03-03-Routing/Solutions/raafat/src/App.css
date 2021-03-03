@@ -1,0 +1,59 @@
+/* .App {
+	text-align: center;
+
+} */
+.form-inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+form {
+	width: 25vw;
+	margin: 20px;
+	padding: 10px;
+	border: 1px black solid;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
+
+form input {
+	padding: 5px;
+	margin: 5px;
+}
+
+.cards {
+	margin: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+}
+
+.card {
+	cursor: pointer;
+	background-color: transparent;
+	height: 400px;
+	perspective: 1000px;
+}
+
+.card h2 {
+	text-decoration: none;
+	color: rgb(53, 53, 53);
+	font-size: 30px;
+	border-bottom: 1px rgb(143, 143, 143) solid;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+.not-found,
+.product {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+}
