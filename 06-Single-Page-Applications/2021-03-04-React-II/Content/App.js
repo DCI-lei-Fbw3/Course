@@ -40,7 +40,10 @@ function App() {
 
         <Switch>
           <Route path="/" component={FrontPage} exact />
-          <Route path="/login" component={LoginPage} />
+          {/* <Route path="/login" component={LoginPage} /> */}
+          <Route path="/login">
+            <LoginPage loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+          </Route>
 
           {/* we can redirect from one path to another */}
           <Redirect from="/notebooks" to="/products" />
