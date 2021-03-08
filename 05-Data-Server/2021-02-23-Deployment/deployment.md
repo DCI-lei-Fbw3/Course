@@ -33,7 +33,7 @@ program.
     - OpeNode
     - Firebase (Google)
 
-### Our first deployment -OpeNode
+### Our first deployment-OpeNode
 - OpeNode: is PaaS, built on top of Docker (https://www.docker.com). 
 - Its super to deploy your code there.
 - It was originally meant for Nodejs environments only, but now they offer environment for different languages/frameworks.
