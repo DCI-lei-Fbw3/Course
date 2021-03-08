@@ -61,5 +61,9 @@ since the last time the component funciton ran.
 - useEffect allows you to control how your the logic of your components has an effect (i.e.
     side effect) on your React application.
 
+- Its quite important to understanc how React Hooks work in the background, this will be
+a pain initially, but worth the time you will save debugging Hook issue later on:
+https://medium.com/the-guild/under-the-hood-of-reacts-hooks-system-eb59638c9dba
+
 */
 
