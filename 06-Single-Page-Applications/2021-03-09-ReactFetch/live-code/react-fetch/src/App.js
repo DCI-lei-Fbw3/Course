@@ -7,21 +7,22 @@ import React, {useState, useEffect} from 'react';
 function App() {
   const API_ENDPOINT= "https://5fd724129dd0db0017ee8da8.mockapi.io/test/users";
 
-  const [resp, setResp] = useState(null);
+  const [resp, setResp] = useState([]);
   const [loading, setLoading] = useState(false);
 
 
   useEffect(()=>{
-
     //before the data is being Fetched, the component is still loading
       setLoading(true);
-      const mock = fetch(API_ENDPOINT)
+      fetch(API_ENDPOINT)
       .then(data => data.json())
+      .then(data => {
+        console.log(data)
+        setResp(data)})
       .catch(()=>{
         setLoading(false)
       });
-      setResp(mock)
-      console.log(resp)
+      //console.log(resp)
   }, [])
   
     return (
@@ -32,9 +33,12 @@ function App() {
             Click button to change background color.
           </p>
           <div>
-         
-
-       
+          {
+           resp.map(d => {
+             return(<p>{d.name}</p>)
+           } )
+         }
+      
           </div>
   
       
