@@ -30,7 +30,7 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            Click button to change background color.
+            The list of names from your API:
           </p>
           <div>
           {
