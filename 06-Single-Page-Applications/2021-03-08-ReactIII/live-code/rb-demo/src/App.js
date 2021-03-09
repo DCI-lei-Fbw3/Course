@@ -7,7 +7,7 @@ import React, {useState, useEffect} from 'react';
 
 function App() {
 const [count, setCount] = useState(0)
-const color = count % 5 === 0 ? "blue": "red"
+const color = count % 5 === 0 ? "blue": "red";
 
 /* 
 - If the dependency array is empty ([]), the callback is called only once. This is will also leave the color of the background permanantly red.

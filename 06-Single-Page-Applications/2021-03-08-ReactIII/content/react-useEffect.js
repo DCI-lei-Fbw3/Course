@@ -6,7 +6,7 @@
 // A recap to React Hooks
 
     /* 
-    - Hooks, genereally, are specially-implemented functions that allow us to add functionality
+    - Hooks, genereally, are specially-implemented functions that allow us to add functionality to
     React components.
     - According to the React Hooks API, we have certain specific hooks available to us. 
     - The three most commonly used hooks are:
@@ -20,7 +20,7 @@
 
     /* 
     - Only Call hooks at the top level of your functional components.
-    - Con't call hooks inside loops, conditions, or nexted functions.
+    - Con't call hooks inside loops, conditions, or nested functions.
     - Instead just use Hooks at the top level of your react functions and all should be fine.
     - What becomes clear quite fast using react is that the execution flow of React is 
     really sensitive. 
@@ -48,9 +48,9 @@ one("blue")
 - From the React hooks API docs above:
  The useEffect hook takes 2 arguments:
     - callback: a function with side effects
-    - dependecies: an optional arry containing depency values
+    - dependecies: an optional array containing depency values
 
-- When our component function run, the callback will be called if any dependecies have changed 
+- When our component function runs, the callback will be called if any dependecies have changed 
 since the last time the component funciton ran.
 
 */
@@ -58,7 +58,7 @@ since the last time the component funciton ran.
 // Example --> in the live-code folder
 
 /* 
-- useEffect allows you to control how your the logic of your components has an effect (i.e.
+- useEffect allows you to control how the logic of your components has an effect (i.e.
     side effect) on your React application.
 
 - Its quite important to understanc how React Hooks work in the background, this will be
