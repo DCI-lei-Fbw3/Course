@@ -5,10 +5,11 @@ import LoginPage from "./components/pages/LoginPage.js";
 import ProductsPage from "./components/pages/ProductsPage.js";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import AppHeader from "./components/AppHeader.js";
+import ProductsProvider from "./context/ProductsProvider";
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   const ProtectedRoute = (props) => {
     if (!loggedIn) return <Redirect to="/login" />
@@ -20,18 +21,20 @@ function App() {
       <Router>
         <AppHeader />
 
-        <main>
-          <Switch>
-            <Route path="/" component={FrontPage} exact />
-            <Route path="/login" component={() => LoginPage({loggedIn, setLoggedIn})} />
-            <ProtectedRoute path="/products" component={() => ProductsPage({loggedIn})} exact />
-            <Route component={() => <h1>Not found</h1>} />
-          </Switch>
-        </main>
+        {/* every component inside our provider can use the context (but does not have to) */}
+        <ProductsProvider>
+          <main>
+            <Switch>
+              <Route path="/" component={FrontPage} exact />
+              <Route path="/login" component={() => LoginPage({loggedIn, setLoggedIn})} />
+              <ProtectedRoute path="/products" component={ProductsPage} exact />
+              <Route component={() => <h1>Not found</h1>} />
+            </Switch>
+          </main>
+        </ProductsProvider>
       </Router>
     </div>
   );
 }
-
 
 export default App;
