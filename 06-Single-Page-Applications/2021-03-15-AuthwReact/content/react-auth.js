@@ -30,4 +30,17 @@
         4) Afternoon session: we will finish the react authentication
     */
 
+    //Steps to seure Authentication
+        /* 
+        - Step 1: To create a login/signup system 
+            1.a) Backend API, database, server, Tokens....(all that backend stuff)
+            1.b) Frontend pages and logic
+        - Step 2: Define protected vs non-protected pages
+        - Step 3: To protect the necessary Routes
+            3.1) make sure you cross-check your token (in a cookie) with your server
+        - Step 4: To use tokens for maintaining session
         
+        
+        
+        */
+

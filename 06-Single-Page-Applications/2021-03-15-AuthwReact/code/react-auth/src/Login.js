@@ -3,6 +3,9 @@ import axios from 'axios';
 
 import {Form, Button} from 'react-bootstrap';
 import React, {useState} from 'react';
+//import but also initiate universal cookies to be able to use browser cookies in your react code
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 function Login() {
 
@@ -24,11 +27,17 @@ function Login() {
     
         axios(config)
             .then((result) => {
-                console.log(result)
+                cookies.set("TOKEN", result.data.token,{
+                    path: "/"
+                })
+            //after POSTing login credential to server, and getting back response, we want to take the logged in user to the first authenticated page
+                window.location.href = '/auth';
+                setLogin(true);
             })
             .catch((err) => {
                 err = new Error()
-            })
+            })     
+
     }
 
     
