@@ -5,7 +5,7 @@
 // Intro
 
     /* 
-    - I have created a backend for your rect app to communicate with
+    - I have created a backend for your react app to communicate with
     - Github repo: https://github.com/thisistaimur/mongo-express-auth
     - This backend also in production on Heroku: https://mongo-express-auth.herokuapp.com
     - API Docs:
@@ -14,7 +14,7 @@
         - /login: POST --> to recieve a JWT and login an existing user
             Takes: {email: String, Password: String}
         - /auth-endpoint: GET --> authorize token on protected React pages
-            Takes: {`Beare ${Token}}
+            Takes: {`Bearer ${Token}}
 
     - Please spend 30-45 mins understanding the backend implementation, but remain aware
     of the context here, which is to learn how auth works in React.
