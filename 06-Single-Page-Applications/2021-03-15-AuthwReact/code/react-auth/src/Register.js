@@ -29,9 +29,7 @@ function Register() {
             .catch((err) => {
                 err = new Error()
             })
-    }
-
-    
+    } 
 
   return (
       <>
