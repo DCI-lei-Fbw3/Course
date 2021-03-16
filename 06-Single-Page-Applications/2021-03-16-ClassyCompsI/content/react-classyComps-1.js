@@ -116,7 +116,7 @@
     more difficult to keep a track of. 
     
 
-    Takeaway:
+    Takeaways:
     Understand three basic things, and then move on:
     1) The different syntax for class and functional components.
     2) Understand the react lifecycle in the context of Class components.
