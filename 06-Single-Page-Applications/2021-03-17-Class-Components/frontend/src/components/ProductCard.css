@@ -1,0 +1,26 @@
+.ProductCard {
+    margin: .5rem;
+    padding: 1rem;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    text-align: left;
+}
+
+.ProductCardTitle {
+    font-size: 1.3em;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ProductCardArticleNo {
+    font-weight: 300;
+}
+
+.ProductCardPrice {
+    text-align: right;
+    font-weight: 100;
+    font-size: 1.1em;
+    margin: 0;
+    color: #999;
+}

@@ -1,0 +1,32 @@
+.MainNavigation ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.MainNavigation li {
+    display: block;
+    transition: ease-in-out .15s;
+}
+.MainNavigation li:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.MainNavigation a,
+.MainNavigation button {
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 1rem;
+    text-decoration: none;
+    font-weight: 700;
+}
+.MainNavigation a {
+    color: #FFF;
+}
+
+.MainNavigation a.active {
+    border-bottom: 4px solid rgb(126, 165, 89);
+}
