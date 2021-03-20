@@ -1,11 +1,16 @@
 import { Component } from "react";
 import ProductCard from "../ProductCard.class.js";
-import axios from "axios";
+import ProductsContext from "../../context/ProductsContext.js";
 
 // to have the basic React functionality in our class, we "extend" the React Component class
 // that means that we inherit all methods and properties
 // we can override them and write our own methods
 class ProductsPage extends Component {
+    // since we cannot use useContext in our class, we need to find another way to access our context
+    // we can do so by setting the static property contextType to the desired context
+    // this technique only works with a single context that will then be available in this.context
+    static contextType = ProductsContext;
+
     // we initialize the component with the constructor
     constructor (props) {
         // with super() we call the constructor of the class we extend
@@ -22,9 +27,13 @@ class ProductsPage extends Component {
 
     // componentDidMount() will be executed as soon as the component is mounted
     componentDidMount () {
-        axios.get("http://localhost:4400/products")
-            .then(response => this.setState({ products: response.data }))
-            .catch(error => console.log(error));
+        this.setState({ products: this.context.products })
+    }
+
+    // this gives us the same result as the useEffect in FrontPage.js that returns a function
+    // here we use componentWillUnmount, a React Component method in our class
+    componentWillUnmount () {
+        console.log("before unmount");
     }
 
     // when mounting or updating the component, render() is executed
