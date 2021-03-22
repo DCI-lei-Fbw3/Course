@@ -21,10 +21,9 @@ if(action.type === 'SUBSTRACT'){
     newState.age -= action.val;
 }
 
-return newState
+return newState;
 
 })
-
 
 const store = createStore(myReducer);//This creates the Redux Store, we need an initial state and a reducer function as the two arguments
 
@@ -41,3 +40,6 @@ store.dispatch({type:'ADD',  val: 10});
 store.dispatch({type:'SUBSTRACT', val: 20});
 
 
+
+store.dispatch({type:'ADD',  val: 40});
+store.dispatch({type:'SUBSTRACT', val: 10});
