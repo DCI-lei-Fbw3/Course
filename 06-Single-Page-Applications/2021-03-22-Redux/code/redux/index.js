@@ -30,6 +30,7 @@ const store = createStore(myReducer);//This creates the Redux Store, we need an 
 
 //Subscribe method subscribes us to any changes in the state (store)
 store.subscribe(() => {
+    localStorage.setItem('state', store.getState())
     console.log("State has been changed to:", store.getState())
 })
 

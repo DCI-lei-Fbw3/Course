@@ -37,4 +37,14 @@ as soon as you have tons and tons components relying on the same data.
     - The dispatcher dispatches an action to the reducer, the reducer takes the payload from the dispatcher and updates the state with the payload data. The reducer and the state sit in the redux store. 
     */
 
+    //Persisting Store data in Redux w7 localStorage API
 
+    /* 
+    - In some use cases, the state of a user's data needs to be persisted, i.e. the browser 
+    needs to remember in what state the user left your React application if they closed the
+    borwser tab or window. 
+    - There are many third-party tools that allow you to persist your redux data in the browser,
+    however the simplest one to begin with is good ol' localStorage. 
+    - LocalStorage gives you a "database" in the browser to preserve the state of your Redux Store.
+    - A good example on how to persis Redux Store in localStorage can be seen here: https://www.geeksforgeeks.org/how-to-persist-redux-state-in-local-storage-without-any-external-library/    
+    */
