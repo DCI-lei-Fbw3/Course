@@ -1,0 +1,10 @@
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/login">Login</a></li>
+
+    <%# to render something conditionally, we can use "if" %>
+    <%# we can type it like in javascript, we only need to wrap each line in ejs delimiters %>
+    <% if (loggedIn) { %>
+        <li><a href="/products">Products</a></li>
+    <% } %>
+</ul>

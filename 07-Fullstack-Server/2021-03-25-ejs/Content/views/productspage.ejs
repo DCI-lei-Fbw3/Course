@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<%# we can put the parts we reuse in partials and just include them %>
+<%# this will give us the same advantages as with React Components %>
+<%# we can even pass props to them. in this case we pass the title to the html head %>
+<%- include("./partials/htmlHead.ejs", { title: "Products" }) %>
+
+<body>
+    <%- include("./partials/navigation.ejs", { loggedIn }) %>
+
+    <h1>Products</h1>
+
+    <%# we can iterate over an array with a forEach %>
+    <%# inside this loop we can either render html directly or make use of partials again %>
+    <% products.forEach(product => { %>
+        <%- include("./partials/productCard.ejs", { product }) %>
+    <% }); %>
+
+    <hr>
+
+    <h2>Product 1</h2>
+    <h2>Product 2</h2>
+    <h2>Product 3</h2>
+    <h2>Product 4</h2>
+</body>
+</html>
