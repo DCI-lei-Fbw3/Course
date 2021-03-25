@@ -12,6 +12,9 @@ const app = express();
 const port = 3005;
 app.listen(port, () => console.log("listening on port 3005"));
 
+// body parser
+app.use(express.urlencoded({ extended: true }));
+
 // sass/scss setup
 // in order to compile our sass/scss files to css we use node-sass-middleware
 // we provide a config to tell the middleware how to compile
@@ -97,3 +100,15 @@ app.get("/products", (req, res) => {
 
     res.render("productspage", { products });
 });
+
+
+app.get("/login", (req, res) => {
+    res.render("loginpage");
+});
+
+
+app.post("/login", (req, res) => {
+    // once we set up our body parser middleware, we have access to the form data in req.body
+    console.log({ body: req.body });
+    res.render("loginpage");
+})

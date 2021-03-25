@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/htmlHead.ejs", { title: "Login" }) %>
+
+<body>
+    <%- include("./partials/navigation.ejs") %>
+
+    <h1>Login</h1>
+
+    <%# in order to send a POST request to our backend, we need to set the method in the html form %>
+    <%# the form sends a request to the current page's path per default. we can override this with the action attribute %>
+    <form action="/login" method="POST">
+        <label for="username">Username</label><br>
+        <%# the name attribute will be the key in our request, whereas the id is primarily used to link the label to this input field %>
+        <input type="text" name="email" id="username"><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password"><br>
+
+        <input type="submit" value="Log in">
+    </form>
+</body>
+</html>
