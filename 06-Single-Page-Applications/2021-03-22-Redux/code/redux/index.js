@@ -4,7 +4,7 @@ const {createStore} = require('redux');
 //Just the initial state of our data
 
 const initialState = {
-    age: 27
+    age: 27,
 }
 
 //Reducer: Follow the basic rules of reducers: (state, action) => newState, and update state immutably rather than mutating it directly.
@@ -30,7 +30,6 @@ const store = createStore(myReducer);//This creates the Redux Store, we need an 
 
 //Subscribe method subscribes us to any changes in the state (store)
 store.subscribe(() => {
-    localStorage.setItem('state', store.getState())
     console.log("State has been changed to:", store.getState())
 })
 
