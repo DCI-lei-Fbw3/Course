@@ -67,7 +67,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 
-
+//frontpage route
 app.get("/", (req, res, next) => {
   res.render("frontpage", { title: "EJS Auth + Express Sessions!" });
   next();
