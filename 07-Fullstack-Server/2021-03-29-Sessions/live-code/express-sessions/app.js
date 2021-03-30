@@ -11,7 +11,7 @@ const path = require("path");
 const dbConnect = require("./db/dbConnect");
 const User = require("./db/userModel");
 const auth = require("./auth");
-
+const cookieParser = require('cookie-parser');
 
 // execute database connection
 dbConnect();
@@ -34,6 +34,7 @@ app.use((req, res, next) => {
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser())
 
 
 // sass/scss setup
@@ -67,7 +68,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 
 
-//frontpage route
+//the front page route
 app.get("/", (req, res, next) => {
   res.render("frontpage", { title: "EJS Auth + Express Sessions!" });
   next();
@@ -125,7 +126,9 @@ app.post("/register", (request, response) => {
 
 
 //Products route
-app.get("/products", (req, res) => {
+//Since Products route is supposed to be only accessible in a user session (its protected), we pass the auth middleware in the request
+
+app.get("/products", auth,  (req, res) => {
   /*
       Workflow: get products page
       ---------------------------------
@@ -189,7 +192,7 @@ app.post("/login", (request, response) => {
           // check if password matches
           if(!passwordCheck) {
             return response.status(400).send({
-              message: "Passwords does not match",
+              message: "Passwords do not match",
               error,
             });
           }
@@ -201,20 +204,17 @@ app.post("/login", (request, response) => {
               userEmail: user.email,
             },
             "RANDOM-TOKEN",
-            { expiresIn: "24h" }
+            { expiresIn: "1h" }
           );
 
           //   return success response
-          response.status(200).send({
-            message: "Login Successful",
-            email: user.email,
-            token,
-          });
+          response.cookie('session', token)
+          response.redirect(200, '/products')
         })
         // catch error if password do not match
         .catch((error) => {
           response.status(400).send({
-            message: "Passwords does not match",
+            message: "Password does not match",
             error,
           });
         });

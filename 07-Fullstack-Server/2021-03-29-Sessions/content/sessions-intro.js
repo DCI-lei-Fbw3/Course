@@ -35,6 +35,10 @@
     - Broadly speaking, there are two ways to implementing sessions:
     1) store everything in the cookie,
     2) store only a unique identifier in the cookie and everything else on the server (this is the approach we have seen together, but maybe not discussed enough)
+
+    - We are gonna look at 2 strategies for creating sessions in any express application:
+        1) Cookie-based session --> statefull
+        2) JWT based session --> stateless
     */
 
     //Example
@@ -43,5 +47,35 @@
     - Take mongo-express-auth demo from 2 weeks, and combine with Domonik's frontend
     - Fix the routing
     - Create a session based on the JWT
+    
+    */
+
+    //Cookie-based session
+
+    /* 
+    - Cookie-based sessions are the "traditional" method for creating browser sessions in server-side frameworks.
+    - Cookie-based sessions are also statefull, meaning these sessions "remember" your's user's state in your application.
+    - Such sessions:
+            - require a store (which can be inMemory or on a daatabase)
+            - requore a cookie to be signed and sent to the browser
+            - the server will cross-check the data in the cookie with the data in the store. 
+    - Some benefits of using this strategy, inlude:
+        - Persistant is maintained throughout your app logic
+        - More secure because, your Store is server side. 
+    - If you have tone of session request at once, your server needs to have the (compute) power to be able to handle all those sessions.
+    
+    */
+
+    //JWT sessions
+
+    /* 
+    - What we do here with JWT is technically not a sessio, its authorization.
+    - Because we do track when a user is logging in, it is not really session.
+    - However, JWT can be used to create a "sense" for a session, because it allows users to interact with your server until the JWT exists.
+    - In JWT sessions, we do not store anything server-side, so we do not need any Store.
+    - This is more of a validation than a session, yet you will see articles and books and turials calling approach a session.
+    - JWT sessions are the more modern approach to sessions, why? you may ask:
+        - Firstly, your server does not need the same amount of computer power to process sessions.
+        - It is working better than cookies in different browsers.
     
     */
