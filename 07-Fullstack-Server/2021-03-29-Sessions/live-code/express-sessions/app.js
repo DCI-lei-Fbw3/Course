@@ -203,11 +203,13 @@ app.post("/login", (request, response) => {
               userId: user._id,
               userEmail: user.email,
             },
+
             "RANDOM-TOKEN",
             { expiresIn: "1h" }
           );
 
           //   return success response
+          //send token in a response cookie
           response.cookie('session', token)
           response.redirect(200, '/products')
         })
