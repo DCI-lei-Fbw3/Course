@@ -6,7 +6,7 @@ The user sessions can be stateless (see Taimur's code from 29.03.21) or stateful
 At 14:45, your pair/group will get 15 mins to present your system. 10 mins for presentation, 5 for questions. 
 
 
-## The system shoud:
+## The system should:
 
 - Have a landing
 - Should have a login, with a session
