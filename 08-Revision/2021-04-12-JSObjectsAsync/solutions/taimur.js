@@ -68,6 +68,7 @@ function mergeObjects(obj1, obj2) {
 
 console.log(mergeObjects(staycation, staycation2));
 console.log(staycation)
+
 // //The first parameter taken by the Object.assign() method is the *target* object that Object.assign() returns. If you set the first parameter to an existing non-empty object, that object will then be changed in the process of merging the next parameters into it. Object.assign() can, however, take multiple source parameters, and so, if you do not want to change one of the objects you would like to merge, you can instead use an {} as the target object, i.e. :
 
 const staycations = {snack: "biscuits"};
