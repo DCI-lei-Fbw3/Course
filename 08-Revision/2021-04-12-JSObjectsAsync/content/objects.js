@@ -61,6 +61,6 @@
 
     const source = ['a', 'b', 'c'];
     const target = {};
-    const list = Object.assign(target, source);
+    const list = Object.assign(target, source); //Output: target = {0: 'a', 1: 'b', 2: 'c'}
 
     console.log(list);
