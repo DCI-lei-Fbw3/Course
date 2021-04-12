@@ -198,4 +198,4 @@ function nestedArray(obj) {
     return newArray = Object.entries(obj)
 }
 
-console.log("Set 2: Answer #5: ", nestedArray(lastObj))
+console.log("Set 2: Answer #5: ", nestedArray(lastObj))  //=== no clue how to do
