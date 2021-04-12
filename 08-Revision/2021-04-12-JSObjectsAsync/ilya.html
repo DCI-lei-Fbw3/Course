@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>object array exercise</title>
+	</head>
+	<body>
+		<script>
+			/*
+                Objects and Array methods
+
+                Please print each of your answers to the console.
+
+                ## Set 1
+
+                **1. Object Person.**
+                Create an object named person. Loop through the object and print both the property and value of the object.
+			*/
+			const person1 = {
+				name: 'bob',
+				age: '34',
+				city: 'Dresden',
+			};
+			Object.entries(person1).forEach((pair) =>
+				console.log(`key = ${pair[0]} : value = ${pair[1]}`)
+			);
+
+			/*
+                2. Get Values.
+                Create a function that returns an array of all **values** of an object's properties.
+                Examples:
+                javascript
+                getObjectValues({
+                    choice1: "tea",
+                    choice2: "coffee",
+                    choice3: "milk"
+                })
+                ```
+                * Expected output:
+                ```javascript
+                ["tea", "coffee", "milk"]
+                ```
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const choices = {
+				choice1: 'tea',
+				choice2: 'coffee',
+				choice3: 'milk',
+			};
+			const getObjectValues = (obj) =>
+				Object.values(obj).forEach((value, index) =>
+					console.log(`value of ${index + 1} key: ${value}`)
+				);
+			getObjectValues(choices);
+
+			/*
+                **3. Add A Method.**
+                Create an object and add a method to that object which prints the values of the objects in a string.
+                * Example
+                ```javascript
+                let person = {
+                    firstName: "Michael",
+                    lastName: "Smith",
+                    job: "driver",
+                    age: 20,
+                    city: Paris
+                }
+                ```
+                * Example of Expected Output
+                "Michael Smith is a 20 year old driver in Paris".
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const person2 = {
+				firstName: 'Michael',
+				lastName: 'Smith',
+				job: 'driver',
+				age: 20,
+				city: 'Paris',
+				logDetails: function () {
+					return `${this.firstName} ${this.lastName} is a ${this.age} years old ${this.job} in ${this.city}.`;
+				},
+			};
+			console.log(person2.logDetails());
+
+			/*
+                ## Set 2
+
+                **1. Convert keys and values into an array.**
+                Create a function that converts an object into an array of keys and values.
+                * Examples:
+                ```javascript
+                objectToArray({
+                    A: 1,
+                    B: 2,
+                    C: 3
+                })
+                ```
+                * Expected output:
+                ```javascript
+                [["A", 1], ["B", 2], ["C", 3]]
+                ```
+
+                ```javascript
+                objectToArray({
+                    cats: 1,
+                    dogs: 2,
+                    turtles: 4
+                })
+                ```
+                * Expected output:
+                ```javascript
+                [["cats", 1], ["dogs", 2], ["turtles", 4]]
+                ```
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const objectToArray = (obj) => Object.entries(obj);
+			console.log(
+				objectToArray({
+					A: 1,
+					B: 2,
+					C: 3,
+				})
+			);
+			console.log(
+				objectToArray({
+					cats: 1,
+					dogs: 2,
+					turtles: 4,
+				})
+			);
+
+			/*
+                **2. List Properties.**
+                Create a function that returns an array of **properties** of a javascript object.
+                * Example
+                ```javascript
+                let student = {
+                    name: "Mike",
+                    class: "4A"
+                    course: "English"
+                }
+                ```
+                * Expected output:
+                ```javascript
+                ["name", "class", "course"]
+                ```
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const student = {
+				name: 'Mike',
+				class: '4A',
+				course: 'English',
+			};
+			console.log(Object.keys(student));
+
+			/*
+                **3. Merge.**
+                Create a function that takes two objects as its parameters and merges them together into a new object.
+                * Example
+                ```javascript
+                let first = {firstName: "John"}
+                let last = {lastName: "Smith"}
+                ```
+                * Expected output:
+                ```javascript
+                {firstName: "John", lastName: "Smith"}
+            ```
+                **Extra Credit:** What happens if you merge two objects with the same property values? In merging these two objects, do you expect to change either or both of the original objects? Why or why not? Comment your answers.
+                ==> the latter source overrides the previous one, original objects stays the same, because a new one 'target' is created
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const merge = (obj1, obj2) => Object.assign({}, obj1, obj2);
+			const first = { firstName: 'John' };
+			const second = { lastName: 'Smith' };
+			const third = { age: 26 };
+			const fourth = { city: 'Leipzig' };
+			const fifth = { city: 'Dresden' };
+			console.log(
+				'merged:',
+				Object.assign({}, first, second, third, fourth, fifth)
+			);
+			console.log('using function:', merge(first, second));
+
+			console.log('first', first);
+			console.log('second', second);
+			console.log('third', third);
+			console.log('fourth', fourth);
+			console.log('fifth', fifth);
+
+			/*
+                **4. Switch Keys and Values.**
+                Create a function to get a copy of an object. The copy must switch the keys and values.
+                * Example:
+                ```javascript
+                let person = {
+                    name: "John",
+                    job: "teacher"
+                }
+                ```
+                    Expected Output:
+                ```javascript
+                {"John": name, "teacher": job}
+                ```
+            */
+
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const swapKeysValues1 = (obj) =>
+				Object.entries(obj).reduce((acc, pair, index) => {
+					acc[pair[1]] = pair[0];
+					return acc;
+				}, {});
+
+			const swapKeysValues2 = (obj) => {
+                const newObj = {};
+				for (let key in obj){
+                    newObj[obj[key]] = key;
+                };
+                return newObj;
+            }
+
+			const person3 = {
+				name: 'John',
+				job: 'teacher',
+			};
+
+			console.log('swap keys and values:', swapKeysValues2(person3));
+			console.log('person3:', person3);
+			/*
+                5. Return Keys and Values.**
+                Write a program that takes an object and returns an array which contains two arrays: one for the keys of the object and the other for the values of the object.
+
+                    Examples:
+                ```javascript
+                { a: 1, b: 2, c: 3 } ➞ [["a", "b", "c"], [1, 2, 3]]
+                {key: true} ➞ [["key"], [true]]
+                ```
+            */
+			console.log(
+				'-----------------------------------------------------------------------'
+			);
+			const obj1 = { a: 1, b: 2, c: 3 };
+			const obj2 = { key: true };
+			const objToKeysAndValuesArrays = (obj) => [
+				[Object.keys(obj)],
+				[Object.values(obj)],
+			];
+			console.log(objToKeysAndValuesArrays(obj1));
+			console.log(objToKeysAndValuesArrays(obj2));
+		</script>
+	</body>
+</html>
