@@ -195,7 +195,10 @@ console.log("Set 2: Answer #4: ", SwitchKeys(personality))
 var lastObj = { a: 1, b: 2, c: 3 };
 
 function nestedArray(obj) {
-    return newArray = Object.entries(obj)
+    var a = Object.keys(obj)
+    var b = Object.values(obj) 
+    return [[...a],[...b]]
+    
 }
 
 console.log("Set 2: Answer #5: ", nestedArray(lastObj))  //=== no clue how to do
